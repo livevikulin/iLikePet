@@ -1,0 +1,87 @@
+extends ../views/layouts/default
+block variables
+	- var title = "Главная";
+
+block content
+	main 
+		.container 
+			.main 
+				.main-block
+					.main-news
+						span.main-news__title Новости
+						.news
+							.news-block
+								span.news-block__calendar 20 ноября
+								span.news-block__text «Николас жив». Рогозин рассказал о судьбе «утопленной» при нём таксы
+							.news-block
+								span.news-block__calendar 20 ноября
+								span.news-block__text Это какая-то «дичь». «Единая Россия» выступила против узаконивания «вип-охоты»
+							.news-block
+								span.news-block__calendar 20 ноября
+								span.news-block__text Самое маленькое в мире млекопитающее обнаружили на юге России
+							.news-block
+								span.news-block__calendar 20 ноября
+								span.news-block__text Обожжённый, но счастливый. Выжившего при пожаре в Калифорнии кота вернули семье
+							.news-block
+								span.news-block__calendar 20 ноября
+								span.news-block__text Полицейские арестовали заводчицу, которая хранила в морозилках трупы 44 собак
+							.news-block
+								span.news-block__calendar 20 ноября
+								span.news-block__text Акулы-призраки и светящиеся кальмары. В Тасмании нашли более 100 новых существ
+							.news-block
+								span.news-block__calendar 20 ноября
+								span.news-block__text Володин: Общество долго ждало закон об ответственном обращении с животными
+							.news-block
+								span.news-block__calendar 20 ноября
+								span.news-block__text Ученые: собаки способны распознавать плохих людей
+							.news-block
+								span.news-block__calendar 20 ноября
+								span.news-block__text Акулы-призраки и светящиеся кальмары. В Тасмании нашли более 100 новых существ
+							.news-block
+								span.news-block__calendar 20 ноября
+								span.news-block__text Медвежонка, которого чудом спасли при пожаре, после выздоровления убил охотник
+							.news-block
+								span.news-block__calendar 20 ноября
+								span.news-block__text Вороны, мартышки и вараны. В зоопарке Москвы в 2018 году родилось 800 малышей
+					.main-review
+						span.main-review__title Обзоры, статьи и советы
+						.review
+							.review-block 
+								img(src="img/review-img1.jpg", alt="").review-block__bg
+								.review-block__bone 
+									img(src="img/sprites/intermediate-svg/bone-red.svg", alt="")
+									span Статьи 
+								a(href="#").review-block__fav
+									i.fas.fa-paw
+								.review-block__info 
+									h2.review-info__text Как мы с Маслинкой и Эклером гуляли
+									.review-info 
+										span.review-author 
+											i.fas.fa-user-circle
+											span Александра Полева
+										span.review-calendar 
+											i.far.fa-calendar-minus
+											span 21 января
+										span.review-views
+											i.far.fa-eye
+											span 40
+							.review-block 
+								img(src="img/review-img2.jpg", alt="").review-block__bg
+								.review-block__bone 
+									img(src="img/sprites/intermediate-svg/bone-red.svg", alt="")
+									span Статьи 
+								a(href="#").review-block__fav
+									i.fas.fa-paw
+								.review-block__info 
+									h2.review-info__text Почему кошки такие живучие
+									.review-info 
+										span.review-author 
+											i.fas.fa-user-circle
+											span Александра Полева
+										span.review-calendar 
+											i.far.fa-calendar-minus
+											span 21 января
+										span.review-views
+											i.far.fa-eye
+											span 40
+
