@@ -9,11 +9,24 @@
 			line-height: 38px
 			color: #D9435D
 	&-review
+		width: 916px
 		&__title
 			font-family: Nexa Script
 			font-size: 32px
 			line-height: 38px
 			color: #D9435D
+	&-gallery 
+		padding-top: 39px
+		padding-bottom: 84px
+		background-color: rgba(46, 41, 45, 0.06)
+		background-image: url('../img/bg-gallery.jpg')
+	&-activities 
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		width: 100%
+		padding-top: 107px
+
 .news
 	width: 290px
 	border-top: 3px solid #F7D9DF
@@ -43,10 +56,19 @@
 			line-height: 24px
 			color: #494A4C
 			margin-top: 2px
+	&-all 
+		font-family: Arsenal Bold
+		font-style: normal
+		font-weight: bold
+		font-size: 20px
+		line-height: 28px
+		color: #D9435D
+		text-decoration: none
 .review
 	display: flex
-	width: 916px
+	width: 100%
 	justify-content: space-between
+	flex-wrap: wrap
 	border-top: 3px solid #F7D9DF
 	margin-top: 7px
 	padding-top: 23px
@@ -57,7 +79,13 @@
 		height: 300px
 		height: 
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))
+		margin-bottom: 15px
+		border-bottom: 3px solid #D9435D
+		transition: 0.3s ease
+		cursor: pointer
 		position: relative
+		&:hover 
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))
 		&__bone 
 			position: absolute
 			top: -5px
@@ -83,9 +111,15 @@
 			text-decoration: none
 		&__bg 
 			position: absolute
+			width: 100%
+			height: 100%
 			z-index: -1
 		&__info 
 			padding: 0 0 26px 15px
+		&__bottom 
+			width: 290px
+			height: 360px
+			margin-bottom: 0
 	&-info 
 		margin-top: 14px
 		&__text 
@@ -114,6 +148,194 @@
 	&-calendar 
 		display: inline-block
 		width: 90px
+	&-bottom 
+		display: flex
+		width: 100%
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-top: 6px
+		margin-bottom: 56px
+	&-btn 
+		width: 208px
+		height: 48px
+		margin: 0 auto 99px
+
+.block__purple 
+	align-items: center
+	flex-direction: column
+	justify-content: flex-end
+	background: #F2F2F2
+	border-bottom: 3px solid #9B51E0
+	img 
+		position: static
+		width: auto
+		height: auto
+		z-index: 0
+	.review-block__fav 
+		color: #BDBDBD
+	.review-block__info 
+		width: 96%
+		margin-top: 25px
+		.review-info__text 
+			color: #494A4C
+		span 
+			color: #494A4C
+.btn 
+	display: block
+	font-family: Arsenal Bold
+	font-style: normal
+	font-weight: bold
+	font-size: 18px
+	line-height: 25px
+	text-align: center
+	color: #FFFFFF
+	background: #D9435D
+	border-radius: 24px
+	outline: none
+	border: none
+	cursor: pointer
+.gallery-block
+	display: flex
+	justify-content: space-between
+.gallery-video
+	width: 100%
+	max-width: 914px
+	&__title 
+		display: block
+		font-family: Nexa Script
+		font-size: 32px
+		line-height: 38px
+		color: #D9435D
+		margin-bottom: 13px
+	&__block 
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		padding-top: 21px
+		border-top: 3px solid #F7D9DF
+	&__btn 
+		display: block
+		width: 208px
+		height: 48px
+		margin: 14px auto 0
+.block-video 
+	display: flex
+	align-items: flex-end
+	width: 447px
+	height: 310px
+	margin-bottom: 20px
+	cursor: pointer
+	position: relative
+	&:hover .block-video__dark 
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))
+	&__bg 
+		position: absolute
+		width: 100%
+		height: 100%
+	&__dark 
+		position: absolute
+		width: 100%
+		height: 100%
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+	&__fav
+		position: absolute
+		top: 15px
+		right: 16px
+	&__play 
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 62px
+		height: 62px
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: -31px
+		margin-left: -31px
+		background: #D9435D
+		opacity: 0.8
+		border-radius: 50%
+	&__info 
+		padding: 0 0 23px 15px
+		z-index: 1
+		span 
+			font-family: Arsenal Bold
+			font-style: normal
+			font-weight: bold
+			font-size: 24px
+			line-height: 32px
+			color: #ffffff
+.gallery-banner 
+	width: 100%
+	max-width: 295px
+	padding-top: 74px
+	&__block 
+		width: 100%
+		margin-bottom: 25px
+		cursor: pointer
+		&:last-child 
+			margin-bottom: 0
+		img 
+			width: auto
+			max-width: 100%
+.activities-subscribe
+	width: 567px
+	height: 221px
+	background-image: url('../img/bg-subscribe.png')
+	background-color: #C75768
+	background-repeat: no-repeat
+	background-position: (100%, 50%)
+	padding: 38px 0 0 43px
+	&__title 
+		font-family: Nexa Script
+		font-size: 36px
+		line-height: 43px
+		color: #FFFFFF
+	&__form
+		width: 100%
+		max-width: 361px
+		position: relative
+		margin-top: 33px
+		input 
+			width: 100%
+			height: 48px
+			background: #F6F6F6
+			border-radius: 24px
+			border: none
+			padding-left: 27px
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 20px
+			display: flex
+			align-items: center
+			color: #494A4C
+			outline: none
+.subscribe-form__btn
+	position: absolute
+	top: 50%
+	right: -20px
+	margin-top: -19px
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 60px
+	height: 38px
+	background: #D9435D
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.22)
+	border-radius: 19px
+.activities-share
+	width: 295px
+	height: 259px
+	background-image: url('../img/bg-share.jpg')
+.activities-social
+	width: 295px
+	height: 259px
+	background-image: url('../img/bg-social.jpg')
+
+
+
 			
 
 
