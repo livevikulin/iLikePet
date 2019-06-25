@@ -58,6 +58,20 @@
         text-decoration: none
         padding: 16px 30px 16px
     li 
+        position: relative
+        span
+            display: block
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 0
+            transition: 0.2s ease-in-out
+            img
+                width: 100%
+                height: 100%
+        &:hover span 
+            height: 7px
         &:last-child 
             a 
                 padding: 18px 30px 14px

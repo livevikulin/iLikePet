@@ -6,6 +6,10 @@ footer
         display: flex
         justify-content: space-between
     &-block 
+        &:nth-child(n+3)
+            a
+                &:before
+                    display: none
         &__title 
             display: block
             width: 190px
@@ -23,6 +27,7 @@ footer
         list-style: none
         a
             display: flex
+            position: relative
             align-items: center
             font-family: Arimo Regular
             font-style: normal
@@ -32,13 +37,44 @@ footer
             color: #FFFFFF
             margin-bottom: 11px
             text-decoration: none
-        i 
+            &:before 
+                position: absolute
+                content: ''
+                top: 50%
+                left: -20px
+                margin-top: -2px
+                width: 0
+                height: 4px
+                border-radius: 5px
+                background: #D9435D
+                transition: 0.2s ease-in-out
+            &:hover .fa-vk
+                color: #4C75A3
+            &:hover .fa-facebook-f
+                color: #3B5998
+            &:hover .fa-twitter
+                color: #1DA1F2
+            &:hover .fa-odnoklassniki
+                color: #ED812B
+            &:hover .fa-youtube
+                color: #FF0000
+            &:hover .fa-instagram  
+                color: #D9435D
+            &:hover .fa-map
+                color: #D9435D
+            &:hover .fa-phone 
+                color: #D9435D
+            &:hover .fa-envelope-open
+                color: #D9435D
+            &:hover:before 
+                width: 10px
+        i
             display: block
             width: 20px
             height: 20px
             text-align: center
             margin-right: 15px
-        span 
+        span
             display: block
     &-bottom 
         display: flex

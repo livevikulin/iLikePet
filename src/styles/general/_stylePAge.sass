@@ -109,6 +109,8 @@
 			right: 20px
 			color: #FFFFFF
 			text-decoration: none
+			&:hover path
+				fill: #D9435D
 		&__bg 
 			position: absolute
 			width: 100%
@@ -172,7 +174,10 @@
 		height: auto
 		z-index: 0
 	.review-block__fav 
-		color: #BDBDBD
+		path
+			fill: #BDBDBD
+		&:hover path 
+			fill: #D9435D
 	.review-block__info 
 		width: 96%
 		margin-top: 25px
@@ -226,6 +231,7 @@
 	margin-bottom: 20px
 	cursor: pointer
 	position: relative
+	text-decoration: none
 	&:hover .block-video__dark 
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))
 	&__bg 
@@ -241,6 +247,8 @@
 		position: absolute
 		top: 15px
 		right: 16px
+		&:hover path
+			fill: #D9435D
 	&__play 
 		display: flex
 		justify-content: center
@@ -255,6 +263,9 @@
 		background: #D9435D
 		opacity: 0.8
 		border-radius: 50%
+		text-decoration: none
+		&:hover 
+			opacity: 1
 	&__info 
 		padding: 0 0 23px 15px
 		z-index: 1
@@ -312,6 +323,54 @@
 			align-items: center
 			color: #494A4C
 			outline: none
+	&__consent
+		margin-top: 19px
+		input
+			display: none
+			&:checked + label i 
+				display: block
+			&:checked + label:after
+				width: 18px
+		label 
+			display: inline-block
+			position: relative
+			max-width: 347px
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 14px
+			line-height: 18px
+			color: #FFFFFF
+			padding-left: 34px
+			&:before 
+				position: absolute
+				content: ''
+				top: 0
+				left: 0
+				border-radius: 4px
+				width: 18px
+				height: 18px
+				border: 2px solid #ffffff
+			&:after 
+				display: block
+				position: absolute
+				content: ''
+				width: 0
+				height: 18px
+				top: 2px
+				left: 2px
+				border-radius: 1px
+				background: #ffffff
+				transition: 0.1s ease-in-out
+			i 
+				display: none
+				position: absolute
+				top: 3px
+				left: 4px
+				font-size: 15px
+				color: #C75768
+				transition: 0.5s
+				z-index: 5
 .subscribe-form__btn
 	position: absolute
 	top: 50%
@@ -326,13 +385,129 @@
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.22)
 	border-radius: 19px
 .activities-share
-	width: 295px
-	height: 259px
+	width: 255px
+	height: 215px
 	background-image: url('../img/bg-share.jpg')
+	padding: 22px 20px
+	&__title 
+		display: block
+		font-family: Nexa Script
+		font-size: 36px
+		line-height: 43px
+		text-align: center
+		color: #FFFFFF
+	&__block 
+		display: flex
+		justify-content: center
+		margin-top: 43px
+		a 
+			display: flex
+			justify-content: center
+			align-items: center
+			min-width: 24px
+			height: 46px
+			background: #ffffff
+			border-radius: 50%
+			text-decoration: none
+			padding: 0 11px
+			margin-right: 15px
+			&:hover i 
+				color: #D9435D
+			&:last-child 
+				margin-right: 0
+			.fa-vk
+				color: #4C75A3
+				font-size: 22px
+				transition: 0.3s ease
+			.fa-facebook-f
+				color: #3B5998
+				font-size: 22px
+				transition: 0.3s ease
+			.fa-twitter 
+				color: #1DA1F2
+				font-size: 22px
+				transition: 0.3s ease
+		&-vk 
+			display: flex !important
+			min-width: 53px !important
+			border-radius: 23px !important
+		p
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 18px
+			line-height: 33px
+			display: flex
+			align-items: center
+			text-align: right
+			color: #494A4C
+			margin-left: 15px
+		
+
 .activities-social
-	width: 295px
-	height: 259px
+	width: 255px
+	height: 215px
 	background-image: url('../img/bg-social.jpg')
+	padding: 22px 20px
+	&__title 
+		display: block
+		font-family: Nexa Script
+		font-size: 36px
+		line-height: 43px
+		text-align: center
+		color: #FFFFFF
+	&__block 
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-wrap: wrap
+		max-width: 168px
+		margin: 17px auto 0
+		a 
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 46px
+			height: 46px
+			background: #ffffff
+			border-radius: 50%
+			text-decoration: none
+			margin-right: 15px
+			margin-bottom: 11px
+			transition: 0.3s ease-in-out
+			&:hover i
+				color: #D9435D
+			&:nth-child(3n+3)
+				margin-right: 0
+			&:nth-child(n+4)
+				margin-bottom: 0
+			.fa-vk
+				color: #4C75A3
+				font-size: 22px
+				transition: 0.3s ease
+			.fa-facebook-f
+				color: #3B5998
+				font-size: 22px
+				transition: 0.3s ease
+			.fa-twitter 
+				color: #1DA1F2
+				font-size: 22px
+				transition: 0.3s ease
+			.fa-odnoklassniki
+				color: #ED812B
+				font-size: 22px
+				transition: 0.3s ease
+			.fa-youtube
+				color: #FF0000
+				font-size: 22px
+				transition: 0.3s ease
+			.fa-instagram
+				background-color: linear-gradient(222.71deg, #405DE6 11.42%, #5851DB 18.33%, #833AB4 27.84%, #C13584 37.79%, #E1306C 47.73%, #FD1D1D 57.24%, #F56040 64.83%, #F77737 72.81%, #FCAF45 81.89%, #FFDC80 89.67%)
+				-webkit-background-clip: text
+				-webkit-text-fill-color: trasparent
+				font-size: 22px
+				transition: 0.3s ease
+				
 
 
 
