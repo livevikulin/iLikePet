@@ -53,25 +53,26 @@ nav.nav
                 li 
                     a(href="#")    
                         img(src="img/sprites/intermediate-svg/glass.svg", alt="")
-            .navbar-blocks 
-                .navbar-block
-                    .navbar-block__image
-                        img(src="img/dogs.jpg", alt="")
-                    .navbar-block__text
-                        h2.navbar-block__title Добрый великан
+            if(isMain)
+                .navbar-blocks 
+                    .navbar-block
+                        .navbar-block__image
+                            img(src="img/dogs.jpg", alt="")
+                        .navbar-block__text
+                            h2.navbar-block__title Добрый великан
                         span.navbar-block__subtitle Самые крупные породы собак
-                    .navbar-block__bone
-                        img(src="img/sprites/intermediate-svg/bone-red.svg", alt="")
-                        span Статьи
-                .navbar-block
-                    .navbar-block__image
-                        img(src="img/cat.jpg", alt="")
-                    .navbar-block__text
-                        h2.navbar-block__title Полезное
-                        span.navbar-block__subtitle Подборка самых полезных статей о вашем питомце
-                    .navbar-block__bone
-                        img(src="img/sprites/intermediate-svg/bone-purple.svg", alt="")
-                        span Статьи
+                        .navbar-block__bone
+                            img(src="img/sprites/intermediate-svg/bone-red.svg", alt="")
+                            span Статьи
+                    .navbar-block
+                        .navbar-block__image
+                            img(src="img/cat.jpg", alt="")
+                        .navbar-block__text
+                            h2.navbar-block__title Полезное
+                            span.navbar-block__subtitle Подборка самых полезных статей о вашем питомце
+                        .navbar-block__bone
+                            img(src="img/sprites/intermediate-svg/bone-purple.svg", alt="")
+                            span Статьи
             
 nav.nav-fixed 
     .container 

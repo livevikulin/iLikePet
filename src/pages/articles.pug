@@ -1,0 +1,122 @@
+extends ../views/layouts/default
+block variables
+	- var title = "Статьи";
+	- var isMain = false;
+	
+block content
+	main
+		.articles
+			.container
+				.breadcrumbs
+					a(href="#").breadcrumbs-item Главная
+					a(href="#").breadcrumbs-this__page.breadcrumbs-item Статьи
+				.h2.articles-block__title.title-page Статьи о животных
+				.articles-sorting.sorting
+					span.sorting-title Сортировать
+					span.sorting-data
+						span по дате
+						i.fas.fa-arrow-down
+					span.sorting-rating.sorting-select
+						span по рейтингу
+						i.fas.fa-arrow-down
+				.articles-block
+					.articles-block__filter
+						.filter-block
+							.filter-box
+								.filter-box__item
+									i.fas.fa-angle-up
+									span Животные
+								ul.filter-box__list
+									li
+										input(type="checkbox", name="dogs" id="dogs")
+										label(for="dogs") Собаки
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="cats" id="cats")
+										label(for="cats") Кошки
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="horses" id="horses")
+										label(for="horses") Лошади
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="ferrets" id="ferrets")
+										label(for="ferrets") Хорьки
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="reptiles" id="reptiles")
+										label(for="reptiles") Рептилии
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="rodents" id="rodents")
+										label(for="rodents") Грызуны
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="amphibians" id="amphibians")
+										label(for="amphibians") Амфибии
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="birds" id="birds")
+										label(for="birds") Птицы
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="exotic" id="exotic")
+										label(for="exotic") Экзотика
+											i.fas.fa-check
+							.filter-box
+								.filter-box__item
+									i.fas.fa-angle-up
+									span Рубрики
+								ul.filter-box__list
+									li
+										input(type="checkbox", name="fСommon" id="fСommon")
+										label(for="fСommon") Общее
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="health" id="health")
+										label(for="health") Здоровье
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="security" id="security")
+										label(for="security") Защита животных
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="fBuy" id="fBuy")
+										label(for="fBuy") Покупка
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="fContent" id="fContent")
+										label(for="fContent") Содержание
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="funny" id="funny")
+										label(for="funny") Забавное
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="interestFacts" id="interestFacts")
+										label(for="interestFacts") Интересные факты
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="progeny" id="progeny")
+										label(for="progeny") Потомство
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="history" id="history")
+										label(for="history") История
+											i.fas.fa-check
+							.filter-box.filter-box__bottom
+								.filter-box__item
+									i.fas.fa-angle-up
+									span Автор
+								ul.filter-box__list
+									li
+										input(type="checkbox", name="author1" id="author1")
+										label(for="author1") Александра Полева
+											i.fas.fa-check
+									li
+										input(type="checkbox", name="author2" id="author2")
+										label(for="author2") Петя Кошкин
+											i.fas.fa-check
+							a(href="#").filter-btn__submit Применить
+							a(href="#").filter-btn__reset Сбросить
+						
