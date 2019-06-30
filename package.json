@@ -52,7 +52,10 @@
 	},
 	"dependencies": {
 		"@fancyapps/fancybox": "^3.5.7",
+		"@fortawesome/fontawesome-common-types": "^0.2.19",
+		"@fortawesome/fontawesome-free": "^5.9.0",
 		"babel": "^6.23.0",
+		"font-awesome": "^4.7.0",
 		"jquery": "^3.4.1",
 		"smart-grid": "^2.1.2",
 		"yarn": "^1.16.0",

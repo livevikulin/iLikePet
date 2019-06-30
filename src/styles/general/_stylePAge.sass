@@ -165,16 +165,16 @@
 		margin: 0 auto 99px
 
 .block__purple 
-	align-items: center
-	flex-direction: column
-	justify-content: flex-end
+	align-items: center !important
+	flex-direction: column !important
+	justify-content: flex-end !important
 	background: #F2F2F2
-	border-bottom: 3px solid #9B51E0
+	border-bottom: 3px solid #9B51E0 !important
 	img 
-		position: static
-		width: auto
-		height: auto
-		z-index: 0
+		position: static !important
+		width: auto !important
+		height: auto !important
+		z-index: 0 !important
 	.review-block__fav 
 		path
 			fill: #BDBDBD
@@ -186,7 +186,18 @@
 		.review-info__text 
 			color: #494A4C
 		span 
-			color: #494A4C
+			color: #494A4C !important
+	.articles-box__dark
+		display: none !important
+	.articles-block__info
+		span
+			color: #494A4C !important
+	.articles-info
+		&__text
+			color: #494A4C !important
+			padding-right: 15px
+		span
+			color: #494A4C !important
 .btn 
 	display: block
 	font-family: Arsenal Bold
@@ -516,7 +527,89 @@
 	background-color: rgba(46, 41, 45, 0.06)
 	background-image: url('../img/bg-gallery.jpg')
 	&-block
+		display: flex
+		justify-content: space-between
 		padding-top: 35px
+		&__info
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+			padding: 0 0 29px 15px
+	&-main
+		width: 100%
+		max-width: 924px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&-box
+		display: flex
+		justify-content: center
+		width: 295px
+		height: 354px
+		overflow: hidden
+		border-bottom: 3px solid #D9435D
+		box-sizing: border-box
+		position: relative
+		&:hover 
+			cursor: pointer
+			.articles-box__dark
+				display: none
+		img
+			position: absolute
+			width: auto
+			height: 100%
+			z-index: 0
+		&__fav
+			z-index: 999
+		&__dark
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			z-index: 1
+			background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,.4))
+		&__width--610
+			width: 610px
+			justify-content: flex-start
+			img
+				width: 100%
+			.articles-author
+				width: 174px
+				margin-bottom: 0
+	&-info
+		display: flex
+		flex-wrap: wrap
+		z-index: 1
+		&__text
+			display: block
+			font-family: Arsenal Bold
+			font-style: normal
+			font-weight: bold
+			font-size: 24px
+			line-height: 32px
+			color: #FFFFFF
+			margin: 0 0 17px 0
+			text-align: left
+			z-index: 1
+		span
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 14px
+			line-height: 16px
+			color: #FFFFFF
+		i
+			margin-right: 5px
+	&-author
+		width: 100%
+		text-align: left
+		margin-bottom: 12px
+	&-calendar
+		margin-right: 9px
+
+	
+
 .breadcrumbs
 	text-align: center
 	position: relative
@@ -652,6 +745,7 @@
 	&__list
 		list-style: none
 		padding: 5px 0 0 29px
+		text-align: left
 		li
 			margin-bottom: 20px
 			cursor: pointer
@@ -738,5 +832,166 @@
 		color: #979899
 		text-decoration: none
 		margin-top: 17px
+.filter-tags
+	width: 264px
+	margin-top: 21px
+	padding: 24px 12px 48px 16px
+	background: #ffffff
+	box-sizing: border-box
+	&__title
+		font-family: Arsenal Bold
+		font-style: normal
+		font-weight: bold
+		font-size: 24px
+		line-height: 30px
+		color: #7E2A2A
+	&__block
+		display: flex
+		flex-wrap: wrap
+		padding-top: 25px
+.filter-tag
+	font-family: Arimo Regular
+	font-style: normal
+	font-weight: normal
+	font-size: 14px
+	line-height: 16px
+	color: #D9435D;
+	text-decoration: none
+	padding: 5px 9px
+	margin: 0 6px 7px 0
+	border: 1px solid rgba(217, 67, 93, 0.3)
+	box-sizing: border-box
+	border-radius: 4px
+
+//Страница с Новостями
+.new
+	padding: 33px 0 62px
+	background-color: rgba(46, 41, 45, 0.06)
+	background-image: url('../img/bg-gallery.jpg')
+	&-main
+		&__data
+			font-family: Nexa Script
+			font-size: 26px
+			line-height: 31px
+			color: #D9435D
+	&-block
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-top: 15px
+		padding-top: 20px
+		padding-bottom: 49px
+		border-top: 3px solid #F7D9DF
+	&-box
+		display: flex
+		align-items: flex-end
+		position: relative
+		margin-bottom: 25px
+		&:hover
+			cursor: pointer
+			.new-box__dark
+				display: none				
+		&__width--608
+			max-width: 608px
+		&__width--396
+			max-width: 396px
+			height: 295px
+		&__width--290
+			max-width: 290px
+			justify-content: center
+			overflow: hidden
+		&__fav
+			z-index: 5
+		&__info
+			position: absolute
+			padding: 0 12px 29px 26px
+			z-index: 5
+		&__img--none
+			background: #ffffff
+			padding-top: 38px
+			box-sizing: border-box
+			.new-box__fav
+				path
+					fill: #000000
+			.new-box__info
+				position: static
+				padding-right: 20px
+			.articles-info__text
+				margin-bottom: 0
+				line-height: 0
+			.new-info
+				span
+					color: #979899
+	&-info
+		span
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 14px
+			line-height: 21px
+			color: #FFFFFF
+		i
+			margin-right: 10px
+	&-calendar
+		margin-right: 14px
+	&-articles
+		&__title
+			display: block
+			font-family: Arsenal Bold
+			font-style: normal
+			font-weight: bold
+			font-size: 24px
+			line-height: 32px
+			color: #D9435D
+		&__subtitle
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			color: #494A4C
+.pagination
+	padding-top: 26px
+	position: relative
+	&:before
+		position: absolute
+		display: block
+		width: 100%
+		height: 5px
+		content: ''
+		top: 0
+		left: 0
+		background: url('../img/sprites/intermediate-svg/breadcrumbs-bottom.svg')
+	&-block
+		display: flex
+		align-items: center
+		a
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 20px
+			color: #D9435D
+			text-decoration: none
+			margin-right: 12px
+		&__number
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 32px
+			height: 32px
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 20px
+			color: #D9435D
+			border-radius: 50%
+			background: #ffffff
+	&-number
+		&__this
+			background: #494A4C
+			color: #ffffff !important
+
 				
 		

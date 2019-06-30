@@ -1,6 +1,8 @@
 import "jquery";
 
 import "@fancyapps/fancybox/";
+
+import "@fortawesome/fontawesome-free";
 // require("fancybox");
 
 // var $ = require('jquery');
