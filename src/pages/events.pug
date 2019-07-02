@@ -1,0 +1,15 @@
+extends ../views/layouts/default
+block variables
+	- var title = "События";
+	- var isMain = false;
+	
+block content
+	main
+		.events
+			.container
+				.breadcrumbs
+					a(href="#").breadcrumbs-item Главная
+					a(href="#").breadcrumbs-this__page.breadcrumbs-item События
+				.h2.events-block__title.title-page События
+		.events-calendar
+			#datepicker

@@ -49,6 +49,16 @@
 }
 
 @font-face {
+	font-family: 'Merriweather Italic';
+	src: url('../fonts/Merriweather-Italic.eot');
+	src: url('../fonts/Merriweather-Italic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Merriweather-Italic.woff') format('woff'),
+	url('../fonts/Merriweather-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'Arimo Bold';
 	src: url('../fonts/Arimo-Bold.eot');
 	src: url('../fonts/Arimo-Bold.eot?#iefix') format('embedded-opentype'),

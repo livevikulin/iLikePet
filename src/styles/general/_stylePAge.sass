@@ -289,6 +289,10 @@
 			font-size: 24px
 			line-height: 32px
 			color: #ffffff
+	&__width-392
+		width: 100%
+		max-width: 392px
+		height: 274px
 .gallery-banner 
 	width: 100%
 	max-width: 295px
@@ -643,11 +647,13 @@
 			width: 0
 			height: 1px
 			bottom: 0
-			left: 0
+			right: 0
 			background: #D9435D
 			transition: 0.3s ease-in-out
 		&:hover
 			&:before
+				left: 0
+				right: auto
 				width: 100%
 		&:last-child 
 			&:after
@@ -971,6 +977,7 @@
 		align-items: flex-end
 		position: relative
 		margin-bottom: 25px
+		overflow: hidden
 		&:hover
 			cursor: pointer
 			.new-box__dark
@@ -980,6 +987,7 @@
 		&__width--396
 			max-width: 396px
 			height: 295px
+			justify-content: center
 		&__width--290
 			max-width: 290px
 			justify-content: center
@@ -1090,7 +1098,7 @@
 	display: flex
 	justify-content: space-between
 	padding-top: 21px
-	&-video__block
+	&-video__animal
 		border: none
 		padding-top: 0
 	&-video__btn
@@ -1226,5 +1234,355 @@
 		text-decoration: none
 		margin-left: 10px
 		
-				
+//Страница со статьей
+.article
+	padding: 33px 0 62px
+	background-color: rgba(46, 41, 45, 0.06)
+	background-image: url('../img/bg-gallery.jpg')
+	&-block
+		display: flex
+		justify-content: space-between
+		margin-top: 23px
+		margin-bottom: 48px
+		background: #ffffff
+		&__social
+			display: flex
+			flex-direction: column
+			margin-bottom: 56px
+	&-main
+		width: 100%
+		max-width: 926px
+		padding: 25px 50px 64px
+		box-sizing: border-box
+		border-right: 1px solid #E0E0E0
+	&-head
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 20px
+		border-bottom: 1px solid #E0E0E0
+		i 
+			margin-right: 8px
+		&__calendar
+			display: inline-block
+			width: 108px
+			margin-right: 8px
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			color: #979899
+		&__views
+			display: inline-block
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			color: #979899
+			margin-right: 20px
+		&__author
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			color: #979899
+		&__fav
+			span
+				font-family: Arimo Regular
+				font-style: normal
+				font-weight: normal
+				font-size: 16px
+				line-height: 24px
+				color: #D9435D
+				margin-left: 9px
+	&-author
+		border-bottom: 1px solid #D9435D
+	&-title
+		font-family: Arsenal Bold
+		font-style: normal
+		font-weight: bold
+		font-size: 48px
+		line-height: 60px
+		color: #494A4C
+		border-radius: 6px
+		margin: 17px 0
+	&-subtitle
+		font-family: Merriweather
+		font-style: normal
+		font-weight: normal
+		font-size: 15px
+		line-height: 28px
+		color: #494A4C
+		&__main
+			font-family: Merriweather Italic
+			font-style: italic
+			font-size: 15px
+			line-height: 25px
+			color: #7E2A2A
+			margin-top: 41px
+	&-similar
+		width: 100%
+		max-width: 317px
+	&-news
+		padding: 37px 28px
+		.news
+			border: none
+			margin: 0
+	&-video
+		width: max-content
+		height: 440px
+		position: relative
+		&:hover .block-video__dark
+			display: none
+		&__main
+			border-right: none
+		.block-video__dark
+			top: 0
+			left: 0
+	&-banner
+		padding: 65px 27px 
+		&__box
+			width: 100%
+			max-width: 262px
+			img
+				width: auto
+				max-width: 100%
+	&-instagram
+		width: max-content
+		font-family: Merriweather
+		font-style: normal
+		font-weight: normal
+		font-size: 15px
+		line-height: 28px
+		color: #494A4C
+		border-bottom: 1px solid #D9435D
+		text-decoration: none
+		box-sizing: border-box
+		margin-bottom: 20px
+		transition: 0.3s ease
+	&-facebook
+		width: max-content
+		font-family: Merriweather
+		font-style: normal
+		font-weight: normal
+		font-size: 15px
+		line-height: 28px
+		color: #494A4C
+		border-bottom: 1px solid #D9435D
+		text-decoration: none
+		box-sizing: border-box
+.repost
+	&-text
+		font-family: Merriweather Italic
+		font-style: italic
+		font-weight: normal
+		font-size: 15px
+		line-height: 25px
+		color: #7E2A2A
+	&-block
+		display: flex
+		margin-top: 11px
+		a
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 60px
+			height: 50px
+			border: 1px solid #E0E0E0
+			box-sizing: border-box
+			transition: 0.3s
+			&:nth-child(1n+2)
+				border-left: none
+	&-fb
+		path
+			fill: #3B5998
+			transition: 0.5s
+		&:hover
+			background: #3B5998
+			path
+				fill: #ffffff
+	&-vk
+		path
+			fill: #4C75A3
+			transition: 0.5s
+		&:hover
+			background: #4C75A3
+			path
+				fill: #ffffff
+	&-google
+		path
+			fill: #DB4437
+			transition: 0.5s
+		&:hover
+			background: #DB4437
+			path
+				fill: #ffffff
+	&-twitter
+		path
+			fill: #00ACED
+			transition: 0.5s
+		&:hover
+			background: #00ACED
+			path
+				fill: #ffffff
+	&-ok
+		path
+			fill: #ED812B
+			transition: 0.5s
+		&:hover
+			background: #ED812B
+			path
+				fill: #ffffff
+.comments
+	padding-top: 30px
+	margin-top: 38px
+	border-top: 1px solid #E0E0E0
+	&-add
+		&__btn
+			font-family: Arsenal Bold
+			font-style: normal
+			font-weight: bold
+			font-size: 18px
+			line-height: 23px
+			color: #D9435D
+			text-decoration: none
+			position: relative
+			&:before
+				position: absolute
+				content: ''
+				bottom: -5px
+				right: 0
+				width: 0
+				height: 1px
+				background: #D9435D
+				transition: 0.3s ease
+			&:hover
+				&:before
+					left: 0
+					right: auto
+					width: 100%
+					
+	&-block
+		margin-top: 34px
+		border-top: 1px solid #E0E0E0
+.comment
+	&-box
+		padding: 21px 0
+		border-bottom: 1px solid #E0E0E0
+		&:last-child
+			border: none
+	&-person
+		display: flex
+		align-items: center
+		&__photo
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 48px
+			height: 48px
+			border-radius: 50%
+			overflow: hidden
+			margin-right: 13px
+			img
+				width: auto
+				max-width: 100%
+		&__name
+			display: block
+			font-family: Arsenal Bold
+			font-style: normal
+			font-weight: bold
+			font-size: 16px
+			line-height: 20px
+			color: #494A4C
+		&__time
+			display: block
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 14px
+			line-height: 16px
+			color: #979899
+			margin-top: 3px
+	&-text
+		display: block
+		font-family: Arimo Regular
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 21px
+		color: #494A4C
+		margin-top: 20px
 		
+//Страница с Событиями
+.events
+	padding: 33px 0 62px
+	background-color: rgba(46, 41, 45, 0.06)
+	background-image: url('../img/bg-gallery.jpg')
+	&-calendar
+		display: flex
+		justify-content: center
+		background: #ffffff
+		position: relative
+		padding: 50px 0 65px
+//Стили для календаря
+.ui-datepicker-next
+	position: absolute
+	content: url('../img/sprites/intermediate-svg/right-arrow.svg')
+	top: 50%
+	right: 50px
+	margin-top: -26px
+.ui-datepicker-prev
+	position: absolute
+	content: url('../img/sprites/intermediate-svg/left-arrow.svg')
+	top: 50%
+	left: 50px
+	margin-top: -26px
+.ui-datepicker-title
+	text-align: center
+	span
+		font-family: Arsenal Regular
+		font-style: normal
+		font-weight: normal
+		font-size: 24px
+		line-height: 30px
+		color: #000000
+.ui-datepicker-calendar
+	thead
+		tr
+			th
+				span
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 52px
+					height: 52px
+					font-family: Arimo Regular
+					font-style: normal
+					font-weight: normal
+					font-size: 17px
+					line-height: 20px
+					color: #979899
+	tbody
+		tr
+			td
+				a
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 52px
+					height: 52px
+					font-family: Arimo Regular
+					font-style: normal
+					font-weight: normal
+					font-size: 17px
+					line-height: 20px
+					color: #494A4C
+					text-decoration: none
+.ui-datepicker-today
+	background: #D9435D
+	a
+		color: #ffffff !important
+	

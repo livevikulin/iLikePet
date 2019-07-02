@@ -22,7 +22,7 @@ $(document).ready(function() {
         },
 	});
 	
-	//Инициализация jquery ui
+	//Инициализация jquery ui + ползунок в фильтре
 	$("#slider-range").slider({
         range: true,
         min: 0,
@@ -59,6 +59,13 @@ $(document).ready(function() {
         $('#slider-range').slider('values', 1, value2);
     })
 	
+	//Календарь на странице с событиями
+	$('#datepicker').datepicker({
+	
+		firstDay: 1,
+	
+	});
+		
 	//Фильтр
 	$('.filter-box__item').click(function() {
 	
