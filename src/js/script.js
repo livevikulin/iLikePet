@@ -1,6 +1,7 @@
 import "jquery";
 import "@fancyapps/fancybox/";
 import "jquery-ui-bundle";
+import "slick-slider";
 
 
 
@@ -61,29 +62,40 @@ $(document).ready(function() {
 	
 	//Календарь на странице с событиями
 	$('#datepicker').datepicker({
-	
 		firstDay: 1,
-	
+		numberOfMonths: 2,
+	});
+	$('.events-week__this').click(function(e) {
+		e.preventDefault();
+		$(this).addClass('events-pick__week');
+		$('.events-week__other').removeClass('events-pick__week');
+		$('.events-calendar').slideUp();
+	});
+	$('.events-week__other').click(function(e) {
+		e.preventDefault();
+		$(this).addClass('events-pick__week');
+		$('.events-week__this').removeClass('events-pick__week');
+		$('.events-calendar').slideDown();
 	});
 		
 	//Фильтр
 	$('.filter-box__item').click(function() {
-	
 		$(this).next().slideToggle();
 		$(this).children('.fas').toggleClass('rotate180');
-	
-	
 	});
 	
-	//Сортировка по дате и рейтингу
-	// $('.sorting-data').click(function() {
-	// 	if ($(this).click()) {
-	// 		$(this).addClass('sorting-select');
-	// 		$('.sorting-rating').removeClass('sorting-select');
-	// 	} else if ($('.sorting-rating').click()) {
-	// 		$('.sorting-data').removeClass('sorting-select');
-	// 		$(this).addClass('sorting-select');
-	// 	}
-	// })
+	//Инициализация slick-slider
+	$('.dog-page-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		fade: true,
+		asNavFor: '.dog-page-slider__nav'
+	});
+	$('.dog-page-slider__nav').slick({
+		slidesToShow: 6,
+		asNavFor: '.dog-page-slider',
+		focusOnSelect: true
+	});
 
 });
