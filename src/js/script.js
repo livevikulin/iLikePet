@@ -97,5 +97,8 @@ $(document).ready(function() {
 		asNavFor: '.dog-page-slider',
 		focusOnSelect: true
 	});
-
+	
+	//Инициализация табов на странице dog-page
+	$('#tabs').tabs();
+	
 });
