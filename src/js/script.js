@@ -65,6 +65,8 @@ $(document).ready(function() {
 		firstDay: 1,
 		numberOfMonths: 2,
 	});
+	
+	//Выбор События эта неделя или выбрать дату
 	$('.events-week__this').click(function(e) {
 		e.preventDefault();
 		$(this).addClass('events-pick__week');
@@ -101,4 +103,20 @@ $(document).ready(function() {
 	//Инициализация табов на странице dog-page
 	$('#tabs').tabs();
 	
+	//Скрытие лэйблов при заполнении инпута
+	$('#inputName, #inputSurname, #inputSex, #inputBorn').on('change', function() {
+		if ($(this).val() == '') {
+			$(this).next('#label').removeClass('label-none')
+		} else {
+			$(this).next('#label').addClass('label-none')
+		}
+	});
+	
+	//Инициализация календаря в Личном кабинете
+	$('.input-born').datepicker();
+	$('.input-born').click(function() {
+	
+		$('.ui-datepicker').fadeToggle();
+	
+	})
 });

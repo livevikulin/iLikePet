@@ -1585,6 +1585,80 @@
 			&:hover
 				background: #D9435D
 				color: #ffffff
+		//Стили для календаря
+		#datepicker
+			width: 100%
+			max-width: 1244px
+			margin: auto
+		.ui-datepicker-inline
+			width: 100% !important
+			display: flex !important
+			justify-content: center
+		.ui-datepicker-next
+			position: absolute
+			content: url('../img/sprites/intermediate-svg/right-arrow.svg')
+			top: 50%
+			right: 50px
+			margin-top: -26px
+			cursor: pointer
+		.ui-datepicker-prev
+			position: absolute
+			content: url('../img/sprites/intermediate-svg/left-arrow.svg')
+			top: 50%
+			left: 50px
+			margin-top: -26px
+			cursor: pointer
+		.ui-datepicker-title
+			text-align: center
+			span
+				font-family: Arsenal Regular
+				font-style: normal
+				font-weight: normal
+				font-size: 24px
+				line-height: 30px
+				color: #000000
+		.ui-datepicker-calendar
+			thead
+				tr
+					th
+						span
+							display: flex
+							justify-content: center
+							align-items: center
+							width: 52px
+							height: 52px
+							font-family: Arimo Regular
+							font-style: normal
+							font-weight: normal
+							font-size: 17px
+							line-height: 20px
+							color: #979899
+			tbody
+				tr
+					td
+						a
+							display: flex
+							justify-content: center
+							align-items: center
+							width: 52px
+							height: 52px
+							font-family: Arimo Regular
+							font-style: normal
+							font-weight: normal
+							font-size: 17px
+							line-height: 20px
+							color: #494A4C
+							text-decoration: none
+		.ui-datepicker-today
+			background: #D9435D
+			a
+				color: #ffffff !important
+		.ui-datepicker-current-day
+			background: #D9435D
+			a
+				color: #ffffff !important
+		.ui-datepicker-group-first
+			margin-right: 59px
 	&-boxes
 		display: flex
 		justify-content: space-between
@@ -1629,80 +1703,80 @@
 			color: #494A4C
 			margin-top: 7px
 	
-//Стили для календаря
-#datepicker
-	width: 100%
-	max-width: 1244px
-	margin: auto
-.ui-datepicker-inline
-	width: 100% !important
-	display: flex !important
-	justify-content: center
-.ui-datepicker-next
-	position: absolute
-	content: url('../img/sprites/intermediate-svg/right-arrow.svg')
-	top: 50%
-	right: 50px
-	margin-top: -26px
-	cursor: pointer
-.ui-datepicker-prev
-	position: absolute
-	content: url('../img/sprites/intermediate-svg/left-arrow.svg')
-	top: 50%
-	left: 50px
-	margin-top: -26px
-	cursor: pointer
-.ui-datepicker-title
-	text-align: center
-	span
-		font-family: Arsenal Regular
-		font-style: normal
-		font-weight: normal
-		font-size: 24px
-		line-height: 30px
-		color: #000000
-.ui-datepicker-calendar
-	thead
-		tr
-			th
-				span
-					display: flex
-					justify-content: center
-					align-items: center
-					width: 52px
-					height: 52px
-					font-family: Arimo Regular
-					font-style: normal
-					font-weight: normal
-					font-size: 17px
-					line-height: 20px
-					color: #979899
-	tbody
-		tr
-			td
-				a
-					display: flex
-					justify-content: center
-					align-items: center
-					width: 52px
-					height: 52px
-					font-family: Arimo Regular
-					font-style: normal
-					font-weight: normal
-					font-size: 17px
-					line-height: 20px
-					color: #494A4C
-					text-decoration: none
-.ui-datepicker-today
-	background: #D9435D
-	a
-		color: #ffffff !important
-.ui-datepicker-current-day
-	background: #D9435D
-	a
-		color: #ffffff !important
-.ui-datepicker-group-first
-	margin-right: 59px
+// //Стили для календаря
+// #datepicker
+// 	width: 100%
+// 	max-width: 1244px
+// 	margin: auto
+// .ui-datepicker-inline
+// 	width: 100% !important
+// 	display: flex !important
+// 	justify-content: center
+// .ui-datepicker-next
+// 	position: absolute
+// 	content: url('../img/sprites/intermediate-svg/right-arrow.svg')
+// 	top: 50%
+// 	right: 50px
+// 	margin-top: -26px
+// 	cursor: pointer
+// .ui-datepicker-prev
+// 	position: absolute
+// 	content: url('../img/sprites/intermediate-svg/left-arrow.svg')
+// 	top: 50%
+// 	left: 50px
+// 	margin-top: -26px
+// 	cursor: pointer
+// .ui-datepicker-title
+// 	text-align: center
+// 	span
+// 		font-family: Arsenal Regular
+// 		font-style: normal
+// 		font-weight: normal
+// 		font-size: 24px
+// 		line-height: 30px
+// 		color: #000000
+// .ui-datepicker-calendar
+// 	thead
+// 		tr
+// 			th
+// 				span
+// 					display: flex
+// 					justify-content: center
+// 					align-items: center
+// 					width: 52px
+// 					height: 52px
+// 					font-family: Arimo Regular
+// 					font-style: normal
+// 					font-weight: normal
+// 					font-size: 17px
+// 					line-height: 20px
+// 					color: #979899
+// 	tbody
+// 		tr
+// 			td
+// 				a
+// 					display: flex
+// 					justify-content: center
+// 					align-items: center
+// 					width: 52px
+// 					height: 52px
+// 					font-family: Arimo Regular
+// 					font-style: normal
+// 					font-weight: normal
+// 					font-size: 17px
+// 					line-height: 20px
+// 					color: #494A4C
+// 					text-decoration: none
+// .ui-datepicker-today
+// 	background: #D9435D
+// 	a
+// 		color: #ffffff !important
+// .ui-datepicker-current-day
+// 	background: #D9435D
+// 	a
+// 		color: #ffffff !important
+// .ui-datepicker-group-first
+// 	margin-right: 59px
 
 //Страница с событием
 .event
@@ -1935,6 +2009,10 @@
 						text-decoration: none
 						padding-bottom: 14px
 						outline: none
+				.ui-tabs-active
+					a
+						color: #000000 !important
+						border-bottom: 3px solid #D9435D
 		&__box
 			width: 100%
 			max-width: 826px
@@ -1969,10 +2047,10 @@
 				top: 0
 				left: 0
 //Стили для табов
-.ui-tabs-active
-	a
-		color: #000000 !important
-		border-bottom: 3px solid #D9435D
+// .ui-tabs-active
+// 	a
+// 		color: #000000 !important
+// 		border-bottom: 3px solid #D9435D
 
 //Стили для страницы с Избранным
 .favorites
@@ -1999,6 +2077,10 @@
 					text-decoration: none
 					padding-bottom: 14px
 					outline: none
+			.ui-tabs-active
+					a
+						color: #000000 !important
+						border-bottom: 3px solid #D9435D
 		&__box
 			.new-block
 				border: none
@@ -2041,4 +2123,147 @@
 			color: #494A4C
 			text-align: center
 			padding: 8px 0 1px
-	
+			
+//Стили для Личного кабинета
+.personal
+	padding: 33px 0 62px
+	background-color: rgba(46, 41, 45, 0.06)
+	background-image: url('../img/bg-gallery.jpg')
+	&-tabs
+		display: flex
+		background: #ffffff
+		ul
+			display: block
+			width: 289px
+			padding: 0
+			margin: 0
+			list-style: none
+			border-right: 1px solid #E0E0E0
+			padding-top: 61px
+			li
+				a
+					display: block
+					width: 289px
+					height: 40px
+					font-family: Arsenal Bold
+					font-style: normal
+					font-weight: bold
+					font-size: 18px
+					line-height: 41px
+					color: #979899
+					text-decoration: none
+					padding-left: 51px
+					outline: none
+					box-sizing: border-box
+			.ui-tabs-active
+				background: #D9435D
+				a
+					color: #ffffff !important
+		&__boxes
+			padding: 61px 0 103px 29px
+	&-box
+		&__title
+			display: block
+			font-family: Arsenal Bold
+			font-style: normal
+			font-weight: bold
+			font-size: 32px
+			line-height: 40px
+			color: #494A4C
+		&__data
+			display: flex
+			margin-top: 27px
+	&-data
+		&__photo
+			width: 154px
+			height: 154px
+			border-radius: 6px
+			background: url('../img/photo-camera.png') #F2F2F2 no-repeat 50% 20%
+			margin-right: 58px
+			position: relative
+			input
+				width: 100%
+				height: 100%
+				opacity: 0
+				cursor: pointer
+			span
+				display: block
+				position: absolute
+				bottom: 23px
+				left: 28px
+				font-family: Arimo Regular
+				font-style: normal
+				font-weight: normal
+				font-size: 14px
+				line-height: 20px
+				color: #979899
+		&__btn
+			width: 100%
+			height: 48px
+			margin-top: 4px
+	&-info
+		&__block
+			margin-bottom: 27px
+		&__title
+			display: block
+			font-family: Arsenal Bold
+			font-style: normal
+			font-weight: bold
+			font-size: 18px
+			line-height: 23px
+			color: #494A4C
+			margin-bottom: 14px
+		&__input
+			width: 320px
+			margin-bottom: 12px
+			&:last-child
+				margin-bottom: 0
+
+//Стиль для инпута
+.input
+	position: relative
+	&-born
+		input
+			background: url('../img/input-born.png') #F5F9FA no-repeat 95% 50% !important
+		.ui-datepicker
+			display: none
+	input
+		width: 100%
+		height: 42px
+		font-family: Arimo Regular
+		font-style: normal
+		font-weight: normal
+		font-size: 15px
+		line-height: 20px
+		color: #979899
+		background: #F5F9FA
+		border: 1px solid #E0E0E0
+		box-sizing: border-box
+		border-radius: 6px
+		padding-left: 11px
+		outline: none
+		&:focus + label
+			font-size: 12px
+			top: -2px
+	label
+		position: absolute
+		top: 11px
+		left: 11px
+		font-family: Arimo Regular
+		font-style: normal
+		font-weight: normal
+		font-size: 15px
+		line-height: 20px
+		color: #979899
+		z-index: 1
+		transition: 0.3s 
+		i
+			width: 20px
+			height: 20px
+			text-align: center
+			margin-right: 10px
+.ui-datepicker
+	display: none
+.label-none
+	display: none
+				

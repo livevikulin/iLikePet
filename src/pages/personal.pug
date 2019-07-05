@@ -1,0 +1,122 @@
+extends ../views/layouts/default
+block variables
+	- var title = "Личный кабинет";
+	- var isMain = false;
+	
+block content
+	main
+		.personal
+			.container
+				.breadcrumbs
+					a(href="#").breadcrumbs-item Главная
+					a(href="#").breadcrumbs-this__page.breadcrumbs-item Личный кабинет
+				h2.personal-block__title.title-page Личный кабинет
+				.personal-tabs#tabs
+					ul
+						li
+							a(href="#tabs-main") Основное
+						li
+							a(href="#tabs-pets") Питомцы
+						li
+							a(href="#tabs-interests") Интересы
+						li
+							a(href="#tabs-photo") Фото
+						li
+							a(href="#tabs-publications") Публикации
+						li
+							a(href="#tabs-advert") Объявления
+						li
+							a(href="#tabs-video") Видео
+						li
+							a(href="#tabs-sub") Подписки
+					
+					.personal-tabs__boxes
+						.personal-tabs__box#tabs-main
+							span.personal-box__title Алексей Петров
+							form(action="#").personal-box__data
+								.personal-data__photo
+									input(type="file", name="#")
+									span Добавить фото
+								.personal-data__info
+									.personal-info__block
+										span.personal-info__title Личные данные
+										.personal-info__input.input
+											input(type="text" id="inputName")
+											label(for="inputName" id="label") Имя
+										.personal-info__input.input
+											input(type="text" id="inputSurname")
+											label(for="inputSurname" id="label") Фамилия
+										.personal-info__input.input
+											input(type="text" id="inputSex")
+											label(for="inputSex" id="label") Пол
+										.personal-info__input.input.input-born
+											input(type="text" id="inputBorn")
+											label(for="inputBorn" id="label") Дата рождения
+									.personal-info__block
+										span.personal-info__title Адрес
+										.personal-info__input.input
+											input(type="text" id="inputCountry")
+											label(for="inputCountry" id="label") Страна
+										.personal-info__input.input
+											input(type="text" id="inputCity")
+											label(for="inputCity" id="label") Город
+										.personal-info__input.input
+											input(type="text" id="inputStreet")
+											label(for="inputStreet" id="label") Улица
+										.personal-info__input.input
+											input(type="text" id="inputHouse")
+											label(for="inputHouse" id="label") Дом
+									.personal-info__block
+										span.personal-info__title Контакты
+										.personal-info__input.input
+											input(type="text" id="inputPhone")
+											label(for="inputPhone" id="label") Мобильный телефон
+										.personal-info__input.input
+											input(type="text" id="inputPhone2")
+											label(for="inputPhone2" id="label") Доп. телефон
+										.personal-info__input.input
+											input(type="text" id="inputEmail")
+											label(for="inputEmail" id="label") Электронная почта
+										.personal-info__input.input
+											input(type="text" id="inputSkype")
+											label(for="inputSkype" id="label") Skype
+									.personal-info__block
+										span.personal-info__title Социальные сети
+										.personal-info__input.input
+											input(type="text" id="inputPhone")
+											label(for="inputPhone" id="label") 
+												i.fab.fa-vk
+												span ВКонтакте
+										.personal-info__input.input
+											input(type="text" id="inputPhone2")
+											label(for="inputPhone2" id="label") 
+												i.fab.fa-facebook-f
+												span Facebook
+										.personal-info__input.input
+											input(type="text" id="inputEmail")
+											label(for="inputEmail" id="label") 
+												i.fab.fa-twitter
+												span Twitter
+										.personal-info__input.input
+											input(type="text" id="inputSkype")
+											label(for="inputSkype" id="label") 
+												i.fab.fa-instagram
+												span Instagram
+									button(type="submit").personal-data__btn.btn Сохранить
+									
+								
+						.personal-tabs__box#tabs-pets
+							
+						.personal-tabs__box#tabs-interests
+							
+						.personal-tabs__box#tabs-photo
+							
+						.personal-tabs__box#tabs-publications
+							
+						.personal-tabs__box#tabs-advert
+							
+						.personal-tabs__box#tabs-video
+							
+						.personal-tabs__box#tabs-sub
+						
+					
