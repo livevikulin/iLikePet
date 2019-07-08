@@ -103,20 +103,160 @@ block content
 												i.fab.fa-instagram
 												span Instagram
 									button(type="submit").personal-data__btn.btn Сохранить
-									
-								
 						.personal-tabs__box#tabs-pets
-							
+							.page-data__pets
+								span.personal-box__title Добавить питомца
+								.data-pets
+									.pets-photo
+										.personal-photo
+											.personal-photo__image
+												img(src="img/review-img4.jpg", alt="")
+											a(href="#").personal-photo__remove Удалить
+										.personal-data__photo
+											input(type="file", name="#")
+											span Добавить фото
+									.pets-info
+										form(action="#")
+							span.personal-box__title Питомцы
+							a(href="#").personal-box__add.add-pets
+								i.fas.fa-plus 
+								span Добавить питомца
+							.personal-box__pets
+								.personal-pet
+									span.personal-pet__name Кузьма
+									a(href="#").personal-pet__remove
+										i.far.fa-trash-alt
+										span Удалить
+								.personal-pet
+									span.personal-pet__name Барон Освальд фон Доннерсмарк
+									a(href="#").personal-pet__remove
+										i.far.fa-trash-alt
+										span Удалить
+								.personal-pet
+									span.personal-pet__name Леопольд
+									a(href="#").personal-pet__remove
+										i.far.fa-trash-alt
+										span Удалить
 						.personal-tabs__box#tabs-interests
-							
+							span.personal-box__title Мои увлечения
+							a(href="#").personal-box__add 
+								i.fas.fa-plus 
+								span Добавить
+							.personal-box__hobbies
+								.personal-hobbie
+									span.personal-hobbie__name Фигурное катание
+									a(href="#").personal-hobbie__remove
+										i.far.fa-trash-alt
+										span Удалить
+								.personal-hobbie
+									span.personal-hobbie__name Музыка
+									a(href="#").personal-hobbie__remove
+										i.far.fa-trash-alt
+										span Удалить
+								.personal-hobbie
+									span.personal-hobbie__name Скрапбукинг
+									a(href="#").personal-hobbie__remove
+										i.far.fa-trash-alt
+										span Удалить
+							a(href="#").personal-hobbie__btn.btn Сохранить
 						.personal-tabs__box#tabs-photo
-							
+							span.personal-box__title Мои фото
+							a(href="#").personal-box__add 
+								i.fas.fa-plus 
+								span Добавить фото
+							.personal-box__photos
+								.personal-photo
+									.personal-photo__image
+										img(src="img/review-img4.jpg", alt="")
+									a(href="#").personal-photo__remove Удалить
+								.personal-photo
+									.personal-photo__image
+										img(src="img/review-img4.jpg", alt="")
+									a(href="#").personal-photo__remove Удалить
+								.personal-photo
+									.personal-photo__image
+										img(src="img/review-img4.jpg", alt="")
+									a(href="#").personal-photo__remove Удалить
+								.personal-photo
+									.personal-photo__image
+										img(src="img/review-img4.jpg", alt="")
+									a(href="#").personal-photo__remove Удалить
+								.personal-photo
+									.personal-photo__image
+										img(src="img/review-img4.jpg", alt="")
+									a(href="#").personal-photo__remove Удалить
+								.personal-photo
+									.personal-photo__image
+										img(src="img/review-img4.jpg", alt="")
+									a(href="#").personal-photo__remove Удалить
 						.personal-tabs__box#tabs-publications
-							
+							span.personal-box__title Мои публикации
+							a(href="#").personal-box__add 
+								i.fas.fa-plus 
+								span Добавить публикацию
+							form(action="#").personal-form__publications
+								.personal-box__publications
+									select(name="activity" id="activity" class="select-activity")
+										option(value="1") Активность публикации
+										option(value="2") Активность публикации
+										option(value="3") Активность публикации
+										option(value="4") Активность публикации
+										option(value="5") Активность публикации
+									input(type="text" class="publications-input__title" placeholder="Заголовок")
+								.personal-box__publications
+									.personal-publications__select
+										span.personal-select__title Животные, связанные со статьей
+										ul
+											li.publications-select__item.item-select
+												span Черновик
+											li.publications-select__item
+												span Амфибии
+											li.publications-select__item
+												span Беспозвоночные
+											li.publications-select__item
+												span Грызуны
+											li.publications-select__item
+												span Кошки
+											li.publications-select__item
+												span Лошади
+										span.personal-select__help Выберите несколько, нажав CTRL
+									.personal-publications__select
+										span.personal-select__title Рубрики
+										ul
+											li.publications-select__item.item-select
+												span Забавное
+											li.publications-select__item
+												span Защита животных
+											li.publications-select__item
+												span Здоровье
+											li.publications-select__item
+												span Интересные факты
+											li.publications-select__item
+												span История
+											li.publications-select__item
+												span Общее
+										span.personal-select__help Выберите несколько, нажав CTRL
+								textarea(type="text" class="publications-input__announcement" placeholder="Анонс")
+								textarea(type="text" class="publications-input__preview" placeholder="Текст статьи")
+								span.personal-text__photo Фото статьи
+								span.personal-text__subtitle Выберите новое фото. Минимальное разрешение 960x640 px. Фото загрузится после нажатия на кнопку «Сохранить».
+								a(href="#").personal-box__add 
+									i.fas.fa-plus 
+									span Добавить фото
+								input(type="text" class="personal-tags" placeholder="Введите теги через запятую")
+								a(href="#").personal-publications__btn.btn Сохранить
 						.personal-tabs__box#tabs-advert
 							
 						.personal-tabs__box#tabs-video
 							
 						.personal-tabs__box#tabs-sub
+							span.personal-box__title Подписаться на рассылку
+							.personal-sub
+								input(type="checkbox", name="sub", id="subscribe")
+								label(for="subscribe") 
+									span Новые статьи
+									span Анонсы полезных материалов каждую неделю
+									i.fas.fa-check
+							a(href="#").personal-sub__btn.btn Подписаться
 						
 					

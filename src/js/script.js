@@ -1,6 +1,7 @@
 import "jquery";
 import "@fancyapps/fancybox/";
 import "jquery-ui-bundle";
+import "jquery-ui";
 import "slick-slider";
 
 
@@ -113,10 +114,30 @@ $(document).ready(function() {
 	});
 	
 	//Инициализация календаря в Личном кабинете
-	$('.input-born').datepicker();
-	$('.input-born').click(function() {
+	$('#inputBorn').datepicker();
+	$('#inputBorn').click(function() {
 	
-		$('.ui-datepicker').fadeToggle();
+		$('.ui-datepicker').addClass('ui-datepicker-personal');
 	
+	});
+	
+	//Инициализация селект меню
+	$('.select-activity').selectmenu();
+	$('.ui-selectmenu-button').click(function() {
+		$('.ui-selectmenu-icon').toggleClass('icon-rotate');
+	});
+	$('.ui-selectmenu-menu').click(function() {
+		$('.ui-selectmenu-icon').removeClass('icon-rotate');
+	});
+	
+	
+	$('.publications-select__item').click(function() {
+		$(this).toggleClass('item-select');
 	})
+	
+	
+	$('.add-pets').click(function(e) {
+		e.preventDefault();
+		$('.page-data__pets').fadeToggle();
+	});
 });
