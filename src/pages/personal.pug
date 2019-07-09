@@ -117,6 +117,44 @@ block content
 											span Добавить фото
 									.pets-info
 										form(action="#")
+											span.personal-info__title Личные данные
+											.personal-info__input.input
+												input(type="text" id="inputPetName")
+												label(for="inputPetName" id="label") Имя
+											.personal-info__select
+												select(name="activity" class="select-activity")
+													option(value="1") Категория питомца
+													option(value="2") Категория питомца
+													option(value="3") Категория питомца
+													option(value="4") Категория питомца
+													option(value="5") Категория питомца
+											.personal-info__select
+												select(name="activity" class="select-activity")
+													option(value="1") Окрас
+													option(value="2") Окрас
+													option(value="3") Окрас
+													option(value="4") Окрас
+													option(value="5") Окрас
+											.personal-info__input.input.input-born
+												input(type="text" id="inputPetBorn")
+												label(for="inputPetBorn" id="label") Дата рождения
+											.personal-info__select
+												select(name="activity" class="select-activity")
+													option(value="1") Порода
+													option(value="2") Порода
+													option(value="3") Порода
+													option(value="4") Порода
+													option(value="5") Порода
+											.personal-info__select
+												select(name="activity" class="select-activity")
+													option(value="1") Характер
+													option(value="2") Характер
+													option(value="3") Характер
+													option(value="4") Характер
+													option(value="5") Характер
+											.personal-info__textarea
+												textarea(type="text" class="pets-info__subtitle" placeholder="Описание")
+											a(href="#").pets-info__btn.btn Сохранить
 							span.personal-box__title Питомцы
 							a(href="#").personal-box__add.add-pets
 								i.fas.fa-plus 
@@ -246,9 +284,17 @@ block content
 								input(type="text" class="personal-tags" placeholder="Введите теги через запятую")
 								a(href="#").personal-publications__btn.btn Сохранить
 						.personal-tabs__box#tabs-advert
-							
+							span.personal-box__title Мои объявления
+							span.personal-box__none У вас пока нет объявлений
+							a(href="#").personal-box__add 
+								i.fas.fa-plus 
+								span Добавить объявление
 						.personal-tabs__box#tabs-video
-							
+							span.personal-box__title Мои видео
+							span.personal-box__none У вас пока нет видео
+							a(href="#").personal-box__add 
+								i.fas.fa-plus 
+								span Добавить видео
 						.personal-tabs__box#tabs-sub
 							span.personal-box__title Подписаться на рассылку
 							.personal-sub

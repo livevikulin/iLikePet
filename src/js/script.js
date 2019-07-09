@@ -17,6 +17,18 @@ import "slick-slider";
 
 $(document).ready(function() {
 	
+	//Строка поиска
+	$('.navbar-item__search').click(function() {
+		$('.navbar-search').addClass('search-open');
+		$('.navbar-item__op').addClass('navbar-button');
+		$('.navbar-search__close').show(850);
+	});
+	$('.navbar-search__close').click(function() {
+		$(this).hide();
+		$('.navbar-search').removeClass('search-open');
+		$('.navbar-item__op').removeClass('navbar-button');
+	});
+	
 	//Инициализация fancybox
 	$('[data-fancybox]').fancybox({
 		helpers : {
@@ -105,7 +117,7 @@ $(document).ready(function() {
 	$('#tabs').tabs();
 	
 	//Скрытие лэйблов при заполнении инпута
-	$('#inputName, #inputSurname, #inputSex, #inputBorn').on('change', function() {
+	$('#inputName, #inputSurname, #inputSex, #inputBorn, #inputPetName, #inputPetBorn').on('change', function() {
 		if ($(this).val() == '') {
 			$(this).next('#label').removeClass('label-none')
 		} else {
@@ -114,17 +126,18 @@ $(document).ready(function() {
 	});
 	
 	//Инициализация календаря в Личном кабинете
-	$('#inputBorn').datepicker();
+	$('#inputBorn, #inputPetBorn').datepicker();
 	$('#inputBorn').click(function() {
-	
 		$('.ui-datepicker').addClass('ui-datepicker-personal');
-	
+	});
+	$('#inputPetBorn').click(function() {
+		$('.ui-datepicker').addClass('ui-datepicker-pets');
 	});
 	
 	//Инициализация селект меню
 	$('.select-activity').selectmenu();
 	$('.ui-selectmenu-button').click(function() {
-		$('.ui-selectmenu-icon').toggleClass('icon-rotate');
+		$(this).children('.ui-selectmenu-icon').toggleClass('icon-rotate');
 	});
 	$('.ui-selectmenu-menu').click(function() {
 		$('.ui-selectmenu-icon').removeClass('icon-rotate');
@@ -138,6 +151,10 @@ $(document).ready(function() {
 	
 	$('.add-pets').click(function(e) {
 		e.preventDefault();
-		$('.page-data__pets').fadeToggle();
+		$('.page-data__pets').fadeIn();
 	});
+	$('.pets-info__btn').click(function(e) {
+		e.preventDefault();
+		$('.page-data__pets').fadeOut();
+	})
 });
