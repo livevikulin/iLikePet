@@ -1,0 +1,22 @@
+.modals-registration#registration
+	.registration-choice
+		a(href="#").login.choice-active Войти
+		a(href="#").signin Зарегистрироваться
+	form(action="#")
+		.registration-form 
+			.registration-name
+				input(type="text" id="loginName")
+				label(for="loginName") Введите ваш e-mail
+			.registration-pass
+				input(type="text" id="loginPassword")
+				label(for="loginPassword") Введите ваш пароль
+			.registration-btns
+				a(href="#").registration-login__btn.btn Войти
+				a(href="#").registration-pass__btn Забыли пароль?
+	.registration-social
+		span Авторизуйтесь через социальную сеть
+		.registration-social__block
+			a(href="#").registration-social__vk
+				i.fab.fa-vk
+			a(href="#").registration-social__fb
+				i.fab.fa-facebook-f

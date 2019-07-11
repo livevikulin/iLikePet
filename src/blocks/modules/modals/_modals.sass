@@ -1,0 +1,130 @@
+.modals-registration
+	display: none
+	width: 504px
+	height: 495px
+	padding: 31px 42px 66px
+	margin: auto
+	box-sizing: border-box
+	background: #ffffff
+.registration
+	&-choice
+		display: block
+		margin-bottom: 34px
+		a
+			font-family: Arsenal Bold
+			font-style: normal
+			font-weight: bold
+			font-size: 24px
+			line-height: 30px
+			color: #494A4C
+			text-decoration: none
+	&-name
+		position: relative
+		margin-bottom: 12px
+	&-form
+		margin-bottom: 53px
+		input
+			width: 100%
+			max-width: 420px
+			height: 42px
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 15px
+			line-height: 20px
+			color: #979899
+			background: #F5F9FA
+			border: 1px solid #E0E0E0
+			box-sizing: border-box
+			border-radius: 6px
+			padding: 11px
+			box-sizing: border-box
+			outline: none
+			&:focus + label
+				top: 20%
+				font-size: 10px
+		label
+			position: absolute
+			top: 50%
+			left: 11px
+			margin-top: -10px
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 15px
+			line-height: 20px
+			color: #979899
+			transition: 0.3s
+	&-pass
+		position: relative
+		margin-bottom: 62px
+		&__btn
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 20px
+			color: #979899
+			text-decoration: none
+	&-login
+		&__btn
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 185px
+			height: 48px
+			text-decoration: none
+			margin-right: 27px
+	&-btns
+		display: flex
+		align-items: center
+	&-social
+		&__block
+			display: flex
+		span 
+			display: block
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 15px
+			line-height: 17px
+			color: #494A4C
+			margin-bottom: 13px
+		a
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 204px
+			height: 42px
+			border-radius: 6px
+			color: #ffffff
+			text-decoration: none
+			box-sizing: border-box
+			transition: 0.3s
+		&__vk
+			background: #4F719B
+			margin-right: 12px
+			&:hover
+				background: #ffffff
+				border: 2px solid #4F719B
+				color: #4F719B
+		&__fb
+			background: #3B5998
+			&:hover
+				background: #ffffff
+				border: 2px solid #3B5998
+				color: #3B5998
+.login
+	margin-right: 37px
+	position: relative
+	&:before
+		position: absolute
+		content: ''
+		width: 1px
+		height: 100%
+		top: 0
+		right: -19px
+		background: #E0E0E0
+.choice-active
+	color: #979899 !important
+	

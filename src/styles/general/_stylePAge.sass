@@ -11,7 +11,8 @@
 			line-height: 38px
 			color: #D9435D
 	&-review
-		width: 916px
+		width: 100%
+		max-width: 916px
 		&__title
 			font-family: Nexa Script
 			font-size: 32px
@@ -77,7 +78,8 @@
 	&-block 
 		display: flex
 		align-items: flex-end
-		width: 447px
+		width: 100%
+		max-width: 447px
 		height: 300px
 		height: 
 		background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))
@@ -307,7 +309,8 @@
 			width: auto
 			max-width: 100%
 .activities-subscribe
-	width: 567px
+	width: 100%
+	max-width: 567px
 	height: 221px
 	background-image: url('../img/bg-subscribe.png')
 	background-color: #C75768
@@ -539,9 +542,12 @@
 			flex-direction: column
 			justify-content: flex-end
 			padding: 0 0 29px 15px
+		&__filter
+			margin-right: 55px
 	&-main
 		width: 100%
 		max-width: 924px
+		height: min-content
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
@@ -732,6 +738,22 @@
 	height: min-content
 	background: #ffffff
 	padding-bottom: 30px
+.filter-mobile
+	display: none
+	justify-content: space-between
+	align-items: center
+	width: 300px
+	background: #2D3036
+	border-radius: 5px
+	box-sizing: border-box
+	padding: 10px
+	&__text
+		font-family: Nexa Script
+		font-size: 18px
+		line-height: 22px
+		color: #FFFFFF
+	&__icon
+		color: #ffffff
 .filter-box 
 	padding: 17px 0 17px 16px
 	border-bottom: 1px solid #E0E0E0
@@ -1310,6 +1332,11 @@
 		color: #494A4C
 		border-radius: 6px
 		margin: 17px 0
+	&-image
+		width: 100%
+		img
+			width: auto
+			max-width: 100%
 	&-subtitle
 		font-family: Merriweather
 		font-style: normal
@@ -1330,6 +1357,8 @@
 	&-news
 		padding: 37px 28px
 		.news
+			width: 100%
+			max-width: 290px
 			border: none
 			margin: 0
 	&-video
@@ -2098,6 +2127,7 @@
 	background-image: url('../img/bg-gallery.jpg')
 	&-block
 		display: flex
+		justify-content: center
 		flex-wrap: wrap
 		padding: 38px 37px 0
 		&__articles
@@ -2106,7 +2136,7 @@
 			padding-top: 30px
 	&-box
 		width: 190px
-		margin: 0 55px 53px 0
+		margin: 0 44px 53px 0
 		cursor: pointer
 		&:nth-child(5n+5)
 			margin-right: 0
@@ -2819,9 +2849,6 @@
 	cursor: pointer
 	div
 		padding-left: 11px
-.ui-state-active
-	color: #ffffff
-	background: #D9435D
 .icon-rotate
 	transform: rotate(180deg)
 	transition: 0.3s
@@ -2881,4 +2908,409 @@
 		margin-bottom: 12px
 	.personal-info__textarea
 		width: 100%
+	.ui-state-active
+		color: #ffffff
+		background: #D9435D
 		
+		
+@media screen and (max-width: 1200px)
+    .review
+        justify-content: center
+        &-block
+            &__bottom
+                margin-bottom: 15px
+    .gallery
+        &-video
+            &__block
+                justify-content: center
+    .activities-subscribe
+        margin-bottom: 20px
+    .article
+        &-similar
+            display: none
+        &-main
+            max-width: 100%
+        &-banner
+            display: none
+    .dog-page
+        &-block
+            &__title
+                text-align: center
+            &__info
+                flex-wrap: wrap
+        &-info
+            margin-top: 22px
+    .tabs-box__video
+        img
+            width: auto
+            max-width: 100%
+    .events
+        &-boxes
+            flex-wrap: wrap
+        &-box
+            margin-bottom: 20px
+    .kind-head__block
+        &:before,
+        &:after
+            display: none
+@media screen and (max-width: 999px)
+    .articles
+        &-box
+            width: 300px
+            height: 218px
+        &-main
+            .block__purple
+                img
+                    position: absolute !important
+                    top: 10px
+    .article
+        &-video
+            width: 100%
+            height: fit-content
+            img
+                width: auto
+                max-width: 100%
+    .dog-page-tabs__block ul li a
+        padding: 0 15px 14px
+    .dog-page-tabs__block ul
+        overflow-x: scroll
+        white-space: nowrap
+    .events-calendar .ui-datepicker-group-first
+        margin-right: 0
+    .ui-datepicker-group-last
+        .ui-datepicker-title
+            display: none
+        .ui-datepicker-calendar
+            display: none
+    .event-block__title
+        font-size: 30px
+        line-height: 38px
+    .event-info__box
+        p
+            span
+                font-size: 14px
+    .nav-kind__item
+        padding: 0 5px
+    .kind-main
+        padding-top: 0
+        overflow: hidden
+    .personal
+        overflow: hidden
+    .personal-tabs 
+        .ui-tabs-nav
+            display: flex
+            width: 100%
+    .personal-tabs
+        flex-direction: column
+    .personal-tabs ul li a
+        width: auto
+        padding: 0 15px
+@media screen and (max-width: 768px)
+	.title-page
+		font-size: 30px
+		margin-bottom: 0
+		margin-top: 0
+	.home
+		padding-top: 0
+		&-block
+			flex-direction: column
+		&-news
+			&__title
+				font-size: 28px
+		&-review
+			&__title
+				font-size: 28px
+		&-activities
+			padding-top: 30px
+			justify-content: center
+	.news
+		width: 100%
+		&-block
+			max-width: 100%
+		&-all
+			display: none
+	.review
+		&-info
+			&__text
+				font-size: 21px
+		&-bottom
+			justify-content: space-around
+	.gallery
+		&-block
+			flex-direction: column
+			align-items: center
+		&-video
+			&__title
+				font-size: 28px
+		&-banner
+			padding-top: 0
+			&__block
+				&:first-child
+					display: none
+	.block
+		&-video
+			&__info
+				span
+					font-size: 21px
+	.articles
+		&-sorting
+			display: none
+		&-block
+			flex-direction: column
+			align-items: center
+			padding-top: 0
+			&__filter
+				margin: 0 0 16px
+		&-main
+			justify-content: center
+		&-box
+			margin-right: 20px
+			&:nth-child(2n+2)
+				margin-right: 0
+		&-info
+			&__text
+				font-size: 21px
+	.article
+		padding-bottom: 0
+		&-head
+			&__block
+				span
+					font-size: 14px
+			&__calendar
+				margin-right: 0
+			&__views
+				margin-right: 0
+		&-title
+			font-size: 30px
+			line-height: 38px
+		&-subtitle
+			font-size: 14px
+		&-main
+			padding-left: 10px
+			padding-right: 10px
+	.filter
+		&-block
+			display: none
+			width: 300px
+		&-tags
+			display: none
+		&-mobile
+			display: flex
+	.new
+		&-block
+			justify-content: center
+		&-box
+			width: 300px
+			height: 211px
+			img
+				width: auto
+				max-width: 100%
+				height: -webkit-fill-available
+			&__info
+				padding:  0 10px 10px
+	.dog-page
+		overflow: hidden
+		&-block
+			padding: 33px 10px 62px
+		&-info
+			padding-left: 0
+		&-block
+			&__info
+				justify-content: inherit
+			&__title
+				font-size: 30px
+				line-height: 38px
+			&__slider
+				flex-direction: column-reverse
+				.slick-track
+					display: flex
+					flex-direction: inherit
+					width: 100% !important
+		&-slider
+			width: 500px
+			height: 400px
+			margin-right: 0
+			&__nav
+				width: 100%
+				max-width: 576px
+				margin-top: 20px
+			.dog-page-slider__item
+				width: 500px !important
+				height: 378px
+				img
+					width: auto
+					height: auto
+					max-width: 100%
+					max-height: 100%
+	.events-box__image
+		height: auto
+	.events-pick
+		a
+			font-size: 16px
+	.events-week__this
+		margin-right: 30px
+		&:before
+			right: -15px
+	.events
+		&-boxes
+			justify-content: center
+	.events-calendar__btn
+		margin: 30px auto 0
+	.events-calendar .ui-datepicker-prev
+		left: 15px
+		margin-top: -50px
+	.events-calendar .ui-datepicker-next
+		right: 15px
+		margin-top: -50px
+	.events-calendar .ui-datepicker-calendar thead tr th span
+		width: 25px
+		height: 25px
+	.events-calendar .ui-datepicker-calendar tbody tr td a
+		width: 25px
+		height: 25px
+	.dog-page-slider .slick-next:before
+		z-index: 5
+	.slick-prev,
+	.slick-next
+		height: 52px
+	.dog-page-info
+		margin-top: 0
+		overflow: hidden
+		&:before
+			top: -5px
+	.dog-page-info__title
+		font-size: 30px
+	.dog-page-info p
+		margin: 0
+		span
+			font-size: 14px
+	.dog-page-info:before
+		left: -10px
+	.event-info
+		flex-direction: column
+		padding: 20px 20px
+	.event-block__subtitle
+		font-size: 14px
+	.event-info__box
+		p
+			margin: 0
+	.event-info__btns
+		text-align: left
+		margin-top: 20px
+	.event-block
+		padding: 0 10px
+	.event-btns__succsess
+		margin: 13px auto 0
+	.event-btns__fav
+		text-align: center
+	.favorites
+		padding-bottom: 0
+	.favorites-tabs ul
+		justify-content: space-around
+		margin-top: 0
+		li
+			margin-right: 0
+	.nav-kind__block
+		overflow-x: scroll
+	.kind-sorting
+		display: none
+	.kind-content
+		margin-top: 20px
+		justify-content: center
+	.kind-block
+		flex-direction: column
+		align-items: center
+		.filter-block
+			margin-right: 0
+	.gallery
+		flex-direction: column
+		align-items: center
+		&-video
+			margin-top: 20px
+	.modals-registration
+		padding: 30px 15px 20px
+	.registration-choice
+		margin-bottom: 20px
+		a
+			font-size: 19px
+	.login
+		margin-right: 30px
+		&:before
+			right: -15px
+	.pagination-block
+		justify-content: center
+	.new-box__img--none
+		height: auto
+@media screen and (max-width: 652px)
+	.articles
+		&-main
+			flex-direction: column
+			align-items: center
+		&-box
+			margin-right: 0
+	.article
+		&-head
+			&__author
+				display: block
+@media screen and (max-width: 550px)
+	.dog-page
+		&-slider
+			width: 280px
+			height: 210px
+			.dog-page-slider__item
+				width: 300px !important
+				height: 210px
+	.dog-page-slider__nav .slick-slide
+		width: 37px !important
+	.dog-page-slider__nav .slick-current:before
+		width: 48px
+		height: 39px
+		margin-left: -24px
+
+@media screen and (max-width: 500px)
+	.home-gallery
+		padding-bottom: 26px
+	.review
+		&-block
+			max-width: 300px
+			height: 212px
+			&__info
+				z-index: 1
+			&__bottom
+				height: 360px
+		&-author
+			display: block
+			margin-bottom: 7px
+		&-bottom
+			margin-bottom: 34px
+		&-btn
+			margin: 0 auto 43px
+	.block
+		&__purple
+			img
+				position: absolute !important
+				top: 0
+		&-video
+			width: 300px
+			height: 200px
+			&__play
+				z-index: 5
+	.activities-subscribe
+		padding: 15px
+		margin-bottom: 0
+		&__title
+			font-size: 28px
+		&__form
+			margin-top: 19px
+			input
+				width: 92%
+		&__consent
+			label
+				font-size: 12px
+	.subscribe-form__btn
+		right: 2px
+	.activities-share
+		width: 290px
+	.activities-social
+		width: 290px
+				

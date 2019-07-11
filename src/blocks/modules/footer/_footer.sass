@@ -1,5 +1,6 @@
 footer 
     background: #2D3036
+    padding: 0 15px
 .footer 
     padding: 52px 0 47px
     &-blocks 
@@ -21,6 +22,15 @@ footer
             color: #999999
             padding-bottom: 14px
             border-bottom: 1px solid rgba(153, 153, 153, 0.2)
+            position: relative
+            span
+                display: none
+                position: absolute
+                top: 50%
+                right: 15px
+                margin-top: -12px
+                transition: 0.3s
+                font-size: 16px
     &-nav 
         padding: 17px 0 0 0
         margin: 0
@@ -104,3 +114,46 @@ footer
             path 
                 fill: rgb(153, 153, 153)
                 transition: 0.5s
+.arrow-toggle
+    transform: rotate(180deg)
+@media screen and (max-width: 999px)
+    .footer
+        &-blocks
+            flex-direction: column
+        &-block
+            border-bottom: 1px solid rgba(153, 153, 153, 0.2)
+            &__title
+                width: 100%
+                padding-top: 14px
+                border-bottom: none
+                span
+                    display: block
+        &-nav
+            display: none
+
+@media screen and (max-width: 540px)
+    .footer
+        padding: 10px 0 10px
+        &-nav
+            padding-top: 0
+            a
+                font-size: 14px
+                &:before
+                    display: none
+            &__mobile
+                display: flex !important
+        &-bottom
+            flex-direction: column
+            justify-content: center
+            padding-top: 16px
+        &-block
+            &:last-child
+                ul
+                    display: none
+                    justify-content: space-around
+                    li
+                        a
+                            i
+                                font-size: 20px
+                            span
+                                display: none

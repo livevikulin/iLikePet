@@ -17,18 +17,6 @@ import "slick-slider";
 
 $(document).ready(function() {
 	
-	//Строка поиска
-	$('.navbar-item__search').click(function() {
-		$('.navbar-search').addClass('search-open');
-		$('.navbar-item__op').addClass('navbar-button');
-		$('.navbar-search__close').show(850);
-	});
-	$('.navbar-search__close').click(function() {
-		$(this).hide();
-		$('.navbar-search').removeClass('search-open');
-		$('.navbar-item__op').removeClass('navbar-button');
-	});
-	
 	//Инициализация fancybox
 	$('[data-fancybox]').fancybox({
 		helpers : {
@@ -157,4 +145,14 @@ $(document).ready(function() {
 		e.preventDefault();
 		$('.page-data__pets').fadeOut();
 	})
+	
+	
+	//Фильтр на мобильной версии
+	$('.filter-mobile').click(function() {
+		$(this).next().slideToggle();
+	});
+	$('.filter-btn__submit').click(function(e) {
+		e.preventDefault();
+		$('.filter-block').slideUp();
+	});
 });
