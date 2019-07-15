@@ -343,6 +343,7 @@
 			align-items: center
 			color: #494A4C
 			outline: none
+			-webkit-appearance: none
 	&__consent
 		margin-top: 19px
 		input
@@ -884,6 +885,7 @@
 		box-sizing: border-box
 		border-radius: 4px
 		padding-left: 11px
+		-webkit-appearance: none
 	&__slider
 		margin-top: 21px
 		margin-bottom: 23px
@@ -2623,6 +2625,7 @@
 		border-radius: 6px
 		padding-left: 11px
 		outline: none
+		-webkit-appearance: none
 		&:focus + label
 			font-size: 10px
 			top: -2px
@@ -3227,6 +3230,16 @@
 		align-items: center
 		&-video
 			margin-top: 20px
+	.personal-tabs
+		ul
+			overflow-x: scroll
+	.personal-box__title
+		font-size: 30px
+	.personal-tabs__boxes
+		width: auto
+	.publications-input__title
+		margin-left: 0
+		margin-top: 15px
 	.modals-registration
 		padding: 30px 15px 20px
 	.registration-choice
@@ -3252,6 +3265,68 @@
 		&-head
 			&__author
 				display: block
+	.personal-tabs__boxes
+		padding: 50px 5px
+	.personal-box__data
+		display: flex
+		flex-direction: column
+		align-items: center
+	.personal-box__title
+		text-align: center
+	.personal-data__photo
+		margin-right: 0
+		margin-bottom: 20px
+	.personal-info__input
+		width: 285px
+	.personal-pet__remove
+		white-space: nowrap
+	.personal-box__hobbies
+		width: 100%
+	#tabs-pets
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 5px 10px
+	#tabs-interests
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 5px 10px
+	#tabs-photo
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 5px 10px
+	.personal-box__photos
+		flex-direction: column
+		align-items: center
+	.personal-photo
+		margin-bottom: 15px
+	.personal-photo:nth-child(1n+6)
+		margin-top: 0
+	.personal-form__publications
+		display: flex
+		flex-direction: column
+		align-items: center
+	#tabs-publications
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 5px 10px
+	.personal-publications__select
+		margin-right: 0
+	.personal-box__publications
+		text-align: center
+	.personal-sub__btn
+		margin: 46px auto 0
+	#tabs-advert
+		display: flex
+		flex-direction: column
+		align-items: center
+	#tabs-video
+		display: flex
+		flex-direction: column
+		align-items: center
 @media screen and (max-width: 550px)
 	.dog-page
 		&-slider
