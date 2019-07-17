@@ -34,4 +34,25 @@ $(document).ready(function() {
 		$('.navbar-fixed__op').removeClass('navbar-button');
 	});
 	
+	//Меню на мобиле
+	$('.header-mobile__burger').click(function() {
+		$('.header-mobile__menu').slideDown();
+		$('html').css('overflow', 'hidden');
+		$(document).bind('touchmove', false);
+	});
+	$('.header-mobile__close i').click(function() {
+		$('.header-mobile__menu').slideUp();
+		$('html').css('overflow', 'auto');
+	});
+	
+	//Поиск на мобиле
+	$('.header-mobile__search').click(function() {
+		$('.header-mobile__search-block').slideDown();
+		$('html').css('overflow', 'hidden');
+		$(document).bind('touchmove', false);
+	});
+	$('.header-mobile__search-close i').click(function() {
+		$('.header-mobile__search-block').slideUp();
+		$('html').css('overflow', 'auto');
+	});
 });
