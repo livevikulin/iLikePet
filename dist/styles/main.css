@@ -4490,6 +4490,8 @@ header {
     text-decoration: none;
     position: relative;
     margin-right: 53px; }
+    .navbar-fixed__account a:last-child {
+      margin-right: 0; }
   .navbar-fixed__account span {
     display: flex;
     justify-content: center;
