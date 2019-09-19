@@ -1477,13 +1477,17 @@ body.compensate-for-scrollbar {
   .block-video__info {
     padding: 0 0 23px 15px;
     z-index: 1; }
-    .block-video__info span {
+    .block-video__info a {
       font-family: Arsenal Bold;
       font-style: normal;
       font-weight: bold;
       font-size: 24px;
       line-height: 32px;
-      color: #ffffff; }
+      color: #ffffff;
+      text-decoration: none;
+      transition: 0.2s; }
+      .block-video__info a:hover {
+        color: #D9435D; }
   .block-video__width-392 {
     width: 100%;
     max-width: 392px;
