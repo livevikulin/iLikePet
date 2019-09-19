@@ -1748,6 +1748,11 @@ body.compensate-for-scrollbar {
     height: min-content;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap; }
+  .articles-wrapper {
+    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap; }
   .articles-box {
     display: flex;
