@@ -1306,6 +1306,7 @@ body.compensate-for-scrollbar {
       position: absolute;
       width: 100%;
       height: 100%;
+      object-fit: cover;
       z-index: -1; }
     .review-block__info {
       padding: 0 0 26px 15px; }
