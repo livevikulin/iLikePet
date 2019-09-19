@@ -1325,7 +1325,11 @@ body.compensate-for-scrollbar {
       line-height: 30px;
       display: flex;
       align-items: flex-end;
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      text-decoration: none;
+      transition: 0.2s; }
+      .review-info__text:hover {
+        color: #D9435D; }
     .review-info span {
       font-family: Arimo Regular;
       font-style: normal;
@@ -1372,7 +1376,10 @@ body.compensate-for-scrollbar {
     width: 96%;
     margin-top: 25px; }
     .block__purple .review-block__info .review-info__text {
-      color: #494A4C; }
+      color: #494A4C;
+      transition: 0.2s; }
+      .block__purple .review-block__info .review-info__text:hover {
+        color: #D9435D; }
     .block__purple .review-block__info span {
       color: #494A4C !important; }
   .block__purple .articles-box__dark {
