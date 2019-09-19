@@ -2520,7 +2520,11 @@ body.compensate-for-scrollbar {
       color: #D9435D;
       margin-left: 9px; }
   .article-author {
-    border-bottom: 1px solid #D9435D; }
+    color: #979899;
+    border-bottom: 1px solid #D9435D;
+    text-decoration: none; }
+    .article-author:hover {
+      border: none; }
   .article-title {
     font-family: Arsenal Bold;
     font-style: normal;
