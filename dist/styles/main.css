@@ -5093,6 +5093,12 @@ footer {
   .personal-tabs ul li a {
     width: auto;
     padding: 0 15px; }
+  .activities-subscribe {
+    max-width: 100%; }
+  .activities-share {
+    width: 100%; }
+  .activities-social {
+    width: 100%; }
   .header-logo span {
     display: none; }
   .navbar-blocks {
@@ -5560,10 +5566,6 @@ footer {
     .activities-subscribe__consent label {
       font-size: 12px; }
   .subscribe-form__btn {
-    right: 2px; }
-  .activities-share {
-    width: 290px; }
-  .activities-social {
-    width: 290px; } }
+    right: 2px; } }
 
 /*# sourceMappingURL=maps/main.css.map */
