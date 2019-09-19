@@ -1175,6 +1175,9 @@ body.compensate-for-scrollbar {
   max-width: 1244px;
   margin: auto; }
 
+body {
+  font-family: sans-serif; }
+
 .home {
   padding-top: 50px; }
   .home-block {
