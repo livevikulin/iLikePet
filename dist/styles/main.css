@@ -2572,6 +2572,13 @@ body.compensate-for-scrollbar {
     .article-video .block-video__dark {
       top: 0;
       left: 0; }
+    .article-video .block-video__play img {
+      width: auto;
+      height: auto; }
+    .article-video img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
   .article-banner {
     padding: 65px 27px; }
     .article-banner__box {
