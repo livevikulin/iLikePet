@@ -1043,15 +1043,27 @@
 			.new-box__dark
 				display: none				
 		&__width--608
-			max-width: 608px
+			width: 608px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
 		&__width--396
-			max-width: 396px
+			width: 396px
 			height: 295px
 			justify-content: center
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
 		&__width--290
-			max-width: 290px
+			width: 290px
 			justify-content: center
 			overflow: hidden
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
 		&__fav
 			z-index: 5
 		&__info
@@ -1296,6 +1308,8 @@
 		margin-left: 10px
 		
 //Страница со статьей
+.js-fav
+	display: none
 .article
 	padding: 33px 0 62px
 	background-color: rgba(46, 41, 45, 0.06)
@@ -1351,6 +1365,7 @@
 			line-height: 24px
 			color: #979899
 		&__fav
+			text-decoration: none
 			span
 				font-family: Arimo Regular
 				font-style: normal
