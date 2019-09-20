@@ -151,8 +151,4 @@ $(document).ready(function() {
 	$('.filter-mobile').click(function() {
 		$(this).next().slideToggle();
 	});
-	$('.filter-btn__submit').click(function(e) {
-		e.preventDefault();
-		$('.filter-block').slideUp();
-	});
 });

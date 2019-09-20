@@ -1,4 +1,5 @@
-
+body
+	font-family: sans-serif
 //Главная страница
 .home
 	padding-top: 50px 
@@ -109,7 +110,8 @@
 			span 
 				position: absolute
 				top: 8px
-				left: 16px
+				left: 50%
+				transform: translateX(-50%)
 				font-family: Arimo Regular
 				font-style: normal
 				font-weight: normal
@@ -131,6 +133,7 @@
 			position: absolute
 			width: 100%
 			height: 100%
+			object-fit: cover
 			z-index: -1
 		&__info 
 			padding: 0 0 26px 15px
@@ -151,6 +154,10 @@
 			display: flex
 			align-items: flex-end
 			color: #FFFFFF
+			text-decoration: none
+			transition: 0.2s
+			&:hover
+				color: #D9435D
 		span 
 			font-family: Arimo Regular
 			font-style: normal
@@ -199,6 +206,9 @@
 		margin-top: 25px
 		.review-info__text 
 			color: #494A4C
+			transition: 0.2s
+			&:hover
+				color: #D9435D
 		span 
 			color: #494A4C !important
 	.articles-box__dark
@@ -213,7 +223,9 @@
 		span
 			color: #494A4C !important
 .btn 
-	display: block
+	display: flex
+	align-items: center
+	justify-content: center
 	font-family: Arsenal Bold
 	font-style: normal
 	font-weight: bold
@@ -299,13 +311,17 @@
 	&__info 
 		padding: 0 0 23px 15px
 		z-index: 1
-		span 
+		a 
 			font-family: Arsenal Bold
 			font-style: normal
 			font-weight: bold
 			font-size: 24px
 			line-height: 32px
 			color: #ffffff
+			text-decoration: none
+			transition: 0.2s
+			&:hover
+				color: #D9435D
 	&__width-392
 		width: 100%
 		max-width: 392px
@@ -566,6 +582,11 @@
 		width: 100%
 		max-width: 924px
 		height: min-content
+		display: flex
+		justify-content: space-between
+		flex-direction: column
+		flex-wrap: wrap
+	&-wrapper
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
@@ -1024,15 +1045,27 @@
 			.new-box__dark
 				display: none				
 		&__width--608
-			max-width: 608px
+			width: 608px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
 		&__width--396
-			max-width: 396px
+			width: 396px
 			height: 295px
 			justify-content: center
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
 		&__width--290
-			max-width: 290px
+			width: 290px
 			justify-content: center
 			overflow: hidden
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
 		&__fav
 			z-index: 5
 		&__info
@@ -1277,6 +1310,8 @@
 		margin-left: 10px
 		
 //Страница со статьей
+.js-fav
+	display: none
 .article
 	padding: 33px 0 62px
 	background-color: rgba(46, 41, 45, 0.06)
@@ -1332,6 +1367,7 @@
 			line-height: 24px
 			color: #979899
 		&__fav
+			text-decoration: none
 			span
 				font-family: Arimo Regular
 				font-style: normal
@@ -1341,7 +1377,11 @@
 				color: #D9435D
 				margin-left: 9px
 	&-author
+		color: #979899
 		border-bottom: 1px solid #D9435D
+		text-decoration: none
+		&:hover
+			border: none
 	&-title
 		font-family: Arsenal Bold
 		font-style: normal
@@ -1353,9 +1393,11 @@
 		margin: 17px 0
 	&-image
 		width: 100%
+		max-height: 400px
 		img
-			width: auto
-			max-width: 100%
+			width: 100%
+			height: 100%
+			object-fit: cover
 	&-subtitle
 		font-family: Merriweather
 		font-style: normal
@@ -1391,6 +1433,14 @@
 		.block-video__dark
 			top: 0
 			left: 0
+		.block-video__play
+			img
+				width: auto
+				height: auto
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
 	&-banner
 		padding: 65px 27px 
 		&__box
@@ -3025,6 +3075,12 @@
     .personal-tabs ul li a
         width: auto
         padding: 0 15px
+    .activities-subscribe
+        max-width: 100%
+    .activities-share
+        width: 100%
+    .activities-social
+        width: 100%
 @media screen and (max-width: 768px)
 	.title-page
 		font-size: 30px
@@ -3424,8 +3480,4 @@
 				font-size: 12px
 	.subscribe-form__btn
 		right: 2px
-	.activities-share
-		width: 290px
-	.activities-social
-		width: 290px
 				
