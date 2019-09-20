@@ -3279,7 +3279,8 @@ body {
   .animals-box {
     width: 190px;
     margin: 0 44px 53px 0;
-    cursor: pointer; }
+    cursor: pointer;
+    position: relative; }
     .animals-box:nth-child(5n+5) {
       margin-right: 0; }
     .animals-box:hover span {
@@ -3294,6 +3295,10 @@ body {
       color: #494A4C;
       text-align: center;
       padding: 8px 0 1px; }
+    .animals-box__link {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
 
 .personal {
   padding: 33px 0 62px;
@@ -5018,6 +5023,12 @@ footer {
     .slick-dots li.slick-active button:before {
       color: black;
       opacity: 0.75; }
+    @media screen and (max-width: 1264px) {
+  .animals-block {
+    padding-left: 0;
+    padding-right: 0; }
+    .animals-block__articles {
+      flex-wrap: wrap; } }
     @media screen and (max-width: 1200px) {
   .review {
     justify-content: center; }
@@ -5053,6 +5064,11 @@ footer {
     height: 375px; }
     .navbar-block__text {
       padding: 0 20px; } }
+    @media screen and (max-width: 1185px) {
+  .animals-box:nth-child(4n+4) {
+    margin-right: 0; }
+  .animals-box:nth-child(5n+5) {
+    margin-right: 44px; } }
     @media screen and (max-width: 999px) {
   .articles-box {
     width: 300px;
@@ -5138,6 +5154,11 @@ footer {
         display: block; }
   .footer-nav {
     display: none; } }
+    @media screen and (max-width: 938px) {
+  .animals-box:nth-child(4n+4) {
+    margin-right: 44px; }
+  .animals-box:nth-child(3n+3) {
+    margin-right: 0; } }
     @media screen and (max-width: 768px) {
   .title-page {
     font-size: 30px;
@@ -5377,6 +5398,16 @@ footer {
     display: none; }
   .nav-fixed {
     padding: 0; } }
+    @media screen and (max-width: 692px) {
+  .animals-box:nth-child(3n+3) {
+    margin-right: 44px; }
+  .animals-box:nth-child(2n+2) {
+    margin-right: 0; }
+  .animals-block__articles {
+    flex-direction: column;
+    align-items: center; }
+    .animals-block__articles .navbar-block {
+      margin-bottom: 15px; } }
     @media screen and (max-width: 652px) {
   .articles-main {
     flex-direction: column;
@@ -5571,5 +5602,12 @@ footer {
       font-size: 12px; }
   .subscribe-form__btn {
     right: 2px; } }
+    @media screen and (max-width: 446px) {
+  .animals-box {
+    margin-right: 0; }
+    .animals-box:nth-child(5n+5) {
+      margin-right: 0; }
+    .animals-box:nth-child(3n+3) {
+      margin-right: 0; } }
 
 /*# sourceMappingURL=maps/main.css.map */

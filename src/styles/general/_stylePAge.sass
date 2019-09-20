@@ -2207,6 +2207,7 @@ body
 		width: 190px
 		margin: 0 44px 53px 0
 		cursor: pointer
+		position: relative
 		&:nth-child(5n+5)
 			margin-right: 0
 		&:hover span
@@ -2222,6 +2223,10 @@ body
 			color: #494A4C
 			text-align: center
 			padding: 8px 0 1px
+		&__link
+			position: absolute
+			width: 100%
+			height: 100%
 			
 //Стили для Личного кабинета
 .personal
@@ -2982,7 +2987,22 @@ body
 		color: #ffffff
 		background: #D9435D
 		
-		
+@media screen and (max-width: 1264px)
+	.animals
+		&-block
+			padding-left: 0
+			padding-right: 0
+			&__articles
+				flex-wrap: wrap
+			
+@media screen and (max-width: 1185px)
+	.animals
+		&-box
+			&:nth-child(4n+4)
+				margin-right: 0
+			&:nth-child(5n+5)
+				margin-right: 44px
+
 @media screen and (max-width: 1200px)
     .review
         justify-content: center
@@ -3081,6 +3101,15 @@ body
         width: 100%
     .activities-social
         width: 100%
+        
+@media screen and (max-width: 938px)
+	.animals
+		&-box
+			&:nth-child(4n+4)
+				margin-right: 44px
+			&:nth-child(3n+3)
+				margin-right: 0
+	
 @media screen and (max-width: 768px)
 	.title-page
 		font-size: 30px
@@ -3327,6 +3356,21 @@ body
 		justify-content: center
 	.new-box__img--none
 		height: auto
+		
+@media screen and (max-width: 692px)
+	.animals
+		&-box
+			&:nth-child(3n+3)
+				margin-right: 44px
+			&:nth-child(2n+2)
+				margin-right: 0
+		&-block
+			&__articles
+				flex-direction: column
+				align-items: center
+				.navbar-block
+					margin-bottom: 15px
+		
 @media screen and (max-width: 652px)
 	.articles
 		&-main
@@ -3481,3 +3525,11 @@ body
 	.subscribe-form__btn
 		right: 2px
 				
+@media screen and (max-width: 446px)
+	.animals
+		&-box
+			margin-right: 0
+			&:nth-child(5n+5)
+				margin-right: 0
+			&:nth-child(3n+3)
+				margin-right: 0
