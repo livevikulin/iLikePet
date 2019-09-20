@@ -5121,7 +5121,17 @@ footer {
     width: 100%; }
   .activities-social {
     width: 100%; }
-  .header-logo span {
+  .header {
+    display: none; }
+    .header-logo span {
+      display: none; }
+    .header-mobile {
+      display: flex; }
+  .nav {
+    margin-top: 50px; }
+  .navbar ul {
+    display: none; }
+  .navbar-fixed {
     display: none; }
   .navbar-blocks {
     justify-content: space-around;
@@ -5388,16 +5398,6 @@ footer {
     height: auto; }
   header {
     padding: 0; }
-  .header {
-    display: none; }
-    .header-mobile {
-      display: flex; }
-  .nav {
-    margin-top: 50px; }
-  .navbar ul {
-    display: none; }
-  .navbar-fixed {
-    display: none; }
   .nav-fixed {
     padding: 0; } }
     @media screen and (max-width: 692px) {

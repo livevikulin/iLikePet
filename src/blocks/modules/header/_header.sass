@@ -545,9 +545,19 @@ header
                 padding: 0 20px
 @media screen and (max-width: 999px)
     .header
+        display: none
         &-logo
             span
                 display: none
+        &-mobile
+            display: flex
+    .nav
+        margin-top: 50px
+    .navbar
+        ul
+            display: none
+        &-fixed
+            display: none
     .navbar
         &-blocks
             justify-content: space-around
@@ -578,17 +588,6 @@ header
 @media screen and (max-width: 768px)
     header
         padding: 0
-    .header
-        display: none
-        &-mobile
-            display: flex
-    .nav
-        margin-top: 50px
-    .navbar
-        ul
-            display: none
-        &-fixed
-            display: none
     .nav-fixed
         padding: 0
 @media screen and (max-width: 635px)
