@@ -154,8 +154,8 @@
                 <div class="filter-box__item"><i class="fas fa-angle-up"></i><span>Количество детенышей</span></div>
                 <div class="filter-box__count">
                   <div class="filter-count">
-                    <input type="text" id="minCost" placeholder="От">
-                    <input type="text" id="maxCost" placeholder="До">
+                    <input type="text" id="minCost" pattern="^[ 0-9]+$" maxlength="3" placeholder="От">
+                    <input type="text" id="maxCost" pattern="^[ 0-9]+$" maxlength="3" placeholder="До">
                   </div>
                   <div class="filter-count__slider" id="slider-range"></div>
                 </div>

@@ -59,7 +59,18 @@ $(document).ready(function() {
             $('input#maxCost').val(value2);
         }
         $('#slider-range').slider('values', 1, value2);
-    })
+    });
+    
+    $("input#minCost").keypress(function(e) {
+		if (e.which != 8 && e.which != 0 && e.which != 46 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+	$("input#maxCost").keypress(function(e) {
+		if (e.which != 8 && e.which != 0 && e.which != 46 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
 	
 	//Календарь на странице с событиями
 	$('#datepicker').datepicker({

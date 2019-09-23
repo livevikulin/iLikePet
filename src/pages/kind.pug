@@ -89,8 +89,8 @@ block content
 								span Количество детенышей
 							.filter-box__count
 								.filter-count
-									input(type="text" id="minCost" placeholder="От")
-									input(type="text" id="maxCost" placeholder="До")
+									input(type="text" id="minCost" pattern="^[ 0-9]+$" maxlength="3" placeholder="От")
+									input(type="text" id="maxCost" pattern="^[ 0-9]+$" maxlength="3" placeholder="До")
 								.filter-count__slider#slider-range
 						.filter-box.filter-box__bottom
 							.filter-box__item
