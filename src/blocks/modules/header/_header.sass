@@ -465,7 +465,7 @@ header
     align-items: center 
     &__logo 
         display: block 
-        width: 252px
+        width: 215px
         height: 59px
         img 
             width: auto
@@ -513,7 +513,7 @@ header
         a 
             text-decoration: none
             position: relative
-            margin-right: 53px
+            margin-right: 25px
             &:last-child
                 margin-right: 0
         span 
@@ -536,6 +536,19 @@ header
             background: #7E2A2A
 
 //Адаптив
+@media screen and (max-width: 1250px)
+	.navbar
+		&-fixed
+			padding: 12px 0
+			justify-content: center
+			&__logo
+				display: none
+			&__menu
+				a
+					padding: 16px 20px 16px
+			&__account
+				a
+					margin-right: 35px
 @media screen and (max-width: 1200px)
     .navbar
         &-block

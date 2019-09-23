@@ -4504,7 +4504,7 @@ header {
   align-items: center; }
   .navbar-fixed__logo {
     display: block;
-    width: 252px;
+    width: 215px;
     height: 59px; }
     .navbar-fixed__logo img {
       width: auto;
@@ -4544,7 +4544,7 @@ header {
   .navbar-fixed__account a {
     text-decoration: none;
     position: relative;
-    margin-right: 53px; }
+    margin-right: 25px; }
     .navbar-fixed__account a:last-child {
       margin-right: 0; }
   .navbar-fixed__account span {
@@ -5031,6 +5031,16 @@ footer {
     padding-right: 0; }
     .animals-block__articles {
       flex-wrap: wrap; } }
+    @media screen and (max-width: 1250px) {
+  .navbar-fixed {
+    padding: 12px 0;
+    justify-content: center; }
+    .navbar-fixed__logo {
+      display: none; }
+    .navbar-fixed__menu a {
+      padding: 16px 20px 16px; }
+    .navbar-fixed__account a {
+      margin-right: 35px; } }
     @media screen and (max-width: 1200px) {
   .review {
     justify-content: center; }
