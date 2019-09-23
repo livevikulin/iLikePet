@@ -1806,6 +1806,10 @@ body {
       .articles-box__width--610 .articles-author {
         width: 174px;
         margin-bottom: 0; }
+    .articles-box__link {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
   .articles-info {
     display: flex;
     flex-wrap: wrap;
