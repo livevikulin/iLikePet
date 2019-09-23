@@ -2598,7 +2598,7 @@ body {
       border: none;
       margin: 0; }
   .article-video {
-    width: max-content;
+    width: 100%;
     height: 440px;
     position: relative; }
     .article-video:hover .block-video__dark {
