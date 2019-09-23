@@ -3014,7 +3014,7 @@ body {
       color: #494A4C;
       text-decoration: none; }
     .events-calendar .ui-datepicker-today {
-      background: #D9435D; }
+      background: gray; }
       .events-calendar .ui-datepicker-today a {
         color: #ffffff !important; }
     .events-calendar .ui-datepicker-current-day {
@@ -3362,13 +3362,35 @@ body {
   .favorites .new-block {
     justify-content: flex-start; }
     .favorites .new-block .new-box {
-      margin-right: 28px; }
+      margin-right: 28px;
+      position: relative; }
       .favorites .new-block .new-box:nth-child(3n+3) {
         margin-right: 0; }
+      .favorites .new-block .new-box__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
     .favorites .new-block .kind-box {
-      margin-right: 28px; }
+      margin-right: 28px;
+      position: relative; }
       .favorites .new-block .kind-box:nth-child(4n+4) {
         margin-right: 0; }
+      .favorites .new-block .kind-box__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+    .favorites .new-block .block-video {
+      position: relative; }
+      .favorites .new-block .block-video__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
 
 .animals {
   padding: 33px 0 62px;
