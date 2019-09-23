@@ -2486,6 +2486,8 @@ body {
     text-decoration: none; }
     .nav-kind__item:hover {
       color: #D9435D; }
+    .nav-kind__item-checked {
+      color: #D9435D; }
   .nav-kind__all {
     font-family: Arsenal Bold;
     font-style: normal;
