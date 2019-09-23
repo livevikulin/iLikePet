@@ -611,7 +611,7 @@ body
 		&:hover 
 			cursor: pointer
 			.articles-box__dark
-				display: none
+				background: rgba(0,0,0,0)
 		img
 			position: absolute
 			width: auto
@@ -626,7 +626,8 @@ body
 			top: 0
 			left: 0
 			z-index: 1
-			background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,.4))
+			background: rgba(0,0,0,.4)
+			transition: background 0.3s ease
 		&__width--610
 			width: 610px
 			justify-content: flex-start
@@ -1059,7 +1060,7 @@ body
 		&:hover
 			cursor: pointer
 			.new-box__dark
-				display: none				
+				background: rgba(0,0,0,0)
 		&__width--608
 			width: 608px
 			img
@@ -1108,6 +1109,12 @@ body
 			.new-info
 				span
 					color: #979899
+		&__link
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
 	&-info
 		span
 			font-family: Arimo Regular
