@@ -162,4 +162,14 @@ $(document).ready(function() {
 	$('.filter-mobile').click(function() {
 		$(this).next().slideToggle();
 	});
+	
+	//Комментарии на странице со статьей
+	$('.js-add__comment').on('click', function(e) {
+		
+		e.preventDefault();
+		$(this).hide();
+		$(this).next('.comments-form').slideDown();
+		
+	});
+	
 });
