@@ -2200,6 +2200,16 @@ body
 				border: none
 				padding-top: 25px
 				margin-top: 0
+	.new-block
+		justify-content: flex-start
+		.new-box
+			margin-right: 28px
+			&:nth-child(3n+3)
+				margin-right: 0
+		.kind-box
+			margin-right: 28px
+			&:nth-child(4n+4)
+				margin-right: 0
 				
 //Стили для страницы с Видами животных
 .animals
@@ -3369,6 +3379,13 @@ body
 		justify-content: center
 	.new-box__img--none
 		height: auto
+	.favorites
+		.new-block
+			justify-content: center
+			.new-box
+				margin-right: 0
+			.kind-box
+				margin-right: 0
 		
 @media screen and (max-width: 692px)
 	.animals

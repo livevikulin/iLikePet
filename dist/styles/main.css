@@ -3274,6 +3274,16 @@ body {
     border: none;
     padding-top: 25px;
     margin-top: 0; }
+  .favorites .new-block {
+    justify-content: flex-start; }
+    .favorites .new-block .new-box {
+      margin-right: 28px; }
+      .favorites .new-block .new-box:nth-child(3n+3) {
+        margin-right: 0; }
+    .favorites .new-block .kind-box {
+      margin-right: 28px; }
+      .favorites .new-block .kind-box:nth-child(4n+4) {
+        margin-right: 0; }
 
 .animals {
   padding: 33px 0 62px;
@@ -5420,6 +5430,12 @@ footer {
     justify-content: center; }
   .new-box__img--none {
     height: auto; }
+  .favorites .new-block {
+    justify-content: center; }
+    .favorites .new-block .new-box {
+      margin-right: 0; }
+    .favorites .new-block .kind-box {
+      margin-right: 0; }
   header {
     padding: 0; }
   .nav-fixed {
