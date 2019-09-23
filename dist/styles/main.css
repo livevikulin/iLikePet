@@ -2115,6 +2115,7 @@ body {
     padding-left: 11px;
     -webkit-appearance: none; }
   .filter-count__slider {
+    width: 97%;
     margin-top: 21px;
     margin-bottom: 23px; }
 
@@ -2124,6 +2125,8 @@ body {
   .ui-slider-horizontal .ui-slider-range {
     background: #D9435D; }
   .ui-slider-horizontal .ui-slider-handle {
+    top: 50%;
+    transform: translateY(-50%);
     width: 22px;
     height: 22px;
     background: #FFFFFF;
