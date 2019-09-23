@@ -5,7 +5,6 @@ import "jquery-ui";
 import "slick-slider";
 
 
-
 // require("fancybox");
 
 // var $ = require('jquery');
@@ -60,11 +59,28 @@ $(document).ready(function() {
         }
         $('#slider-range').slider('values', 1, value2);
     })
-	
+
 	//Календарь на странице с событиями
-	$('#datepicker').datepicker({
+	$("#datepicker").datepicker({
 		firstDay: 1,
 		numberOfMonths: 2,
+		dateFormat: "yy-mm-dd",
+		onSelect: function (date, i) {
+			if (date !== i.lastVal) {
+
+				$.post($("#datepicker").data("url"), "ajax=Y&curr_event_date=" + date,
+					function (html) {
+						$('#events-container').html(html);
+					});
+			}
+		}
+	});
+
+    $('.js-show-current-week').on('click', ()=> {
+		$.post($("#datepicker").data("url"), "ajax=Y",
+			function (html) {
+				$('#events-container').html(html);
+			});
 	});
 	
 	//Выбор События эта неделя или выбрать дату
