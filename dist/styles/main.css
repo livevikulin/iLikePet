@@ -3014,7 +3014,7 @@ body {
       color: #494A4C;
       text-decoration: none; }
     .events-calendar .ui-datepicker-today {
-      background: gray; }
+      background: #d7d7d7; }
       .events-calendar .ui-datepicker-today a {
         color: #ffffff !important; }
     .events-calendar .ui-datepicker-current-day {
