@@ -5132,7 +5132,8 @@ footer {
     width: auto;
     padding: 0 15px; }
   .activities-subscribe {
-    max-width: 100%; }
+    max-width: 100%;
+    margin-bottom: 0; }
   .activities-share {
     width: 100%; }
   .activities-social {
