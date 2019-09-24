@@ -3181,6 +3181,22 @@ body {
         font-size: 15px;
         line-height: 28px;
         color: #494A4C; }
+    .event-party__boxes {
+      display: flex;
+      flex-wrap: wrap; }
+    .event-party__person {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 5px; }
+      .event-party__person img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
 
 .dog-page {
   padding: 33px 0 62px;
