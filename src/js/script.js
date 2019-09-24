@@ -5,6 +5,7 @@ import "jquery-ui";
 import "slick-slider";
 
 
+
 // require("fancybox");
 
 // var $ = require('jquery');
@@ -15,14 +16,14 @@ import "slick-slider";
 
 
 $(document).ready(function() {
-	
+
 	//Инициализация fancybox
 	$('[data-fancybox]').fancybox({
 		helpers : {
             media : {}
         },
 	});
-	
+
 	//Инициализация jquery ui + ползунок в фильтре
 	$("#slider-range").slider({
         range: true,
@@ -41,7 +42,7 @@ $(document).ready(function() {
     $('input#minCost').change(function(){
         var value1 = $('input#minCost').val();
         var value2 = $('input#maxCost').val();
-        
+
         if (parseInt(value1) > parseInt(value2)){
             value1 = value2;
             $('input#minCost').val(value1);
@@ -58,7 +59,18 @@ $(document).ready(function() {
             $('input#maxCost').val(value2);
         }
         $('#slider-range').slider('values', 1, value2);
-    })
+    });
+
+    $("input#minCost").keypress(function(e) {
+		if (e.which != 8 && e.which != 0 && e.which != 46 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
+	$("input#maxCost").keypress(function(e) {
+		if (e.which != 8 && e.which != 0 && e.which != 46 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
 
 	//Календарь на странице с событиями
 	$("#datepicker").datepicker({
@@ -82,7 +94,7 @@ $(document).ready(function() {
 				$('#events-container').html(html);
 			});
 	});
-	
+
 	//Выбор События эта неделя или выбрать дату
 	$('.events-week__this').click(function(e) {
 		e.preventDefault();
@@ -96,13 +108,13 @@ $(document).ready(function() {
 		$('.events-week__this').removeClass('events-pick__week');
 		$('.events-calendar').slideDown();
 	});
-		
+
 	//Фильтр
 	$('.filter-box__item').click(function() {
 		$(this).next().slideToggle();
 		$(this).children('.fas').toggleClass('rotate180');
 	});
-	
+
 	//Инициализация slick-slider
 	$('.dog-page-slider').slick({
 		slidesToShow: 1,
@@ -116,10 +128,10 @@ $(document).ready(function() {
 		asNavFor: '.dog-page-slider',
 		focusOnSelect: true
 	});
-	
+
 	//Инициализация табов на странице dog-page
 	$('#tabs').tabs();
-	
+
 	//Скрытие лэйблов при заполнении инпута
 	$('#inputName, #inputSurname, #inputSex, #inputBorn, #inputPetName, #inputPetBorn').on('change', function() {
 		if ($(this).val() == '') {
@@ -128,7 +140,7 @@ $(document).ready(function() {
 			$(this).next('#label').addClass('label-none')
 		}
 	});
-	
+
 	//Инициализация календаря в Личном кабинете
 	$('#inputBorn, #inputPetBorn').datepicker();
 	$('#inputBorn').click(function() {
@@ -137,7 +149,7 @@ $(document).ready(function() {
 	$('#inputPetBorn').click(function() {
 		$('.ui-datepicker').addClass('ui-datepicker-pets');
 	});
-	
+
 	//Инициализация селект меню
 	$('.select-activity').selectmenu();
 	$('.ui-selectmenu-button').click(function() {
@@ -146,13 +158,13 @@ $(document).ready(function() {
 	$('.ui-selectmenu-menu').click(function() {
 		$('.ui-selectmenu-icon').removeClass('icon-rotate');
 	});
-	
-	
+
+
 	$('.publications-select__item').click(function() {
 		$(this).toggleClass('item-select');
 	})
-	
-	
+
+
 	$('.add-pets').click(function(e) {
 		e.preventDefault();
 		$('.page-data__pets').fadeIn();
@@ -161,10 +173,20 @@ $(document).ready(function() {
 		e.preventDefault();
 		$('.page-data__pets').fadeOut();
 	})
-	
-	
+
+
 	//Фильтр на мобильной версии
 	$('.filter-mobile').click(function() {
 		$(this).next().slideToggle();
 	});
+
+	//Комментарии на странице со статьей
+	$('.js-add__comment').on('click', function(e) {
+
+		e.preventDefault();
+		$(this).hide();
+		$(this).next('.comments-form').slideDown();
+
+	});
+
 });

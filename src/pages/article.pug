@@ -82,7 +82,19 @@ block content
 										</defs>
 									</svg>
 						.comments
-							a(href="#").comments-add__btn Добавить комментарий
+							a(href="#").comments-add__btn.js-add__comment Добавить комментарий
+							.comments-form
+								span._title Добавить комментарий
+								form._block(action="#")
+									._input
+										input(type="text" placeholder="Имя")
+									._input
+										input(type="text" placeholder="Электронная почта")
+									._textarea
+										textarea(name="" placeholder="Тут я уже набираю свой длинный комментарий к новости")
+									a._btn(href="#") Отправить
+									span._consent Нажимая на кнопку, вы соглашаетесь с 
+										a(href="#") Политикой конфиденциальности
 							.comments-block
 								.comment-box
 									.comment-person
