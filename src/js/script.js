@@ -25,10 +25,13 @@ $(document).ready(function() {
 	});
 	
 	//Инициализация jquery ui + ползунок в фильтре
+	var dataMin = $("#slider-range").data("min"),
+		dataMax = $("#slider-range").data("max");
+	
 	$("#slider-range").slider({
         range: true,
-        min: 0,
-        max: 10,
+        min: dataMin,
+        max: dataMax,
         values: [ 0, 10 ],
         stop: function(event, ui){
             $('input#minCost').val($('#slider-range').slider('values', 0));
