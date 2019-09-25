@@ -30,21 +30,21 @@ $(document).ready(function() {
 		dataMax = sliderRange.data("max"),
 		dataValueMin = sliderRange.data("value-min"),
 		dataValueMax = sliderRange.data("value-min");
-	
-		sliderRange.slider({
-			range: true,
-			min: dataMin,
-			max: dataMax,
-			values: [ dataValueMin, dataValueMax ],
-			stop: function(event, ui){
-				$('input#minCost').val(sliderRange.slider('values', 0));
-				$('input#maxCost').val(sliderRange.slider('values', 1));
-			},
-			slide: function(event, ui){
-				$('input#minCost').val(sliderRange.slider('values', 0));
-				$('input#maxCost').val(sliderRange.slider('values', 1));
-			}
-		});
+
+	sliderRange.slider({
+		range: true,
+		min: dataMin,
+		max: dataMax,
+		values: [ dataValueMin, dataValueMax ],
+		stop: function(event, ui){
+			$('input#minCost').val(sliderRange.slider('values', 0));
+			$('input#maxCost').val(sliderRange.slider('values', 1));
+		},
+		slide: function(event, ui){
+			$('input#minCost').val(sliderRange.slider('values', 0));
+			$('input#maxCost').val(sliderRange.slider('values', 1));
+		}
+	});
     $('input#minCost').change(function(){
         var value1 = $('input#minCost').val();
         var value2 = $('input#maxCost').val();
@@ -87,12 +87,29 @@ $(document).ready(function() {
 	$('#datepicker').datepicker({
 		firstDay: 1,
 		numberOfMonths: 2,
+		dateFormat: "yy-mm-dd",
+		onSelect: function (date, i) {
+			if (date !== i.lastVal) {
+
+				$.post($("#datepicker").data("url"), "ajax=Y&curr_event_date=" + date,
+					function (html) {
+						$('#events-container').html(html);
+					});
+			}
+		},
 		dayNames: [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение" ],
 		dayNamesMin: [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс" ],
 		monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
 		monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек']
 	});
-	
+
+	$('.js-show-current-week').on('click', ()=> {
+		$.post($("#datepicker").data("url"), "ajax=Y",
+			function (html) {
+				$('#events-container').html(html);
+			});
+	});
+
 	$( "#datepicker" ).datepicker( "option", dayNames, [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение" ] );
 	$( "#datepicker" ).datepicker( "option", dayNamesMin, [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс" ] );
 	$( "#datepicker" ).datepicker( "option", monthNames, ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'] );
