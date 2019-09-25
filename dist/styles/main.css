@@ -1294,6 +1294,7 @@ input[type="number"]::-webkit-outer-spin-button {
       background: rgba(0, 0, 0, 0); }
     .review-block__bone {
       position: absolute;
+      width: 80px;
       top: -5px;
       left: 15px; }
       .review-block__bone span {
