@@ -1,5 +1,5 @@
 body
-	font-family: Arsenal, sans-serif
+	font-family: Arsenal Regular, sans-serif
 //Главная страница
 .home
 	padding-top: 50px 
@@ -49,10 +49,12 @@ body
 	&::-webkit-scrollbar-button
 		display: none
 	&-block 
+		display: block
 		max-width: 264px
 		padding-bottom: 25px
 		margin-bottom: 15px
 		border-bottom: 1px solid #E0E0E0
+		text-decoration: none
 		&:last-child 
 			border-bottom: none
 		&__calendar
@@ -640,6 +642,7 @@ body
 			position: absolute
 			width: 100%
 			height: 100%
+			z-index: 9
 	&-info
 		display: flex
 		flex-wrap: wrap
@@ -1115,6 +1118,7 @@ body
 			left: 0
 			width: 100%
 			height: 100%
+			z-index: 9
 	&-info
 		span
 			font-family: Arimo Regular
@@ -1269,7 +1273,12 @@ body
 			bottom: -14px
 			left: -4px
 		&__image
+			width: 100%
 			height: 220px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
 		&__fav
 			position: absolute
 			top: 7px
@@ -1353,7 +1362,6 @@ body
 			margin-bottom: 56px
 	&-main
 		width: 100%
-		max-width: 926px
 		padding: 25px 50px 64px
 		box-sizing: border-box
 		border-right: 1px solid #E0E0E0
@@ -1442,7 +1450,7 @@ body
 		width: 100%
 		max-width: 317px
 	&-news
-		padding: 37px 28px
+		padding: 37px 5px 37px 28px
 		.news
 			width: 100%
 			max-width: 290px
@@ -1874,6 +1882,8 @@ body
 	&-box
 		width: 396px
 		cursor: pointer
+		background: #ffffff
+		margin-bottom: 20px
 		position: relative
 		&:before
 			position: absolute
@@ -2327,6 +2337,7 @@ body
 				left: 0
 				width: 100%
 				height: 100%
+				z-index: 9
 		.kind-box
 			margin-right: 28px
 			position: relative

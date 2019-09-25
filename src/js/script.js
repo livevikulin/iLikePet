@@ -25,10 +25,13 @@ $(document).ready(function() {
 	});
 
 	//Инициализация jquery ui + ползунок в фильтре
+	var dataMin = $("#slider-range").data("min"),
+		dataMax = $("#slider-range").data("max");
+
 	$("#slider-range").slider({
         range: true,
-        min: 0,
-        max: 10,
+        min: dataMin,
+        max: dataMax,
         values: [ 0, 10 ],
         stop: function(event, ui){
             $('input#minCost').val($('#slider-range').slider('values', 0));
@@ -71,9 +74,14 @@ $(document).ready(function() {
 			return false;
 		}
 	});
-
+	
 	//Календарь на странице с событиями
-	$("#datepicker").datepicker({
+	var dayNames = $( "#datepicker" ).datepicker( "option", "dayNames" );
+	var dayNamesMin = $( "#datepicker" ).datepicker( "option", "dayNamesMin" );
+	var monthNames = $( "#datepicker" ).datepicker( "option", "monthNames" );
+	var monthNamesShort = $( "#datepicker" ).datepicker( "option", "monthNamesShort" );
+
+	$('#datepicker').datepicker({
 		firstDay: 1,
 		numberOfMonths: 2,
 		dateFormat: "yy-mm-dd",
@@ -85,15 +93,25 @@ $(document).ready(function() {
 						$('#events-container').html(html);
 					});
 			}
-		}
+		},
+		dayNames: [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение" ],
+		dayNamesMin: [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс" ],
+		monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+		monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек']
 	});
 
-    $('.js-show-current-week').on('click', ()=> {
+	$('.js-show-current-week').on('click', ()=> {
 		$.post($("#datepicker").data("url"), "ajax=Y",
 			function (html) {
 				$('#events-container').html(html);
 			});
 	});
+
+	$( "#datepicker" ).datepicker( "option", dayNames, [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение" ] );
+	$( "#datepicker" ).datepicker( "option", dayNamesMin, [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс" ] );
+	$( "#datepicker" ).datepicker( "option", monthNames, ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'] );
+	$( "#datepicker" ).datepicker( "option", monthNamesShort, ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'] );
+
 
 	//Выбор События эта неделя или выбрать дату
 	$('.events-week__this').click(function(e) {
@@ -108,13 +126,13 @@ $(document).ready(function() {
 		$('.events-week__this').removeClass('events-pick__week');
 		$('.events-calendar').slideDown();
 	});
-
+		
 	//Фильтр
 	$('.filter-box__item').click(function() {
 		$(this).next().slideToggle();
 		$(this).children('.fas').toggleClass('rotate180');
 	});
-
+	
 	//Инициализация slick-slider
 	$('.dog-page-slider').slick({
 		slidesToShow: 1,
@@ -128,10 +146,10 @@ $(document).ready(function() {
 		asNavFor: '.dog-page-slider',
 		focusOnSelect: true
 	});
-
+	
 	//Инициализация табов на странице dog-page
 	$('#tabs').tabs();
-
+	
 	//Скрытие лэйблов при заполнении инпута
 	$('#inputName, #inputSurname, #inputSex, #inputBorn, #inputPetName, #inputPetBorn').on('change', function() {
 		if ($(this).val() == '') {
@@ -140,7 +158,7 @@ $(document).ready(function() {
 			$(this).next('#label').addClass('label-none')
 		}
 	});
-
+	
 	//Инициализация календаря в Личном кабинете
 	$('#inputBorn, #inputPetBorn').datepicker();
 	$('#inputBorn').click(function() {
@@ -149,7 +167,7 @@ $(document).ready(function() {
 	$('#inputPetBorn').click(function() {
 		$('.ui-datepicker').addClass('ui-datepicker-pets');
 	});
-
+	
 	//Инициализация селект меню
 	$('.select-activity').selectmenu();
 	$('.ui-selectmenu-button').click(function() {
@@ -158,13 +176,13 @@ $(document).ready(function() {
 	$('.ui-selectmenu-menu').click(function() {
 		$('.ui-selectmenu-icon').removeClass('icon-rotate');
 	});
-
-
+	
+	
 	$('.publications-select__item').click(function() {
 		$(this).toggleClass('item-select');
 	})
-
-
+	
+	
 	$('.add-pets').click(function(e) {
 		e.preventDefault();
 		$('.page-data__pets').fadeIn();
@@ -173,20 +191,20 @@ $(document).ready(function() {
 		e.preventDefault();
 		$('.page-data__pets').fadeOut();
 	})
-
-
+	
+	
 	//Фильтр на мобильной версии
 	$('.filter-mobile').click(function() {
 		$(this).next().slideToggle();
 	});
-
+	
 	//Комментарии на странице со статьей
 	$('.js-add__comment').on('click', function(e) {
-
+		
 		e.preventDefault();
 		$(this).hide();
 		$(this).next('.comments-form').slideDown();
-
+		
 	});
-
+	
 });
