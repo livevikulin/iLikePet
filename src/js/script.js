@@ -89,9 +89,6 @@ $(document).ready(function() {
 		numberOfMonths: 2,
 		dateFormat: "yy-mm-dd",
 		onSelect: function (date, i) {
-			console.log(date !== i.lastVal);
-			console.log(i);
-			console.log($("#datepicker").data("url"));
 			if (date !== i.lastVal) {
 
 				$.post($("#datepicker").data("url"), "ajax=Y&curr_event_date=" + date,
