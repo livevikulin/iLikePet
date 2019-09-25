@@ -5666,7 +5666,9 @@ footer {
   header {
     padding: 0; }
   .nav-fixed {
-    padding: 0; } }
+    padding: 0; }
+  .navbar-block__image {
+    height: 145px; } }
     @media screen and (max-width: 692px) {
   .animals-box:nth-child(3n+3) {
     margin-right: 44px; }
