@@ -25,23 +25,26 @@ $(document).ready(function() {
 	});
 	
 	//Инициализация jquery ui + ползунок в фильтре
-	var dataMin = $("#slider-range").data("min"),
-		dataMax = $("#slider-range").data("max");
+	var sliderRange = $("#slider-range"),
+		dataMin = sliderRange.data("min"),
+		dataMax = sliderRange.data("max"),
+		dataValueMin = sliderRange.data("value-min"),
+		dataValueMax = sliderRange.data("value-min");
 	
-	$("#slider-range").slider({
-        range: true,
-        min: dataMin,
-        max: dataMax,
-        values: [ 0, 10 ],
-        stop: function(event, ui){
-            $('input#minCost').val($('#slider-range').slider('values', 0));
-            $('input#maxCost').val($('#slider-range').slider('values', 1));
-        },
-        slide: function(event, ui){
-            $('input#minCost').val($('#slider-range').slider('values', 0));
-            $('input#maxCost').val($('#slider-range').slider('values', 1));
-        }
-    });
+		sliderRange.slider({
+			range: true,
+			min: dataMin,
+			max: dataMax,
+			values: [ dataValueMin, dataValueMax ],
+			stop: function(event, ui){
+				$('input#minCost').val(sliderRange.slider('values', 0));
+				$('input#maxCost').val(sliderRange.slider('values', 1));
+			},
+			slide: function(event, ui){
+				$('input#minCost').val(sliderRange.slider('values', 0));
+				$('input#maxCost').val(sliderRange.slider('values', 1));
+			}
+		});
     $('input#minCost').change(function(){
         var value1 = $('input#minCost').val();
         var value2 = $('input#maxCost').val();
@@ -50,7 +53,7 @@ $(document).ready(function() {
             value1 = value2;
             $('input#minCost').val(value1);
         }
-        $('#slider-range').slider('values', 0, value1);
+        sliderRange.slider('values', 0, value1);
     });
     $('input#maxCost').change(function(){
         var value1 = $('input#minCost').val();
@@ -61,7 +64,7 @@ $(document).ready(function() {
             value2 = value1;
             $('input#maxCost').val(value2);
         }
-        $('#slider-range').slider('values', 1, value2);
+        sliderRange.slider('values', 1, value2);
     });
     
     $("input#minCost").keypress(function(e) {
