@@ -1828,7 +1828,7 @@ input[type="number"]::-webkit-outer-spin-button
 		#datepicker
 			width: 100%
 			max-width: 1244px
-			height: 410px
+			height: 410px //<-- Вот это тоже нужно добавить, я потерял коммит с этим исправлением
 			margin: auto
 		.ui-datepicker-inline
 			width: 100% !important
@@ -3462,6 +3462,8 @@ input[type="number"]::-webkit-outer-spin-button
 	.events
 		&-boxes
 			justify-content: center
+	.events-calendar #datepicker
+		height: 240px
 	.events-calendar__btn
 		margin: 30px auto 0
 	.events-calendar .ui-datepicker-prev

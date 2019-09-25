@@ -5516,6 +5516,8 @@ footer {
       right: -15px; }
   .events-boxes {
     justify-content: center; }
+  .events-calendar #datepicker {
+    height: 240px; }
   .events-calendar__btn {
     margin: 30px auto 0; }
   .events-calendar .ui-datepicker-prev {
