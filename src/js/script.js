@@ -29,7 +29,7 @@ $(document).ready(function() {
 		dataMin = sliderRange.data("min"),
 		dataMax = sliderRange.data("max"),
 		dataValueMin = sliderRange.data("value-min"),
-		dataValueMax = sliderRange.data("value-min");
+		dataValueMax = sliderRange.data("value-max");
 
 	sliderRange.slider({
 		range: true,
