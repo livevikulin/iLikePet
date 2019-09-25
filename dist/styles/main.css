@@ -1929,7 +1929,7 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 10px 30px;
   background: #FFFFFF;
   border-radius: 20px;
-  max-width: 285px; }
+  max-width: 300px; }
   .sorting-title {
     margin-right: 10px; }
   .sorting i {
@@ -5412,6 +5412,7 @@ footer {
     @media screen and (max-width: 768px) {
   .title-page {
     font-size: 30px;
+    line-height: 38px;
     margin-bottom: 0;
     margin-top: 0; }
   .home {
