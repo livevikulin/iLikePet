@@ -1,5 +1,10 @@
 body
 	font-family: Arsenal Regular, sans-serif
+	
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button 
+	display: none
+
 //Главная страница
 .home
 	padding-top: 50px 
@@ -758,9 +763,15 @@ body
 		transform: translateY(0)
 	&-data
 		cursor: pointer
+		text-decoration: none
+		&:hover i
+			animation: arrowDown 0.5s infinite
 	&-rating
 		margin-left: 19px
 		cursor: pointer
+		text-decoration: none
+		&:hover i
+			animation: arrowDown 0.5s infinite
 	span 
 		font-family: Arsenal Regular
 		font-style: normal
@@ -769,9 +780,6 @@ body
 		line-height: 22px
 		text-align: right
 		color: #494A4C
-		&:nth-child(n+2)
-			&:hover i
-				animation: arrowDown 0.5s infinite
 	&-select
 		span
 			color: #D9435D !important
@@ -1293,6 +1301,12 @@ body
 			height: 95px
 			background: #ffffff
 			padding: 0 5px
+		&__link
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
 	&-name
 		display: block
 		text-align: center
@@ -1329,8 +1343,11 @@ body
 		text-decoration: none
 		&:hover 
 			color: #D9435D
-		&-checked
+		&_checked
 			color: #D9435D
+		&_active
+			color: #d3d3d3
+			pointer-events: none
 	&__all
 		font-family: Arsenal Bold
 		font-style: normal

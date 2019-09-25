@@ -16,41 +16,44 @@ import "slick-slider";
 
 
 $(document).ready(function() {
-
+	
 	//Инициализация fancybox
 	$('[data-fancybox]').fancybox({
 		helpers : {
             media : {}
         },
 	});
-
+	
 	//Инициализация jquery ui + ползунок в фильтре
-	var dataMin = $("#slider-range").data("min"),
-		dataMax = $("#slider-range").data("max");
+	var sliderRange = $("#slider-range"),
+		dataMin = sliderRange.data("min"),
+		dataMax = sliderRange.data("max"),
+		dataValueMin = sliderRange.data("value-min"),
+		dataValueMax = sliderRange.data("value-min");
 
-	$("#slider-range").slider({
-        range: true,
-        min: dataMin,
-        max: dataMax,
-        values: [ 0, 10 ],
-        stop: function(event, ui){
-            $('input#minCost').val($('#slider-range').slider('values', 0));
-            $('input#maxCost').val($('#slider-range').slider('values', 1));
-        },
-        slide: function(event, ui){
-            $('input#minCost').val($('#slider-range').slider('values', 0));
-            $('input#maxCost').val($('#slider-range').slider('values', 1));
-        }
-    });
+	sliderRange.slider({
+		range: true,
+		min: dataMin,
+		max: dataMax,
+		values: [ dataValueMin, dataValueMax ],
+		stop: function(event, ui){
+			$('input#minCost').val(sliderRange.slider('values', 0));
+			$('input#maxCost').val(sliderRange.slider('values', 1));
+		},
+		slide: function(event, ui){
+			$('input#minCost').val(sliderRange.slider('values', 0));
+			$('input#maxCost').val(sliderRange.slider('values', 1));
+		}
+	});
     $('input#minCost').change(function(){
         var value1 = $('input#minCost').val();
         var value2 = $('input#maxCost').val();
-
+        
         if (parseInt(value1) > parseInt(value2)){
             value1 = value2;
             $('input#minCost').val(value1);
         }
-        $('#slider-range').slider('values', 0, value1);
+        sliderRange.slider('values', 0, value1);
     });
     $('input#maxCost').change(function(){
         var value1 = $('input#minCost').val();
@@ -61,9 +64,9 @@ $(document).ready(function() {
             value2 = value1;
             $('input#maxCost').val(value2);
         }
-        $('#slider-range').slider('values', 1, value2);
+        sliderRange.slider('values', 1, value2);
     });
-
+    
     $("input#minCost").keypress(function(e) {
 		if (e.which != 8 && e.which != 0 && e.which != 46 && (e.which < 48 || e.which > 57)) {
 			return false;
@@ -80,12 +83,15 @@ $(document).ready(function() {
 	var dayNamesMin = $( "#datepicker" ).datepicker( "option", "dayNamesMin" );
 	var monthNames = $( "#datepicker" ).datepicker( "option", "monthNames" );
 	var monthNamesShort = $( "#datepicker" ).datepicker( "option", "monthNamesShort" );
-
+	
 	$('#datepicker').datepicker({
 		firstDay: 1,
 		numberOfMonths: 2,
 		dateFormat: "yy-mm-dd",
 		onSelect: function (date, i) {
+			console.log(date !== i.lastVal);
+			console.log(i);
+			console.log($("#datepicker").data("url"));
 			if (date !== i.lastVal) {
 
 				$.post($("#datepicker").data("url"), "ajax=Y&curr_event_date=" + date,
@@ -111,8 +117,8 @@ $(document).ready(function() {
 	$( "#datepicker" ).datepicker( "option", dayNamesMin, [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс" ] );
 	$( "#datepicker" ).datepicker( "option", monthNames, ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'] );
 	$( "#datepicker" ).datepicker( "option", monthNamesShort, ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'] );
-
-
+	
+	
 	//Выбор События эта неделя или выбрать дату
 	$('.events-week__this').click(function(e) {
 		e.preventDefault();

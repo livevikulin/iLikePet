@@ -19,15 +19,15 @@ block content
 			.container
 				.kind-sorting.sorting
 					span.sorting-title Сортировать
-					span.sorting-data
+					a(href="#").sorting-data
 						span по дате
 						i.fas.fa-arrow-down
-					span.sorting-rating.sorting-select
+					a(href="#").sorting-rating.sorting-select
 						span по рейтингу
 						i.fas.fa-arrow-down
 				.nav-kind
 					.nav-kind__block
-						a(href="#").nav-kind__item.nav-kind__item-checked А
+						a(href="#").nav-kind__item.nav-kind__item_checked А
 						a(href="#").nav-kind__item Б
 						a(href="#").nav-kind__item В
 						a(href="#").nav-kind__item Г
@@ -36,10 +36,10 @@ block content
 						a(href="#").nav-kind__item Ж
 						a(href="#").nav-kind__item З
 						a(href="#").nav-kind__item И
-						a(href="#").nav-kind__item Й
-						a(href="#").nav-kind__item К
-						a(href="#").nav-kind__item Л
-						a(href="#").nav-kind__item М
+						a(href="#").nav-kind__item.nav-kind__item_active Й
+						a(href="#").nav-kind__item.nav-kind__item_active К
+						a(href="#").nav-kind__item.nav-kind__item_active Л
+						a(href="#").nav-kind__item.nav-kind__item_active М
 						a(href="#").nav-kind__item Н
 						a(href="#").nav-kind__item О
 						a(href="#").nav-kind__item П
@@ -91,7 +91,7 @@ block content
 								.filter-count
 									input(type="text" id="minCost" maxlength="3" placeholder="От")
 									input(type="text" id="maxCost" maxlength="3" placeholder="До")
-								.filter-count__slider#slider-range(data-min="0" data-max="10")
+								.filter-count__slider#slider-range(data-min="0" data-max="10" data-value-min data-value-max)
 						.filter-box.filter-box__bottom
 							.filter-box__item
 								i.fas.fa-angle-up
