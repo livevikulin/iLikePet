@@ -2398,7 +2398,8 @@ input[type="number"]::-webkit-outer-spin-button {
   .kind-head__animal {
     width: 360px;
     position: absolute;
-    bottom: -66px; }
+    bottom: -66px;
+    left: -30px; }
     .kind-head__animal img {
       width: 100%;
       height: 100%;
@@ -2406,7 +2407,7 @@ input[type="number"]::-webkit-outer-spin-button {
   .kind-head__detail {
     width: 360px;
     position: absolute;
-    right: 0;
+    right: -30px;
     bottom: -66px; }
     .kind-head__detail img {
       width: 100%;
@@ -5249,6 +5250,10 @@ footer {
     .navbar-fixed__account a {
       margin-right: 35px; } }
     @media screen and (max-width: 1200px) {
+  .kind-head__animal {
+    display: none; }
+  .kind-head__detail {
+    display: none; }
   .review {
     justify-content: center; }
     .review-block__bottom {
