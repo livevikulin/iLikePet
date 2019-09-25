@@ -2268,6 +2268,7 @@ input[type="number"]::-webkit-outer-spin-button {
         object-fit: cover; }
     .new-box__width--290 {
       width: 290px;
+      height: 260px;
       justify-content: center;
       overflow: hidden; }
       .new-box__width--290 img {
