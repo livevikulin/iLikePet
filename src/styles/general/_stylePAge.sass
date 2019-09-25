@@ -1262,6 +1262,8 @@ input[type="number"]::-webkit-outer-spin-button
 	&-block
 		display: flex
 		padding-bottom: 60px
+		&__content
+			width: 100%
 		.filter-block
 			margin-right: 54px
 		.filter-box__item
@@ -1271,7 +1273,6 @@ input[type="number"]::-webkit-outer-spin-button
 			margin-top: 19px
 	&-content
 		display: flex
-		justify-content: space-between
 		flex-wrap: wrap
 		width: 100%
 		max-width: 926px
@@ -1284,7 +1285,10 @@ input[type="number"]::-webkit-outer-spin-button
 		height: 315px
 		margin-bottom: 23px
 		cursor: pointer
+		margin-right: 28px
 		position: relative
+		&:nth-child(3n+3)
+			margin-right: 0
 		&:before
 			position: absolute
 			content: url('../img/box-bottom.png')
@@ -3198,6 +3202,14 @@ input[type="number"]::-webkit-outer-spin-button
 		color: #ffffff
 		background: #D9435D
 		
+@media screen and (max-width: 1301px)
+	.kind
+		&-box
+			&:nth-child(3n+3)
+				margin-right: 28px
+			&:nth-child(2n+2)
+				margin-right: 0
+		
 @media screen and (max-width: 1264px)
 	.animals
 		&-block
@@ -3717,6 +3729,14 @@ input[type="number"]::-webkit-outer-spin-button
 		display: flex
 		flex-direction: column
 		align-items: center
+		
+@media screen and (max-width: 639px)
+	.kind
+		&-box
+			margin-right: 0
+			&:nth-child(3n+3)
+				margin-right: 0
+		
 @media screen and (max-width: 550px)
 	.dog-page
 		&-slider
