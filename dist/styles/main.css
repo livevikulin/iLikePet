@@ -2513,15 +2513,16 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size: 18px;
     line-height: 25px;
     text-transform: uppercase;
-    color: #000000;
-    text-decoration: none; }
-    .nav-kind__item:hover {
-      color: #D9435D; }
+    color: #d3d3d3;
+    text-decoration: none;
+    pointer-events: none; }
     .nav-kind__item_checked {
       color: #D9435D; }
     .nav-kind__item_active {
-      color: #d3d3d3;
-      pointer-events: none; }
+      color: #000000;
+      pointer-events: auto; }
+      .nav-kind__item_active:hover {
+        color: #D9435D; }
   .nav-kind__all {
     font-family: Arsenal Bold;
     font-style: normal;

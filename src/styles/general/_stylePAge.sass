@@ -1339,15 +1339,16 @@ input[type="number"]::-webkit-outer-spin-button
 		font-size: 18px
 		line-height: 25px
 		text-transform: uppercase
-		color: #000000
+		color: #d3d3d3
 		text-decoration: none
-		&:hover 
-			color: #D9435D
+		pointer-events: none
 		&_checked
 			color: #D9435D
 		&_active
-			color: #d3d3d3
-			pointer-events: none
+			color: #000000
+			pointer-events: auto
+			&:hover 
+				color: #D9435D
 	&__all
 		font-family: Arsenal Bold
 		font-style: normal
