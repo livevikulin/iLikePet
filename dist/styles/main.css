@@ -3045,6 +3045,8 @@ body {
   .events-box {
     width: 396px;
     cursor: pointer;
+    background: #ffffff;
+    margin-bottom: 20px;
     position: relative; }
     .events-box:before {
       position: absolute;
