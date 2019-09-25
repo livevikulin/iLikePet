@@ -4,6 +4,7 @@ body
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button 
 	display: none
+
 //Главная страница
 .home
 	padding-top: 50px 
@@ -762,9 +763,15 @@ input[type="number"]::-webkit-outer-spin-button
 		transform: translateY(0)
 	&-data
 		cursor: pointer
+		text-decoration: none
+		&:hover i
+			animation: arrowDown 0.5s infinite
 	&-rating
 		margin-left: 19px
 		cursor: pointer
+		text-decoration: none
+		&:hover i
+			animation: arrowDown 0.5s infinite
 	span 
 		font-family: Arsenal Regular
 		font-style: normal
@@ -773,9 +780,6 @@ input[type="number"]::-webkit-outer-spin-button
 		line-height: 22px
 		text-align: right
 		color: #494A4C
-		&:nth-child(n+2)
-			&:hover i
-				animation: arrowDown 0.5s infinite
 	&-select
 		span
 			color: #D9435D !important

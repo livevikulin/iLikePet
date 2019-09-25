@@ -1938,10 +1938,16 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-left: 7px;
     transform: translateY(0); }
   .sorting-data {
-    cursor: pointer; }
+    cursor: pointer;
+    text-decoration: none; }
+    .sorting-data:hover i {
+      animation: arrowDown 0.5s infinite; }
   .sorting-rating {
     margin-left: 19px;
-    cursor: pointer; }
+    cursor: pointer;
+    text-decoration: none; }
+    .sorting-rating:hover i {
+      animation: arrowDown 0.5s infinite; }
   .sorting span {
     font-family: Arsenal Regular;
     font-style: normal;
@@ -1950,8 +1956,6 @@ input[type="number"]::-webkit-outer-spin-button {
     line-height: 22px;
     text-align: right;
     color: #494A4C; }
-    .sorting span:nth-child(n+2):hover i {
-      animation: arrowDown 0.5s infinite; }
   .sorting-select span {
     color: #D9435D !important;
     border-bottom: 1px dashed #D9435D; }
