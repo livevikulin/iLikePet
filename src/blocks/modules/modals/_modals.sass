@@ -6,6 +6,13 @@
 	margin: auto
 	box-sizing: border-box
 	background: #ffffff
+.modals-thanks
+	display: none
+	width: 504px
+	padding: 32px 50px 60px 160px
+	box-sizing: border-box
+	border: 1px solid #000000
+	background: #ffffff
 .registration
 	&-choice
 		display: block
@@ -128,3 +135,51 @@
 .choice-active
 	color: #979899 !important
 	
+.thanks
+	position: relative
+	&__picture
+		position: absolute
+		top: 50%
+		left: -160px
+		transform: translateY(-50%)
+	&__title
+		display: block
+		font-family: Nexa Script
+		font-size: 32px
+		line-height: 38px
+		color: #494A4C
+		margin-bottom: 10px
+	&__subtitle
+		display: block
+		font-family: Arimo Regular
+		font-style: normal
+		font-weight: normal
+		font-size: 15px
+		line-height: 20px
+		color: #494A4C
+		margin-bottom: 32px
+	&__btn
+		display: inline-block
+		font-family: Arsenal Bold
+		font-style: normal
+		font-weight: bold
+		font-size: 18px
+		line-height: 25px
+		text-align: center
+		color: #D9435D
+		border: 2px solid #D9435D
+		box-sizing: border-box
+		border-radius: 28px
+		padding: 12px 20px
+		text-decoration: none
+		transition: 0.2s
+		&:hover
+			background: #D9435D
+			color: #ffffff
+			
+@media (max-width: 550px)
+	.modal-thanks
+		padding-left: 90px
+	.thanks
+		&__picture
+			transform: rotate(110deg)
