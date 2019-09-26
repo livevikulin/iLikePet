@@ -324,6 +324,10 @@ input[type="number"]::-webkit-outer-spin-button
 		text-decoration: none
 		&:hover 
 			opacity: 1
+		img
+			width: auto !important
+			height: auto !important
+			
 	&__info 
 		padding: 0 0 23px 15px
 		z-index: 1
@@ -2208,7 +2212,7 @@ input[type="number"]::-webkit-outer-spin-button
 			object-fit: cover
 		&__nav
 			.dog-page-slider__item
-				width: 46px
+				width: 46px !important
 				height: 36px
 				.block-video__dark
 					top: 0
@@ -3464,7 +3468,7 @@ input[type="number"]::-webkit-outer-spin-button
 				.slick-track
 					display: flex
 					flex-direction: inherit
-					width: 100% !important
+					// width: 100% !important
 		&-slider
 			width: 500px
 			height: 400px
@@ -3473,6 +3477,11 @@ input[type="number"]::-webkit-outer-spin-button
 				width: 100%
 				max-width: 576px
 				margin-top: 20px
+				.slick-slide
+					padding: 10px
+				.slick-current
+					&:before
+						width: 57px
 			.dog-page-slider__item
 				width: 500px !important
 				height: 378px
@@ -3749,7 +3758,7 @@ input[type="number"]::-webkit-outer-spin-button
 	.dog-page-slider__nav .slick-slide
 		width: 37px !important
 	.dog-page-slider__nav .slick-current:before
-		width: 48px
+		width: 57px
 		height: 46px
 		margin-left: -24px
 	.activities-subscribe

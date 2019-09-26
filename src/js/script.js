@@ -16,22 +16,20 @@ import "slick-slider";
 
 
 $(document).ready(function() {
-	
-	//Инициализация fancybox
-	$('[data-fancybox]').fancybox({
+    //Инициализация fancybox
+    $('[data-fancybox]').fancybox({
 		helpers : {
             media : {}
         },
 	});
-	
-	//Инициализация jquery ui + ползунок в фильтре
-	var sliderRange = $("#slider-range"),
-		dataMin = sliderRange.data("min"),
-		dataMax = sliderRange.data("max"),
-		dataValueMin = sliderRange.data("value-min"),
-		dataValueMax = sliderRange.data("value-max");
 
-	sliderRange.slider({
+    var sliderRange = $("#slider-range");
+    var dataMin = sliderRange.data("min");
+    var dataMax = sliderRange.data("max");
+    var dataValueMin = sliderRange.data("value-min");
+    var dataValueMax = sliderRange.data("value-max");
+
+    sliderRange.slider({
 		range: true,
 		min: dataMin,
 		max: dataMax,
@@ -66,25 +64,25 @@ $(document).ready(function() {
         }
         sliderRange.slider('values', 1, value2);
     });
-    
+
     $("input#minCost").keypress(function(e) {
 		if (e.which != 8 && e.which != 0 && e.which != 46 && (e.which < 48 || e.which > 57)) {
 			return false;
 		}
 	});
-	$("input#maxCost").keypress(function(e) {
+    $("input#maxCost").keypress(function(e) {
 		if (e.which != 8 && e.which != 0 && e.which != 46 && (e.which < 48 || e.which > 57)) {
 			return false;
 		}
 	});
-	
-	//Календарь на странице с событиями
-	var dayNames = $( "#datepicker" ).datepicker( "option", "dayNames" );
-	var dayNamesMin = $( "#datepicker" ).datepicker( "option", "dayNamesMin" );
-	var monthNames = $( "#datepicker" ).datepicker( "option", "monthNames" );
-	var monthNamesShort = $( "#datepicker" ).datepicker( "option", "monthNamesShort" );
-	
-	$('#datepicker').datepicker({
+
+    //Календарь на странице с событиями
+    var dayNames = $( "#datepicker" ).datepicker( "option", "dayNames" );
+    var dayNamesMin = $( "#datepicker" ).datepicker( "option", "dayNamesMin" );
+    var monthNames = $( "#datepicker" ).datepicker( "option", "monthNames" );
+    var monthNamesShort = $( "#datepicker" ).datepicker( "option", "monthNamesShort" );
+
+    $('#datepicker').datepicker({
 		firstDay: 1,
 		numberOfMonths: 2,
 		dateFormat: "yy-mm-dd",
@@ -103,111 +101,120 @@ $(document).ready(function() {
 		monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек']
 	});
 
-	$('.js-show-current-week').on('click', ()=> {
+    $('.js-show-current-week').on('click', ()=> {
 		$.post($("#datepicker").data("url"), "ajax=Y",
 			function (html) {
 				$('#events-container').html(html);
 			});
 	});
 
-	$( "#datepicker" ).datepicker( "option", dayNames, [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение" ] );
-	$( "#datepicker" ).datepicker( "option", dayNamesMin, [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс" ] );
-	$( "#datepicker" ).datepicker( "option", monthNames, ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'] );
-	$( "#datepicker" ).datepicker( "option", monthNamesShort, ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'] );
-	
-	
-	//Выбор События эта неделя или выбрать дату
-	$('.events-week__this').click(function(e) {
+    $( "#datepicker" ).datepicker( "option", dayNames, [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение" ] );
+    $( "#datepicker" ).datepicker( "option", dayNamesMin, [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс" ] );
+    $( "#datepicker" ).datepicker( "option", monthNames, ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'] );
+    $( "#datepicker" ).datepicker( "option", monthNamesShort, ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'] );
+
+
+    //Выбор События эта неделя или выбрать дату
+    $('.events-week__this').click(function(e) {
 		e.preventDefault();
 		$(this).addClass('events-pick__week');
 		$('.events-week__other').removeClass('events-pick__week');
 		$('.events-calendar').slideUp();
 	});
-	$('.events-week__other').click(function(e) {
+    $('.events-week__other').click(function(e) {
 		e.preventDefault();
 		$(this).addClass('events-pick__week');
 		$('.events-week__this').removeClass('events-pick__week');
 		$('.events-calendar').slideDown();
 	});
-		
-	//Фильтр
-	$('.filter-box__item').click(function() {
+
+    //Фильтр
+    $('.filter-box__item').click(function() {
 		$(this).next().slideToggle();
 		$(this).children('.fas').toggleClass('rotate180');
 	});
-	
-	//Инициализация slick-slider
-	$('.dog-page-slider').slick({
+
+    //Инициализация slick-slider
+    $('.dog-page-slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: true,
 		fade: true,
 		asNavFor: '.dog-page-slider__nav'
 	});
-	$('.dog-page-slider__nav').slick({
+    $('.dog-page-slider__nav').slick({
 		slidesToShow: 6,
 		asNavFor: '.dog-page-slider',
-		focusOnSelect: true
+		focusOnSelect: true,
+		vertical: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					vertical: false,
+					variableWidth: true
+				}
+			}
+		]
 	});
-	
-	//Инициализация табов на странице dog-page
-	$('#tabs').tabs();
-	
-	//Скрытие лэйблов при заполнении инпута
-	$('#inputName, #inputSurname, #inputSex, #inputBorn, #inputPetName, #inputPetBorn').on('change', function() {
+
+    //Инициализация табов на странице dog-page
+    $('#tabs').tabs();
+
+    //Скрытие лэйблов при заполнении инпута
+    $('#inputName, #inputSurname, #inputSex, #inputBorn, #inputPetName, #inputPetBorn').on('change', function() {
 		if ($(this).val() == '') {
 			$(this).next('#label').removeClass('label-none')
 		} else {
 			$(this).next('#label').addClass('label-none')
 		}
 	});
-	
-	//Инициализация календаря в Личном кабинете
-	$('#inputBorn, #inputPetBorn').datepicker();
-	$('#inputBorn').click(function() {
+
+    //Инициализация календаря в Личном кабинете
+    $('#inputBorn, #inputPetBorn').datepicker();
+    $('#inputBorn').click(function() {
 		$('.ui-datepicker').addClass('ui-datepicker-personal');
 	});
-	$('#inputPetBorn').click(function() {
+    $('#inputPetBorn').click(function() {
 		$('.ui-datepicker').addClass('ui-datepicker-pets');
 	});
-	
-	//Инициализация селект меню
-	$('.select-activity').selectmenu();
-	$('.ui-selectmenu-button').click(function() {
+
+    //Инициализация селект меню
+    $('.select-activity').selectmenu();
+    $('.ui-selectmenu-button').click(function() {
 		$(this).children('.ui-selectmenu-icon').toggleClass('icon-rotate');
 	});
-	$('.ui-selectmenu-menu').click(function() {
+    $('.ui-selectmenu-menu').click(function() {
 		$('.ui-selectmenu-icon').removeClass('icon-rotate');
 	});
-	
-	
-	$('.publications-select__item').click(function() {
+
+
+    $('.publications-select__item').click(function() {
 		$(this).toggleClass('item-select');
 	})
-	
-	
-	$('.add-pets').click(function(e) {
+
+
+    $('.add-pets').click(function(e) {
 		e.preventDefault();
 		$('.page-data__pets').fadeIn();
 	});
-	$('.pets-info__btn').click(function(e) {
+    $('.pets-info__btn').click(function(e) {
 		e.preventDefault();
 		$('.page-data__pets').fadeOut();
 	})
-	
-	
-	//Фильтр на мобильной версии
-	$('.filter-mobile').click(function() {
+
+
+    //Фильтр на мобильной версии
+    $('.filter-mobile').click(function() {
 		$(this).next().slideToggle();
 	});
-	
-	//Комментарии на странице со статьей
-	$('.js-add__comment').on('click', function(e) {
+
+    //Комментарии на странице со статьей
+    $('.js-add__comment').on('click', function(e) {
 		
 		e.preventDefault();
 		$(this).hide();
 		$(this).next('.comments-form').slideDown();
 		
 	});
-	
 });
