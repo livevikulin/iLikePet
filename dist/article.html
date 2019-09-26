@@ -75,6 +75,7 @@
             <li class="navbar-item__op"><a href="#">Полезное</a></li>
             <li class="navbar-item__op"><a href="#">Видео</a></li>
             <li class="navbar-item__op"><a href="#">Новости</a></li>
+            <li class="navbar-item__op"><a href="#">Объявления</a></li>
             <li class="navbar-item__op"><a href="#">События</a></li>
             <li class="navbar-item"><a class="navbar-item__search" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
 <path d="M19.8828 18.8203C19.9609 18.8984 20 19.0156 20 19.1328C20 19.2891 19.9609 19.4062 19.8828 19.4844L18.9844 20.3438C18.8672 20.4609 18.75 20.5 18.6328 20.5C18.4766 20.5 18.3984 20.4609 18.3203 20.3438L13.5547 15.6172C13.4766 15.5391 13.4375 15.4219 13.4375 15.3047V14.7578C12.6953 15.3828 11.875 15.8906 10.9766 16.2422C10.0391 16.5938 9.10156 16.75 8.125 16.75C6.64062 16.75 5.27344 16.3984 4.02344 15.6562C2.77344 14.9531 1.79688 13.9766 1.09375 12.7266C0.351562 11.4766 0 10.1094 0 8.625C0 7.14062 0.351562 5.8125 1.09375 4.5625C1.79688 3.3125 2.77344 2.33594 4.02344 1.59375C5.27344 0.890625 6.64062 0.5 8.125 0.5C9.60938 0.5 10.9375 0.890625 12.1875 1.59375C13.4375 2.33594 14.4141 3.3125 15.1562 4.5625C15.8594 5.8125 16.25 7.14062 16.25 8.625C16.25 9.64062 16.0547 10.5781 15.7031 11.4766C15.3516 12.4141 14.8828 13.2344 14.2578 13.9375H14.8047C14.9219 13.9375 15.0391 13.9766 15.1172 14.0547L19.8828 18.8203ZM8.125 14.875C9.21875 14.875 10.2734 14.6016 11.25 14.0547C12.1875 13.5078 12.9688 12.7266 13.5156 11.75C14.0625 10.8125 14.375 9.75781 14.375 8.625C14.375 7.53125 14.0625 6.47656 13.5156 5.5C12.9688 4.5625 12.1875 3.78125 11.25 3.23438C10.2734 2.6875 9.21875 2.375 8.125 2.375C6.99219 2.375 5.9375 2.6875 5 3.23438C4.02344 3.78125 3.24219 4.5625 2.69531 5.5C2.14844 6.47656 1.875 7.53125 1.875 8.625C1.875 9.75781 2.14844 10.8125 2.69531 11.75C3.24219 12.7266 4.02344 13.5078 5 14.0547C5.9375 14.6016 6.99219 14.875 8.125 14.875Z" fill="white"/>
@@ -94,6 +95,7 @@
               <li class="navbar-fixed__op"><a href="#">Полезное</a></li>
               <li class="navbar-fixed__op"><a href="#">Видео</a></li>
               <li class="navbar-fixed__op"><a href="#">Новости</a></li>
+              <li class="navbar-fixed__op"><a href="#">Объявления</a></li>
               <li class="navbar-fixed__op"><a href="#">События</a></li>
               <li><a class="navbar-fixed__search" href="#"><img src="img/sprites/intermediate-svg/glass-fixed.svg" alt=""></a>
                 <input class="navbar-search" type="search" name="navbarSearch" placeholder="Поиск по сайту"><span class="navbar-search__close"><i class="far fa-times-circle"></i></span>
@@ -158,7 +160,20 @@
 </defs>
 </svg></a></div>
               </div>
-              <div class="comments"><a class="comments-add__btn" href="#">Добавить комментарий</a>
+              <div class="comments"><a class="comments-add__btn js-add__comment" href="#">Добавить комментарий</a>
+                <div class="comments-form"><span class="comments-form__title">Добавить комментарий</span>
+                  <form class="comments-form__block" action="#">
+                    <div class="comments-form__input">
+                      <input type="text" placeholder="Имя">
+                    </div>
+                    <div class="comments-form__input">
+                      <input type="text" placeholder="Электронная почта">
+                    </div>
+                    <div class="comments-form__textarea">
+                      <textarea name="" placeholder="Тут я уже набираю свой длинный комментарий к новости"></textarea>
+                    </div><a class="comments-form__btn" href="#">Отправить</a><span class="comments-form__consent">Нажимая на кнопку, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></span>
+                  </form>
+                </div>
                 <div class="comments-block">
                   <div class="comment-box">
                     <div class="comment-person"><span class="comment-person__photo"><img src="img/avatar-person.jpg" alt=""></span>
@@ -180,16 +195,7 @@
             </div>
             <div class="article-similar">
               <div class="article-news"><span class="home-news__title">Похожие статьи</span>
-                <div class="news">
-                  <div class="news-block"><span class="news-block__calendar">20 ноября</span><span class="news-block__text">«Николас жив». Рогозин рассказал о судьбе «утопленной» при нём таксы</span></div>
-                  <div class="news-block"><span class="news-block__calendar">20 ноября</span><span class="news-block__text">Это какая-то «дичь». «Единая Россия» выступила против узаконивания «вип-охоты»</span></div>
-                  <div class="news-block"><span class="news-block__calendar">20 ноября</span><span class="news-block__text">Самое маленькое в мире млекопитающее обнаружили на юге России</span></div>
-                  <div class="news-block"><span class="news-block__calendar">20 ноября</span><span class="news-block__text">Обожжённый, но счастливый. Выжившего при пожаре в Калифорнии кота вернули семье</span></div>
-                  <div class="news-block"><span class="news-block__calendar">20 ноября</span><span class="news-block__text">Полицейские арестовали заводчицу, которая хранила в морозилках трупы 44 собак</span></div>
-                  <div class="news-block"><span class="news-block__calendar">20 ноября</span><span class="news-block__text">Акулы-призраки и светящиеся кальмары. В Тасмании нашли более 100 новых существ</span></div>
-                  <div class="news-block"><span class="news-block__calendar">20 ноября</span><span class="news-block__text">Володин: Общество долго ждало закон об ответственном обращении с животными</span></div>
-                  <div class="news-block"><span class="news-block__calendar">20 ноября</span><span class="news-block__text">Ученые: собаки способны распознавать плохих людей</span></div>
-                </div><a class="news-all" href="#">Все новости</a>
+                <div class="news"><a class="news-block" href="#"><span class="news-block__calendar">20 ноября</span><span class="news-block__text">«Николас жив». Рогозин рассказал о судьбе «утопленной» при нём таксы</span></a><a class="news-block" href="#"><span class="news-block__calendar">20 ноября</span><span class="news-block__text">Это какая-то «дичь». «Единая Россия» выступила против узаконивания «вип-охоты»</span></a><a class="news-block" href="#"><span class="news-block__calendar">20 ноября</span><span class="news-block__text">Самое маленькое в мире млекопитающее обнаружили на юге России</span></a><a class="news-block" href="#"><span class="news-block__calendar">20 ноября</span><span class="news-block__text">Обожжённый, но счастливый. Выжившего при пожаре в Калифорнии кота вернули семье</span></a><a class="news-block" href="#"><span class="news-block__calendar">20 ноября</span><span class="news-block__text">Полицейские арестовали заводчицу, которая хранила в морозилках трупы 44 собак</span></a><a class="news-block" href="#"><span class="news-block__calendar">20 ноября</span><span class="news-block__text">Акулы-призраки и светящиеся кальмары. В Тасмании нашли более 100 новых существ</span></a><a class="news-block" href="#"><span class="news-block__calendar">20 ноября</span><span class="news-block__text">Володин: Общество долго ждало закон об ответственном обращении с животными</span></a><a class="news-block" href="#"><span class="news-block__calendar">20 ноября</span><span class="news-block__text">Ученые: собаки способны распознавать плохих людей</span></a></div><a class="news-all" href="#">Все новости</a>
               </div>
             </div>
           </div>

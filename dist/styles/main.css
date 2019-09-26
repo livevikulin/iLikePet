@@ -5819,7 +5819,9 @@ footer {
   .dog-page-slider__nav .slick-current:before {
     width: 48px;
     height: 39px;
-    margin-left: -24px; } }
+    margin-left: -24px; }
+  .activities-subscribe {
+    width: auto; } }
     @media screen and (max-width: 540px) {
   .footer {
     padding: 10px 0 10px; }
