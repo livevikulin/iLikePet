@@ -3085,20 +3085,24 @@ input[type="number"]::-webkit-outer-spin-button {
       margin-right: 59px; }
   .events-boxes {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     padding-top: 20px;
     margin-top: 14px;
     border-top: 3px solid #F7D9DF; }
   .events-box {
-    width: 396px;
-    cursor: pointer;
+    width: calc(33% - 15px);
     background: #ffffff;
+    margin-left: 15px;
+    cursor: pointer;
     margin-bottom: 20px;
     position: relative; }
     .events-box:before {
       position: absolute;
-      content: url("../img/events-box-line.png");
+      content: "";
+      background: url("../img/events-box-line.png") repeat-x;
+      width: 100%;
+      height: 10px;
       bottom: -7px; }
     .events-box__image {
       width: 100%;
@@ -5221,6 +5225,7 @@ footer {
     opacity: 0.25; }
   .slick-prev:before,
   .slick-next:before {
+    font-family: "slick";
     font-size: 20px;
     line-height: 1;
     color: white;
@@ -5292,6 +5297,7 @@ footer {
         content: "•";
         width: 20px;
         height: 20px;
+        font-family: "slick";
         font-size: 6px;
         line-height: 20px;
         text-align: center;
@@ -5302,6 +5308,9 @@ footer {
     .slick-dots li.slick-active button:before {
       color: black;
       opacity: 0.75; }
+    @media (min-width: 1050px) {
+      .events-box:nth-of-type(3n + 1) {
+        margin-left: 0; } }
     @media screen and (max-width: 1301px) {
   .kind-box:nth-child(3n+3) {
     margin-right: 28px; }
@@ -5369,6 +5378,11 @@ footer {
     margin-right: 0; }
   .animals-box:nth-child(5n+5) {
     margin-right: 44px; } }
+    @media (max-width: 1050px) {
+      .events-box {
+        width: calc(50% - 15px); }
+        .events-box:nth-of-type(2n + 1) {
+          margin-left: 0; } }
     @media screen and (max-width: 999px) {
   .articles-box {
     width: 300px;
@@ -5843,6 +5857,10 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center; } }
+    @media (max-width: 640px) {
+      .events-box {
+        width: 100%;
+        margin-left: 0; } }
     @media screen and (max-width: 639px) {
   .kind-box {
     margin-right: 0; }
