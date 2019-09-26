@@ -22,7 +22,13 @@ $(document).ready(function() {
             media : {}
         },
 	});
-
+	
+	//Закрытие модалки с благодарностью
+	$('.thanks__btn').on('click', function () {
+		$.fancybox.close();
+	});
+	
+	//Натройка ползунка в фильтре
     var sliderRange = $("#slider-range");
     var dataMin = sliderRange.data("min");
     var dataMax = sliderRange.data("max");
