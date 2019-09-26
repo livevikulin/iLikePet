@@ -271,7 +271,6 @@ input[type="number"]::-webkit-outer-spin-button
 		margin-bottom: 13px
 	&__block 
 		display: flex
-		justify-content: space-between
 		flex-wrap: wrap
 		padding-top: 21px
 		border-top: 3px solid #F7D9DF
@@ -346,6 +345,9 @@ input[type="number"]::-webkit-outer-spin-button
 		width: 100%
 		max-width: 392px
 		height: 274px
+		margin-right: 28px
+		&:nth-child(3n+3)
+			margin-right: 0
 .gallery-banner 
 	width: 100%
 	max-width: 295px
@@ -3222,6 +3224,12 @@ input[type="number"]::-webkit-outer-spin-button
 			padding-right: 0
 			&__articles
 				flex-wrap: wrap
+	.block-video
+		&__width-392
+			&:nth-child(3n+3)
+				margin-right: 28px
+			&:nth-child(2n+2)
+				margin-right: 0
 
 @media screen and (max-width: 1200px)
 	.kind
@@ -3245,10 +3253,6 @@ input[type="number"]::-webkit-outer-spin-button
         &-block
             &__bottom
                 margin-bottom: 15px
-    .gallery
-        &-video
-            &__block
-                justify-content: center
     .activities-subscribe
         margin-bottom: 20px
     .article
@@ -3346,6 +3350,13 @@ input[type="number"]::-webkit-outer-spin-button
 				margin-right: 44px
 			&:nth-child(3n+3)
 				margin-right: 0
+				
+@media screen and (max-width: 854px)
+	.block-video
+		&__width-392
+			margin-right: 0
+			&:nth-child(3n+3)
+				margin-right: 0
 	
 @media screen and (max-width: 768px)
 	.title-page
@@ -3385,6 +3396,8 @@ input[type="number"]::-webkit-outer-spin-button
 		&-video
 			&__title
 				font-size: 28px
+			&__block
+				justify-content: center
 		&-banner
 			padding-top: 0
 			&__block
