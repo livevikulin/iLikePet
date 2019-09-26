@@ -5796,6 +5796,9 @@ footer {
     @media screen and (max-width: 635px) {
   .navbar-block {
     margin-bottom: 10px; } }
+    @media screen and (max-width: 631px) {
+  .articles-wrapper {
+    justify-content: center; } }
     @media all and (max-height: 576px) {
   .fancybox-slide {
     padding-left: 6px;
