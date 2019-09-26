@@ -23,7 +23,20 @@ $(document).ready(function() {
         },
 	});
 	
-	//Закрытие модалки с благодарностью
+	//Открытие / Закрытие модалки с благодарностью	
+	$(window).on('sendshow', function () {
+		$.fancybox.open({
+		
+			src  : '#thanks',
+			type : 'inline'
+		
+		});
+	});
+	
+	$('.comments-form__btn').click(function() {
+		$(this).trigger('sendshow');
+	});
+	
 	$('.thanks__btn').on('click', function () {
 		$.fancybox.close();
 	});
