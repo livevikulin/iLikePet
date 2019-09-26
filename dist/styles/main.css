@@ -5225,7 +5225,6 @@ footer {
     opacity: 0.25; }
   .slick-prev:before,
   .slick-next:before {
-    font-family: "slick";
     font-size: 20px;
     line-height: 1;
     color: white;
@@ -5297,7 +5296,6 @@ footer {
         content: "•";
         width: 20px;
         height: 20px;
-        font-family: "slick";
         font-size: 6px;
         line-height: 20px;
         text-align: center;
@@ -5561,6 +5559,7 @@ footer {
     .article-subtitle {
       font-size: 14px; }
     .article-main {
+      height: 100%;
       padding-left: 10px;
       padding-right: 10px; }
   .filter-block {
