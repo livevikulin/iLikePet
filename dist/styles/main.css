@@ -3361,7 +3361,7 @@ input[type="number"]::-webkit-outer-spin-button {
       margin-bottom: 21px; }
     .dog-page-info p {
       margin: 0 0 10px 0; }
-  .dog-page-tabs__block ul {
+  .dog-page-tabs__block .ui-tabs-nav {
     display: flex;
     justify-content: space-between;
     padding: 0 0 15px 0;
@@ -3369,7 +3369,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-bottom: 0;
     list-style: none;
     border-bottom: 1px solid #E0E0E0; }
-    .dog-page-tabs__block ul li a {
+    .dog-page-tabs__block .ui-tabs-nav li a {
       font-family: Arsenal Bold;
       font-style: normal;
       font-weight: bold;
@@ -3379,7 +3379,7 @@ input[type="number"]::-webkit-outer-spin-button {
       text-decoration: none;
       padding-bottom: 14px;
       outline: none; }
-    .dog-page-tabs__block ul .ui-tabs-active a {
+    .dog-page-tabs__block .ui-tabs-nav .ui-tabs-active a {
       color: #000000 !important;
       border-bottom: 3px solid #D9435D; }
   .dog-page-tabs__box {
