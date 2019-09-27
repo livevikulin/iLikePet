@@ -4729,6 +4729,16 @@ header {
   padding: 12px 0 5px;
   z-index: 9999; }
 
+.nav-active {
+  display: block;
+  animation: navActive 0.5s ease forwards; }
+
+@keyframes navActive {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .navbar-fixed {
   display: flex;
   justify-content: space-between;
