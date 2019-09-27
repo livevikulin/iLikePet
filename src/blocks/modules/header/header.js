@@ -40,12 +40,12 @@ $(document).ready(function() {
 	//Меню на мобиле
 	$('.header-mobile__burger').click(function() {
 		$('.header-mobile__menu').slideDown();
-		$('html').css('overflow', 'hidden');
+		$('body').css('overflow', 'hidden');
 		$(document).bind('touchmove', false);
 	});
 	$('.header-mobile__close i').click(function() {
 		$('.header-mobile__menu').slideUp();
-		$('html').css('overflow', 'auto');
+		$('body').css('overflow', 'auto');
 	});
 	
 	//Поиск на мобиле
