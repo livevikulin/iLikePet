@@ -40,7 +40,9 @@ $(document).ready(function() {
 	//Меню на мобиле
 	$('.header-mobile__burger').click(function() {
 		$('.header-mobile__menu').slideDown();
-		$('body').css('overflow', 'hidden');
+		$('body').on('touchmove', function(e) {
+			e.preventDefault();
+		});
 		$(document).bind('touchmove', false);
 	});
 	$('.header-mobile__close i').click(function() {
@@ -51,7 +53,6 @@ $(document).ready(function() {
 	//Поиск на мобиле
 	$('.header-mobile__search').click(function() {
 		$('.header-mobile__search-block').slideDown();
-		$('html').css('overflow', 'hidden');
 		$(document).bind('touchmove', false);
 	});
 	$('.header-mobile__search-close i').click(function() {
