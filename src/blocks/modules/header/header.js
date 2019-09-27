@@ -26,13 +26,15 @@ $(document).ready(function() {
 	$('.navbar-fixed__search').click(function(e) {
 		e.preventDefault();
 		$(this).parent().find('.navbar-search').addClass('search-open');
-		$('.navbar-fixed__op').addClass('navbar-button');
+		//Поправил классы
+		$('.navbar-item__op').addClass('navbar-button');
 		$(this).parent().find('.navbar-search__close').show(850);
 	});
 	$('.navbar-search__close').click(function() {
 		$(this).hide();
 		$(this).parent().find('.navbar-search').removeClass('search-open');
-		$('.navbar-fixed__op').removeClass('navbar-button');
+		//Поправил классы
+		$('.navbar-item__op').removeClass('navbar-button');
 	});
 	
 	//Меню на мобиле
