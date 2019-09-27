@@ -40,6 +40,7 @@ $(document).ready(function() {
 	//Меню на мобиле
 	$('.header-mobile__burger').click(function() {
 		$('.header-mobile__menu').slideDown();
+		$('body').css('overflow', 'hidden');
 		$('body').on('touchmove', function(e) {
 			e.preventDefault();
 		});
