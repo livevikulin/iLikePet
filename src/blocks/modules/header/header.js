@@ -4,9 +4,10 @@ $(document).ready(function() {
 	
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > 250) {
-			$('.nav-fixed').slideDown();
+			$('.nav-fixed').addClass('nav-active');
+			
 		} else {
-			$('.nav-fixed').hide()
+			$('.nav-fixed').removeClass('nav-active');
 		}
 	});
 	
