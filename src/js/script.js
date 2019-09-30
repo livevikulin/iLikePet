@@ -96,19 +96,19 @@ $(document).ready(function() {
 	});
 
     //Календарь на странице с событиями
-    var dayNames = $( "#datepicker" ).datepicker( "option", "dayNames" );
-    var dayNamesMin = $( "#datepicker" ).datepicker( "option", "dayNamesMin" );
-    var monthNames = $( "#datepicker" ).datepicker( "option", "monthNames" );
-    var monthNamesShort = $( "#datepicker" ).datepicker( "option", "monthNamesShort" );
+    var dayNames = $( ".js-datepicker" ).datepicker( "option", "dayNames" );
+    var dayNamesMin = $( ".js-datepicker" ).datepicker( "option", "dayNamesMin" );
+    var monthNames = $( ".js-datepicker" ).datepicker( "option", "monthNames" );
+    var monthNamesShort = $( ".js-datepicker" ).datepicker( "option", "monthNamesShort" );
 
-    $('#datepicker').datepicker({
+    $('.js-datepicker').datepicker({
 		firstDay: 1,
 		numberOfMonths: 2,
 		dateFormat: "yy-mm-dd",
 		onSelect: function (date, i) {
 			if (date !== i.lastVal) {
 
-				$.post($("#datepicker").data("url"), "ajax=Y&curr_event_date=" + date,
+				$.post($(".js-datepicker").data("url"), "ajax=Y&curr_event_date=" + date,
 					function (html) {
 						$('#events-container').html(html);
 					});
@@ -121,16 +121,16 @@ $(document).ready(function() {
 	});
 
     $('.js-show-current-week').on('click', ()=> {
-		$.post($("#datepicker").data("url"), "ajax=Y",
+		$.post($(".js-datepicker").data("url"), "ajax=Y",
 			function (html) {
 				$('#events-container').html(html);
 			});
 	});
 
-    $( "#datepicker" ).datepicker( "option", dayNames, [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение" ] );
-    $( "#datepicker" ).datepicker( "option", dayNamesMin, [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс" ] );
-    $( "#datepicker" ).datepicker( "option", monthNames, ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'] );
-    $( "#datepicker" ).datepicker( "option", monthNamesShort, ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'] );
+    $( ".js-datepicker" ).datepicker( "option", dayNames, [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение" ] );
+    $( ".js-datepicker" ).datepicker( "option", dayNamesMin, [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс" ] );
+    $( ".js-datepicker" ).datepicker( "option", monthNames, ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'] );
+    $( ".js-datepicker" ).datepicker( "option", monthNamesShort, ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'] );
 
 
     //Выбор События эта неделя или выбрать дату
