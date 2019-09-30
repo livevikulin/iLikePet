@@ -46,17 +46,20 @@ block content
 										.personal-info__input.input
 											input(type="text" id="inputSurname" class="js-input")
 											label(for="inputSurname" id="label") Фамилия
-										.personal-info__input.input
-											input(type="text" id="inputSex" class="js-input")
-											label(for="inputSex" id="label") Пол
+										.personal-info__select
+											select(name="activity" class="select-activity")
+												option(value="1") Мужской
+												option(value="2") Женский
 										.personal-info__input.input.input-born
 											input(type="text" id="inputBorn" class="js-input")
 											label(for="inputBorn" id="label") Дата рождения
 									.personal-info__block
 										span.personal-info__title Адрес
-										.personal-info__input.input
-											input(type="text" id="inputCountry" class="js-input")
-											label(for="inputCountry" id="label") Страна
+										.personal-info__select
+											select(name="activity" class="select-activity")
+												option(value="1") Россия
+												option(value="2") США
+												option(value="3") Китай
 										.personal-info__input.input
 											input(type="text" id="inputCity" class="js-input")
 											label(for="inputCity" id="label") Город

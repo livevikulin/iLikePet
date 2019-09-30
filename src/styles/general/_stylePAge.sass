@@ -2592,6 +2592,12 @@ input[type="number"]::-webkit-outer-spin-button
 	&-info
 		&__block
 			margin-bottom: 27px
+			&:first-child
+				.personal-info__select
+					margin-bottom: 12px
+			&:nth-child(2)
+				.personal-info__select
+					margin-bottom: 12px
 		&__title
 			display: block
 			font-family: Arsenal Bold
@@ -3140,9 +3146,11 @@ input[type="number"]::-webkit-outer-spin-button
 	outline: none
 	padding: 11px
 	cursor: pointer
+.ui-menu
+	width: 100%
 .ui-selectmenu-menu
 	width: 100%
-	max-width: 396px
+	max-width: 320px
 	// top: -684px !important
 	background: #F5F9FA
 	border: 1px solid #E0E0E0
