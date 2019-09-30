@@ -191,7 +191,7 @@ $(document).ready(function() {
 	});
 
     //Инициализация календаря в Личном кабинете
-    $('#inputBorn, #inputPetBorn, .js-datepicker').datepicker();
+    $('.js-datepicker-personal').datepicker();
     $('#inputBorn').click(function() {
 		$('.ui-datepicker').addClass('ui-datepicker-personal');
 	});
