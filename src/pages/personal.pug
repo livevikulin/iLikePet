@@ -34,9 +34,14 @@ block content
 						.personal-tabs__box#tabs-main
 							span.personal-box__title Алексей Петров
 							form(action="#").personal-box__data
-								.personal-data__photo
-									input(type="file", name="#")
-									span Добавить фото
+								.personal-photos
+									.personal-photo
+										.personal-photo__image
+											img(src="img/review-img4.jpg", alt="")
+										a(href="#").personal-photo__remove Удалить
+									.personal-data__photo
+										input(type="file", name="#")
+										span Добавить фото
 								.personal-data__info
 									.personal-info__block
 										span.personal-info__title Личные данные
