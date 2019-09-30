@@ -214,7 +214,7 @@ $(document).ready(function() {
 	})
 
 
-    $('.add-pets').click(function(e) {
+    $('.js-add_pets').click(function(e) {
 		e.preventDefault();
 		$('.page-data__pets').fadeIn();
 	});
