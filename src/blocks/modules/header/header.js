@@ -41,9 +41,6 @@ $(document).ready(function() {
 	$('.header-mobile__burger').click(function() {
 		$('.header-mobile__menu').slideDown();
 		$('body').css('overflow', 'hidden');
-		$('body').on('touchmove', function(e) {
-			e.preventDefault();
-		});
 		$(document).bind('touchmove', false);
 	});
 	$('.header-mobile__close i').click(function() {

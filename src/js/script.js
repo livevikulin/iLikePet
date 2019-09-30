@@ -181,7 +181,7 @@ $(document).ready(function() {
     $('#tabs').tabs();
 
     //Скрытие лэйблов при заполнении инпута
-    $('#inputName, #inputSurname, #inputSex, #inputBorn, #inputPetName, #inputPetBorn').on('change', function() {
+    $('.js-input').on('change', function() {
 		if ($(this).val() == '') {
 			$(this).next('#label').removeClass('label-none')
 		} else {
