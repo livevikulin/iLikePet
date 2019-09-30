@@ -3,6 +3,7 @@ import "@fancyapps/fancybox/";
 import "jquery-ui-bundle";
 import "jquery-ui";
 import "slick-slider";
+import "jquery-mask-plugin";
 
 
 
@@ -236,4 +237,11 @@ $(document).ready(function() {
 		$(this).next('.comments-form').slideDown();
 		
 	});
+	
+	//Маски
+	$("#inputBorn").mask('00/00/0000');
+	$("#inputPetBorn").mask('00/00/0000');	
+	$("#inputPhone").mask('+7(000) 000-0000');
+	$("#inputPhone2").mask('+7(000) 000-0000');
+	
 });
