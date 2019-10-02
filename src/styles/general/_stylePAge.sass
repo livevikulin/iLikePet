@@ -178,7 +178,7 @@ input[type="number"]::-webkit-outer-spin-button
 			font-style: normal
 			font-weight: normal
 			font-size: 14px
-			line-height: 16px
+			line-height: 18px
 			color: #FFFFFF
 		i 
 			margin-right: 5px
@@ -187,7 +187,8 @@ input[type="number"]::-webkit-outer-spin-button
 		width: 174px
 	&-calendar 
 		display: inline-block
-		width: 90px
+		width: 112px
+		white-space: pre
 	&-bottom 
 		display: flex
 		width: 100%
@@ -1201,6 +1202,8 @@ input[type="number"]::-webkit-outer-spin-button
 			color: #D9435D
 			text-decoration: none
 			margin-right: 12px
+			&.unactive
+				pointer-events: none
 		&__number
 			display: flex
 			justify-content: center
@@ -1427,7 +1430,7 @@ input[type="number"]::-webkit-outer-spin-button
 			margin-right: 8px
 		&__calendar
 			display: inline-block
-			width: 108px
+			width: 130px
 			margin-right: 8px
 			font-family: Arimo Regular
 			font-style: normal
@@ -1453,6 +1456,7 @@ input[type="number"]::-webkit-outer-spin-button
 			color: #979899
 		&__fav
 			text-decoration: none
+			display: flex
 			span
 				font-family: Arimo Regular
 				font-style: normal
@@ -2109,6 +2113,7 @@ input[type="number"]::-webkit-outer-spin-button
 		&__box
 			p
 				margin: 0 0 10px 0
+				padding-right: 10px
 				&:last-child
 					margin: 0
 		&__btns
@@ -2690,6 +2695,8 @@ input[type="number"]::-webkit-outer-spin-button
 			height: 154px
 			border-radius: 6px
 			overflow: hidden
+			background-position: center
+			background-size: cover
 		&__remove
 			font-family: Arimo Regular
 			font-style: normal
@@ -3761,6 +3768,8 @@ input[type="number"]::-webkit-outer-spin-button
 			.personal-photo__image
 				width: 115px
 				height: 115px
+				background-position: center
+				background-size: cover
 			.personal-photo
 				height: 154px
 	#tabs-pets .pets-info__btn
