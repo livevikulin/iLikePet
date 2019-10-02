@@ -1,0 +1,164 @@
+.service-provider
+    padding: 33px 0 62px
+    background-color: rgba(46, 41, 45, 0.06)
+    background-image: url(../img/bg-gallery.jpg)
+    .provider-service
+        width: 1244px
+        margin: 0 auto
+        &__container
+            display: flex
+            margin-top: 20px
+            .service__card:nth-child(3n+3)
+                margin-right: 28px
+            .service__card:last-child
+                margin-right: 0
+        &__title
+            border-bottom: 3px solid #F7D9DF
+            h3
+                font-family: 'Nexa Script', sans-serif
+                font-size: 32px
+                color: #D9435D
+                margin-bottom: 8px
+    .provider
+        width: 1244px
+        margin: 0 auto
+        background-color: #fff
+        margin-top: 20px
+        &__tabs
+            &-content
+                width: 876px
+            .dog-page-tabs__block
+                padding-bottom: 122px
+                ul
+                    justify-content: flex-start
+                    li
+                        margin-right: 32px
+        &__content
+            margin-right: 50px
+            margin-left: 50px
+            border-top: 1px solid #E0E0E0
+        &__add-favorite
+            padding: 15px 50px
+            display: flex
+            justify-content: flex-end
+            a
+                position: relative
+                text-decoration: none
+                color: #D9435D
+                font-size: 16px
+                &:before
+                    position: absolute
+                    content: ''
+                    width: 20px
+                    height: 18px
+                    background: url('../img/service-card-print.svg') no-repeat
+                    left: -35px
+        &__header
+            margin-top: 20px
+            display: flex
+            &-descr
+                margin-left: 47px
+                display: flex
+                flex-direction: column
+                .row
+                    display: flex
+                    margin-top: 15px
+                    button
+                        align-self: baseline
+                        padding: 0
+                        height: 48px
+                        width: 194px
+                    .phone
+                        display: flex
+                        flex-direction: column
+                        margin-left: 33px
+                        span
+                            color: #979899
+                            font-family: 'Merriweather', sans-serif
+                            font-size: 15px
+                        span:last-child
+                            color: #494A4C
+                            margin-top: 8px
+                span
+                    font-family: 'Arsenal Bold', sans-serif
+                    font-size: 48px
+                    color: #494A4C
+                a
+                    margin-top: 7px
+                    display: inline-block
+                    font-family: 'Arimo Regular', sans-serif
+                    color: #D9435D
+                    align-self: baseline
+                    height: 32px
+                    line-height: 32px
+                    border: 1px solid #EFEFEF
+                    box-sizing: border-box
+                    padding-right: 13px
+                    padding-left: 13px
+                    text-decoration: none
+                    font-size: 15px
+                    border-radius: 16px
+            &-icon
+                border: 1px solid #E0E0E0
+                width: 405px
+                height: 248px
+                box-sizing: border-box
+                display: flex
+                align-items: center
+                justify-content: center
+
+
+@media screen and (max-width: 1280px)
+    .service-provider
+        .provider-service,
+        .provider
+            width: 1024px
+        .provider-service__container
+            cursor: pointer
+            overflow-x: scroll
+@media screen and (max-width: 1280px)
+    .service-provider
+        .provider-service,
+        .provider
+            width: 768px
+        .provider__tabs-content
+            width: 500px
+        .provider__header-descr .row 
+            button
+                height: 41px
+                width: 145px
+                font-size: 14px
+            .phone
+                margin-left: 10px
+        .provider__header-icon
+            width: 300px
+            height: 200px
+@media screen and (max-width: 780px)
+    .service-provider
+        .provider-service,
+        .provider
+            width: 732px
+@media screen and (max-width: 768px)
+    .service-provider
+        .provider-service,
+        .provider
+            width: 360px
+        .provider__header
+            align-items: center
+            flex-direction: column
+        .provider__tabs-content
+            width: 290px
+        .provider__add-favorite
+            justify-content: center
+@media screen and (max-width: 360px)
+    .service-provider
+        .provider-service,
+        .provider
+            width: 320px
+        .provider__header
+            align-items: center
+            flex-direction: column
+        .provider__tabs-content
+            width: 250px
+        .provider__header-descr
+            margin-left: 0

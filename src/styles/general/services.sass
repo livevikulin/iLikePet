@@ -1,0 +1,85 @@
+.services
+    padding: 33px 0 62px
+    background-color: rgba(46, 41, 45, 0.06)
+    background-image: url(../img/bg-gallery.jpg)
+    &__list
+        width: 1244px
+        margin: 0 auto
+        .row
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+    &__item
+        margin-bottom: 40px
+        &_vet
+            flex-basis: 346px
+        &_teach
+            flex-basis: 391px
+        &_houtel
+            flex-basis: 352px
+        &_services
+            flex-basis: 375px
+        &_ritual
+            flex-basis: 412px
+        &_tour
+            flex-basis: 358px
+        &_buy
+            flex-basis: 297px
+        &-title
+            font-family: 'Arsenal Bold', sans-serif
+            font-size: 24px
+            font-weight: 600
+            color: #494A4C
+            display: flex
+            span
+                font-family: 'Arsenal Regular', sans-serif
+                margin-left: 9px
+                align-self: flex-start
+                font-size: 15px
+                color: #D9435D
+
+        &-body
+            margin-top: 17px
+            .open-more
+                width: 32px
+                border-radius: 50%
+                padding: 0
+.services-link
+    text-decoration: none
+    color: #494A4C
+    box-sizing: border-box
+    text-align: center
+    margin-bottom: 10px
+    height: 32px
+    font-size: 16px
+    display: inline-block
+    margin-right: 10px
+    border: 1px solid #D9435D
+    background-color: #fff
+    border-radius: 16px
+    line-height: 32px
+    padding-left: 14px
+    padding-right: 14px
+@media screen and (max-width: 1280px)
+    .services__list
+        width: 1024px
+        .services__item
+            &_houtel,
+            &_teach,
+            &_tour,
+            &_buy
+                flex-basis: 346px
+@media screen and (max-width: 1050px)
+    .services__list
+        width: 800px
+@media screen and (max-width: 800px)
+    .services__list
+        width: 360px
+        .services__item
+            margin-bottom: 0
+            margin-top: 40px
+            .services__item-title
+                font-size: 22px
+@media screen and (max-width: 360px)
+    .services__list
+        width: 300px

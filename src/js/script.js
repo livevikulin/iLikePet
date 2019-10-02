@@ -169,7 +169,7 @@ $(document).ready(function() {
 		vertical: true,
 		responsive: [
 			{
-				breakpoint: 768,
+				breakpoint: 769, 
 				settings: {
 					vertical: false,
 					variableWidth: true
@@ -177,6 +177,15 @@ $(document).ready(function() {
 			}
 		]
 	});
+
+	//declaration-more page
+		// show all module
+		$('.show-more').on('click',function(){
+			$(this).hide();
+			$(this).prev().css("width", "unset");
+		})
+	//declaration-more page END
+
 
     //Инициализация табов на странице dog-page
     $('#tabs').tabs();
