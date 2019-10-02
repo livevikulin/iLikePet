@@ -1,0 +1,196 @@
+
+$storeContent:  1280px
+$cardStockBg: #F6D365
+$cardTitle: #494A4C
+$cardBorder: #D9435D
+
+$sectionTitle: #D9435D
+
+
+.store
+    &__line
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__wrapper
+        width: 952px
+    &__more-articles
+        box-sizing: border-box
+        color: $cardTitle
+        border: 3px solid #F7D9DF
+        background-color: #fff
+        border-radius: 20px
+        height: 40px
+        padding-left: 20px
+        padding-right: 28px
+        line-height: 33px
+        position: relative
+        text-decoration: none
+        &:after
+            content: ''
+            position: absolute
+            right: 10px
+            top: 50%
+            transform: translateY(-50%)
+            width: 8px
+            height: 9px
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMUw1IDVMMSA5IiBzdHJva2U9IiNEOTQzNUQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==) no-repeat  
+    &__animals
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.08)
+        height: 133px
+        display: flex
+        justify-content: center
+        align-items: center
+    &__title
+        font-family: 'Nexa Script', sans-serif
+        padding-left: 20px
+        color: $sectionTitle
+        font-size: 40px
+    &__content
+        width: $storeContent
+        margin: 0 auto
+    &__section
+        background-color: #fff
+        &_has-pets
+            padding-top: 40px
+            padding-bottom: 48px
+            background-color: rgba(46, 41, 45, 0.06)
+            background-image: url(../img/bg-gallery.jpg)
+    .row
+        display: flex
+    .new-box_store-vertical
+        &:nth-child(2)
+            margin-right: 31px
+            margin-left: 31px
+    .review-block_store
+        &:nth-child(2)
+            margin-right: 31px
+            margin-left: 31px
+    .stock-wrapper
+        .row
+            .card-store
+                &:first-child
+                    margin-right: 32px
+            &:first-child
+                margin-bottom: 24px
+
+.pets
+    margin: 0
+    padding: 0
+    display: flex
+    align-items: center
+    list-style: none    
+    flex-basis: 896px
+    &__item
+        flex-basis: 64px
+        text-align: center
+        margin-right: 40px
+        &:last-child
+            margin-right: 0
+        a
+            text-decoration: none
+            img
+                width: 64px
+                height: 64px
+                object-fit: contain
+
+
+.card-store
+    width: 296px
+    height: 256px
+    background-color: #fff
+    border-radius: 8px
+    &_lg
+        width: 616px
+        height: 536px
+        margin-right: 32px
+        .card-store__icon
+            img
+                height: 316px
+        .card-store__stock
+            margin-top: 22px
+            margin-bottom: 22px            
+        .card-store__title
+            line-height: 40px
+            width: 479px
+    &_sm
+        position: relative
+        .card-store__stock
+            position: absolute
+            top: 12px
+            left: 12px
+            margin-top: 0
+            margin-bottom: 0   
+            margin-left: 0   
+        .card-store__title
+            font-size: 20px
+            width: 270px
+            margin-left: 12px
+            margin-top: 8px
+    &__icon
+        img
+            width: 100%
+            height: 152px
+            object-fit: cover
+            border-bottom: 4px solid $cardBorder
+    &__title
+        font-size: 20px
+        color: $cardTitle
+        font-family: 'Arsenal Bold', sans-serif
+    &__title,
+    &__stock
+        margin-left: 20px
+    &__stock
+        height: 24px
+        width: 170px
+        line-height: 24px
+        text-align: center
+        font-family: 'Arimo Regular', sans-serif
+        font-size: 14px
+        background-color: $cardStockBg
+        border-radius: 4px
+        color: $cardTitle
+    
+
+.sllider-brands
+    width: 1182px
+    margin: 0 auto
+    margin-bottom: 96px
+    &__item
+        margin-right: 30px
+        img
+            width: 137px
+            height: 96px
+            margin-right: 72px
+
+.new-box_store-vertical
+    border-radius: 8px
+    width: 450px
+    height: 296px
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+.new-box_store-vertical
+    .new-box__info 
+        .articles-info__text
+            width: 370px
+
+
+.review-block_store
+    width: 296px
+    height: 300px
+    border-radius: 8px
+    border-bottom: 0
+    overflow: hidden
+
+.block-video_store
+    border-radius: 8px
+    overflow: hidden
+    .block-video__info
+        a
+            text-decoration: none
+            color: #fff
+            font-size: 24px
+            line-height: 32px
+            font-family: 'Arsenal Bold', sans-serif

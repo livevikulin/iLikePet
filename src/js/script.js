@@ -186,6 +186,13 @@ $(document).ready(function() {
 		})
 	//declaration-more page END
 
+	//store page
+		// store-slider module
+		$('.sllider-brands').slick({
+			arrows: false,
+		});
+	//store page end
+
 
     //Инициализация табов на странице dog-page
     $('#tabs').tabs();
