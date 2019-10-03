@@ -254,18 +254,17 @@ $sectionTitle: #D9435D
     .card-store
         &.card-store_lg
             width: 550px
-    .store
-        .row
-            justify-content: space-between
-        .row_start
-            justify-content: flex-start
-            .review-block_store
-                &:last-child
-                    display: none
-        &__wrapper
-            width: 820px
-        &__content
-            width: 1160px
+    .row
+        justify-content: space-between
+    .row_start
+        justify-content: flex-start
+        .review-block_store
+            &:last-child
+                display: none
+    .store__wrapper
+        width: 820px
+    .store__content
+        width: 1160px
     .new-box.new-box_store-vertical
         width: 350px
         .articles-info__text
@@ -288,37 +287,36 @@ $sectionTitle: #D9435D
                         &:last-child
                             display: none
 @media screen and (max-width: 1180px)
-    .store
-        .store__wrapper
-            width: 650px
-        .store__content
-            width: 1000px
-        &__section
-            &_news
-                .row
-                    justify-content: center
-                    .new-box
-                        &:last-child
-                            display: none
-        &__section_stoks
-            .card-store_sm
-                margin-bottom: 20px
-            .card-store.card-store_lg
-                margin-right: 0
-                width: 614px
-                margin-bottom: 15px
+    .store__wrapper
+        width: 650px
+    .store__content
+        width: 1000px
+    .store__section
+        &_news
             .row
-                flex-direction: column
-                align-items: center
-                .stock-wrapper
-                    display: flex
-                    .row
-                        margin-bottom: 0
-                        &:first-child
-                            margin-right: 20px
-                    .card-store
-                        &:first-child
-                            margin-right: 0
+                justify-content: center
+                .new-box
+                    &:last-child
+                        display: none
+    .store__section_stoks
+        .card-store_sm
+            margin-bottom: 20px
+        .card-store.card-store_lg
+            margin-right: 0
+            width: 614px
+            margin-bottom: 15px
+        .row
+            flex-direction: column
+            align-items: center
+            .stock-wrapper
+                display: flex
+                .row
+                    margin-bottom: 0
+                    &:first-child
+                        margin-right: 20px
+                .card-store
+                    &:first-child
+                        margin-right: 0
     .wrapper-slider
         width: 885px
         .slider-next
@@ -350,7 +348,7 @@ $sectionTitle: #D9435D
         padding-top: 24px
     .store__advert
         display: none
-    .store .store__content
+    .store__content
         width: 775px
     .wrapper-slider
         width: 650px
@@ -371,23 +369,23 @@ $sectionTitle: #D9435D
                         &:nth-last-child(-n+2)
                             display: none
 @media screen and (max-width: 768px)
-    .store
-        .store__wrapper
-            width: 360px
-        .store__line
+    
+    .store__wrapper
+        width: 360px
+    .store__line
+        flex-direction: column
+        h2
+            font-size: 42px
+    .store__content
+        width: 360px
+    .store__section_has-pets
+        .row
             flex-direction: column
-            h2
-                font-size: 42px
-        .store__content
-            width: 360px
-        .store__section_has-pets
-            .row
-                flex-direction: column
-        .new-box_store-vertical:nth-child(2)
-            margin: 0
-        .store__section_news .row .new-box:last-child
-            display: flex
-            margin-top: 25px
+    .new-box_store-vertical:nth-child(2)
+        margin: 0
+    .store__section_news .row .new-box:last-child
+        display: flex
+        margin-top: 25px
     .store__section_stoks
         .row
             .stock-wrapper
@@ -422,7 +420,7 @@ $sectionTitle: #D9435D
                             display: none
                         &:nth-last-child(-n+4)
                             display: none
-    .store .row_start
+    .row_start
         flex-direction: column
         align-items: center
         margin-top: 20px
@@ -438,24 +436,23 @@ $sectionTitle: #D9435D
     .row_video .block-video_store
         width: 290px
         height: 200px
-    .store .store__line h2
+    .store__line h2
         font-size: 32px
-    .store .store__wrapper
+    .store__wrapper
         width: 290px
-    .store .store__content
+    .store__content
         width: 290px
     .slider-next
         right: -2px
     .slider-back
         left: -10px
-    .store
-        .new-box_store-vertical
-            width: 300px
-            .articles-info__text
-                font-size: 18px
-                width: 270px
-            .new-articles__title
-                font-size: 18px
+    .new-box.new-box_store-vertical
+        width: 300px
+        .articles-info__text
+            font-size: 18px
+            width: 270px
+        .new-articles__title
+            font-size: 18px
     .wrapper-slider
         width: 290px
         overflow: hidden

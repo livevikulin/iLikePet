@@ -1,6 +1,6 @@
 extends ../views/layouts/default
 block variables
-	- var title = "Каталог 1";
+	- var title = "Каталог 2";
 	- var isMain = false;
 	
 block content
@@ -34,7 +34,41 @@ block content
 								.filter-box.filter-box_catalog
 									.filter-box__item
 										i.fas.fa-angle-up
-										span Корм
+										span Вид
+									ul.filter-box__list
+										li
+											a(href="#") Сухой
+										li
+											a(href="#") Влажный
+										li
+											a(href="#") Влажный
+										li
+											a(href="#") Лечебный
+										li
+											a(href="#") Лакомство
+										li
+											a(href="#") Натуральный
+								.filter-box.filter-box_catalog
+									.filter-box__item
+										i.fas.fa-angle-up
+										span Вкус
+									ul.filter-box__list
+										li
+											a(href="#") Ассорти
+										li
+											a(href="#") Говядина
+										li
+											a(href="#") Индейка
+										li
+											a(href="#") Кролик
+										li
+											a(href="#") Курица
+										li
+											a(href="#") Лосось
+								.filter-box.filter-box_catalog
+									.filter-box__item
+										i.fas.fa-angle-up
+										span Размер собаки
 									ul.filter-box__list
 										li
 											a(href="#") Вискас
@@ -43,7 +77,7 @@ block content
 								.filter-box.filter-box_catalog
 									.filter-box__item
 										i.fas.fa-angle-up
-										span Аммуниция
+										span Порода
 									ul.filter-box__list
 										li
 											a(href="#") Вискас
@@ -52,7 +86,7 @@ block content
 								.filter-box.filter-box_catalog
 									.filter-box__item
 										i.fas.fa-angle-up
-										span Одежда и обувь
+										span Возраст собаки
 									ul.filter-box__list
 										li
 											a(href="#") Вискас
@@ -61,88 +95,12 @@ block content
 								.filter-box.filter-box_catalog
 									.filter-box__item
 										i.fas.fa-angle-up
-										span Миски
+										span Особые потребности
 									ul.filter-box__list
 										li
 											a(href="#") Вискас
 										li
 											a(href="#") Дошик
-								.filter-box.filter-box_catalog
-									.filter-box__item
-										i.fas.fa-angle-up
-										span Игрушки
-									ul.filter-box__list
-										li
-											a(href="#") Вискас
-										li
-											a(href="#") Дошик
-								.filter-box.filter-box_catalog
-									.filter-box__item
-										i.fas.fa-angle-up
-										span Места для отдыха и содержания
-									ul.filter-box__list
-										li
-											a(href="#") Вискас
-										li
-											a(href="#") Дошик
-								.filter-box.filter-box_catalog
-									.filter-box__item
-										i.fas.fa-angle-up
-										span Транспортировка
-									ul.filter-box__list
-										li
-											a(href="#") Вискас
-										li
-											a(href="#") Дошик
-								.filter-box.filter-box_catalog
-									.filter-box__item
-										i.fas.fa-angle-up
-										span Туалеты
-									ul.filter-box__list
-										li
-											a(href="#") Вискас
-										li
-											a(href="#") Дошик
-								.filter-box.filter-box_catalog
-									.filter-box__item
-										i.fas.fa-angle-up
-										span Ветаптека
-									ul.filter-box__list
-										li
-											a(href="#") Вискас
-										li
-											a(href="#") Дошик
-								.filter-box.filter-box_catalog-text
-									.filter-box__item
-										i.fas.fa-angle-up
-										span Бренд
-									ul.filter-box__list.filter-box__list_show-more
-										li
-											input(type="checkbox", name="brend-all" id="brend-all")
-											label(for="brend-all") Все бренды
-												i.fas.fa-check
-										li
-											input(type="checkbox", name="brend-Canin" id="brend-Canin")
-											label(for="brend-Canin") Royal Canin
-												i.fas.fa-check
-										li
-											input(type="checkbox", name="good-dog" id="good-dog")
-											label(for="good-dog") Хороший пес
-												i.fas.fa-check
-										li
-											input(type="checkbox", name="brend-Fitmin" id="brend-Fitmin")
-											label(for="brend-Fitmin") Fitmin
-												i.fas.fa-check
-										li
-											input(type="checkbox", name="Some-else" id="Some-else")
-											label(for="Some-else") Some else
-												i.fas.fa-check
-										li
-											input(type="checkbox", name="Some-else" id="Some-else-2")
-											label(for="Some-else-2") Some else 2
-												i.fas.fa-check
-									.filter-box__show-all.filter-box__show-all_closed
-										a(href="#") Показать еще
 						.catalog__card-list
 							+card-catalog
 							+card-catalog
@@ -167,7 +125,7 @@ block content
 							+card-catalog
 							+card-catalog
 
-			.store__section_has-pets.store__section_news
+			.store__section.store__section_has-pets.store__section_news
 				.store__content
 					h2.store__title Новости
 					.row

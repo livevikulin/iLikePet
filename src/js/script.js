@@ -216,6 +216,23 @@ $(document).ready(function() {
 		})
 	//store page end
 
+	//product card page
+		//slider module
+		$('.product-card__slider-block').slick({
+			slidesToShow: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.product-slider__nav'
+		  });
+
+		$('.product-slider__nav').slick({
+			slidesToShow: 2,
+			asNavFor: '.product-card__slider-block',
+			variableWidth: true,
+			focusOnSelect: true
+		});
+	//product card end
+
 
     //Инициализация табов на странице dog-page
     $('#tabs').tabs();

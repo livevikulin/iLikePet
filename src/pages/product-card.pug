@@ -5,7 +5,7 @@ block variables
 	
 block content
 	main
-		.catalog
+		.product-card
 			.animals-line
 				ul.pets
 					+pets-item("Cобаки",1)
@@ -17,157 +17,27 @@ block content
 					+pets-item("Рептилии",4)
 					+pets-item("Амфибии",7)
 					+pets-item("Экзотика",9)
-			.__section
-				.breadcrumbs.catalog__breadcrumbs
+			.__top-line
+				.breadcrumbs.product-card__breadcrumbs
 					a(href="#").breadcrumbs-item Интернет-магазин
-					a(href="#").breadcrumbs-this__page.breadcrumbs-item  Товары для собак
+					a(href="#").breadcrumbs-item Товары для собак
+					a(href="#").breadcrumbs-this__page.breadcrumbs-item  Корм для собак
+				h1.__title Royal Canin Mini Adult для собак
+				.product-card
+					img(src="./img/product-card/product-logo.png")
 			.__section
-				.catalog__content
-					h1.catalog__title Товары для собак
-					.catalog__wrapper
-						.filter-main
-							.filter-mobile
-								span.filter-mobile__text Фильтр
-								span.filter-mobile__icon
-									i.fas.fa-sliders-h
-							.filter-block
-								.filter-box.filter-box_catalog
-									.filter-box__item
-										i.fas.fa-angle-up
-										span Корм
-									ul.filter-box__list
-										li
-											a(href="#") Вискас
-										li
-											a(href="#") Дошик
-								.filter-box.filter-box_catalog
-									.filter-box__item
-										i.fas.fa-angle-up
-										span Аммуниция
-									ul.filter-box__list
-										li
-											a(href="#") Вискас
-										li
-											a(href="#") Дошик
-								.filter-box.filter-box_catalog
-									.filter-box__item
-										i.fas.fa-angle-up
-										span Одежда и обувь
-									ul.filter-box__list
-										li
-											a(href="#") Вискас
-										li
-											a(href="#") Дошик
-								.filter-box.filter-box_catalog
-									.filter-box__item
-										i.fas.fa-angle-up
-										span Миски
-									ul.filter-box__list
-										li
-											a(href="#") Вискас
-										li
-											a(href="#") Дошик
-								.filter-box.filter-box_catalog
-									.filter-box__item
-										i.fas.fa-angle-up
-										span Игрушки
-									ul.filter-box__list
-										li
-											a(href="#") Вискас
-										li
-											a(href="#") Дошик
-								.filter-box.filter-box_catalog
-									.filter-box__item
-										i.fas.fa-angle-up
-										span Места для отдыха и содержания
-									ul.filter-box__list
-										li
-											a(href="#") Вискас
-										li
-											a(href="#") Дошик
-								.filter-box.filter-box_catalog
-									.filter-box__item
-										i.fas.fa-angle-up
-										span Транспортировка
-									ul.filter-box__list
-										li
-											a(href="#") Вискас
-										li
-											a(href="#") Дошик
-								.filter-box.filter-box_catalog
-									.filter-box__item
-										i.fas.fa-angle-up
-										span Туалеты
-									ul.filter-box__list
-										li
-											a(href="#") Вискас
-										li
-											a(href="#") Дошик
-								.filter-box.filter-box_catalog
-									.filter-box__item
-										i.fas.fa-angle-up
-										span Ветаптека
-									ul.filter-box__list
-										li
-											a(href="#") Вискас
-										li
-											a(href="#") Дошик
-								.filter-box.filter-box_catalog-text
-									.filter-box__item
-										i.fas.fa-angle-up
-										span Бренд
-									ul.filter-box__list.filter-box__list_show-more
-										li
-											input(type="checkbox", name="brend-all" id="brend-all")
-											label(for="brend-all") Все бренды
-												i.fas.fa-check
-										li
-											input(type="checkbox", name="brend-Canin" id="brend-Canin")
-											label(for="brend-Canin") Royal Canin
-												i.fas.fa-check
-										li
-											input(type="checkbox", name="good-dog" id="good-dog")
-											label(for="good-dog") Хороший пес
-												i.fas.fa-check
-										li
-											input(type="checkbox", name="brend-Fitmin" id="brend-Fitmin")
-											label(for="brend-Fitmin") Fitmin
-												i.fas.fa-check
-										li
-											input(type="checkbox", name="Some-else" id="Some-else")
-											label(for="Some-else") Some else
-												i.fas.fa-check
-										li
-											input(type="checkbox", name="Some-else" id="Some-else-2")
-											label(for="Some-else-2") Some else 2
-												i.fas.fa-check
-									.filter-box__show-all.filter-box__show-all_closed
-										a(href="#") Показать еще
-						.catalog__card-list
-							+card-catalog
-							+card-catalog
-							+card-catalog
-							.card-store.card-store_sm.card-store_catalog
-									a(href="#" class="card-store__link")
-									.card-store__icon
-										img(src="./img/store/card-sm-1.png")
-									.card-store__stock 1 августа – 15 сентября
-									.card-store__title Всю неделю скидка 15% на кошачий корм в упаковках
-							+card-catalog
-							+card-catalog
-							+card-catalog
-							.card-store.card-store_sm.card-store_catalog
-									a(href="#" class="card-store__link")
-									.card-store__icon
-										img(src="./img/store/card-sm-1.png")
-									.card-store__stock 1 августа – 15 сентября
-									.card-store__title Всю неделю скидка 15% на кошачий корм в упаковках
-							+card-catalog
-							+card-catalog
-							+card-catalog
-							+card-catalog
-
-			.store__section_has-pets.store__section_news
+				.product-slider
+					.product-card__slider-block
+						.product-slider__item
+							img(src="./img/product-card/slider-block.png")
+						.product-slider__item
+							img(src="./img/product-card/slider-block.png")
+					.product-slider__nav
+						.product-slider__item
+							img(src="./img/product-card/slider-block.png")
+						.product-slider__item
+							img(src="./img/product-card/slider-block.png")
+			.store__section.store__section_has-pets.store__section_news
 				.store__content
 					h2.store__title Новости
 					.row
