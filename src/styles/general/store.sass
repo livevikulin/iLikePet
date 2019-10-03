@@ -14,6 +14,15 @@ $sectionTitle: #D9435D
         justify-content: space-between
     &__wrapper
         width: 952px
+    &__advert
+        width: 280px
+        margin-left: 40px
+        margin-top: 48px
+
+        img
+            width: 100%
+            object-fit: cover
+            height: 680px
     &__more-articles
         box-sizing: border-box
         color: $cardTitle
@@ -35,20 +44,17 @@ $sectionTitle: #D9435D
             width: 8px
             height: 9px
             background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDYgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMUw1IDVMMSA5IiBzdHJva2U9IiNEOTQzNUQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==) no-repeat  
-    &__animals
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.08)
-        height: 133px
-        display: flex
-        justify-content: center
-        align-items: center
     &__title
         font-family: 'Nexa Script', sans-serif
         padding-left: 20px
         color: $sectionTitle
         font-size: 40px
+        margin-top: 48px
     &__content
         width: $storeContent
         margin: 0 auto
+        &_row
+            display: flex
     &__section
         background-color: #fff
         &_has-pets
@@ -58,14 +64,6 @@ $sectionTitle: #D9435D
             background-image: url(../img/bg-gallery.jpg)
     .row
         display: flex
-    .new-box_store-vertical
-        &:nth-child(2)
-            margin-right: 31px
-            margin-left: 31px
-    .review-block_store
-        &:nth-child(2)
-            margin-right: 31px
-            margin-left: 31px
     .stock-wrapper
         .row
             .card-store
@@ -73,6 +71,15 @@ $sectionTitle: #D9435D
                     margin-right: 32px
             &:first-child
                 margin-bottom: 24px
+
+.new-box_store-vertical
+        &:nth-child(2)
+            margin-right: 31px
+            margin-left: 31px
+.review-block_store
+    &:nth-child(2)
+        margin-right: 31px
+        margin-left: 31px
 
 .pets
     margin: 0
@@ -85,14 +92,30 @@ $sectionTitle: #D9435D
         flex-basis: 64px
         text-align: center
         margin-right: 40px
+        position: relative
+        &:before
+            position: absolute
+            content: ''
+            width: 100%
+            height: 0px
+            bottom: -23px
+            left: 0
+            background: #D9435D
+            transition: 0.3s
+        &:hover
+            &:before
+                animation: navBottom 0.5s forwards
         &:last-child
             margin-right: 0
         a
-            text-decoration: none
+            text-decoration: none        
+            color: $cardTitle
             img
                 width: 64px
                 height: 64px
                 object-fit: contain
+            
+        
 
 
 .card-store
@@ -100,6 +123,13 @@ $sectionTitle: #D9435D
     height: 256px
     background-color: #fff
     border-radius: 8px
+    position: relative
+    &__link
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
     &_lg
         width: 616px
         height: 536px
@@ -151,17 +181,33 @@ $sectionTitle: #D9435D
         border-radius: 4px
         color: $cardTitle
     
-
-.sllider-brands
-    width: 1182px
-    margin: 0 auto
-    margin-bottom: 96px
-    &__item
-        margin-right: 30px
-        img
-            width: 137px
-            height: 96px
-            margin-right: 72px
+.wrapper-slider
+    position: relative
+    .slider-next,
+    .slider-back
+        position: absolute
+        cursor: pointer
+        outline: none
+        top: 50%
+        transform: translateY(-50%)
+        background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCAxNCA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTMgMUwxIDIxTDEzIDQxIiBzdHJva2U9IiNEMEM5RDYiLz48L3N2Zz4=) no-repeat
+        width: 12px
+        height: 40px
+        border: 0
+    .slider-next
+        right: 0
+        transform: rotate(180deg)
+        top: 40%
+    .sllider-brands
+        width: 1182px
+        margin: 0 auto
+        margin-bottom: 96px
+        &__item
+            margin-right: 30px
+            img
+                width: 137px
+                height: 96px
+                margin-right: 72px
 
 .new-box_store-vertical
     border-radius: 8px
@@ -194,3 +240,234 @@ $sectionTitle: #D9435D
             font-size: 24px
             line-height: 32px
             font-family: 'Arsenal Bold', sans-serif
+
+
+.animals-line
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.08)
+        height: 133px
+        display: flex
+        justify-content: center
+        align-items: center
+
+
+@media screen and (max-width: 1330px)
+    .card-store
+        &.card-store_lg
+            width: 550px
+    .store
+        .row
+            justify-content: space-between
+        .row_start
+            justify-content: flex-start
+            .review-block_store
+                &:last-child
+                    display: none
+        &__wrapper
+            width: 820px
+        &__content
+            width: 1160px
+    .new-box.new-box_store-vertical
+        width: 350px
+        .articles-info__text
+            width: 300px
+        .articles-info__text
+            font-size: 21px
+        .new-articles__title
+            font-size: 21px
+    .new-box__img--none
+        .new-info
+            margin-top: 2px
+    .wrapper-slider
+        width: 1060px
+        margin: 0 auto
+        .sllider-brands
+            width: 1010px
+            .sllider-brands__item
+                .row
+                    img
+                        &:last-child
+                            display: none
+@media screen and (max-width: 1180px)
+    .store
+        .store__wrapper
+            width: 650px
+        .store__content
+            width: 1000px
+        &__section
+            &_news
+                .row
+                    justify-content: center
+                    .new-box
+                        &:last-child
+                            display: none
+        &__section_stoks
+            .card-store_sm
+                margin-bottom: 20px
+            .card-store.card-store_lg
+                margin-right: 0
+                width: 614px
+                margin-bottom: 15px
+            .row
+                flex-direction: column
+                align-items: center
+                .stock-wrapper
+                    display: flex
+                    .row
+                        margin-bottom: 0
+                        &:first-child
+                            margin-right: 20px
+                    .card-store
+                        &:first-child
+                            margin-right: 0
+    .wrapper-slider
+        width: 885px
+        .slider-next
+            right: -15px
+            z-index: 2
+        .slider-back
+            left: -35px
+        .sllider-brands
+            width: 880px
+            .sllider-brands__item
+                margin-right: 0
+                .row
+                    img
+                        margin-right: 40px
+                        &:last-child
+                            display: none
+@media screen and (max-width: 1050px)
+    .pets
+        flex-basis: 272px
+        flex-wrap: wrap
+        .pets__item
+            margin-bottom: 10px
+            &:nth-child(3n+3)
+                margin-right: 0
+            &:before
+                animation: none   
+    .animals-line
+        height: unset
+        padding-top: 24px
+    .store__advert
+        display: none
+    .store .store__content
+        width: 775px
+    .wrapper-slider
+        width: 650px
+        .slider-next
+            right: -30px
+            z-index: 2
+        .slider-back
+            left: -35px
+        .sllider-brands
+            width: 650px
+            .sllider-brands__item
+                margin-right: 0
+                .row
+                    img
+                        margin-right: 40px
+                        &:last-child
+                            display: none
+                        &:nth-last-child(-n+2)
+                            display: none
+@media screen and (max-width: 768px)
+    .store
+        .store__wrapper
+            width: 360px
+        .store__line
+            flex-direction: column
+            h2
+                font-size: 42px
+        .store__content
+            width: 360px
+        .store__section_has-pets
+            .row
+                flex-direction: column
+        .new-box_store-vertical:nth-child(2)
+            margin: 0
+        .store__section_news .row .new-box:last-child
+            display: flex
+            margin-top: 25px
+    .store__section_stoks
+        .row
+            .stock-wrapper
+                flex-direction: column
+                .row:first-child
+                    margin-right: 0
+        .card-store
+            &.card-store_lg
+                height: 410px
+                width: 296px
+                .card-store__title
+                    width: 300px
+                .card-store__icon img
+                    height: 225px
+    .wrapper-slider
+        width: 300px
+        .slider-next
+            right: -30px
+            z-index: 2
+        .slider-back
+            left: -35px
+        .sllider-brands
+            width: 300px
+            .sllider-brands__item
+                margin-right: 0
+                .row
+                    img
+                        margin-right: 15px
+                        &:last-child
+                            display: none
+                        &:nth-last-child(-n+2)
+                            display: none
+                        &:nth-last-child(-n+4)
+                            display: none
+    .store .row_start
+        flex-direction: column
+        align-items: center
+        margin-top: 20px
+    .review-block_store:nth-child(2)
+        margin: 0
+    .row_video
+        flex-direction: column
+        margin-top: 10px
+        .block-video_store
+            width: 360px
+            height: 260px
+@media screen and (max-width: 360px)
+    .row_video .block-video_store
+        width: 290px
+        height: 200px
+    .store .store__line h2
+        font-size: 32px
+    .store .store__wrapper
+        width: 290px
+    .store .store__content
+        width: 290px
+    .slider-next
+        right: -2px
+    .slider-back
+        left: -10px
+    .store
+        .new-box_store-vertical
+            width: 300px
+            .articles-info__text
+                font-size: 18px
+                width: 270px
+            .new-articles__title
+                font-size: 18px
+    .wrapper-slider
+        width: 290px
+        overflow: hidden
+        .slider-next
+            right: -30px
+            z-index: 2
+        .slider-back
+            left: -35px
+        .sllider-brands
+            width: 290px
+    .slider-back,
+    .slider-next
+        display: none
+    .store__section_stoks .card-store.card-store_lg .card-store__title
+        width: 250px

@@ -1,0 +1,189 @@
+$wrapper: 1280px
+$catalogColor: #494A4C
+$cardBorder: #E4DFEA
+$tabsColor: #5C6069
+$cardWeight: #979899
+$priceColor: #7E2A2A
+.catalog
+    &__breadcrumbs
+        width: $wrapper
+        text-align: left
+        margin: 0 auto
+        padding-top: 40px
+        padding-bottom: 24px
+    &__title
+        color: $catalogColor
+        font-size: 48px
+        font-family: 'Arsenal Bold', sans-serif
+        margin-top: 0
+        margin-bottom: 40px
+    &__content
+        width: $wrapper
+        margin: 0 auto
+    &__card-list
+        display: flex
+        margin-left: 35px
+        flex-wrap: wrap
+        align-self: baseline
+        flex-basis: 1035px
+    &__wrapper
+        display: flex
+        .filter-block
+            width: 210px
+    
+
+.card-catalog
+    flex-basis: 243px
+    height: 336px
+    background-color: #fff
+    border-radius: 6px
+    border: 1px solid $cardBorder
+    position: relative
+    font-family: 'Arimo Regular',sans-serif
+    margin-right: 12px
+    margin-bottom: 24px
+    &:last-child
+        margin-right: 0
+    &__logo
+        width: 214px
+        height: 160px
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: 15px
+    &__info
+        position: absolute
+        text-align: center
+        line-height: 35px
+        color: #fff
+        font-size: 14px
+        left: 11px
+        top: -4px
+        width: 78px
+        height: 35px
+        &_stocks
+            background: url('../img/sprites/intermediate-svg/bone-green.svg') no-repeat
+    &__title
+        text-decoration: none
+        color: $catalogColor
+        font-size: 20px
+        line-height: 24px
+        width: 214px
+        display: inline-block
+        margin: 10px 15px
+    &__row
+        display: flex
+        justify-content: space-between
+        margin: 15px
+    &__weight
+        color: $cardWeight
+        font-size: 14px
+        margin-bottom: 8px
+    &__print
+        text-decoration: none
+        position: absolute
+        cursor: pointer
+        right: 8px
+        top: 8px
+        svg path
+            fill: #BDBDBD
+        &:hover
+            svg path
+                fill: #D9435D
+
+    &__price 
+        font-family: 'Arsenal Bold', sans-serif
+        font-size: 20px
+        color: $priceColor
+        span
+            color: #2D3036
+            margin-left: 3px
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTcuMTU4IDEyLjMxNUgzLjg4N1YxNUgyLjAydi0yLjY4NUgwdi0xLjU0M2gyLjAyMVY5LjQzM0gwVjcuOWgyLjAyMVYuNzgxaDUuMjQ1YzEuNTIzIDAgMi43My4zODggMy42MjMgMS4xNjIuODkyLjc3NSAxLjMzOCAxLjgyMyAxLjMzOCAzLjE0NSAwIDEuMzg3LS40MyAyLjQ1OC0xLjI5IDMuMjEzLS44NTIuNzQ4LTIuMDY3IDEuMTI2LTMuNjQyIDEuMTMzSDMuODg3djEuMzM4aDMuMjcxdjEuNTQzek0zLjg4NyA3LjloMy4zNzljMS4wMDkgMCAxLjc3Ny0uMjM3IDIuMzA0LS43MTMuNTI4LS40NzUuNzkxLTEuMTY4Ljc5MS0yLjA4IDAtLjgyNi0uMjczLTEuNDk0LS44Mi0yLjAwMi0uNTQ3LS41MTQtMS4yODYtLjc3NC0yLjIxNy0uNzhIMy44ODdWNy45eiIgZmlsbD0iIzJEMzAzNiIvPjwvc3ZnPg==) no-repeat
+            width: 12px
+            height: 14px
+            display: inline-block
+    
+
+.btn-incard
+    background-color: #D9435D
+    border-radius: 20px
+    border: 0
+    height: 28px
+    line-height: 28px
+    text-align: center
+    padding: 0 12px
+    font-family: 'Arsenal Regular', sans-serif
+    font-size: 15px
+    color: #fff
+    cursor: pointer
+    align-self: flex-end
+
+
+.card-store_catalog
+    flex-basis: 243px
+    height: 336px
+    border: 1px solid #E4DFEA
+    .card-store__title
+        margin-top: 22px
+    .card-store__icon img
+        height: 169px
+    .card-store__title    
+        width: 211px
+.filter-box_closed
+    .filter-box__show-all
+        display: none
+.filter-box.filter-box_catalog-text
+    span
+        font-size: 18px
+        color: $tabsColor
+    .filter-box__list
+        padding-left: 0
+    .filter-box__list_show-more
+        li
+            display: none
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4)
+                display: flex
+    .filter-box__show-all
+        a
+            text-decoration: none
+            color: #979899
+            border-bottom: 1px dotted #979899
+            font-family: 'Arimo Regular', sans-serif
+            pointer-events: none
+.filter-box_catalog
+    .filter-box__list
+        padding-left: 0
+        li a
+            color: $catalogColor
+            text-decoration: none
+            font-size: 16px
+            font-family: 'Arimo Regular', sans-serif
+    span
+        font-size: 18px
+        color: $tabsColor
+        position: relative
+        max-width: 150px
+        align-items: baseline
+        &:before
+            position: absolute
+            content: ''
+            background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNSIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDUgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUgNUwwIDBWMTBMNSA1WiIgZmlsbD0iI0Y3RDlERiIvPjwvc3ZnPg==) no-repeat
+            width: 5px
+            height: 10px
+            top: 40%
+            transform: translateY(-50%)
+            line-height: 24px
+            transition: 0.3s
+            transform: rotate(90deg)  
+            right: -16px
+            display: block
+    i
+        display: none
+        &.rotate180 ~ span
+            &:before
+                transform: rotate(0deg)  
+        
+

@@ -5,7 +5,7 @@ block variables
 	
 block content
 	main
-		.store
+		.catalog
 			.animals-line
 				ul.pets
 					+pets-item("Cобаки",1)
@@ -17,82 +17,157 @@ block content
 					+pets-item("Рептилии",4)
 					+pets-item("Амфибии",7)
 					+pets-item("Экзотика",9)
-			.__section.store__section_has-pets.store__section_stoks
-				.store__content
-					.row
-						.card-store.card-store_lg
-							a(href="#" class="card-store__link")
-							.card-store__icon
-								img(src="./img/store/card-large.png")
-							.card-store__stock 1 августа – 15 сентября
-							.card-store__title Всю неделю скидка 15% на кошачий корм в упаковках
-						.stock-wrapper
-							.row
-								.card-store.card-store_sm
-									a(href="#" class="card-store__link")
-									.card-store__icon
-										img(src="./img/store/card-sm-2.png")
-									.card-store__stock 1 августа – 15 сентября
-									.card-store__title Скидка 10% на влажные корма Best Dinner
-								.card-store.card-store_sm
-									a(href="#" class="card-store__link")
-									.card-store__icon
-										img(src="./img/store/card-sm-1.png")
-									.card-store__stock 1 августа – 15 сентября
-									.card-store__title Всю неделю скидка 15% на кошачий корм в упаковках
-							.row
-								.card-store.card-store_sm
-									a(href="#" class="card-store__link")
-									.card-store__icon
-										img(src="./img/store/card-sm-1.png")
-									.card-store__stock 1 августа – 15 сентября
-									.card-store__title Всю неделю скидка 15% на кошачий корм в упаковках
-								.card-store.card-store_sm
-									a(href="#" class="card-store__link")
-									.card-store__icon
-										img(src="./img/store/card-sm-2.png")
-									.card-store__stock 1 августа – 15 сентября
-									.card-store__title Скидка 15% на лакомства и корма для собак
 			.__section
-				.store__content
-					h2.store__title Бренды
-					.wrapper-slider
-						button.slider-next
-						button.slider-back
-						.sllider-brands
-							.sllider-brands__item
-								.row
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-								.row
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-							.sllider-brands__item
-								.row
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-								.row
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-									img(src="./img/store/slider.png")
-					
+				.breadcrumbs.catalog__breadcrumbs
+					a(href="#").breadcrumbs-item Интернет-магазин
+					a(href="#").breadcrumbs-this__page.breadcrumbs-item  Товары для собак
+			.__section
+				.catalog__content
+					h1.catalog__title Товары для собак
+					.catalog__wrapper
+						.filter-main
+							.filter-mobile
+								span.filter-mobile__text Фильтр
+								span.filter-mobile__icon
+									i.fas.fa-sliders-h
+							.filter-block
+								.filter-box.filter-box_catalog
+									.filter-box__item
+										i.fas.fa-angle-up
+										span Корм
+									ul.filter-box__list
+										li
+											a(href="#") Вискас
+										li
+											a(href="#") Дошик
+								.filter-box.filter-box_catalog
+									.filter-box__item
+										i.fas.fa-angle-up
+										span Аммуниция
+									ul.filter-box__list
+										li
+											a(href="#") Вискас
+										li
+											a(href="#") Дошик
+								.filter-box.filter-box_catalog
+									.filter-box__item
+										i.fas.fa-angle-up
+										span Одежда и обувь
+									ul.filter-box__list
+										li
+											a(href="#") Вискас
+										li
+											a(href="#") Дошик
+								.filter-box.filter-box_catalog
+									.filter-box__item
+										i.fas.fa-angle-up
+										span Миски
+									ul.filter-box__list
+										li
+											a(href="#") Вискас
+										li
+											a(href="#") Дошик
+								.filter-box.filter-box_catalog
+									.filter-box__item
+										i.fas.fa-angle-up
+										span Игрушки
+									ul.filter-box__list
+										li
+											a(href="#") Вискас
+										li
+											a(href="#") Дошик
+								.filter-box.filter-box_catalog
+									.filter-box__item
+										i.fas.fa-angle-up
+										span Места для отдыха и содержания
+									ul.filter-box__list
+										li
+											a(href="#") Вискас
+										li
+											a(href="#") Дошик
+								.filter-box.filter-box_catalog
+									.filter-box__item
+										i.fas.fa-angle-up
+										span Транспортировка
+									ul.filter-box__list
+										li
+											a(href="#") Вискас
+										li
+											a(href="#") Дошик
+								.filter-box.filter-box_catalog
+									.filter-box__item
+										i.fas.fa-angle-up
+										span Туалеты
+									ul.filter-box__list
+										li
+											a(href="#") Вискас
+										li
+											a(href="#") Дошик
+								.filter-box.filter-box_catalog
+									.filter-box__item
+										i.fas.fa-angle-up
+										span Ветаптека
+									ul.filter-box__list
+										li
+											a(href="#") Вискас
+										li
+											a(href="#") Дошик
+								.filter-box.filter-box_catalog-text
+									.filter-box__item
+										i.fas.fa-angle-up
+										span Бренд
+									ul.filter-box__list.filter-box__list_show-more
+										li
+											input(type="checkbox", name="brend-all" id="brend-all")
+											label(for="brend-all") Все бренды
+												i.fas.fa-check
+										li
+											input(type="checkbox", name="brend-Canin" id="brend-Canin")
+											label(for="brend-Canin") Royal Canin
+												i.fas.fa-check
+										li
+											input(type="checkbox", name="good-dog" id="good-dog")
+											label(for="good-dog") Хороший пес
+												i.fas.fa-check
+										li
+											input(type="checkbox", name="brend-Fitmin" id="brend-Fitmin")
+											label(for="brend-Fitmin") Fitmin
+												i.fas.fa-check
+										li
+											input(type="checkbox", name="Some-else" id="Some-else")
+											label(for="Some-else") Some else
+												i.fas.fa-check
+										li
+											input(type="checkbox", name="Some-else" id="Some-else-2")
+											label(for="Some-else-2") Some else 2
+												i.fas.fa-check
+									.filter-box__show-all.filter-box__show-all_closed
+										a(href="#") Показать еще
+						.catalog__card-list
+							+card-catalog
+							+card-catalog
+							+card-catalog
+							.card-store.card-store_sm.card-store_catalog
+									a(href="#" class="card-store__link")
+									.card-store__icon
+										img(src="./img/store/card-sm-1.png")
+									.card-store__stock 1 августа – 15 сентября
+									.card-store__title Всю неделю скидка 15% на кошачий корм в упаковках
+							+card-catalog
+							+card-catalog
+							+card-catalog
+							.card-store.card-store_sm.card-store_catalog
+									a(href="#" class="card-store__link")
+									.card-store__icon
+										img(src="./img/store/card-sm-1.png")
+									.card-store__stock 1 августа – 15 сентября
+									.card-store__title Всю неделю скидка 15% на кошачий корм в упаковках
+							+card-catalog
+							+card-catalog
+							+card-catalog
+							+card-catalog
 
-			.__section.store__section_has-pets.store__section_news
+			.store__section.store__section_has-pets
 				.store__content
 					h2.store__title Новости
 					.row
@@ -153,7 +228,7 @@ block content
 						.store__line
 							h2.store__title Обзоры, статьи, советы
 							a(href="#").store__more-articles Все статьи
-						.row.row_start
+						.row
 							.review-block.review-block_store
 								img(src="img/review-img1.jpg", alt="").review-block__bg
 								.review-block__bone 
@@ -217,11 +292,11 @@ block content
 										span.review-views
 											i.far.fa-eye
 											span 40
-						.row.row_start
+						.row
 						.store__line
 							h2.store__title Видео о животных
 							a(href="#").store__more-articles Все видео
-						.row.row_video
+						.row
 							.block-video.block-video_store
 								a._link(href="#")
 								img(src="img/store/video.png", alt="").block-video__bg
