@@ -2,6 +2,18 @@ $infoColor: #F5F5F5
 $favoritColot: #E8E8E8
 $textColor: #494A4C
 .product-card
+    &__looked
+        border-top: 1px solid #E0E0E0
+        .row
+            flex-wrap: wrap
+            justify-content: flex-start
+    &__secont-title
+        color: #D9435D
+        font-size: 40px
+        font-family: 'Nexa Script',sans-serif
+        margin-top: 40px
+        margin-bottom: 28px
+        padding-left: 20px
     &__row
         display: flex
     &__mobile-wrapper
@@ -11,7 +23,8 @@ $textColor: #494A4C
         margin-top: 40px
         &:after
             display: none
-    &__top-line
+    &__top-line,
+    &__looked
         margin: 0 auto
         width: 1280px
         h1
@@ -326,7 +339,96 @@ $textColor: #494A4C
                     width: 96px
                     height: 88px
                     object-fit: cover
-                
+.produc-modal-wrapper
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: rgba(0,0,0,.85)
+    display: none
+    z-index: 9999
+    .product-modal
+        background-color: #fff
+        width: 504px
+        padding: 32px 42px 70px 42px
+        box-sizing: border-box
+        color: #494A4C
+        display: flex
+        flex-direction: column
+        position: absolute
+        left: 50%
+        top: 50%
+        z-index: 999
+        transform: translate(-50%,-50%)
+        &__close
+            width: 15px
+            height: 20px
+            cursor: pointer
+            position: absolute
+            top: -20px
+            right: -30px
+            &:before
+                content: ''
+                background-color: #fff
+                width: 2px
+                height: 18px
+                position: absolute
+                transform: rotate(45deg)
+            &:after
+                content: ''
+                background-color: #fff
+                width: 2px
+                height: 18px
+                position: absolute
+                transform: rotate(-45deg)
+        &__title
+            font-size: 32px
+            font-family: 'Arsenal Bold', sans-serif
+            margin-bottom: 16px
+        &__descr
+            font-size: 16px
+            font-family: 'Arimo Regular', sans-serif
+            width: 420px
+            margin-bottom: 24px
+        &__form
+            text-align: center
+            input
+                background-color: #F5F9FA
+                width: 420px
+                height: 48px
+                padding-left: 16px
+                box-sizing: border-box
+                margin-bottom: 22px
+                border: 1px solid #E0E0E0
+                border-radius: 6px
+            input[type="submit"]
+                width: 184px
+                height: 48px
+                color: #fff
+                font-family: 'Arsenal Bold', sans-serif
+                font-size: 18px
+                background-color: #D9435D
+                border-radius: 24px
+                border: 0
+                padding: 0
+                display: inline-block
+                &:placeholder
+                    color: #979899
+        &__info
+            display: flex
+            flex-direction: column
+            align-items: center
+            color: #494A4C
+            font-family: 'Arimo Regular', sans-serif
+            font-size: 14px
+            a
+                text-decoration: underline
+                color: #D9435D
+
+
+
+               
 @media screen and (max-width: 1330px)
     .product-card__info
         width: 660px
@@ -334,12 +436,14 @@ $textColor: #494A4C
         width: 560px
     .product-card__top-line,
     .product-card__content,
-    .product-card__tabs
+    .product-card__tabs,
+    .product-card__looked
         width: 1160px
 @media screen and (max-width: 1180px)
     .product-card__top-line,
     .product-card__content,
-    .product-card__tabs
+    .product-card__tabs,
+    .product-card__looked
             width: 1000px
     .product-slider 
         .product-card__slider-block
@@ -367,7 +471,8 @@ $textColor: #494A4C
 @media screen and (max-width: 1050px)
     .product-card__top-line,
     .product-card__content,
-    .product-card__tabs
+    .product-card__tabs,
+    .product-card__looked
             width: 775px
     .product-card__content
         flex-direction: column
@@ -385,7 +490,8 @@ $textColor: #494A4C
 @media screen and (max-width: 768px)
     .product-card__top-line,
     .product-card__content,
-    .product-card__tabs
+    .product-card__tabs,
+    .product-card__looked
             width: 360px
     .product-card__weight, .product-card__taste
         display: flex
@@ -427,10 +533,27 @@ $textColor: #494A4C
                     width: 350px
         .product-slider__nav
             width: 360px
+    .product-card__looked
+        .row
+            justify-content: center
+    .produc-modal-wrapper .product-modal__close
+        top: -30px
+        right: -7px
+    .product-modal__info
+        text-align: center
+    .produc-modal-wrapper .product-modal
+        width: 290px
+    .produc-modal-wrapper .product-modal__descr
+        font-size: 15px
+    .product-modal__form,.produc-modal-wrapper .product-modal__descr,.produc-modal-wrapper .product-modal__form input
+        width: unset
+    .produc-modal-wrapper .product-modal__title
+        font-size: 29px
 @media screen and (max-width: 360px)
     .product-card__top-line,
     .product-card__content,
-    .product-card__tabs
+    .product-card__tabs,
+    .product-card__looked
             width: 290px
     .product-slider
         .product-card__slider-block

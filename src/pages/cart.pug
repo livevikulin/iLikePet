@@ -1,11 +1,11 @@
 extends ../views/layouts/default
 block variables
-	- var title = "Страница товара";
+	- var title = "Корзина";
 	- var isMain = false;
 	
 block content
 	main
-		.product-card
+		.cart
 			.animals-line
 				ul.pets
 					+pets-item("Cобаки",1)
@@ -18,130 +18,94 @@ block content
 					+pets-item("Амфибии",7)
 					+pets-item("Экзотика",9)
 			.__top-line
-				.breadcrumbs.product-card__breadcrumbs
+				.breadcrumbs.cart__breadcrumbs
 					a(href="#").breadcrumbs-item Интернет-магазин
-					a(href="#").breadcrumbs-item Товары для собак
-					a(href="#").breadcrumbs-this__page.breadcrumbs-item  Корм для собак
-				h1.__title Royal Canin Mini Adult для собак
-				.product-card
-					img(src="./img/product-card/product-logo.png")
-			.__section
-				.produc-modal-wrapper
-					.product-modal
-						.__title Купить в 1 клик
-						.__descr Оставьте информацию для связи, и мы вам перезвоним.
-						form.__form
-							input(type="text" placeholder="Ваше имя")
-							input(type="number" id="productPhone" placeholder="Контактный телефон")
-							input(type="submit", value="Отправить")
-						.__info
-							| Нажимая на кнопку, я соглашаюсь на обработку
-							a персональных данных
-						.__close
-				.product-card__content
-					.product-slider
-						.product-card__slider-block
-							.product-slider__item
-								img(src="./img/product-card/slider-block.png")
-								.product-slider__info.product-slider__info_discount Скидка
-							.product-slider__item
-								img(src="./img/product-card/slider-block.png")
-								.product-slider__info.product-slider__info_stocks Акции
-						.product-slider__nav
-							.product-slider__item
-								img(src="./img/product-card/slider-block.png")
-							.product-slider__item
-								img(src="./img/product-card/slider-block.png")
-					.product-card__info
-						.product-card__add-favorit
-							span В избранное 
-						.product-card__weight
-							span Вес:
-							.weight-wrapper
-								input(type="radio" id="3kg" name="weight")
-								label(for="3kg") 3кг
-							.weight-wrapper
-								input(type="radio" id="15kg" name="weight")
-								label(for="15kg") 15кг
-							.weight-wrapper
-								input(type="radio" id="800g" name="weight")
-								label(for="800g") 800г
-						.product-card__taste
-							span Вкус:
-							.taste-wrapper
-								input(type="radio" id="chiken" name="taste")
-								label(for="chiken") Курица
-							.taste-wrapper
-								input(type="radio" id="lamb" name="taste")
-								label(for="lamb") Ягненок
-							.taste-wrapper
-								input(type="radio" id="veal" name="taste")
-								label(for="veal") Телятина
-							.taste-wrapper
-								input(type="radio" id="rabbit" name="taste")
-								label(for="rabbit") Кролик
-						.product-card__row
-							.product-card__price
-								.price
-									span 1190
-									span
-								.descr 20 бонусов за покупку
-							.product-card__mobile-wrapper
-								.product-card__buy
-									.product-card__amount
-										span
-										span 1
-										span
-									.product-card__in-cart
-										button В корзину
-								a.product-card__buy-click Купить в 1 клик
-						.product-card__price-subscribe
-							.price
-								span 1190
-								span
-							.descr
-								span.icon-ring
-								span Цена по подписке
-						.product-card__deliveri-info
-							span Бесплатная доставка по России при заказе от 1500 руб.
-				.product-card__tabs
-					#tabs.dog-page-tabs__block
-						ul
-							li
-								a(href="#tabs-1") О породе, фото и видео
-							li
-								a(href="#tabs-2") Стандарты породы
-							li
-								a(href="#tabs-3") Рекомендации по питанию
-							li
-								a(href="#tabs-4") Отзывы
-							li
-								a(href="#tabs-5") Доставка и оплата
-						#tabs-1.product-card__tabs-item
-							p Сухой корм для собак мелких размеров с 10 месяцев до 8 лет.
-							h3 Достоинства:
-							ul
-								li стимулирование аппетита
-								li здоровая шерсть
-								li замедленное образование зубного налета
-							h3 Состав:
-							p дегидратированные белки животного происхождения (птицы), кукуруза, кукурузная мука, животные жиры, кукурузная клейковина, изолят растительных белков, пшеница, гидролизат белков животного происхождения, рис, свекольный жом, минеральные вещества, рыбий жир, дрожжи, соевое масло, фруктоолигосахариды.
-						#tabs-2.product-card__tabs-item
-							span.tabs-box__subtitle Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, quod?
-						#tabs-3.product-card__tabs-item
-							span.tabs-box__subtitle Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, quod?
-						#tabs-4.product-card__tabs-item
-							span.tabs-box__subtitle Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, quod?
-						#tabs-5.product-card__tabs-item
-							span.tabs-box__subtitle Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, quod?
-			.product-card__looked
-				h2.product-card__secont-title Вы недавно смотрели
-				.row
-					+card-catalog
-					+card-catalog
-					+card-catalog
-					+card-catalog
-					+card-catalog
+					a(href="#").breadcrumbs-this__page.breadcrumbs-item  Корзина
+				h1.__title Корзина
+			.cart__info
+			.cart__list
+				.item-cart.item-cart_full
+					.item-cart__icon
+						img(src="./img/product-card/slider-block.png")
+					.item-cart__info
+						span Royal Canin X-Small Puppy для щенков
+						span 800 г
+						span 2 шт.
+					.item-cart__cost
+						span 1190
+							span руб.
+						span 20 бонусов за покупку
+					.item-cart__amount
+						span 
+						span 1
+						span
+					.item-cart__price
+						span 2380
+							span руб.
+						span 40 бонусов за покупку
+					.item-cart__close
+				.item-cart.item-cart_full
+					.item-cart__icon
+						img(src="./img/product-card/slider-block.png")
+					.item-cart__info
+						span Royal Canin X-Small Puppy для щенков
+						span 800 г
+						span 2 шт.
+					.item-cart__cost
+						span 1190
+							span руб.
+						span 20 бонусов за покупку
+					.item-cart__amount
+						span 
+						span 1
+						span
+					.item-cart__price
+						span 2380
+							span руб.
+						span 40 бонусов за покупку
+					.item-cart__close
+				.item-cart.item-cart_full
+					.item-cart__icon
+						img(src="./img/product-card/slider-block.png")
+					.item-cart__info
+						span Royal Canin X-Small Puppy для щенков
+						span 800 г
+						span 2 шт.
+					.item-cart__cost
+						span 1190
+							span руб.
+						span 20 бонусов за покупку
+					.item-cart__amount
+						span 
+						span 1
+						span
+					.item-cart__price
+						span 2380
+							span руб.
+						span 40 бонусов за покупку
+					.item-cart__close
+			.cart__footer
+				.cart__about
+					.cart__cost
+						span Стоимость товаров:
+						span 4070 руб.
+						span 60 бонусов за покупку
+					.cart__discount
+						span Ваша скидка: 
+						span 50 руб.
+					.cart__price
+						span Цена со скидкой:
+						span 
+							|	4020
+							span руб.
+				.cart__buy
+					button.continue-shopping Продолжить покупки
+					button.order-product Оформить заказ
+			.cart__delivery
+				.delivery-info
+					span
+					span
+				a(href="#") Условия доставки в регионы
 			.store__section.store__section_has-pets.store__section_news
 				.store__content
 					h2.store__title Новости

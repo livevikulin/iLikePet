@@ -1,0 +1,200 @@
+.cart
+    &__top-line
+        width: 1280px
+        margin: 0 auto
+    &__title
+        font-size: 48px
+        font-family: 'Arsenal Bold', sans-serif
+        margin: 24px 0
+    &__breadcrumbs
+        text-align: left
+        margin-top: 40px
+        &:after
+            display: none
+    &__delivery
+        background-color: #F5F5F5
+        width: 574px
+    &__list,
+    &__footer
+        width: 1280px
+        margin: 0 auto
+    &__cost,
+    &__discount,
+    &__price
+        font-family: 'Arimo Regular', sans-serif
+    &__footer
+        margin-top: 50px
+        display: flex
+        justify-content: space-between
+    &__cost,
+    &__discount,
+    &__price
+        color: #494A4C
+        font-size: 18px
+        margin-bottom: 20px
+        span
+            &:nth-child(2)
+                font-family: 'Arimo Bold', sans-serif
+                margin-left: 8px
+            &:nth-child(3)
+                color: #666666
+                margin-left: 28px
+    &__price
+        color: #7E2A2A
+        margin-bottom: 0        
+        span:last-child
+            font-size: 40px
+            span
+                margin-left: 5px
+                font-size: 18px
+    &__discount
+        margin-bottom: 5px
+.item-cart
+    display: flex
+    padding: 24px
+    justify-content: space-between
+    align-items: center
+    //border-radius: 6px 6px 0px 0px
+    border-bottom: 1px solid #E4DFEA
+    &__close
+        width: 24px
+        cursor: pointer
+        height: 24px
+        position: relative
+        &:before,
+        &:after
+          position: absolute
+          content: ''
+          background-color: #D0C9D6
+          width: 24px
+          height: 2px
+          transform: rotate(45deg)
+        &:after
+            transform: rotate(-45deg)
+    &_full
+        width: inherit
+
+        .item-cart__info
+            flex-basis: 342px
+            span
+                &:last-child
+                    display: none
+                &:first-child
+                    margin-bottom: 8px
+        .item-cart__cost,
+        .item-cart__price
+            flex-basis: 165px
+            span
+                &:first-child
+                    font-family: 'Arsenal Bold', sans-serif
+                    color: #7E2A2A
+                    font-size: 24px
+                    margin-bottom: 8px
+                    span
+                        font-size: 18px
+                        color: #7E2A2A
+                        margin-left: 5px
+                        font-family: 'Arsenal Regular', sans-serif
+                &:last-child
+                    color: #666666
+                    font-size: 16px
+        .item-cart__amount
+            flex-basis: 130px
+            box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.11)
+            border-radius: 28px
+            display: flex
+            align-items: center
+            height: 56px
+            justify-content: space-between
+            padding-left: 7px
+            padding-right: 7px
+            box-sizing: border-box
+            span
+                &:nth-child(2)
+                    font-size: 18px
+                    color: #494A4C
+                    margin: 0 20px
+                &:nth-child(1),
+                &:nth-child(3)
+                    position: relative
+                    width: 32px
+                    display: block
+                    cursor: pointer
+                    height: 32px
+                    border-radius: 50%
+                    background-color: #F5F5F5
+                &:first-child,
+                &:last-child
+                    &:before
+                        content: ''
+                        position: absolute
+                        background-color: #979899
+                        width: 14px
+                        border-radius: 2px
+                        height: 2px
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%,-50%)
+                &:last-child
+                    &:before
+                        background-color: #D9435D
+                    &:after
+                        content: ''
+                        position: absolute
+                        background-color: #D9435D
+                        height: 14px
+                        border-radius: 2px
+                        width: 2px
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%,-50%)
+        .item-cart__price
+            flex-basis: 165px
+    &__icon
+        img
+            width: 104px
+            height: 104px
+            object-fit: cover
+    &__info,
+    &__cost,
+    &__price
+        display: flex
+        flex-direction: column
+        font-family: 'Arsenal Regular', sans-serif
+    &__close
+        width: 24px
+    &__info
+        span
+            &:first-child
+                font-family: 'Arsenal Regular', sans-serif
+                font-size: 20px
+                color: #494A4C
+            &:nth-child(2)
+                color: #979899
+                font-size: 16px
+    
+.continue-shopping,
+.order-product    
+    padding: 10px 7px
+    text-align: center
+    background-color: #fff
+    border: 1px solid #D9435D
+    color: #D9435D
+    margin-right: 20px
+    box-sizing: border-box
+    border-radius: 28px
+.order-product
+    padding-right: 38px
+    padding-left: 15px
+    background-color: #D9435D
+    color: #fff
+    position: relative
+    &:after
+        content: ''
+        position: absolute
+        background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2LjUzIDYuNTNhLjc1Ljc1IDAgMDAwLTEuMDZMMTEuNzU3LjY5N2EuNzUuNzUgMCAwMC0xLjA2IDEuMDZMMTQuOTM5IDZsLTQuMjQyIDQuMjQzYS43NS43NSAwIDAwMS4wNiAxLjA2TDE2LjUzIDYuNTN6TTAgNi43NWgxNnYtMS41SDB2MS41eiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==) no-repeat
+        width: 17px
+        height: 12px
+        margin-left: 9px
+        top: 50%
+        transform: translateY(-50%)

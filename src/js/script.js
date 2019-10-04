@@ -205,24 +205,11 @@ $(document).ready(function () {
 		sliderStore.slick("slickNext");
 	});
 
+
+
 	$(".filter-box__show-all").on("click", function (e) {
 		e.preventDefault();
-		//filter-box__show-all_closed
-		let msg = $(this).hasClass("filter-box__show-all_closed") ? msg = "Скыть" : "Показать еще";
-		$(this).children(":first").text(msg);
-		$(this).prev().find("li").each(function (i, item) {
-			if (i > 3) {
-				$(".filter-box__show-all").hasClass("filter-box__show-all_closed") ? $(item).show() : $(item).hide();
-			}
-		});
-		
-		$(".slider-back").on('click',function(){
-			sliderStore.slick("slickPrev")
-		})
-		$(".slider-next").on('click',function(){
-			sliderStore.slick("slickNext")
-		})
-
+	
 		$(".filter-box__show-all").on('click',function(e){
 			e.preventDefault();
 			//filter-box__show-all_closed
@@ -236,24 +223,6 @@ $(document).ready(function () {
 			$(this).toggleClass('filter-box__show-all_closed');
 		})
 	//store page end
-
-	//product card page
-		//slider module
-		$('.product-card__slider-block').slick({
-			slidesToShow: 1,
-			arrows: false,
-			fade: true,
-			asNavFor: '.product-slider__nav',
-			
-		  });
-
-		$('.product-slider__nav').slick({
-			slidesToShow: 2,
-			asNavFor: '.product-card__slider-block',
-			variableWidth: true,
-			focusOnSelect: true
-		});
-	//product card end
 		$(this).toggleClass("filter-box__show-all_closed");
 	});
 	//store page end
@@ -273,7 +242,13 @@ $(document).ready(function () {
 		variableWidth: true,
 		focusOnSelect: true
 	});
-
+	//modaul module
+		$(".product-card__buy-click").on('click',function(){
+			$(".produc-modal-wrapper").show();
+		})
+		$(".product-modal__close").on('click',function(){
+			$(".produc-modal-wrapper").hide();
+		})
 	//product card end
 
 
@@ -398,5 +373,5 @@ $(document).ready(function () {
 	$("#inputBorn").mask("00.00.0000");
 	$("#inputPetBorn").mask("00.00.0000");
 	$("#inputPhone").mask("+7(000) 000-0000");
-	$("#inputPhone2").mask("+7(000) 000-0000");
+	$("#inputPhone2").mask("+7(000) 000-0000");	
 });
