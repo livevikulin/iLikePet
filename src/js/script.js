@@ -205,7 +205,7 @@ $(document).ready(function() {
 		$(".filter-box__show-all").on('click',function(e){
 			e.preventDefault();
 			//filter-box__show-all_closed
-			let msg  = $(this).hasClass('filter-box__show-all_closed') ? msg = 'Скыть' : 'Показать еще';
+			let msg  = $(this).hasClass('filter-box__show-all_closed') ? 'Скыть' : 'Показать еще';
 			$(this).children(':first').text(msg);
 			$(this).prev().find('li').each(function(i,item){
 				if(i > 3 ) {
@@ -222,7 +222,8 @@ $(document).ready(function() {
 			slidesToShow: 1,
 			arrows: false,
 			fade: true,
-			asNavFor: '.product-slider__nav'
+			asNavFor: '.product-slider__nav',
+			
 		  });
 
 		$('.product-slider__nav').slick({
