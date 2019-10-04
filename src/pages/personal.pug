@@ -46,13 +46,13 @@ block content
 									.personal-info__block
 										span.personal-info__title Личные данные
 										.personal-info__input.input
-											input(type="text" id="inputName" class="js-input")
+											input(type="text" id="inputName" value="132")
 											label(for="inputName" id="label") Имя
 										.personal-info__input.input
 											input(type="text" id="inputSurname" class="js-input")
 											label(for="inputSurname" id="label") Фамилия
 										.personal-info__select
-											select(name="activity" class="select-activity")
+											select(name="activity" class="js-select")
 												option(value="1") Мужской
 												option(value="2") Женский
 										.personal-info__input.input.input-born
@@ -130,7 +130,7 @@ block content
 												input(type="text" id="inputPetName" class="js-input")
 												label(for="inputPetName" id="label") Имя
 											.personal-info__select
-												select(name="activity" class="select-activity")
+												select(class="js-select" id="category_select" data-url="/wer/" name="PROPERTY_CATEGORY" data-target-selector="petCategory")
 													option(value="1") Категория питомца
 													option(value="2") Категория питомца
 													option(value="3") Категория питомца
@@ -294,6 +294,28 @@ block content
 						.personal-tabs__box#tabs-advert
 							span.personal-box__title Мои объявления
 							span.personal-box__none У вас пока нет объявлений
+							.personal-adverts
+								.personal-advert
+									._name
+										p Наименование объявления
+										span На модерации
+									a._delete(href="#")
+										i.far.fa-trash-alt
+										span Удалить
+								.personal-advert
+									._name
+										p Наименование объявления
+										span На модерации
+									a._delete(href="#")
+										i.far.fa-trash-alt
+										span Удалить
+								.personal-advert
+									._name
+										p Наименование объявления
+										span На модерации
+									a._delete(href="#")
+										i.far.fa-trash-alt
+										span Удалить
 							a(href="#").personal-box__add.js-add_pets 
 								i.fas.fa-plus 
 								span Добавить объявление 
