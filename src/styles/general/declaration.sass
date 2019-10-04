@@ -1,0 +1,102 @@
+.declaration
+    padding: 33px 0 62px
+    background-color: rgba(46, 41, 45, 0.06)
+    background-image: url(../img/bg-gallery.jpg)
+    &__more
+        display: block
+        width: 208px
+        height: 48px
+        margin: 30px auto 
+    .row
+        display: flex
+        flex-wrap: wrap
+        .declaration__card
+            margin-bottom: 24px
+            &:nth-child(3n+3)
+                margin-right: 0
+    .declaration-content
+        width: 1244px
+        display: flex
+    &__right
+        margin-left: 54px
+   
+.declaration__card
+       height: 350px
+       margin-right: 28px
+       position: relative
+       background-color: #fff
+       font-family: 'Arsenal Regular', sans-serif
+       &:before
+           content: ''
+           width: 100%
+           height: 7px
+           position: absolute
+           bottom: -4px
+           background: url('../img/service-card-bottom.svg') no-repeat
+       .declaration-card-icon
+            width: 290px
+            height: 185px
+            overflow: hidden
+       &-title
+           padding-left: 15px
+           margin-bottom: 4px
+           a
+               color: #2D3036
+               font-family: 'Arsenal Bold', sans-serif                
+               font-size: 21px
+               text-decoration: none
+       &-price
+           color: #7E2A2A
+           font-size: 18px
+           padding-left: 15px
+       &-city,
+       &-date
+           font-family: 'Arimo Regular', sans-serif
+           color: #979899
+           padding-left: 15px
+           font-size: 15px
+       &-city
+           margin-top: 10px
+       &-date
+           margin-top: 5px
+   
+@media screen and (max-width: 1280px)
+    .declaration 
+        .declaration-content
+            width: 1024px
+            margin: 0 auto
+        .row
+            .declaration__card
+                margin-bottom: 24px
+                &:nth-child(3n+3)
+                    margin-right: 28px
+                &:nth-child(2n+2)
+                    margin-right: 28px
+@media screen and (max-width: 1050px)
+    .declaration 
+        .declaration-content
+            width: 636px
+        .row
+            .declaration__card
+                margin-bottom: 24px
+                margin-right: 0
+                &:nth-child(3n+3)
+                    margin-right: 0
+                &:nth-child(2n+2)
+                    margin-right: 0
+@media screen and (max-width: 1050px)
+    .declaration 
+        .declaration-content
+            width: 290px
+            flex-direction: column
+        .declaration__right
+            margin-left: 0
+            margin-top: 10px
+        .row
+            .declaration__card
+                margin-bottom: 24px
+                margin-right: 0
+                &:nth-child(3n+3)
+                    margin-right: 0
+                &:nth-child(2n+2)
+                    margin-right: 0

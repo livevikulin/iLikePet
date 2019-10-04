@@ -1,0 +1,129 @@
+extends ../views/layouts/default
+block variables
+	- var title = "Личный кабинет";
+	- var isMain = false;
+	
+block content
+	main
+		.services
+			.container
+				.breadcrumbs
+					a(href="#").breadcrumbs-item Главная
+					a(href="#").breadcrumbs-this__page.breadcrumbs-item Услуги
+				h2.services-block__title.title-page Услуги
+				.services__list
+					.row
+						.services__item.services__item_vet
+							.services__item-title Ветеренарные услуги
+								span.amount 123
+							.services__item-body
+								a(href="#" class="services-link") акушерство и гинекология
+								a(href="#" class="services-link") аллергология
+								a(href="#" class="services-link") анализы
+								a(href="#" class="services-link") анестезиология
+								a(href="#" class="open-more services-link") ...
+						.services__item.services__item_vet
+							.services__item-title Красота для животных
+								span.amount 123
+							.services__item-body
+								a(href="#" class="services-link") SPA процедуры
+								a(href="#" class="services-link") вызов грумера на дом
+								a(href="#" class="services-link") гигиенический уход
+								a(href="#" class="services-link") зоомассаж
+								a(href="#" class="open-more services-link") ...
+						.services__item.services__item_teach
+							.services__item-title Красота для животных
+								span.amount 123
+							.services__item-body
+								a(href="#" class="services-link") воспитание собак-поводырей
+								a(href="#" class="services-link") заездка лошадей
+								a(href="#" class="services-link") зоопсихолог
+								a(href="#" class="services-link") индивидуальная программа дрессировки
+								a(href="#" class="open-more services-link") ...
+						.services__item.services__item_houtel
+							.services__item-title Гостиницы и приюты
+								span.amount 123
+							.services__item-body
+								a(href="#" class="services-link") бассейн для собак
+								a(href="#" class="services-link") гостиница
+								a(href="#" class="services-link") приют
+						.services__item.services__item_services
+							.services__item-title Услуги по уходу и содержанию
+								span.amount 123
+							.services__item-body
+								a(href="#" class="services-link") выгул
+								a(href="#" class="services-link") изготовление аквариумов
+								a(href="#" class="services-link") изготовление аквариумов
+								a(href="#" class="services-link") конюшня (постой)
+								a(href="#" class="open-more services-link") ...
+						.services__item.services__item_teach
+							.services__item-title Перевозка животных
+								span.amount 123
+							.services__item-body
+								a(href="#" class="services-link") зоотакси
+								a(href="#" class="services-link") перевозка акварумов
+						.services__item.services__item_ritual
+							.services__item-title Ритуальные услуги
+								span.amount 123
+							.services__item-body
+								a(href="#" class="services-link") иные ритуальные услуги
+								a(href="#" class="services-link") кремация
+						.services__item.services__item_tour
+							.services__item-title Туристические услуги
+								span.amount 123
+							.services__item-body
+								a(href="#" class="services-link") оформление документации
+								a(href="#" class="services-link") туры
+								a(href="#" class="services-link") участие в выставках
+								a(href="#" class="open-more services-link") ...
+						.services__item.services__item_teach
+							.services__item-title Фото- и видео услуги
+								span.amount 123
+							.services__item-body
+								a(href="#" class="services-link") аренда фотостудии
+								a(href="#" class="services-link") фото- и видеосъемки с животными
+								a(href="#" class="services-link") фотосессии и видеосъемки животных
+						.services__item.services__item_buy
+							.services__item-title Продажа животных
+								span.amount 123
+							.services__item-body
+								a(href="#" class="services-link") заводчик
+								a(href="#" class="services-link") магазин
+								a(href="#" class="services-link") заводчик
+				.home-activities 
+					.activities-subscribe
+						span.activities-subscribe__title Подписывайся на новости!
+						form(action="#").activities-subscribe__form
+							input(type="text" placeholder="Введите ваш e-mail")
+							button(type="submit").subscribe-form__btn.btn
+								img(src="img/sprites/intermediate-svg/arrow-pointing-to-right.svg", alt="")
+						.activities-subscribe__consent 
+							input(type="checkbox" name="consent" id="consent")
+							label(for="consent") Я согласен с условиями Соглашения о персональных данных 
+								i.fas.fa-check
+					.activities-share
+						span.activities-share__title Расскажи о нас друзьям
+						.activities-share__block
+							a(href="#").activities-share__block-vk
+								i.fab.fa-vk
+								p 4
+							a(href="#")
+								i.fab.fa-facebook-f
+							a(href="#")
+								i.fab.fa-twitter
+					.activities-social
+						span.activities-social__title Наш проект в соцсетях
+						.activities-social__block
+							a(href="#")
+								i.fab.fa-vk
+							a(href="#")
+								i.fab.fa-facebook-f
+							a(href="#")
+								i.fab.fa-twitter
+							a(href="#")
+								i.fab.fa-odnoklassniki
+							a(href="#")
+								i.fab.fa-youtube
+							a(href="#")
+								i.fab.fa-instagram
+				

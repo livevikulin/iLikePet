@@ -1,0 +1,149 @@
+extends ../views/layouts/default
+block variables
+	- var title = "Объявление";
+	- var isMain = false;
+	
+block content
+	main
+		.declaration
+			.container
+				.breadcrumbs
+					a(href="#").breadcrumbs-item Главная
+					a(href="#").breadcrumbs-this__page.breadcrumbs-item Объявления
+				h2.declaration-block__title.title-page Объявления
+				.declaration-content
+					.declaration__left
+						.filter-main
+							.filter-mobile
+								span.filter-mobile__text Фильтр
+								span.filter-mobile__icon
+									i.fas.fa-sliders-h
+							.filter-block
+								.filter-box
+									.filter-box__item
+										i.fas.fa-angle-up
+										span Животные
+									ul.filter-box__list
+										li
+											input(type="checkbox", name="dogs" id="dogs")
+											label(for="dogs") Собаки
+												i.fas.fa-check
+										li
+											input(type="checkbox", name="cats" id="cats")
+											label(for="cats") Кошки
+												i.fas.fa-check
+										li
+											input(type="checkbox", name="horses" id="horses")
+											label(for="horses") Лошади
+												i.fas.fa-check
+										li
+											input(type="checkbox", name="ferrets" id="ferrets")
+											label(for="ferrets") Хорьки
+												i.fas.fa-check
+										li
+											input(type="checkbox", name="reptiles" id="reptiles")
+											label(for="reptiles") Рептилии
+												i.fas.fa-check
+										li
+											input(type="checkbox", name="rodents" id="rodents")
+											label(for="rodents") Грызуны
+												i.fas.fa-check
+										li
+											input(type="checkbox", name="amphibians" id="amphibians")
+											label(for="amphibians") Амфибии
+												i.fas.fa-check
+										li
+											input(type="checkbox", name="birds" id="birds")
+											label(for="birds") Птицы
+												i.fas.fa-check
+										li
+											input(type="checkbox", name="exotic" id="exotic")
+											label(for="exotic") Экзотика
+												i.fas.fa-check
+								.filter-box.filter-box__bottom
+									.filter-box__item
+										i.fas.fa-angle-up
+										span Категория
+									ul.filter-box__list
+										li
+											input(type="checkbox", name="buy" id="declaration-buy")
+											label(for="declaration-buy") Куплю
+												i.fas.fa-check
+										li
+											input(type="checkbox", name="declaration-selling" id="declaration-selling")
+											label(for="declaration-selling") Продам
+												i.fas.fa-check
+								.filter-box.filter-box__bottom
+									.filter-box__item
+										i.fas.fa-angle-up
+										span Город
+									ul.filter-box__list
+										li
+											input(type="checkbox", name="city-ZG" id="city-ZG")
+											label(for="city-ZG") Зеленоград
+												i.fas.fa-check
+										li
+											input(type="checkbox", name="city-MSK" id="city-MSK")
+											label(for="city-MSK") Москва
+												i.fas.fa-check
+								a(href="#").filter-btn__submit.filter-btn__submit_service Применить
+								a(href="#").filter-btn__reset Сбросить
+					.declaration__right
+						.row
+							.declaration__card
+								.declaration-card-icon
+									img(src="./img/declaration-1.png")
+								.declaration__card-title
+									a(href="#") Щенок в добрые руки
+								.declaration__card-price 100 руб.
+								.declaration__card-city Москва
+								.declaration__card-date 2 часа назад
+							.declaration__card
+								.declaration-card-icon
+									img(src="./img/declaration-1.png")
+								.declaration__card-title
+									a(href="#") Щенок в добрые руки
+								.declaration__card-price 100 руб.
+								.declaration__card-city Москва
+								.declaration__card-date 2 часа назад
+							.declaration__card
+								.declaration-card-icon
+									img(src="./img/dog1.jpg")
+								.declaration__card-title
+									a(href="#") Щенок в добрые руки
+								.declaration__card-price 100 руб.
+								.declaration__card-city Москва
+								.declaration__card-date 2 часа назад
+							.declaration__card
+								.declaration-card-icon
+									img(src="./img/dog2.jpg")
+								.declaration__card-title
+									a(href="#") Щенок в добрые руки
+								.declaration__card-price 100 руб.
+								.declaration__card-city Москва
+								.declaration__card-date 2 часа назад
+							.declaration__card
+								.declaration-card-icon
+									img(src="./img/declaration-1.png")
+								.declaration__card-title
+									a(href="#") Щенок в добрые руки
+								.declaration__card-price 100 руб.
+								.declaration__card-city Москва
+								.declaration__card-date 2 часа назад
+							.declaration__card
+								.declaration-card-icon
+									img(src="./img/declaration-1.png")
+								.declaration__card-title
+									a(href="#") Щенок в добрые руки
+								.declaration__card-price 100 руб.
+								.declaration__card-city Москва
+								.declaration__card-date 2 часа назад
+						button(class="btn declaration__more") Показать еще
+						.pagination
+							.pagination-block
+								a(href="#").pagination-block__number 1
+								a(href="#").pagination-block__number.pagination-number__this 2
+								a(href="#").pagination-block__number 3
+								a(href="#").pagination-block__points ...
+								a(href="#").pagination-block__number 72
+								a(href="#").pagination-block__next Далее

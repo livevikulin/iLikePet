@@ -296,7 +296,64 @@ block content
 							span.personal-box__none У вас пока нет объявлений
 							a(href="#").personal-box__add.js-add_pets 
 								i.fas.fa-plus 
-								span Добавить объявление
+								span Добавить объявление 
+							form(action="#").personal-form__advert
+								.personal-box__advert
+									select(name="activity" id="activity" class="select-activity")
+										option(value="1") Активность объявления	
+										option(value="2") Активность объявления	
+										option(value="3") Активность объявления	
+										option(value="4") Активность объявления	
+										option(value="5") Активность объявления	
+									select(name="activity" id="activity" class="select-activity select-activity_last")
+										option(value="1") Ваш регион
+										option(value="2") Ваш регион
+										option(value="3") Ваш регион
+										option(value="4") Ваш регион
+										option(value="5") Ваш регион
+								.personal-box__advert
+									input(type="text" class="publications-input__title" placeholder="Заголовок объявления")
+									input(type="text" class="publications-input__title" placeholder="Телефон (если не указан, будет взят из профиля)")
+								.personal-box__advert
+									.personal-publications__select
+										span.personal-select__title Тип животного
+										ul
+											li.publications-select__item.item-select
+												span Черновик
+											li.publications-select__item
+												span Амфибии
+											li.publications-select__item
+												span Беспозвоночные
+											li.publications-select__item
+												span Грызуны
+											li.publications-select__item
+												span Кошки
+									.personal-publications__select
+										span.personal-select__title Рубрики
+										ul
+											li.publications-select__item.item-select
+												span Куплю
+											li.publications-select__item
+												span Обмен
+											li.publications-select__item
+												span Отдам Бесплатно
+											li.publications-select__item
+												span Питомник
+											li.publications-select__item
+												span Продам
+								textarea(type="text" class="advert-input__announcement" placeholder="Анонс")
+								input(type="text" class="personal-tags" placeholder="Цена, руб.")
+								span.personal-text__photo Фотографии
+								span.personal-text__subtitle Выберите новое фото. Минимальное разрешение 960x640 px. Фото загрузится после нажатия на кнопку «Сохранить».
+								a(href="#").personal-box__add.js-add_pets.advert-box__add 
+									i.fas.fa-plus 
+									span Добавить фото
+								input(type="text" class="personal-tags" placeholder="Введите теги через запятую")
+								.personal-box__infitity-advert
+									
+									input.advert-input(id="advert-infinity" type="checkbox")
+									label.advert-label(for="advert-infinity") Бессрочное объявление
+								a(href="#").personal-publications__btn.btn Сохранить
 						.personal-tabs__box#tabs-video
 							span.personal-box__title Мои видео
 							span.personal-box__none У вас пока нет видео

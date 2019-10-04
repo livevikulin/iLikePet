@@ -1,0 +1,102 @@
+extends ../views/layouts/default
+block variables
+	- var title = "Объявление";
+	- var isMain = false;
+	
+block content
+	main
+		.declaration-more
+			.container
+				.breadcrumbs
+					a(href="#").breadcrumbs-item Главная
+					a(href="#").breadcrumbs-this__page.breadcrumbs-item Объявления
+				h2.declaration-more-block__title.title-page Объявления
+				.content
+					.content__header
+						.date-visit
+							.date-visit__month 22 августа
+							.date-visit__views 40
+						.add-favorit
+							a Сохранить в избранное
+					h3.declaration-more__title Щенок в добрые руки					
+					.content__info
+						.content__left.dog-page-block__slider
+								.dog-page-slider__nav
+									.dog-page-slider__item
+										img(src="img/dog-img1.jpg", alt="")
+									.dog-page-slider__item
+										img(src="img/dog-img1.jpg", alt="")
+									.dog-page-slider__item
+										img(src="img/dog-img1.jpg", alt="")
+									.dog-page-slider__item
+										img(src="img/dog-img1.jpg", alt="")
+									.dog-page-slider__item
+										img(src="img/dog-img1.jpg", alt="")
+										.span.block-video__dark
+										a(href="#").block-video__play
+											img(src="img/sprites/intermediate-svg/play-button-slider.svg", alt="")
+									.dog-page-slider__item
+										img(src="img/dog-img1.jpg", alt="")
+								.dog-page-slider
+									.dog-page-slider__item
+										img(src="img/dog-img1.jpg", alt="")
+									.dog-page-slider__item
+										img(src="img/dog-img1.jpg", alt="")
+									.dog-page-slider__item
+										img(src="img/dog-img1.jpg", alt="")
+									.dog-page-slider__item
+										img(src="img/dog-img1.jpg", alt="")
+									.dog-page-slider__item
+										img(src="img/dog-img1.jpg", alt="")
+										.span.block-video__dark
+										a(data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/o280yA1nUZE" href="javascript:;").block-video__play
+											img(src="img/sprites/intermediate-svg/play.svg", alt="")
+									.dog-page-slider__item
+										img(src="img/dog-img1.jpg", alt="")
+											
+						.content__right
+							.declaration-more__price Цена не указана
+							.declaration-more__place 
+								.title Местоположение
+								.descr Москва
+							.declaration-more__author
+								.title Автор
+								.descr Андрей
+							.declaration-more__phone
+								.title Телефон
+								.descr 
+									.phone
+										span 8 800 555 35 35
+									.show-more Показать телефон
+							.declaration-more__date
+								.title Размещено
+								.descr Сегоня в 17:22
+					.content__footer
+						h4.declaration-more__footer-title Описание						
+						p.declaration-more__descr Щенок померанского шпица. Девочка. Супермини. Возраст 2 месяца. Привита по возрасту. Видео по WhatsApp, Viber.
+				.declaration-more__footer
+					.declaration-more__footer-service
+						h5 Похожие услуги предлагают
+					.declaration-more__footer-container
+						.service__card
+							.service__card-icon
+								img(src="./img/service-card.png")
+							.service__card-title Оберег
+							.service__card-descr 0 отзывов
+						.service__card
+							.service__card-icon
+								img(src="./img/service-card.png")
+							.service__card-title Оберег
+							.service__card-descr 0 отзывов
+						.service__card
+							.service__card-icon
+								img(src="./img/service-card.png")
+							.service__card-title Оберег
+							.service__card-descr 0 отзывов
+						.service__card
+							.service__card-icon
+								img(src="./img/service-card.png")
+							.service__card-title Оберег
+							.service__card-descr 0 отзывов
+
+
