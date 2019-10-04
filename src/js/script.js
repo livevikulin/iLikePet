@@ -274,6 +274,13 @@ $(document).ready(function () {
 		inputRefresh($el);
 	});
 
+	$(document).on('click', '#initSelect', ()=>{
+		$(".input input").each((i, el) => {
+			const $el = $(el);
+			inputRefresh($el);
+		});
+	});
+
 	//Инициализация календаря в Личном кабинете
 	$(".js-datepicker-personal").datepicker({dateFormat: "dd.mm.yy"});
 	$("#inputBorn").click(function () {
@@ -295,20 +302,26 @@ $(document).ready(function () {
 		$(".ui-datepicker").addClass("ui-datepicker-pets");
 	});
 
-	//Инициализация селект меню
-	$(".js-select").selectmenu({
-		select: function (event, ui) {
-		}
-	});
-	$(".ui-selectmenu-button").click(function () {
-		$(this).children(".ui-selectmenu-icon").toggleClass("icon-rotate");
-	});
-	$(".ui-selectmenu-menu").click(function () {
-		$(".ui-selectmenu-icon").removeClass("icon-rotate");
-	});
+	function initSelect() {
+		//Инициализация селект меню
+		$(".js-select").selectmenu({
+			select: function (event, ui) {}
+		});
+		$(".ui-selectmenu-button").click(function () {
+			$(this).children(".ui-selectmenu-icon").toggleClass("icon-rotate");
+		});
+		$(".ui-selectmenu-menu").click(function () {
+			$(".ui-selectmenu-icon").removeClass("icon-rotate");
+		});
 
-	$("#category_select").trigger("selectmenuchange");
+		$("#category_select").trigger("selectmenuchange");
+	}
 
+	initSelect();
+
+	$(document).on('click', '#initSelect', ()=>{
+		initSelect();
+	});
 
 	$(document).on("selectmenuchange", "#category_select", function (e) {
 		const $el = $(e.target);

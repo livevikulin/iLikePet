@@ -2566,6 +2566,9 @@ input[type="number"]::-webkit-outer-spin-button
 			justify-content: space-between
 			flex-wrap: wrap
 			padding-top: 41px
+		&__publications
+			.ui-selectmenu-menu
+				max-width: 396px
 	&-photos
 		
 	&-data
@@ -2864,40 +2867,29 @@ input[type="number"]::-webkit-outer-spin-button
 			margin-top: 46px
 			text-decoration: none
 .personal-advert
-	display: flex
-	justify-content: space-between
-	align-items: center
+	display: block
 	padding: 15px 0
 	border-bottom: 1px solid #F2F2F2
+	text-decoration: none
 	&:last-child
 		border-bottom: none
-	&__name
-		p 
-			font-family: Arimo Regular
-			font-style: normal
-			font-weight: 700
-			font-size: 16px
-			line-height: 18px
-			color: #494A4C
-			margin: 0
-		span 
-			display: block
-			font-family: Arimo Regular
-			font-style: normal
-			font-weight: 400
-			font-size: 14px
-			line-height: 18px
-			color: #494A4C
-			margin-top: 10px
-	&__delete
+	p 
 		font-family: Arimo Regular
+		font-style: normal
+		font-weight: 700
 		font-size: 16px
-		line-height: 16px
-		text-align: right
-		color: #D9435D
-		text-decoration: none
-		span
-			margin-left: 5px
+		line-height: 18px
+		color: #494A4C
+		margin: 0
+	span 
+		display: block
+		font-family: Arimo Regular
+		font-style: normal
+		font-weight: 400
+		font-size: 14px
+		line-height: 18px
+		color: #494A4C
+		margin-top: 5px
 .item-select
 	background: #D9435D
 	span
@@ -3248,14 +3240,14 @@ input[type="number"]::-webkit-outer-spin-button
 		color: #ffffff
 		background: #D9435D
 .page-data__pets
-	display: none
-	position: absolute
-	top: 0
-	left: 0
-	right: 0
-	bottom: 0
-	background: #ffffff
-	z-index: 10
+	//display: none
+	//position: absolute
+	//top: 0
+	//left: 0
+	//right: 0
+	//bottom: 0
+	//background: #ffffff
+	//z-index: 10
 .data-pets
 	display: flex
 	padding-top: 45px
