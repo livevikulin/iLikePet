@@ -26,17 +26,103 @@ block content
 				.product-card
 					img(src="./img/product-card/product-logo.png")
 			.__section
-				.product-slider
-					.product-card__slider-block
-						.product-slider__item
-							img(src="./img/product-card/slider-block.png")
-						.product-slider__item
-							img(src="./img/product-card/slider-block.png")
-					.product-slider__nav
-						.product-slider__item
-							img(src="./img/product-card/slider-block.png")
-						.product-slider__item
-							img(src="./img/product-card/slider-block.png")
+				.product-card__content
+					.product-slider
+						.product-card__slider-block
+							.product-slider__item
+								img(src="./img/product-card/slider-block.png")
+								.product-slider__info.product-slider__info_discount Скидка
+							.product-slider__item
+								img(src="./img/product-card/slider-block.png")
+								.product-slider__info.product-slider__info_stocks Акции
+						.product-slider__nav
+							.product-slider__item
+								img(src="./img/product-card/slider-block.png")
+							.product-slider__item
+								img(src="./img/product-card/slider-block.png")
+					.product-card__info
+						.product-card__add-favorit
+							span В избранное 
+						.product-card__weight
+							span Вес:
+							.weight-wrapper
+								input(type="radio" id="3kg" name="weight")
+								label(for="3kg") 3кг
+							.weight-wrapper
+								input(type="radio" id="15kg" name="weight")
+								label(for="15kg") 15кг
+							.weight-wrapper
+								input(type="radio" id="800g" name="weight")
+								label(for="800g") 800г
+						.product-card__taste
+							span Вкус:
+							.taste-wrapper
+								input(type="radio" id="chiken" name="taste")
+								label(for="chiken") Курица
+							.taste-wrapper
+								input(type="radio" id="lamb" name="taste")
+								label(for="lamb") Ягненок
+							.taste-wrapper
+								input(type="radio" id="veal" name="taste")
+								label(for="veal") Телятина
+							.taste-wrapper
+								input(type="radio" id="rabbit" name="taste")
+								label(for="rabbit") Кролик
+						.product-card__row
+							.product-card__price
+								.price
+									span 1190
+									span
+								.descr 20 бонусов за покупку
+							.product-card__mobile-wrapper
+								.product-card__buy
+									.product-card__amount
+										span
+										span 1
+										span
+									.product-card__in-cart
+										button В корзину
+								a.product-card__buy-click Купить в 1 клик
+						.product-card__price-subscribe
+							.price
+								span 1190
+								span
+							.descr
+								span.icon-ring
+								span Цена по подписке
+						.product-card__deliveri-info
+							span Бесплатная доставка по России при заказе от 1500 руб.
+				.product-card__tabs
+					#tabs.dog-page-tabs__block
+						ul
+							li
+								a(href="#tabs-1") О породе, фото и видео
+							li
+								a(href="#tabs-2") Стандарты породы
+							li
+								a(href="#tabs-3") Рекомендации по питанию
+							li
+								a(href="#tabs-4") Отзывы
+							li
+								a(href="#tabs-5") Доставка и оплата
+						#tabs-1.product-card__tabs-item
+							p Сухой корм для собак мелких размеров с 10 месяцев до 8 лет.
+							h3 Достоинства:
+							ul
+								li стимулирование аппетита
+								li здоровая шерсть
+								li замедленное образование зубного налета
+							h3 Состав:
+							p дегидратированные белки животного происхождения (птицы), кукуруза, кукурузная мука, животные жиры, кукурузная клейковина, изолят растительных белков, пшеница, гидролизат белков животного происхождения, рис, свекольный жом, минеральные вещества, рыбий жир, дрожжи, соевое масло, фруктоолигосахариды.
+						#tabs-2.product-card__tabs-item
+							span.tabs-box__subtitle Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, quod?
+						#tabs-3.product-card__tabs-item
+							span.tabs-box__subtitle Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, quod?
+						#tabs-4.product-card__tabs-item
+							span.tabs-box__subtitle Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, quod?
+						#tabs-5.product-card__tabs-item
+							span.tabs-box__subtitle Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, quod?
+
 			.store__section.store__section_has-pets.store__section_news
 				.store__content
 					h2.store__title Новости

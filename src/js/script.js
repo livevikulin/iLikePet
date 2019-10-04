@@ -215,6 +215,45 @@ $(document).ready(function () {
 				$(".filter-box__show-all").hasClass("filter-box__show-all_closed") ? $(item).show() : $(item).hide();
 			}
 		});
+		
+		$(".slider-back").on('click',function(){
+			sliderStore.slick("slickPrev")
+		})
+		$(".slider-next").on('click',function(){
+			sliderStore.slick("slickNext")
+		})
+
+		$(".filter-box__show-all").on('click',function(e){
+			e.preventDefault();
+			//filter-box__show-all_closed
+			let msg  = $(this).hasClass('filter-box__show-all_closed') ? 'Скыть' : 'Показать еще';
+			$(this).children(':first').text(msg);
+			$(this).prev().find('li').each(function(i,item){
+				if(i > 3 ) {
+					$(".filter-box__show-all").hasClass('filter-box__show-all_closed') ? $(item).show() : $(item).hide();
+				}
+			})
+			$(this).toggleClass('filter-box__show-all_closed');
+		})
+	//store page end
+
+	//product card page
+		//slider module
+		$('.product-card__slider-block').slick({
+			slidesToShow: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.product-slider__nav',
+			
+		  });
+
+		$('.product-slider__nav').slick({
+			slidesToShow: 2,
+			asNavFor: '.product-card__slider-block',
+			variableWidth: true,
+			focusOnSelect: true
+		});
+	//product card end
 		$(this).toggleClass("filter-box__show-all_closed");
 	});
 	//store page end
@@ -260,6 +299,13 @@ $(document).ready(function () {
 		inputRefresh($el);
 	});
 
+	$(document).on('click', '#initSelect', ()=>{
+		$(".input input").each((i, el) => {
+			const $el = $(el);
+			inputRefresh($el);
+		});
+	});
+
 	//Инициализация календаря в Личном кабинете
 	$(".js-datepicker-personal").datepicker({dateFormat: "dd.mm.yy"});
 	$("#inputBorn").click(function () {
@@ -281,20 +327,26 @@ $(document).ready(function () {
 		$(".ui-datepicker").addClass("ui-datepicker-pets");
 	});
 
-	//Инициализация селект меню
-	$(".js-select").selectmenu({
-		select: function (event, ui) {
-		}
-	});
-	$(".ui-selectmenu-button").click(function () {
-		$(this).children(".ui-selectmenu-icon").toggleClass("icon-rotate");
-	});
-	$(".ui-selectmenu-menu").click(function () {
-		$(".ui-selectmenu-icon").removeClass("icon-rotate");
-	});
+	function initSelect() {
+		//Инициализация селект меню
+		$(".js-select").selectmenu({
+			select: function (event, ui) {}
+		});
+		$(".ui-selectmenu-button").click(function () {
+			$(this).children(".ui-selectmenu-icon").toggleClass("icon-rotate");
+		});
+		$(".ui-selectmenu-menu").click(function () {
+			$(".ui-selectmenu-icon").removeClass("icon-rotate");
+		});
 
-	$("#category_select").trigger("selectmenuchange");
+		$("#category_select").trigger("selectmenuchange");
+	}
 
+	initSelect();
+
+	$(document).on('click', '#initSelect', ()=>{
+		initSelect();
+	});
 
 	$(document).on("selectmenuchange", "#category_select", function (e) {
 		const $el = $(e.target);

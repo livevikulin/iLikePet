@@ -1,4 +1,16 @@
+$infoColor: #F5F5F5
+$favoritColot: #E8E8E8
+$textColor: #494A4C
 .product-card
+    &__row
+        display: flex
+    &__mobile-wrapper
+        display: flex
+    &__breadcrumbs
+        text-align: left
+        margin-top: 40px
+        &:after
+            display: none
     &__top-line
         margin: 0 auto
         width: 1280px
@@ -8,15 +20,304 @@
             font-family: 'Arsenal Bold', sans-serif
             margin-top: 24px
             margin-bottom: 24px
+    &__tabs
+        width: 1280px
+        margin: 0 auto
+        margin-bottom: 56px
+        .ui-tabs-nav
+            justify-content: flex-start
+            li a 
+                padding-right: 20px
+                padding-left: 20px
+    &__tabs-item
+        font-family: 'Merriweather', sans-serif
+        h3
+            color: #494A4C
+            font-size: 15px
+        p
+            width: 976px
+            line-height: 27px
+        ul
+            li
+                font-size: 15px
+                margin-bottom: 8px
+    &__content
+        display: flex
+        width: 1280px
+        margin: 0 auto
+    &__info
+        margin-top: 40px
+        margin-left: 38px
+        width: 762px
+        background-color: $infoColor
+        border-radius: 8px
+        position: relative
+        align-self: baseline
+    &__deliveri-info
+        border-radius: 4px
+        border: 1px dashed #494A4C
+        width: 700px
+        margin: 21px 23px 40px 37px
+        box-sizing: border-box
+        background-color: #fff
+        padding: 16px 0
+        span
+            font-size: 16px
+            font-family: 'Arimo Regular', sans-serif
+            color: #494A4C
+            position: relative
+            margin-left: 67px
+            &:before
+                position: absolute
+                content: ''
+                left: -48px
+                top: 70%
+                transform: translateY(-50%)
+                background: url('../img/sprites/intermediate-svg/delivery-car.svg') no-repeat
+                width: 32px
+                height: 32px
+                margin-right: 16px
+    &__add-favorit
+        position: absolute
+        right: 0
+        top: 0
+        width: 156px
+        height: 40px
+        cursor: pointer
+        box-sizing: border-box
+        text-align: right
+        padding-right: 14px
+        background-color: $favoritColot
+        line-height: 40px
+        border-radius: 0 8px
+        span
+            position: relative
+            color: $textColor
+            &:before
+                content: ''
+                position: absolute
+                background: url('../img/sprites/intermediate-svg/fav.svg') no-repeat
+                left: -30px
+                width: 20px
+                height: 18px
+                top: 50%
+                transform: translateY(-50%)
+        &:hover
+            background-color: darken($favoritColot,2)
+    &__weight,
+    &__taste
+        margin-top: 35px
+        margin-left: 39px
+        display: flex
+        font-family: 'Arimo Regular', sans-serif
+        span
+            font-size: 18px
+            color: #979899
+            margin-right: 15px
+        .weight-wrapper,
+        .taste-wrapper
+            input[type="radio"]
+                display: none
+            label                
+                font-size: 18px
+                color: #3A1F5D
+                padding: 5px 10px
+                box-sizing: border-box
+            input:checked ~ label
+                background-color: #F7D9DF
+                border-radius: 4px
+                height: 32px
+    &__weight
+        span
+            margin-right: 21px
+    &__price
+        margin-left: 30px
+        margin-top: 32px
+        .row
+            display: flex
+        .price
+            span
+                &:first-child
+                    font-family: 'Arimo Bold', sans-serif
+                    color: #7E2A2A
+                    font-size: 40px
+                &:last-child
+                    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTcuMTU4IDEyLjMxNUgzLjg4N1YxNUgyLjAydi0yLjY4NUgwdi0xLjU0M2gyLjAyMVY5LjQzM0gwVjcuOWgyLjAyMVYuNzgxaDUuMjQ1YzEuNTIzIDAgMi43My4zODggMy42MjMgMS4xNjIuODkyLjc3NSAxLjMzOCAxLjgyMyAxLjMzOCAzLjE0NSAwIDEuMzg3LS40MyAyLjQ1OC0xLjI5IDMuMjEzLS44NTIuNzQ4LTIuMDY3IDEuMTI2LTMuNjQyIDEuMTMzSDMuODg3djEuMzM4aDMuMjcxdjEuNTQzek0zLjg4NyA3LjloMy4zNzljMS4wMDkgMCAxLjc3Ny0uMjM3IDIuMzA0LS43MTMuNTI4LS40NzUuNzkxLTEuMTY4Ljc5MS0yLjA4IDAtLjgyNi0uMjczLTEuNDk0LS44Mi0yLjAwMi0uNTQ3LS41MTQtMS4yODYtLjc3NC0yLjIxNy0uNzhIMy44ODdWNy45eiIgZmlsbD0iIzJEMzAzNiIvPjwvc3ZnPg==) no-repeat
+                    width: 18px
+                    background-size: cover
+                    margin-left: 5px
+                    height: 22px
+                    display: inline-block
+        .descr
+            font-size: 16px
+            color: #666666
+            font-family: 'Arimo Regular', sans-serif
+    &__price-subscribe
+        width: 370px
+        margin-top: 22px
+        display: flex
+        box-sizing: border-box
+        padding-left: 30px
+        background-color: #FBD45F
+        border-radius: 0px 10px 10px 0px
+        align-items: center
+        height: 58px
+        .icon-ring
+            margin-left: 23px
+            margin-right: 12px
+        .descr
+            display: flex
+            align-items: center
+            span
+                &:last-child
+                    font-size: 16px
+                    font-family: 'Arimo Regular', sans-serif
+                    position: relative
+                    &:after
+                        content: ''
+                        position: absolute
+                        right: -33px
+                        top: -25px
+                        background: url('../img/sprites/intermediate-svg/card-product-subscribe.svg') no-repeat
+                        width: 33px
+                        height: 37px
+        .price
+            span
+                &:first-child
+                    font-family: 'Arimo Bold', sans-serif
+                    color: #2D3036
+                    font-size: 27px
+                &:last-child
+                    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTcuMTU4IDEyLjMxNUgzLjg4N1YxNUgyLjAydi0yLjY4NUgwdi0xLjU0M2gyLjAyMVY5LjQzM0gwVjcuOWgyLjAyMVYuNzgxaDUuMjQ1YzEuNTIzIDAgMi43My4zODggMy42MjMgMS4xNjIuODkyLjc3NSAxLjMzOCAxLjgyMyAxLjMzOCAzLjE0NSAwIDEuMzg3LS40MyAyLjQ1OC0xLjI5IDMuMjEzLS44NTIuNzQ4LTIuMDY3IDEuMTI2LTMuNjQyIDEuMTMzSDMuODg3djEuMzM4aDMuMjcxdjEuNTQzek0zLjg4NyA3LjloMy4zNzljMS4wMDkgMCAxLjc3Ny0uMjM3IDIuMzA0LS43MTMuNTI4LS40NzUuNzkxLTEuMTY4Ljc5MS0yLjA4IDAtLjgyNi0uMjczLTEuNDk0LS44Mi0yLjAwMi0uNTQ3LS41MTQtMS4yODYtLjc3NC0yLjIxNy0uNzhIMy44ODdWNy45eiIgZmlsbD0iIzJEMzAzNiIvPjwvc3ZnPg==) no-repeat
+                    width: 16px
+                    background-size: cover
+                    margin-left: 5px
+                    height: 16px
+                    display: inline-block
+
+    &__buy-click
+        color: #D9435D
+        font-family: 'Arsenal Bold', sans-serif
+        text-decoration: none
+        align-self: center  
+        font-size: 18px
+        border-bottom: 1px dashed  #D9435D
+        padding-bottom: 1px
+    &__buy
+        display: flex
+        padding-top: 24px
+        position: relative
+        width: 320px
+        .product-card__in-cart
+            position: absolute
+            left: 125px
+            button
+                background-color: #D9435D
+                text-align: center
+                width: 187px
+                cursor: pointer
+                box-sizing: border-box
+                font-size: 20px
+                font-family: 'Arsenal Bold', sans-serif
+                border-radius: 32px
+                border: 0
+                color: #fff
+                height: 56px
+                line-height: 56px
+                position: absolute
+                &:before
+                    content: ''
+                    background: url('../img/sprites/intermediate-svg/in-cart.svg') no-repeat
+                    position: absolute
+                    width: 17px
+                    height: 17px
+                    top: 50%
+                    transform: translateY(-50%)
+                    left: 25px
+        .product-card__amount
+            background-color: #fff
+            display: flex
+            box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.11)
+            border-radius: 28px
+            padding-left: 7px
+            height: 56px
+            align-items: center
+            width: 185px
+            span
+                &:nth-child(2)
+                    font-size: 18px
+                    color: #494A4C
+                    margin: 0 20px
+                &:nth-child(1),
+                &:nth-child(3)
+                    position: relative
+                    width: 32px
+                    display: block
+                    cursor: pointer
+                    height: 32px
+                    border-radius: 50%
+                    background-color: #F5F5F5
+                &:first-child,
+                &:last-child
+                    &:before
+                        content: ''
+                        position: absolute
+                        background-color: #979899
+                        width: 14px
+                        border-radius: 2px
+                        height: 2px
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%,-50%)
+                &:last-child
+                    &:before
+                        background-color: #D9435D
+                    &:after
+                        content: ''
+                        position: absolute
+                        background-color: #D9435D
+                        height: 14px
+                        border-radius: 2px
+                        width: 2px
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%,-50%)
+                
 
 
+.icon-ring
+    width: 24px
+    height: 24px
+    background: url('../img/sprites/intermediate-svg/product-card-ring.svg') no-repeat
+    display: inline-block
         
     
 
 .product-slider
+    margin-top: 40px
+    margin-bottom: 56px
     .product-card__slider-block
         width: 480px 
+        .product-slider__item
+            position: relative
+            .product-slider__info
+                position: absolute
+                font-family: 'Arimo Regular', sans-serif
+                font-size: 14px
+                width: 78px
+                height: 35px
+                top: 8px
+                right: 7px
+                line-height: 35px
+                text-align: center
+                color: #fff
+                &_discount
+                    background: url('../img/sprites/intermediate-svg/bone-green.svg') no-repeat
+                &_stocks
+                    background: url('../img/sprites/intermediate-svg/bone-red.svg') no-repeat
+                    width: 79px
     .product-slider__nav
+        margin-top: 30px
         width: 480px
     &__item
     .product-slider__nav
@@ -25,3 +326,141 @@
                     width: 96px
                     height: 88px
                     object-fit: cover
+                
+@media screen and (max-width: 1330px)
+    .product-card__info
+        width: 660px
+    .product-card__deliveri-info
+        width: 560px
+    .product-card__top-line,
+    .product-card__content,
+    .product-card__tabs
+        width: 1160px
+@media screen and (max-width: 1180px)
+    .product-card__top-line,
+    .product-card__content,
+    .product-card__tabs
+            width: 1000px
+    .product-slider 
+        .product-card__slider-block
+            width: 400px
+            .product-slider__item
+                img 
+                    width: 350px
+                    height: 100%
+                    object-fit: contain
+        .product-slider__nav
+            width: 400px
+    .product-card__row
+        flex-direction: column
+    .product-card__price
+        order: 1
+    .product-card__mobile-wrapper
+        margin-left: 39px
+        align-items: center
+    .product-card__deliveri-info 
+        width: 450px
+        span
+            font-size: 14px
+    .product-card__info
+        width: 545px
+@media screen and (max-width: 1050px)
+    .product-card__top-line,
+    .product-card__content,
+    .product-card__tabs
+            width: 775px
+    .product-card__content
+        flex-direction: column
+        align-items: center
+    .product-card__info
+        margin: 0 auto
+    .product-card__tabs .ui-tabs-nav
+        li
+            margin-right: 15px
+            a
+                padding: 0
+                font-size: 15px
+    .product-card__tabs-item p
+        width: 650px
+@media screen and (max-width: 768px)
+    .product-card__top-line,
+    .product-card__content,
+    .product-card__tabs
+            width: 360px
+    .product-card__weight, .product-card__taste
+        display: flex
+        flex-wrap: wrap
+    .product-card__info
+        width: 360px
+    .product-card__price-subscribe
+        padding-left: 10px
+        width: inherit
+        border-radius: 0
+    .product-card__mobile-wrapper
+        flex-direction: column
+        .product-card__buy-click
+            margin-top: 10px
+    .product-card__mobile-wrapper,
+    .product-card__price
+        margin-left: 10px
+    .product-card__weight
+        margin-top: 55px
+    .product-card__deliveri-info 
+        margin: 20px auto
+        width: 270px
+        display: flex
+        justify-content: flex-end
+        span
+            margin-left: 0
+            display: inline-block
+            width: 200px
+    .product-card__tabs-item p
+        width: 360px
+        font-size: 14px
+    .product-card__tabs-item ul li
+        font-size: 13px
+    .product-slider
+        .product-card__slider-block
+            width: 360px
+            .product-slider__item
+                img 
+                    width: 350px
+        .product-slider__nav
+            width: 360px
+@media screen and (max-width: 360px)
+    .product-card__top-line,
+    .product-card__content,
+    .product-card__tabs
+            width: 290px
+    .product-slider
+        .product-card__slider-block
+            width: 290px
+            .product-slider__item
+                img 
+                    width: 290px
+        .product-slider__nav
+            width: 290px
+    .product-card__tabs-item p
+        width: 290px
+    .product-card__info
+        width: 290px
+    .product-card__buy
+        width: 265px
+    .product-card__buy .product-card__amount 
+        height: 45px
+        span:nth-child(1), .product-card__buy .product-card__amount span:nth-child(3)
+            width: 28px
+            height: 28px
+        span:nth-child(2)
+            margin: 0 15px
+            font-size: 15px
+    .product-card__buy .product-card__in-cart button
+        width: 140px
+        font-size: 15px
+        height: 45px
+        line-height: 45px
+    .product-card__buy .product-card__in-cart button:before
+        left: 10px
+    .product-card__price-subscribe .descr span:last-child:after
+        top: -36px
+        right: -15px
