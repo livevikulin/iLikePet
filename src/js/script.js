@@ -97,10 +97,10 @@ $(document).ready(function() {
 	});
 
     //Календарь на странице с событиями
-    var dayNames = $( ".js-datepicker" ).datepicker( "option", "dayNames" );
-    var dayNamesMin = $( ".js-datepicker" ).datepicker( "option", "dayNamesMin" );
-    var monthNames = $( ".js-datepicker" ).datepicker( "option", "monthNames" );
-    var monthNamesShort = $( ".js-datepicker" ).datepicker( "option", "monthNamesShort" );
+    var dayNames = $( ".js-datepicker .js-datepicker-personal" ).datepicker( "option", "dayNames" );
+    var dayNamesMin = $( ".js-datepicker .js-datepicker-personal" ).datepicker( "option", "dayNamesMin" );
+    var monthNames = $( ".js-datepicker .js-datepicker-personal" ).datepicker( "option", "monthNames" );
+    var monthNamesShort = $( ".js-datepicker .js-datepicker-personal" ).datepicker( "option", "monthNamesShort" );
 
     $('.js-datepicker').datepicker({
 		firstDay: 1,
@@ -128,10 +128,10 @@ $(document).ready(function() {
 			});
 	});
 
-    $( ".js-datepicker" ).datepicker( "option", dayNames, [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение" ] );
-    $( ".js-datepicker" ).datepicker( "option", dayNamesMin, [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс" ] );
-    $( ".js-datepicker" ).datepicker( "option", monthNames, ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'] );
-    $( ".js-datepicker" ).datepicker( "option", monthNamesShort, ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'] );
+    $( ".js-datepicker .js-datepicker-personal" ).datepicker( "option", dayNames, [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение" ] );
+    $( ".js-datepicker .js-datepicker-personal" ).datepicker( "option", dayNamesMin, [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс" ] );
+    $( ".js-datepicker .js-datepicker-personal" ).datepicker( "option", monthNames, ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'] );
+    $( ".js-datepicker .js-datepicker-personal" ).datepicker( "option", monthNamesShort, ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'] );
 
 
     //Выбор События эта неделя или выбрать дату
@@ -247,7 +247,13 @@ $(document).ready(function() {
 	});
 
     //Инициализация календаря в Личном кабинете
-    $('.js-datepicker-personal').datepicker();
+    $('.js-datepicker-personal').datepicker({
+        dateFormat: 'dd.mm.yy',
+        dayNames: [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение" ],
+		dayNamesMin: [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс" ],
+		monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+		monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек']
+    });
     $('#inputBorn').click(function() {
 		$('.ui-datepicker').addClass('ui-datepicker-personal');
 	});
@@ -295,8 +301,8 @@ $(document).ready(function() {
 	});
 	
 	//Маски
-	$("#inputBorn").mask('00/00/0000');
-	$("#inputPetBorn").mask('00/00/0000');	
+	$("#inputBorn").mask('00.00.0000');
+	$("#inputPetBorn").mask('00.00.0000');	
 	$("#inputPhone").mask('+7(000) 000-0000');
 	$("#inputPhone2").mask('+7(000) 000-0000');
 });
