@@ -99,10 +99,10 @@ $(document).ready(function () {
 	});
 
 	//Календарь на странице с событиями
-	var dayNames = $( ".js-datepicker .js-datepicker-personal" ).datepicker( "option", "dayNames" );
-	var dayNamesMin = $( ".js-datepicker .js-datepicker-personal" ).datepicker( "option", "dayNamesMin" );
-	var monthNames = $( ".js-datepicker .js-datepicker-personal" ).datepicker( "option", "monthNames" );
-	var monthNamesShort = $( ".js-datepicker .js-datepicker-personal" ).datepicker( "option", "monthNamesShort" );
+	var dayNames = $(".js-datepicker .js-datepicker-personal").datepicker("option", "dayNames");
+	var dayNamesMin = $(".js-datepicker .js-datepicker-personal").datepicker("option", "dayNamesMin");
+	var monthNames = $(".js-datepicker .js-datepicker-personal").datepicker("option", "monthNames");
+	var monthNamesShort = $(".js-datepicker .js-datepicker-personal").datepicker("option", "monthNamesShort");
 
 	$(".js-datepicker").datepicker({
 		firstDay: 1,
@@ -130,10 +130,10 @@ $(document).ready(function () {
 			});
 	});
 
-	$( ".js-datepicker .js-datepicker-personal" ).datepicker( "option", dayNames, [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение" ] );
-	$( ".js-datepicker .js-datepicker-personal" ).datepicker( "option", dayNamesMin, [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс" ] );
-	$( ".js-datepicker .js-datepicker-personal" ).datepicker( "option", monthNames, ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'] );
-	$( ".js-datepicker .js-datepicker-personal" ).datepicker( "option", monthNamesShort, ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'] );
+	$(".js-datepicker .js-datepicker-personal").datepicker("option", dayNames, ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение"]);
+	$(".js-datepicker .js-datepicker-personal").datepicker("option", dayNamesMin, ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]);
+	$(".js-datepicker .js-datepicker-personal").datepicker("option", monthNames, ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]);
+	$(".js-datepicker .js-datepicker-personal").datepicker("option", monthNamesShort, ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"]);
 
 	//Выбор События эта неделя или выбрать дату
 	$(".events-week__this").click(function (e) {
@@ -152,8 +152,8 @@ $(document).ready(function () {
 	//Фильтр
 	$(".filter-box__item").click(function () {
 		$(this).next().slideToggle();
-		$(this).parent().toggleClass('filter-box_closed');
-		$(this).children('.fas').toggleClass('rotate180');
+		$(this).parent().toggleClass("filter-box_closed");
+		$(this).children(".fas").toggleClass("rotate180");
 	});
 
 	//Инициализация slick-slider
@@ -182,60 +182,60 @@ $(document).ready(function () {
 
 	//Инициализация табов на странице dog-page
 	$("#tabs").tabs();
-		//declaration-more page
-		// show all module
-		$('.show-more').on('click',function(){
-			$(this).hide();
-			$(this).prev().css("width", "unset");
-		})
+	//declaration-more page
+	// show all module
+	$(".show-more").on("click", function () {
+		$(this).hide();
+		$(this).prev().css("width", "unset");
+	});
 	//declaration-more page END
 
 	//store page
 	// store-slider module
-	let sliderStore = $('.sllider-brands');
+	let sliderStore = $(".sllider-brands");
 	sliderStore.slick({
 		arrows: false,
 		variableWidth: true,
 	});
 
-	$(".slider-back").on('click',function(){
-		sliderStore.slick("slickPrev")
-	})
-	$(".slider-next").on('click',function(){
-		sliderStore.slick("slickNext")
-	})
+	$(".slider-back").on("click", function () {
+		sliderStore.slick("slickPrev");
+	});
+	$(".slider-next").on("click", function () {
+		sliderStore.slick("slickNext");
+	});
 
-	$(".filter-box__show-all").on('click',function(e){
+	$(".filter-box__show-all").on("click", function (e) {
 		e.preventDefault();
 		//filter-box__show-all_closed
-		let msg  = $(this).hasClass('filter-box__show-all_closed') ? msg = 'Скыть' : 'Показать еще';
-		$(this).children(':first').text(msg);
-		$(this).prev().find('li').each(function(i,item){
-			if(i > 3 ) {
-				$(".filter-box__show-all").hasClass('filter-box__show-all_closed') ? $(item).show() : $(item).hide();
+		let msg = $(this).hasClass("filter-box__show-all_closed") ? msg = "Скыть" : "Показать еще";
+		$(this).children(":first").text(msg);
+		$(this).prev().find("li").each(function (i, item) {
+			if (i > 3) {
+				$(".filter-box__show-all").hasClass("filter-box__show-all_closed") ? $(item).show() : $(item).hide();
 			}
-		})
-		$(this).toggleClass('filter-box__show-all_closed');
-	})
+		});
+		$(this).toggleClass("filter-box__show-all_closed");
+	});
 	//store page end
 
 	//product card page
 	//slider module
-	$('.product-card__slider-block').slick({
+	$(".product-card__slider-block").slick({
 		slidesToShow: 1,
 		arrows: false,
 		fade: true,
-		asNavFor: '.product-slider__nav'
+		asNavFor: ".product-slider__nav"
 	});
 
-	$('.product-slider__nav').slick({
+	$(".product-slider__nav").slick({
 		slidesToShow: 2,
-		asNavFor: '.product-card__slider-block',
+		asNavFor: ".product-card__slider-block",
 		variableWidth: true,
 		focusOnSelect: true
 	});
-	//product card end
 
+	//product card end
 
 
 	function inputRefresh($el) {
@@ -261,20 +261,21 @@ $(document).ready(function () {
 	});
 
 	//Инициализация календаря в Личном кабинете
-	$(".js-datepicker-personal").datepicker({ dateFormat: 'dd.mm.yy' });
+	$(".js-datepicker-personal").datepicker({dateFormat: "dd.mm.yy"});
 	$("#inputBorn").click(function () {
 		$(".ui-datepicker").addClass("ui-datepicker-personal");
 	});
 
-	$('.js-datepicker-personal').datepicker({
-		dateFormat: 'dd.mm.yy',
-		dayNames: [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение" ],
-		dayNamesMin: [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс" ],
-		monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-		monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек']
+	$(".js-datepicker-personal").datepicker({
+		dateFormat: "dd.mm.yy",
+		dayNames: ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение"],
+		dayNamesMin: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+		monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+		monthNamesShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"]
 	});
-	$('#inputBorn').click(function() {
-		$('.ui-datepicker').addClass('ui-datepicker-personal');
+	$("#inputBorn").click(function () {
+		$(".ui-datepicker").addClass("ui-datepicker-personal");
+	});
 
 	$("#inputPetBorn").click(function () {
 		$(".ui-datepicker").addClass("ui-datepicker-pets");
@@ -282,7 +283,8 @@ $(document).ready(function () {
 
 	//Инициализация селект меню
 	$(".js-select").selectmenu({
-		select: function( event, ui ) {}
+		select: function (event, ui) {
+		}
 	});
 	$(".ui-selectmenu-button").click(function () {
 		$(this).children(".ui-selectmenu-icon").toggleClass("icon-rotate");
@@ -291,17 +293,17 @@ $(document).ready(function () {
 		$(".ui-selectmenu-icon").removeClass("icon-rotate");
 	});
 
-	$('#category_select').trigger('selectmenuchange');
+	$("#category_select").trigger("selectmenuchange");
 
 
-	$(document).on("selectmenuchange","#category_select",function(e){
+	$(document).on("selectmenuchange", "#category_select", function (e) {
 		const $el = $(e.target);
 		const url = $el.data("url");
 		const sectId = $el.val();
 		const $breed_select = $("#breed_select");
 		$breed_select.html("");
 		$breed_select.selectmenu("refresh");
-		$breed_select.selectmenu( "option", "disabled", true );
+		$breed_select.selectmenu("option", "disabled", true);
 
 		$.post(url, "get_pets=" + sectId, function (data) {
 			if (data) {
@@ -354,8 +356,8 @@ $(document).ready(function () {
 	});
 
 	//Маски
-	$("#inputBorn").mask('00.00.0000');
-	$("#inputPetBorn").mask('00.00.0000');
-	$("#inputPhone").mask('+7(000) 000-0000');
-	$("#inputPhone2").mask('+7(000) 000-0000');
+	$("#inputBorn").mask("00.00.0000");
+	$("#inputPetBorn").mask("00.00.0000");
+	$("#inputPhone").mask("+7(000) 000-0000");
+	$("#inputPhone2").mask("+7(000) 000-0000");
 });
