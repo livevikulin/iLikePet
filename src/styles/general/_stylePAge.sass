@@ -2863,6 +2863,41 @@ input[type="number"]::-webkit-outer-spin-button
 			height: 48px
 			margin-top: 46px
 			text-decoration: none
+.personal-advert
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 15px 0
+	border-bottom: 1px solid #F2F2F2
+	&:last-child
+		border-bottom: none
+	&__name
+		p 
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: 700
+			font-size: 16px
+			line-height: 18px
+			color: #494A4C
+			margin: 0
+		span 
+			display: block
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: 400
+			font-size: 14px
+			line-height: 18px
+			color: #494A4C
+			margin-top: 10px
+	&__delete
+		font-family: Arimo Regular
+		font-size: 16px
+		line-height: 16px
+		text-align: right
+		color: #D9435D
+		text-decoration: none
+		span
+			margin-left: 5px
 .item-select
 	background: #D9435D
 	span
@@ -3166,6 +3201,8 @@ input[type="number"]::-webkit-outer-spin-button
 .ui-selectmenu-menu
 	width: 100%
 	max-width: 320px
+	height: 100%
+	max-height: 270px
 	// top: -684px !important
 	background: #F5F9FA
 	border: 1px solid #E0E0E0
@@ -3175,6 +3212,8 @@ input[type="number"]::-webkit-outer-spin-button
 	border-bottom-right-radius: 6px
 	padding-top: 1px
 	z-index: 10
+	overflow-x: hidden
+	overflow-y: auto
 	ul
 		list-style: none
 		padding: 0
@@ -3205,18 +3244,21 @@ input[type="number"]::-webkit-outer-spin-button
 	height: 100%
 	min-height: 730px
 	position: relative
-	.page-data__pets
-		display: none
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		background: #ffffff
-		z-index: 10
-	.data-pets
-		display: flex
-		padding-top: 45px
+	.ui-state-active
+		color: #ffffff
+		background: #D9435D
+.page-data__pets
+	display: none
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: #ffffff
+	z-index: 10
+.data-pets
+	display: flex
+	padding-top: 45px
 	.personal-data__photo
 		margin-top: 33px
 	.pets-info
@@ -3255,9 +3297,6 @@ input[type="number"]::-webkit-outer-spin-button
 		margin-bottom: 12px
 	.personal-info__textarea
 		width: 100%
-	.ui-state-active
-		color: #ffffff
-		background: #D9435D
 
 ///Личный кабинет - объявления
 .personal-box__advert
