@@ -16,6 +16,37 @@ import "jquery-mask-plugin";
 
 
 $(document).ready(function () {
+
+	//Кнопка "НАВЕРХ"
+	const $toTopButton = $(".js-to-top-link");
+
+	if ($toTopButton.length) {
+		let scrollTrigger = 20, // px
+			backToTop = () => {
+				var scrollTop = $(window).scrollTop();
+
+				if (scrollTop > scrollTrigger) {
+					$toTopButton.addClass("topper_active");
+				} else {
+					$toTopButton.removeClass("topper_active");
+				}
+			};
+
+		backToTop();
+
+		$(window).on("scroll", () => {
+			backToTop();
+		});
+
+		$toTopButton.on("click", (e) => {
+			e.preventDefault();
+
+			$("html,body").animate({
+				scrollTop: 0
+			}, 700);
+		});
+	}
+
 	//Инициализация fancybox
 	$("[data-fancybox]").fancybox({
 		helpers: {
@@ -366,6 +397,8 @@ $(document).ready(function () {
 	// 	e.preventDefault();
 	// 	$(".page-data__pets").fadeOut();
 	// });
+
+
 
 
 	//Фильтр на мобильной версии
