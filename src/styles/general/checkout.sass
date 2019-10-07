@@ -1,0 +1,132 @@
+.checkout
+    &__body
+        display: flex
+    &__left
+        flex-basis: 842px
+    &__right
+        flex-basis: 405px
+        margin-left: 33px
+    &__top-line,
+    &__body
+        width: 1280px
+        margin: 0 auto
+    &__breadcrumbs
+        text-align: left
+        margin-top: 40px
+        &:after
+            display: none
+    &__top-line
+        h1
+            color: #2D3036
+            font-size: 48px
+            font-family: 'Arsenal Bold', sans-serif
+    &__line
+        margin-top: 97px
+        margin-bottom: 73px
+    
+.order-line
+    height: 6px
+    background-color: #D0C9D6
+    display: flex
+    position: relative
+    width: 100%
+    &__item
+        &:before
+            content: attr(data-text)
+            position: absolute
+            color: #2D3036
+            font-size: 18px
+            top: -40px
+            width: 175px
+        &_active
+            background-color: #27AE60
+            border-color: #27AE60
+            &:before
+                font-family: 'Arsenal Bold', sans-serif
+            &:after
+                content: ''
+                position: absolute
+                width: 12px
+                height: 8px
+                left: 50%
+                top: 50%
+                background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDEyIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMy40TDQuNzUgN0wxMSAxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=) no-repeat
+                transform: translate(-50%,-50%)
+        position: absolute
+        background-color: #fff
+        width: 24px
+        height: 24px
+        border-radius: 50%
+        border: 4px solid #D0C9D6
+        box-sizing: border-box
+        top: -10px
+        &:nth-child(1)
+            left: 77px
+            &:before
+                left: -50px
+        &:nth-child(2)
+            left: 353px
+            &:before
+                left: -50px
+        &:nth-child(3)
+            left: 629px
+            &:before
+                left: -48px
+        &:nth-child(4)
+            left: 905px
+            &:before
+                left: -66px
+        &:nth-child(5)
+            right: 75px
+            left: unset
+            &:before
+                left: -58px
+            
+        
+    
+.order-info
+    background-color: #F9F9FB
+    &_location
+        .order-info__descr
+            margin-top: 25px
+            width: 640px
+            line-height: 24px
+        .order-info__caption
+            margin-bottom: 10px
+    &__body 
+        padding-left: 32px
+    &__number
+        background: #F7D9DF
+        border-radius: 0px 20px 20px 0px
+        padding: 8px 9px 8px 41px
+        color: #3A1F5D
+        font-size: 24px
+    &__header
+        display: flex
+        padding-top: 32px
+        padding-bottom: 30px
+        align-items: center
+    &__title
+        font-size: 24px
+        color: #2D3036
+        margin-left: 8px
+    &__caption,
+    &__descr
+        font-family: 'Arimo Regular', sans-serif
+        font-size: 16px
+    &__caption
+        color: #494A4C
+    &__descr
+        color: #979899
+    &__back
+        color: #979899
+        background-color: transparent
+        position: relative
+        box-sizing: border-box
+        border-radius: 6px
+        width: 129px
+        height: 48px
+        svg
+            position: absolute
+            left: 0
+            top: 0

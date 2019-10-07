@@ -5,6 +5,7 @@
     .provider-service
         width: 1244px
         margin: 0 auto
+ 
         &__container
             display: flex
             margin-top: 20px
@@ -17,8 +18,12 @@
             h3
                 font-family: 'Nexa Script', sans-serif
                 font-size: 32px
+                font-weight: 500
                 color: #D9435D
                 margin-bottom: 8px
+    &__breadcrumbs
+        a
+            display: inline-block
     .provider
         width: 1244px
         margin: 0 auto
@@ -27,6 +32,7 @@
         &__tabs
             &-content
                 width: 876px
+                font-size: 15px
             .dog-page-tabs__block
                 padding-bottom: 122px
                 ul
@@ -53,6 +59,7 @@
                     height: 18px
                     background: url('../img/service-card-print.svg') no-repeat
                     left: -35px
+        
         &__header
             margin-top: 20px
             display: flex
@@ -139,6 +146,9 @@
         .provider
             width: 732px
 @media screen and (max-width: 768px)
+    .provider__tabs
+        width: 290px
+        margin: 0 auto
     .service-provider
         .provider-service,
         .provider
@@ -150,15 +160,30 @@
             width: 290px
         .provider__add-favorite
             justify-content: center
+        .provider__header-descr
+            margin-left: 0
+            align-items: center
+            .row 
+                flex-direction: column
+                align-items: center
+                .phone
+                    margin-left: 0
+                    align-items: center
+                    span
+                        margin-top: 7px
+        .provider__content
+            margin: 0 10px
 @media screen and (max-width: 360px)
+    .provider__tabs
+        width: 250px
     .service-provider
         .provider-service,
         .provider
-            width: 320px
+            width: 290px
         .provider__header
             align-items: center
             flex-direction: column
         .provider__tabs-content
-            width: 250px
-        .provider__header-descr
-            margin-left: 0
+            width: 220px
+    .service-provider .provider__header-icon
+        width: 280px

@@ -90,6 +90,7 @@
         margin: 0 auto
         padding: 0 50px
         box-sizing: border-box
+        margin-top: 21px
         width: 1244px
         background-color: #fff
         &__left
@@ -161,6 +162,8 @@
                 overflow-x: scroll
 @media screen and (max-width: 1090px)   
     .declaration-more
+        &__title
+            text-align: center
         .content
             width: 786px
             &__info
@@ -168,6 +171,11 @@
                 align-items: center
         &__footer
             width: 768px
+        &__descr
+            padding-bottom: 40px
+        .content__right
+            margin-left: 0
+            width: 511px
 @media screen and (max-width: 858px)
     .declaration-more
         &__descr
@@ -177,8 +185,10 @@
         &__footer
             width: 660px
 @media screen and (max-width: 768px)
+    .declaration-more .content__right
     .declaration-more .content
         margin-top: 15px
+        padding: 0 10px
     .declaration-more .dog-page-slider__nav
         order: 0
     .dog-page-slider .dog-page-slider__item
@@ -203,7 +213,7 @@
             .date-visit
                 margin-bottom: 10px
         &__descr
-            width: 220px
+            width: unset
         .show-more
             width: 60px
         .content
@@ -213,6 +223,16 @@
         .dog-page-slider
             width: 280px
             height: 210px
+        .content__right
+            width: unset
+        .show-more
+            margin-left: 0
+            &:before
+                display: none            
+        &__phone
+            .descr
+                display: flex
+                flex-direction: column
 @media screen and (max-width: 360px)
     .declaration-more
         &__footer-service h5
@@ -221,13 +241,10 @@
             font-size: 28px
         &__title
             font-size: 20px
-
-        &__descr
-            width: 220px
         .content
-            width: 300px
+            width: 290px
         &__footer
-            width: 300px
+            width: 290px
         .dog-page-slider
             width: 260px
             height: 210px
