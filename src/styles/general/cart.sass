@@ -1,7 +1,11 @@
 .cart
-    &__top-line
-        width: 1280px
-        margin: 0 auto
+    &__list
+        .item-cart
+            &:first-child
+                border-top: 1px solid #E4DFEA
+                border-radius: 6px 6px 0px 0px
+            &:last-child
+                border-radius: 0px 0px 6px 6px
     &__title
         font-size: 48px
         font-family: 'Arsenal Bold', sans-serif
@@ -11,11 +15,10 @@
         margin-top: 40px
         &:after
             display: none
-    &__delivery
-        background-color: #F5F5F5
-        width: 574px
+    &__delivery,
     &__list,
-    &__footer
+    &__footer,
+    &__top-line
         width: 1280px
         margin: 0 auto
     &__cost,
@@ -49,13 +52,17 @@
                 font-size: 18px
     &__discount
         margin-bottom: 5px
+    &__delivery
+        margin-bottom: 80px
 .item-cart
     display: flex
     padding: 24px
     justify-content: space-between
     align-items: center
-    //border-radius: 6px 6px 0px 0px
     border-bottom: 1px solid #E4DFEA
+    box-sizing: border-box
+    border-right: 1px solid #E4DFEA
+    border-left: 1px solid #E4DFEA
     &__close
         width: 24px
         cursor: pointer
@@ -198,3 +205,159 @@
         margin-left: 9px
         top: 50%
         transform: translateY(-50%)
+
+
+.delivery-info
+    margin-top: 32px
+    background: #F5F5F5
+    border-radius: 8px
+    padding: 32px 73px 40px 48px
+    box-sizing: border-box
+    width: 574px
+    &__title
+        font-size: 18px
+        color: #2D3036
+        font-family: 'Arsenal Bold', sans-serif
+    &__descr
+        font-size: 16px
+        color: #494A4C
+        font-family: 'Arimo Regular', sans-serif
+        display: flex
+        justify-content: space-between
+        margin-bottom: 10px
+        &:nth-child(2)
+            margin-top: 20px
+    &__price
+        color: #D9435D
+    a
+        color: #3A1F5D
+        font-family: 'Arimo Regular', sans-serif
+        font-size: 16px
+
+@media screen and (max-width: 1329px)
+    .cart__delivery, 
+    .cart__list, 
+    .cart__footer,
+    .cart__top-line
+        width: 1180px
+@media screen and (max-width: 1210px)
+    .cart__delivery, 
+    .cart__list, 
+    .cart__footer,
+    .cart__top-line
+        width: 1024px
+    .item-cart_full .item-cart__info
+        flex-basis: 270px
+@media screen and (max-width: 1050px)
+    .cart__delivery, 
+    .cart__list, 
+    .cart__footer,
+    .cart__top-line
+        width: 768px
+    .item-cart_full .item-cart__info
+        flex-basis: 175px
+    .item-cart_full .item-cart__price,
+    .item-cart_full .item-cart__cost
+        flex-basis: 80px
+    .cart__footer
+        display: flex
+        justify-content: space-between
+    .cart__buy
+        flex-basis: 190px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .continue-shopping,
+        .order-product
+            margin-right: 0
+@media screen and (max-width: 800px)
+    .cart__delivery, 
+    .cart__list, 
+    .cart__footer,
+    .cart__top-line
+        width: 360px
+    .item-cart.item-cart_full
+        flex-wrap: wrap
+        padding: 10px
+        position: relative
+        .item-cart__icon
+            flex-basis: 75px
+            order: 1
+            .item-cart__icon img
+                width: 75px
+                height: 90px
+        .item-cart__info
+            flex-basis: 225px
+            order: 2
+        .item-cart__cost
+            order: 3
+            flex-basis: 300px
+            padding-left: 112px
+        .item-cart__amount
+            order: 4
+            margin-top: 20px
+            flex-basis: 125px
+        .item-cart__price
+            order: 5
+            margin-top: 20px
+            flex-basis: 132px
+            span
+                &:last-child
+                    font-size: 14px
+        .item-cart__close
+            position: absolute
+            width: 15px
+            order: 6
+            top: 10px
+            right: 3px
+            &:before,&:after
+                width: 15px
+    .cart__footer
+        flex-direction: column
+        .cart__cost
+            display: flex
+            flex-wrap: wrap
+            justify-content: flex-start
+            span:nth-child(3)
+                margin-left: 0
+                margin-top: 10px
+        .cart__price span:last-child
+            font-size: 30px
+        .cart__buy 
+            flex-basis: 100px
+            flex-direction: row
+            flex-basis: 50px
+            margin-top: 10px
+        .cart__buy .continue-shopping, .cart__buy .order-product
+            align-self: center
+    .delivery-info
+        width: 360px
+        padding: 15px 20px
+        .delivery-info__descr
+            font-size: 14px
+            .delivery-info__where
+                width: 200px
+        a
+            font-size: 14px
+    .cart__cost, .cart__discount, .cart__price
+        font-size: 16px
+@media screen and (max-width: 370px)
+    .cart__delivery, 
+    .cart__list, 
+    .cart__footer,
+    .cart__top-line
+        width: 290px
+    .item-cart.item-cart_full 
+        .item-cart__info
+            flex-basis: 164px
+        .item-cart__cost
+            padding-left: 102px
+    .cart__footer 
+        .cart__buy
+            margin-top: 20px
+            flex-direction: column
+            flex-basis: 100px
+    .delivery-info
+        width: 290px
+    .delivery-info .delivery-info__descr .delivery-info__where
+        width: 150px

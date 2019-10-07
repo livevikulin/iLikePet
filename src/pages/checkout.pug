@@ -1,0 +1,100 @@
+extends ../views/layouts/default
+block variables
+	- var title = "Корзина";
+	- var isMain = false;
+	
+block content
+	main
+		.checkout
+			.animals-line
+				ul.pets
+					+pets-item("Cобаки",1)
+					+pets-item("Кошки",2)
+					+pets-item("Птицы",8)
+					+pets-item("Грызуны",3)
+					+pets-item("Хорьки",6)
+					+pets-item("Рыбы",10)
+					+pets-item("Рептилии",4)
+					+pets-item("Амфибии",7)
+					+pets-item("Экзотика",9)
+			.__top-line
+				.breadcrumbs.checkout__breadcrumbs
+					a(href="#").breadcrumbs-item Интернет-магазин
+					a(href="#").breadcrumbs-this__page.breadcrumbs-item  Оформление заказа
+				h1.__title Оформление заказа
+				.checkout__line
+					.order-line
+						.__item(data-text="Регион доставки").order-line__item_active
+						.__item(data-text="Способ доставки")
+						.__item(data-text="Способ оплаты")
+						.__item(data-text="Контактные данные")
+						.__item(data-text="Оформить заказ")
+			.__body
+				.checkout__left
+					.order-info.order-info_location
+						.__header
+							span.order-info__number 1
+							span.order-info__title Регион доставки
+						.__body
+							.order-info__caption Местоположение
+							label.order-info__location
+								input(class="order-info__input order-info__input_city" list="location" type="text" placeholder="Москва, московская область")
+								datalist(id="location")
+									option(value="Москва")
+									option(value="Барнаул")
+									option(value="Заринск")
+									option(value="Бийск")
+							p.order-info__descr Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"
+							.order-info__navigate
+								button.order-info__back 
+									|	Назад
+									<svg width="129" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M128.5 6c0-3.04-2.446-5.5-5.481-5.5H16.564a5.485 5.485 0 00-4.826 2.88l-9.75 18a5.5 5.5 0 000 5.24l9.75 18a5.485 5.485 0 004.826 2.88H123.019c3.035 0 5.481-2.46 5.481-5.5V6z" stroke="#979899" stroke-opacity=".2"/></svg>
+								button.order-info__next
+									|	Далее
+									<svg width="129" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6c0-2.765 2.224-5 4.981-5H112.436a4.986 4.986 0 014.387 2.619l9.75 18a4.998 4.998 0 010 4.762l-9.75 18A4.986 4.986 0 01112.436 47H5.981A4.984 4.984 0 011 42V6z" stroke="#D9435D" stroke-width="2"/></svg>
+					.order-info.order-info_delivery
+						.__header
+							span.order-info__number 2
+							span.order-info__title Способ доставки
+						.__body
+							.order-info__delivery
+								button.onfoot
+									span Самовывоз
+								button.oncar
+									span Курьерская служба
+							.order-info__where
+								label(for="order-info-msk") Москва + Санкт Петербург
+								input(type="radio", name="msk" id='order-info-msk')
+
+							.order-info__caption Адрес доставки
+							label
+								input(class="order-info__input order-info__input_delivery" list="location" type="text" placeholder="Адрес доставки")
+							.order-info__navigate
+								button.order-info__back 
+									|	Назад
+									<svg width="129" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M128.5 6c0-3.04-2.446-5.5-5.481-5.5H16.564a5.485 5.485 0 00-4.826 2.88l-9.75 18a5.5 5.5 0 000 5.24l9.75 18a5.485 5.485 0 004.826 2.88H123.019c3.035 0 5.481-2.46 5.481-5.5V6z" stroke="#979899" stroke-opacity=".2"/></svg>
+								button.order-info__next
+									|	Далее
+									<svg width="129" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6c0-2.765 2.224-5 4.981-5H112.436a4.986 4.986 0 014.387 2.619l9.75 18a4.998 4.998 0 010 4.762l-9.75 18A4.986 4.986 0 01112.436 47H5.981A4.984 4.984 0 011 42V6z" stroke="#D9435D" stroke-width="2"/></svg>
+				.checkout__right
+					.order-cart
+						.__title Информация о заказе
+						.__caption У вас есть промокод?
+						form.order-cart__promo
+							label.order-cart__code
+								input(type="text" class="order-cart__input" placeholder="Введите промокод")
+							button.order-cart__btn ok
+						.__descr
+							span Стоимость товаров:
+							span 4070 руб.
+						.__descr.order-cart__descr_discount
+							span Ваша скидка:
+							span - 50 руб.
+						.__descr
+							span Доставка:
+							span 50 руб.
+						.__total
+							span Итого к оплате:
+							span
+								|	4070
+								span руб.
