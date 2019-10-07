@@ -1,6 +1,4 @@
 .checkout
-    &__body
-        display: flex
     &__left
         flex-basis: 842px
     &__right
@@ -23,7 +21,9 @@
     &__line
         margin-top: 97px
         margin-bottom: 73px
-    
+    &__body
+        display: flex
+        margin-bottom: 90px
 .order-line
     height: 6px
     background-color: #D0C9D6
@@ -86,6 +86,59 @@
     
 .order-info
     background-color: #F9F9FB
+    &__delivery
+        margin-bottom: 49px
+        .onfoot,
+        .oncar
+            width: 380px
+            height: 100px
+            font-size: 16px
+            background-color: #fff
+            line-height: 100px
+            text-align: center
+            border: 2px solid #F7D9DF
+            box-sizing: border-box
+            border-radius: 8px
+        .onfoot span
+            position: relative
+            &:before
+              position: absolute
+              content: ''
+              background: url('../img/sprites/intermediate-svg/delivery-1.svg')
+              height: 48px
+              width: 48px
+              top: 50%
+              transform: translateY(-50%)
+              left: -64px
+        .oncar span
+            position: relative
+            &:before
+              position: absolute
+              content: ''
+              background: url('../img/sprites/intermediate-svg/delivery-2.svg')
+              cursor: pointer
+              height: 48px
+              width: 48px
+              top: 50%
+              transform: translateY(-50%)
+              left: -64px
+    &__input
+        box-sizing: border-box
+        outline: none
+        height: 48px
+        border: 1px solid #E0E0E0
+        box-sizing: border-box
+        font-family: 'Arimo Regular', sans-serif
+        border-radius: 6px
+        &:placeholder
+            color: #979899
+        &_city
+            width: inherit
+        &_delivery
+            width: 600px
+            padding-left: 16px
+            margin-top: 8px
+            margin-bottom: 104px
     &_location
         .order-info__descr
             margin-top: 25px
@@ -93,6 +146,10 @@
             line-height: 24px
         .order-info__caption
             margin-bottom: 10px
+        .order-info__input
+            padding-left: 48px
+        .order-info__descr
+            margin-bottom: 110px
     &__body 
         padding-left: 32px
     &__number
@@ -118,7 +175,8 @@
         color: #494A4C
     &__descr
         color: #979899
-    &__back
+    &__back,
+    &__next
         color: #979899
         background-color: transparent
         position: relative
@@ -126,7 +184,96 @@
         border-radius: 6px
         width: 129px
         height: 48px
+        font-size: 20px
+        border: 0
         svg
             position: absolute
             left: 0
             top: 0
+    &__navigate
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-right: 32px
+        padding-bottom: 48px
+    &__location
+        position: relative
+        box-sizing: border-box
+        width: 600px
+        height: auto
+        &::before
+            content: ''
+            position: absolute
+            background: url('../img/sprites/intermediate-svg/glass-fixed.svg')
+            height: 20px
+            width: 20px
+            top: 50%
+            transform: translateY(-50%)
+            left: 16px
+            
+        
+.order-cart
+    flex-direction: column
+    display: flex
+    height: 480px
+    background: #FFFFFF
+    box-shadow: 0px 4px 12px rgba(40, 40, 50, 0.1)
+    padding: 24px 24px 0 24px
+    font-family: 'Arimo Regular', sans-serif
+    
+    &__title 
+        color: #2D3036
+        font-size: 32px
+        font-family: 'Nexa Script', sans-serif
+        margin-bottom: 25px
+    &__promo
+        display: flex
+        margin-top: 10px
+        margin-bottom: 25px
+    &__input
+        width: 300px
+        background: #FFFFFF
+        border: 1px solid #F0F0F0
+        box-sizing: border-box
+        border-top-left-radius: 6px
+        border-bottom-left-radius: 6px
+        color: #979899
+        height: 42px
+        padding-left: 16px
+        &::placeholder
+            color: #979899
+    &__btn
+        width: 57px
+        border-top-right-radius: 6px
+        border-bottom-right-radius: 6px
+        height: 42px
+        border: 0
+        color: #979899
+        font-family: 'Arsenal Bold',sans-serif
+        text-transform: uppercase
+    &__descr
+        font-size: 16px
+        display: flex
+        justify-content: space-between
+        margin-bottom: 10px
+        span
+            &:first-child
+                color: #494A4C
+            &:last-child
+                font-family: 'Arimo Bold', sans-serif
+                color: #494A4C
+    .order-cart__descr_discount
+        span
+            &:last-child
+                color: #D9435D
+    &__total
+        margin-top: 10px
+        padding-top: 16px
+        border-top: 1px solid #D0C9D6
+        color: #7E2A2A
+        display: flex
+        justify-content: space-between
+        span:nth-child(2)
+            font-size: 24px
+            span
+                font-size: 16px
