@@ -12,30 +12,33 @@ $(document).ready(function() {
 	});
 	
 	//Строка поиска
-	$('.navbar-item__search').click(function() {
-		$(this).parent().find('.navbar-search').addClass('search-open');
-		$('.navbar-item__op').addClass('navbar-button');
-		$(this).parent().find('.navbar-search__close').show(850);
-	});
-	$('.navbar-search__close').click(function() {
-		$(this).hide();
-		$(this).parent().find('.navbar-search').removeClass('search-open');
-		$('.navbar-item__op').removeClass('navbar-button');
-	});
-	
-	$('.navbar-fixed__search').click(function(e) {
+	$('.js-search-toggle-link').click(function(e) {
 		e.preventDefault();
-		$(this).parent().find('.navbar-search').addClass('search-open');
-		//Поправил классы
-		$('.navbar-item__op').addClass('navbar-button');
-		$(this).parent().find('.navbar-search__close').show(850);
+		const $el = $(e.target);
+		const $navbar = $el.closest('.js-navbar');
+
+		$navbar.find('.js-navbar-search').fadeToggle().toggleClass('navbar-search_opened');
+		$navbar.find('.js-menu').toggleClass('navbar__menu-wrap_hidden');
+		$navbar.find('.js-logo').toggleClass('navbar-fixed__logo_hidden');
+		$navbar.find('.js-account').toggleClass('navbar-fixed__account_hidden');
 	});
-	$('.navbar-search__close').click(function() {
-		$(this).hide();
-		$(this).parent().find('.navbar-search').removeClass('search-open');
-		//Поправил классы
-		$('.navbar-item__op').removeClass('navbar-button');
-	});
+
+
+
+	
+	// $('.navbar-fixed__search').click(function(e) {
+	// 	e.preventDefault();
+	// 	$(this).parent().find('.navbar-search').addClass('search-open');
+	// 	//Поправил классы
+	// 	$('.navbar-item__op').addClass('navbar-button');
+	// 	$(this).parent().find('.navbar-search__close').show(850);
+	// });
+	// $('.navbar-search__close').click(function() {
+	// 	$(this).hide();
+	// 	$(this).parent().find('.navbar-search').removeClass('search-open');
+	// 	//Поправил классы
+	// 	$('.navbar-item__op').removeClass('navbar-button');
+	// });
 	
 	//Меню на мобиле
 	$('.header-mobile__burger').click(function() {
