@@ -330,7 +330,7 @@ $(document).ready(function () {
 	});
 
 	$("#inputPetBorn").click(function () {
-		$(".ui-datepicker").addClass("ui-datepicker-pets");
+		$(".ui-datepicker").addClass("ui-datepicker-personal");
 	});
 
 	function initSelect() {
@@ -420,4 +420,18 @@ $(document).ready(function () {
 	$("#inputPetBorn").mask("00.00.0000");
 	$("#inputPhone").mask("+7(000) 000-0000");
 	$("#inputPhone2").mask("+7(000) 000-0000");	
+
+	//Смена вход/регистрация
+	$('.signin').on('click', function() {
+		$('.login').removeClass('choice-active');
+		$(this).addClass('choice-active');
+		$('.form-login').removeClass('form-active');
+		$('.form-registration').addClass('form-active');
+	});
+	$('.login').on('click', function() {
+		$('.signin').removeClass('choice-active');
+		$(this).addClass('choice-active');
+		$('.form-registration').removeClass('form-active');
+		$('.form-login').addClass('form-active');
+	})
 });
