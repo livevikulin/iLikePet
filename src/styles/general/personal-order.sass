@@ -1,0 +1,74 @@
+.table-order
+    &__list
+        display: flex
+        flex-direction: column
+    &__inner
+        position: absolute
+        top: 10px
+        width: inherit
+    &__item
+        width: 876px
+        display: flex
+        height: 56px
+        align-items: center
+        box-sizing: border-box
+        position: relative
+        border-bottom: 1px solid #DDDDDD
+        padding-left: 15px
+        padding-right: 20px
+        font-family: 'Arimo Regular', sans-serif
+        justify-content: space-between
+        &:first-child
+            border-top: 1px solid #DDDDDD
+            color: #979899
+            font-family: 'Arsenal Regular', sans-serif
+            font-size:  18px
+            .table-order__check
+                visibility: hidden
+    &__number
+        flex-basis: 100px
+    &__date
+        flex-basis: 200px
+    &__status
+        flex-basis: 159px
+    &__total
+        flex-basis: 159px
+    &__check
+        flex-basis: 88px
+        color: #D9435D
+        border-bottom: 1px dashed #D9435D
+        
+    
+.personal-box__title_order
+    color: #2D3036
+    font-size: 20px
+    margin-top: 100px
+    
+@media screen and (max-width: 1279px)
+    .table-order__item
+        width: 770px
+        .table-order__number
+            flex-basis: 140px
+@media screen and (max-width: 1160px)
+    .table-order__item
+        width: 570px
+        .table-order__number
+            flex-basis: 140px
+@media screen and (max-width: 999px)
+    .table-order__item
+        width: 700px
+        .table-order__number
+            flex-basis: 100px
+@media screen and (max-width: 787px)
+    .table-order__item
+        width: 670px
+        .table-order__number
+            flex-basis: 120px
+@media screen and (max-width: 787px)
+    .table-order__item
+        width: 876px
+        .table-order__number
+            flex-basis: 100px
+    .table-order__list
+        overflow-x: scroll
+        

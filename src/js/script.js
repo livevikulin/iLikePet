@@ -240,20 +240,20 @@ $(document).ready(function () {
 
 	$(".filter-box__show-all").on("click", function (e) {
 		e.preventDefault();
-	
-		$(".filter-box__show-all").on('click',function(e){
+
+		$(".filter-box__show-all").on('click', function (e) {
 			e.preventDefault();
 			//filter-box__show-all_closed
-			let msg  = $(this).hasClass('filter-box__show-all_closed') ? 'Скыть' : 'Показать еще';
+			let msg = $(this).hasClass('filter-box__show-all_closed') ? 'Скыть' : 'Показать еще';
 			$(this).children(':first').text(msg);
-			$(this).prev().find('li').each(function(i,item){
-				if(i > 3 ) {
+			$(this).prev().find('li').each(function (i, item) {
+				if (i > 3) {
 					$(".filter-box__show-all").hasClass('filter-box__show-all_closed') ? $(item).show() : $(item).hide();
 				}
 			})
 			$(this).toggleClass('filter-box__show-all_closed');
 		})
-	//store page end
+		//store page end
 		$(this).toggleClass("filter-box__show-all_closed");
 	});
 	//store page end
@@ -274,13 +274,153 @@ $(document).ready(function () {
 		focusOnSelect: true
 	});
 	//modaul module
-		$(".product-card__buy-click").on('click',function(){
-			$(".produc-modal-wrapper").show();
-		})
-		$(".product-modal__close").on('click',function(){
-			$(".produc-modal-wrapper").hide();
-		})
+	$(".product-card__buy-click").on('click', function () {
+		$(".produc-modal-wrapper").show();
+	})
+	$(".product-modal__close").on('click', function () {
+		$(".produc-modal-wrapper").hide();
+	})
 	//product card end
+
+
+	//checkout page
+
+
+	let dataOrder = {};
+	let lines = $('.order-line').find('.order-line__item');
+	let activeItem = 1;
+	let lastActiveItem = 0;
+	let _CARD = ['location', 'delivery', 'payment', 'contact', 'confirm'];
+
+	setActiveLine(activeItem)
+	setActiveCard(activeItem)
+	addListenerOnActiveCard(activeItem);
+
+	function setActiveLine(activeItem) {
+		$(lines).each((i, item) => {
+			$(item).data('checkout') === activeItem ? $(item).addClass('order-line__item_active order-line__item_now') : '';
+			$(item).data('checkout') === lastActiveItem ? $(item).removeClass('order-line__item_now') : '';
+		})
+	}
+
+	function setActiveCard(activeItem) {
+		$(`.order-info_${_CARD[lastActiveItem - 1]}`).fadeOut(0);
+		$(`.order-info_${_CARD[activeItem]}`).fadeOut(0);
+		$(`.order-info_${_CARD[activeItem - 1]}`).fadeIn(300);
+
+	}
+
+	function addListenerOnActiveCard(activeItem) {
+		$(`.order-info_${_CARD[activeItem - 1]}`).find('.order-info__next').on('click', nextStep);
+		$(`.order-info_${_CARD[activeItem - 1]}`).find('.order-info__back').on('click', backStep);
+	}
+
+	function nextStep(e) {
+		//Если пользователь на последней карточке
+		if (activeItem === _CARD.length) {
+			makeRequestForOrder();
+			return;
+		}
+		checkDataOrder(activeItem);
+		$(`.order-info_${_CARD[activeItem - 1]}`)
+		$('.order-info__next').off('click');
+		$('.order-info__back').off('click');
+
+		lastActiveItem = activeItem;
+		activeItem++;
+
+		setActiveLine(activeItem)
+		setActiveCard(activeItem)
+		addListenerOnActiveCard(activeItem)
+	};
+
+
+	function checkDataOrder(activeItem) {
+		switch (activeItem) {
+			case 1:
+				dataOrder.location = $('.order-info__input_city').val();
+				break;
+			case 2:
+				let msk = $('#Msk_Piter').prop("checked");
+				let other = $('#other_city').prop("checked");
+				let when = msk === true ? msk : other === true ? false : undefined;
+				dataOrder.delivery = {
+					adress: $('.order-info__input_delivery').val(),
+					msk_sbp: when,
+					courier: !$('.order-info__btn_onfoot').hasClass('order-info__btn_active')
+				};
+				break;
+			case 3:
+				dataOrder.cash = $('.order-info__btn_cash').hasClass('order-info__btn_active');
+				break;
+			case 4:
+				dataOrder.about = {
+					name: $('.order-info__input_name').val(),
+					phone: $('.order-info__input_phone').val(),
+					email: $('.order-info__input_email').val(),
+					comment: $('.order-info__input_text').val(),
+				};
+				break;
+			default:
+				break;
+		}
+	}
+
+
+
+
+
+
+	function backStep(e) {
+
+		//Если нажал назад, а такой карточки нет
+		if (activeItem === 1) {
+			return;
+		}
+
+		$('.order-info__next').off('click');
+		$('.order-info__back').off('click');
+
+		removeActiveLine(activeItem)
+		activeItem--;
+		lastActiveItem--;
+		setActiveLine(activeItem);
+		setActiveCard(activeItem);
+		addListenerOnActiveCard(activeItem)
+	};
+
+	function removeActiveLine(activeItem) {
+		$(lines).each((i, item) => {
+			$(item).data('checkout') === activeItem ? $(item).removeClass('order-line__item_active order-line__item_now') : '';
+		})
+	}
+
+
+	//Костыли для кнопок
+	$('.order-info__delivery').on('click', function (e) {
+		if ($(e.target).hasClass('order-info__btn')) {
+			$('.order-info__btn_onfoot').removeClass('order-info__btn_active');
+			$('.order-info__btn_oncar').removeClass('order-info__btn_active');
+			$(e.target).addClass('order-info__btn_active');
+		}
+	})
+
+	$('.order-info__payment').on('click', function (e) {
+		if ($(e.target).hasClass('order-info__btn')) {
+			$('.order-info__btn_cash').removeClass('order-info__btn_active');
+			$('.order-info__btn_cashless').removeClass('order-info__btn_active');
+			$(e.target).addClass('order-info__btn_active');
+		}
+	})
+
+
+
+	//Функция для запроса
+	function makeRequestForOrder() {
+		alert(JSON.stringify(dataOrder))
+	}
+
+	//checkout page
 
 
 	function inputRefresh($el) {
@@ -305,7 +445,7 @@ $(document).ready(function () {
 		inputRefresh($el);
 	});
 
-	$(document).on('click', '#initSelect', ()=>{
+	$(document).on('click', '#initSelect', () => {
 		$(".input input").each((i, el) => {
 			const $el = $(el);
 			inputRefresh($el);
@@ -313,7 +453,7 @@ $(document).ready(function () {
 	});
 
 	//Инициализация календаря в Личном кабинете
-	$(".js-datepicker-personal").datepicker({dateFormat: "dd.mm.yy"});
+	$(".js-datepicker-personal").datepicker({ dateFormat: "dd.mm.yy" });
 	$("#inputBorn").click(function () {
 		$(".ui-datepicker").addClass("ui-datepicker-personal");
 	});
@@ -330,13 +470,13 @@ $(document).ready(function () {
 	});
 
 	$("#inputPetBorn").click(function () {
-		$(".ui-datepicker").addClass("ui-datepicker-pets");
+		$(".ui-datepicker").addClass("ui-datepicker-personal");
 	});
 
 	function initSelect() {
 		//Инициализация селект меню
 		$(".js-select").selectmenu({
-			select: function (event, ui) {}
+			select: function (event, ui) { }
 		});
 		$(".ui-selectmenu-button").click(function () {
 			$(this).children(".ui-selectmenu-icon").toggleClass("icon-rotate");
@@ -350,7 +490,7 @@ $(document).ready(function () {
 
 	initSelect();
 
-	$(document).on('click', '#initSelect', ()=>{
+	$(document).on('click', '#initSelect', () => {
 		initSelect();
 	});
 
@@ -420,4 +560,18 @@ $(document).ready(function () {
 	$("#inputPetBorn").mask("00.00.0000");
 	$("#inputPhone").mask("+7(000) 000-0000");
 	$("#inputPhone2").mask("+7(000) 000-0000");	
+
+	//Смена вход/регистрация
+	$('.signin').on('click', function() {
+		$('.login').removeClass('choice-active');
+		$(this).addClass('choice-active');
+		$('.form-login').removeClass('form-active');
+		$('.form-registration').addClass('form-active');
+	});
+	$('.login').on('click', function() {
+		$('.signin').removeClass('choice-active');
+		$(this).addClass('choice-active');
+		$('.form-registration').removeClass('form-active');
+		$('.form-login').addClass('form-active');
+	})
 });

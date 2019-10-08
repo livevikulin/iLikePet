@@ -29,6 +29,8 @@ block content
 							a(href="#tabs-video") Видео
 						li
 							a(href="#tabs-sub") Подписки
+						li
+							a(href="#tabs-order") Мои заказы
 					
 					.personal-tabs__boxes
 						.personal-tabs__box#tabs-main
@@ -379,5 +381,38 @@ block content
 									span Анонсы полезных материалов каждую неделю
 									i.fas.fa-check
 							a(href="#").personal-sub__btn.btn Подписаться
+						.personal-tabs__box#tabs-order
+							span.personal-box__title Мои заказы
+							span.personal-box__none У вас 4 заказа:
+							.table-order
+								.table-order__list
+									.table-order__item
+										.table-order__number № Заказа
+										.table-order__date Дата и время заказа
+										.table-order__status Статус
+										.table-order__total Сумма
+										a.table-order__check
+									.table-order__item 
+										.table-order__number 112233456
+										.table-order__date 112233456
+										.table-order__status Закрыт
+										.table-order__total 29 590 руб.
+										a.table-order__check Посмотреть
+										.table-order__inner
+											span.personal-box__title.personal-box__title_order Заказ №112233456
+											.table-inner
+												.item-cart
+													.item-cart__icon
+														img(src="./img/product-card/slider-block.png")
+													.item-cart__info
+														span Royal Canin X-Small Puppy для щенков
+														span 800 г
+													.item-cart__cost
+														span 1190 руб.
+													.item-cart__amount
+														span 2 шт														
+													.item-cart__price
+														span 2380 руб														
+
 						
 					
