@@ -24,11 +24,11 @@ block content
 				h1.__title Оформление заказа
 				.checkout__line
 					.order-line
-						.__item(data-text="Регион доставки").order-line__item_active
-						.__item(data-text="Способ доставки")
-						.__item(data-text="Способ оплаты")
-						.__item(data-text="Контактные данные")
-						.__item(data-text="Оформить заказ")
+						.__item(data-text="Регион доставки" data-checkout="1")
+						.__item(data-text="Способ доставки" data-checkout="2")
+						.__item(data-text="Способ оплаты" data-checkout="3")
+						.__item(data-text="Контактные данные" data-checkout="4")
+						.__item(data-text="Оформить заказ" data-checkout="5")
 			.__body
 				.checkout__left
 					.order-info.order-info_location
@@ -58,17 +58,20 @@ block content
 							span.order-info__title Способ доставки
 						.__body
 							.order-info__delivery
-								button.onfoot
+								button.order-info__btn.order-info__btn_onfoot
 									span Самовывоз
-								button.oncar
+								button.order-info__btn.order-info__btn_oncar
 									span Курьерская служба
 							.order-info__where
-								label(for="order-info-msk") Москва + Санкт Петербург
-								input(type="radio", name="msk" id='order-info-msk')
-
+								.order-info__wrapper
+									input(type="radio", name="Msk_Piter" value="MSK_SPB" id='Msk_Piter')
+									label(for="Msk_Piter") Москва + Санкт Петербург
+								.order-info__wrapper
+									input(type="radio", name="Msk_Piter" value="Other" id='other_city')
+									label(for="other_city") Остальные регионы
 							.order-info__caption Адрес доставки
 							label
-								input(class="order-info__input order-info__input_delivery" list="location" type="text" placeholder="Адрес доставки")
+								input(class="order-info__input order-info__input_delivery" type="text" placeholder="Адрес доставки")
 							.order-info__navigate
 								button.order-info__back 
 									|	Назад
@@ -76,6 +79,111 @@ block content
 								button.order-info__next
 									|	Далее
 									<svg width="129" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6c0-2.765 2.224-5 4.981-5H112.436a4.986 4.986 0 014.387 2.619l9.75 18a4.998 4.998 0 010 4.762l-9.75 18A4.986 4.986 0 01112.436 47H5.981A4.984 4.984 0 011 42V6z" stroke="#D9435D" stroke-width="2"/></svg>
+					.order-info.order-info_payment
+						.__header
+							span.order-info__number 3
+							span.order-info__title Способ оплаты
+						.__body
+							.order-info__payment
+								button.order-info__btn.order-info__btn_cash
+									span Наличные 
+								button.order-info__btn.order-info__btn_cashless
+									span Банковская карта
+							.order-info__navigate
+								button.order-info__back 
+									|	Назад
+									<svg width="129" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M128.5 6c0-3.04-2.446-5.5-5.481-5.5H16.564a5.485 5.485 0 00-4.826 2.88l-9.75 18a5.5 5.5 0 000 5.24l9.75 18a5.485 5.485 0 004.826 2.88H123.019c3.035 0 5.481-2.46 5.481-5.5V6z" stroke="#979899" stroke-opacity=".2"/></svg>
+								button.order-info__next
+									|	Далее
+									<svg width="129" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6c0-2.765 2.224-5 4.981-5H112.436a4.986 4.986 0 014.387 2.619l9.75 18a4.998 4.998 0 010 4.762l-9.75 18A4.986 4.986 0 01112.436 47H5.981A4.984 4.984 0 011 42V6z" stroke="#D9435D" stroke-width="2"/></svg>
+					.order-info.order-info_contact
+							.__header
+								span.order-info__number 4
+								span.order-info__title Контактные данные
+							.__body
+								.order-info__caption Введите ваши данные
+								.order-info__form
+									input(type="text" class="order-info__input order-info__input_name" placeholder="Имя")
+									input(type="number" class="order-info__input order-info__input_phone" placeholder="Телефон")
+									input(type="email" class="order-info__input order-info__input_email" placeholder="Электронная почта")
+									textarea(name="" class="order-info__input order-info__input_text" placeholder="Комментрий к заказу")
+								.order-info__navigate
+									button.order-info__back 
+										|	Назад
+										<svg width="129" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M128.5 6c0-3.04-2.446-5.5-5.481-5.5H16.564a5.485 5.485 0 00-4.826 2.88l-9.75 18a5.5 5.5 0 000 5.24l9.75 18a5.485 5.485 0 004.826 2.88H123.019c3.035 0 5.481-2.46 5.481-5.5V6z" stroke="#979899" stroke-opacity=".2"/></svg>
+									button.order-info__next
+										|	Далее
+										<svg width="129" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6c0-2.765 2.224-5 4.981-5H112.436a4.986 4.986 0 014.387 2.619l9.75 18a4.998 4.998 0 010 4.762l-9.75 18A4.986 4.986 0 01112.436 47H5.981A4.984 4.984 0 011 42V6z" stroke="#D9435D" stroke-width="2"/></svg>
+					.order-info.order-info_confirm
+							.__header
+								span.order-info__number 5
+								span.order-info__title Подтверждение заказа
+							.__body
+								.order-info__about
+									.order-info__wrapper
+										span.order-info__descr Покупатель
+										span.order-info__caption Михаил Иванов
+									.order-info__wrapper
+										span.order-info__descr Телефон
+										span.order-info__caption +7 901 234 56 78
+									.order-info__wrapper
+										span.order-info__descr Эл.почта
+										span.order-info__caption m.ivanov88@rambler.ru
+									.order-info__wrapper
+										span.order-info__descr Способ доставки
+										span.order-info__caption Курьерская служба
+									.order-info__wrapper
+										span.order-info__descr Способ оплаты
+										span.order-info__caption Банковская карта
+									.order-info__wrapper
+										span.order-info__descr Адрес доставки
+										span.order-info__caption Алтайский край, Барнаул, пр. Ленина, 43, кв 4
+								.order-info__cart
+									span.order-info__title Состав заказа
+									.item-cart.item-cart_checkout
+										.item-cart__icon
+											img(src="./img/product-card/slider-block.png")
+										.item-cart__info
+											span Royal Canin X-Small Puppy для щенков
+											span 800 г
+											span 2 шт.
+										.item-cart__price
+											span 2380
+												span руб.
+											span 40 бонусов за покупку
+									.item-cart.item-cart_checkout
+										.item-cart__icon
+											img(src="./img/product-card/slider-block.png")
+										.item-cart__info
+											span Royal Canin X-Small Puppy для щенков
+											span 800 г
+											span 2 шт.
+										.item-cart__price
+											span 2380
+												span руб.
+											span 40 бонусов за покупку
+									.item-cart.item-cart_checkout
+										.item-cart__icon
+											img(src="./img/product-card/slider-block.png")
+										.item-cart__info
+											span Royal Canin X-Small Puppy для щенков
+											span 800 г
+											span 2 шт.
+										.item-cart__price
+											span 2380
+												span руб.
+											span 40 бонусов за покупку
+									.order-info__total
+										span Стоимость товаров:
+										span 4070
+											span  руб.
+									.order-info__navigate
+										button.order-info__back 
+											|	Назад
+											<svg width="129" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M128.5 6c0-3.04-2.446-5.5-5.481-5.5H16.564a5.485 5.485 0 00-4.826 2.88l-9.75 18a5.5 5.5 0 000 5.24l9.75 18a5.485 5.485 0 004.826 2.88H123.019c3.035 0 5.481-2.46 5.481-5.5V6z" stroke="#979899" stroke-opacity=".2"/></svg>
+										button.order-info__next
+											span Подтвердить заказ
+											<svg width="235" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6c0-2.772 2.202-5 4.954-5h212.482a4.986 4.986 0 014.387 2.619l9.75 18a4.998 4.998 0 010 4.762l-9.75 18A4.986 4.986 0 01218.436 47H5.954C3.202 47 1 44.772 1 42V6z" fill="#D9435D" stroke="#D9435D" stroke-width="2"/></svg>
 				.checkout__right
 					.order-cart
 						.__title Информация о заказе

@@ -1,279 +1,689 @@
 .checkout
-    &__left
-        flex-basis: 842px
-    &__right
-        flex-basis: 405px
-        margin-left: 33px
-    &__top-line,
-    &__body
-        width: 1280px
-        margin: 0 auto
-    &__breadcrumbs
-        text-align: left
-        margin-top: 40px
-        &:after
-            display: none
-    &__top-line
-        h1
-            color: #2D3036
-            font-size: 48px
-            font-family: 'Arsenal Bold', sans-serif
-    &__line
-        margin-top: 97px
-        margin-bottom: 73px
-    &__body
-        display: flex
-        margin-bottom: 90px
+	&__left
+		flex-basis: 842px
+	&__right
+		flex-basis: 405px
+		margin-left: 33px
+	&__top-line,
+	&__body
+		width: 1280px
+		margin: 0 auto
+	&__breadcrumbs
+		text-align: left
+		margin-top: 40px
+		&:after
+			display: none
+	&__top-line
+		h1
+			color: #2D3036
+			font-size: 48px
+			font-family: 'Arsenal Bold', sans-serif
+	&__line
+		margin-top: 97px
+		margin-bottom: 73px
+	&__body
+		display: flex
+		margin-bottom: 90px
 .order-line
-    height: 6px
-    background-color: #D0C9D6
-    display: flex
-    position: relative
-    width: 100%
-    &__item
-        &:before
-            content: attr(data-text)
-            position: absolute
-            color: #2D3036
-            font-size: 18px
-            top: -40px
-            width: 175px
-        &_active
-            background-color: #27AE60
-            border-color: #27AE60
-            &:before
-                font-family: 'Arsenal Bold', sans-serif
-            &:after
-                content: ''
-                position: absolute
-                width: 12px
-                height: 8px
-                left: 50%
-                top: 50%
-                background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDEyIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMy40TDQuNzUgN0wxMSAxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=) no-repeat
-                transform: translate(-50%,-50%)
-        position: absolute
-        background-color: #fff
-        width: 24px
-        height: 24px
-        border-radius: 50%
-        border: 4px solid #D0C9D6
-        box-sizing: border-box
-        top: -10px
-        &:nth-child(1)
-            left: 77px
-            &:before
-                left: -50px
-        &:nth-child(2)
-            left: 353px
-            &:before
-                left: -50px
-        &:nth-child(3)
-            left: 629px
-            &:before
-                left: -48px
-        &:nth-child(4)
-            left: 905px
-            &:before
-                left: -66px
-        &:nth-child(5)
-            right: 75px
-            left: unset
-            &:before
-                left: -58px
-            
-        
-    
+	height: 6px
+	background-color: #D0C9D6
+	display: flex
+	position: relative
+	width: 100%
+	&__item
+		transition: .3s
+		&:before
+			content: attr(data-text)
+			position: absolute
+			transition: .3s
+			color: #2D3036
+			font-size: 18px
+			top: -40px
+			width: 175px
+		&_now
+			&:before
+				font-family: 'Arsenal Bold', sans-serif
+		&_active
+			background-color: #27AE60
+			border-color: #27AE60
+			&:after
+				content: ''
+				position: absolute
+				width: 12px
+				height: 8px
+				left: 50%
+				top: 50%
+				background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDEyIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMy40TDQuNzUgN0wxMSAxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=) no-repeat
+				transform: translate(-50%,-50%)
+		position: absolute
+		background-color: #fff
+		width: 24px
+		height: 24px
+		border-radius: 50%
+		border: 4px solid #D0C9D6
+		box-sizing: border-box
+		top: -10px
+		&:nth-child(1)
+			left: 77px
+			&:before
+				left: -50px
+		&:nth-child(2)
+			left: 353px
+			&:before
+				left: -50px
+		&:nth-child(3)
+			left: 629px
+			&:before
+				left: -48px
+		&:nth-child(4)
+			left: 905px
+			&:before
+				left: -66px
+		&:nth-child(5)
+			right: 75px
+			left: unset
+			&:before
+				left: -58px
+			
+		
+	
 .order-info
-    background-color: #F9F9FB
-    &__delivery
-        margin-bottom: 49px
-        .onfoot,
-        .oncar
-            width: 380px
-            height: 100px
-            font-size: 16px
-            background-color: #fff
-            line-height: 100px
-            text-align: center
-            border: 2px solid #F7D9DF
-            box-sizing: border-box
-            border-radius: 8px
-        .onfoot span
-            position: relative
-            &:before
-              position: absolute
-              content: ''
-              background: url('../img/sprites/intermediate-svg/delivery-1.svg')
-              height: 48px
-              width: 48px
-              top: 50%
-              transform: translateY(-50%)
-              left: -64px
-        .oncar span
-            position: relative
-            &:before
-              position: absolute
-              content: ''
-              background: url('../img/sprites/intermediate-svg/delivery-2.svg')
-              cursor: pointer
-              height: 48px
-              width: 48px
-              top: 50%
-              transform: translateY(-50%)
-              left: -64px
-    &__input
-        box-sizing: border-box
-        outline: none
-        height: 48px
-        border: 1px solid #E0E0E0
-        box-sizing: border-box
-        font-family: 'Arimo Regular', sans-serif
-        border-radius: 6px
-        &:placeholder
-            color: #979899
-        &_city
-            width: inherit
-        &_delivery
-            width: 600px
-            padding-left: 16px
-            margin-top: 8px
-            margin-bottom: 104px
-    &_location
-        .order-info__descr
-            margin-top: 25px
-            width: 640px
-            line-height: 24px
-        .order-info__caption
-            margin-bottom: 10px
-        .order-info__input
-            padding-left: 48px
-        .order-info__descr
-            margin-bottom: 110px
-    &__body 
-        padding-left: 32px
-    &__number
-        background: #F7D9DF
-        border-radius: 0px 20px 20px 0px
-        padding: 8px 9px 8px 41px
-        color: #3A1F5D
-        font-size: 24px
-    &__header
-        display: flex
-        padding-top: 32px
-        padding-bottom: 30px
-        align-items: center
-    &__title
-        font-size: 24px
-        color: #2D3036
-        margin-left: 8px
-    &__caption,
-    &__descr
-        font-family: 'Arimo Regular', sans-serif
-        font-size: 16px
-    &__caption
-        color: #494A4C
-    &__descr
-        color: #979899
-    &__back,
-    &__next
-        color: #979899
-        background-color: transparent
-        position: relative
-        box-sizing: border-box
-        border-radius: 6px
-        width: 129px
-        height: 48px
-        font-size: 20px
-        border: 0
-        svg
-            position: absolute
-            left: 0
-            top: 0
-    &__navigate
-        display: flex
-        align-items: center
-        justify-content: space-between
-        padding-right: 32px
-        padding-bottom: 48px
-    &__location
-        position: relative
-        box-sizing: border-box
-        width: 600px
-        height: auto
-        &::before
-            content: ''
-            position: absolute
-            background: url('../img/sprites/intermediate-svg/glass-fixed.svg')
-            height: 20px
-            width: 20px
-            top: 50%
-            transform: translateY(-50%)
-            left: 16px
-            
-        
+	background-color: #F9F9FB
+	&_delivery,
+	&_payment,
+	&_contact,
+	&_confirm,
+	&_location
+		display: none
+	&__about
+		padding: 16px 0 20px 25px
+		border: 1px solid #D0C9D6
+		box-sizing: border-box
+		border-radius: 6px
+		width: 533px
+		margin-bottom: 40px
+		.order-info__wrapper
+			margin-bottom: 10px
+			.order-info__descr
+				margin-right: 16px
+	&__where
+		margin-bottom: 40px
+		.order-info__wrapper
+		   margin-bottom: 15px
+		   input
+			   display: none
+			   &:checked + label:before
+				   border: 8px solid #D9435D
+		   label
+			   color: #979899
+			   position: relative
+			   
+			   padding-left: 40px
+			   &:before
+				   position: absolute
+				   content: ''
+				   width: 24px
+				   height: 24px
+				   transition: .3s
+				   background-color: #fff
+				   border: 1px solid #E6E6E6
+				   box-sizing: border-box
+				   border-radius: 50%
+				   left: 0px
+	&__total
+		display: flex
+		justify-content: flex-end
+		margin-top: 16px
+		margin-right: 47px
+		align-items: center
+		span
+			color: #7E2A2A
+			&:first-child
+				font-size: 16px
+				font-family: 'Arimo Regular',sans-serif
+				margin-right: 16px
+			&:last-child
+				font-size: 24px
+				font-family: 'Arimo Bold',sans-serif
+				span
+					font-size: 16px
+					font-family: 'Arimo Bold',sans-serif
+					
+	&__delivery
+		margin-bottom: 49px
+	&__payment
+		margin-bottom: 104px
+	&__input
+		box-sizing: border-box
+		outline: none
+		height: 48px
+		border: 1px solid #E0E0E0
+		box-sizing: border-box
+		font-family: 'Arimo Regular', sans-serif
+		border-radius: 6px
+		&:placeholder
+			color: #979899
+		&_city
+			width: inherit
+		&_delivery
+			width: 600px
+			padding-left: 16px
+			margin-top: 8px
+			margin-bottom: 104px
+		&_name,
+		&_phone
+			margin-right: 11px
+		&_name,
+		&_phone,
+		&_email
+			width: 249px
+			padding-left: 16px
+			margin-top: 8px
+			margin-bottom: 25px
+			box-sizing: border-box
+			color: #979899
+		&_text
+			width: 777px
+			display: block
+			height: 104px
+			padding-left: 16px
+			color: #979899
+			padding-top: 14px
+			margin-bottom: 106px
+			resize: none            
+	&_location
+		.order-info__descr
+			margin-top: 25px
+			width: 640px
+			line-height: 24px
+		.order-info__caption
+			margin-bottom: 10px
+		.order-info__input
+			padding-left: 48px
+		.order-info__descr
+			margin-bottom: 110px
+	&_confirm
+		.order-info__navigate
+			margin-top: 50px
+			.order-info__next
+				width: 235px
+				color: #fff
+				span
+					position: absolute
+					top: 50%
+					left: 50%
+					z-index: 4
+					width: 170px
+					pointer-events: none
+					transform: translate(-50%,-50%)
+	&__body 
+		padding-left: 32px
+	&__number
+		background: #F7D9DF
+		border-radius: 0px 20px 20px 0px
+		padding: 8px 9px 8px 41px
+		color: #3A1F5D
+		font-size: 24px
+	&__header
+		display: flex
+		padding-top: 32px
+		padding-bottom: 30px
+		align-items: center
+	&__title
+		font-size: 24px
+		color: #2D3036
+		margin-left: 8px
+	&__caption,
+	&__descr
+		font-family: 'Arimo Regular', sans-serif
+		font-size: 16px
+	&__caption
+		color: #494A4C
+	&__descr
+		color: #979899
+	&__back,
+	&__next
+		color: #979899
+		background-color: transparent
+		position: relative
+		box-sizing: border-box
+		border-radius: 6px
+		width: 129px
+		height: 48px
+		font-size: 20px
+		cursor: pointer
+		border: 0
+		svg
+			position: absolute
+			left: 0
+			top: 0
+			pointer-events: none
+	&__navigate
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-right: 32px
+		padding-bottom: 48px
+	&__location
+		position: relative
+		box-sizing: border-box
+		width: 600px
+		height: auto
+		&::before
+			content: ''
+			position: absolute
+			background: url('../img/sprites/intermediate-svg/glass-fixed.svg')
+			height: 20px
+			width: 20px
+			top: 50%
+			transform: translateY(-50%)
+			left: 16px
+	&__form
+		margin-top: 
+
+.order-info__btn
+			width: 380px
+			height: 100px
+			font-size: 16px
+			background-color: #fff
+			line-height: 100px
+			cursor: pointer
+			text-align: center
+			border: 2px solid #F7D9DF
+			box-sizing: border-box
+			outline: none
+			border-radius: 8px
+			transition: .3s
+			&:hover
+				background: #F7D9DF
+				border: 2px solid #D9435D
+			&_active
+				background: #F7D9DF
+				border: 2px solid #D9435D
+			span
+				position: relative
+				&:before
+				  position: absolute
+				  content: ''
+				  pointer-events: none
+				  height: 48px
+				  width: 48px
+				  top: 50%
+				  transform: translateY(-50%)
+				  left: -64px
+			&_onfoot span:before
+				background: url('../img/sprites/intermediate-svg/delivery-1.svg')
+			&_oncar span:before
+				background: url('../img/sprites/intermediate-svg/delivery-2.svg')
+			&_cash span:before
+				background: url('../img/sprites/intermediate-svg/delivery-3.svg')
+			&_cashless  span:before
+				background: url('../img/sprites/intermediate-svg/delivery-4.svg')
+
+
 .order-cart
-    flex-direction: column
-    display: flex
-    height: 480px
-    background: #FFFFFF
-    box-shadow: 0px 4px 12px rgba(40, 40, 50, 0.1)
-    padding: 24px 24px 0 24px
-    font-family: 'Arimo Regular', sans-serif
-    
-    &__title 
-        color: #2D3036
-        font-size: 32px
-        font-family: 'Nexa Script', sans-serif
-        margin-bottom: 25px
-    &__promo
-        display: flex
-        margin-top: 10px
-        margin-bottom: 25px
-    &__input
-        width: 300px
-        background: #FFFFFF
-        border: 1px solid #F0F0F0
-        box-sizing: border-box
-        border-top-left-radius: 6px
-        border-bottom-left-radius: 6px
-        color: #979899
-        height: 42px
-        padding-left: 16px
-        &::placeholder
-            color: #979899
-    &__btn
-        width: 57px
-        border-top-right-radius: 6px
-        border-bottom-right-radius: 6px
-        height: 42px
-        border: 0
-        color: #979899
-        font-family: 'Arsenal Bold',sans-serif
-        text-transform: uppercase
-    &__descr
-        font-size: 16px
-        display: flex
-        justify-content: space-between
-        margin-bottom: 10px
-        span
-            &:first-child
-                color: #494A4C
-            &:last-child
-                font-family: 'Arimo Bold', sans-serif
-                color: #494A4C
-    .order-cart__descr_discount
-        span
-            &:last-child
-                color: #D9435D
-    &__total
-        margin-top: 10px
-        padding-top: 16px
-        border-top: 1px solid #D0C9D6
-        color: #7E2A2A
-        display: flex
-        justify-content: space-between
-        span:nth-child(2)
-            font-size: 24px
-            span
-                font-size: 16px
+	flex-direction: column
+	display: flex
+	height: 480px
+	background: #FFFFFF
+	box-shadow: 0px 4px 12px rgba(40, 40, 50, 0.1)
+	padding: 24px 24px 0 24px
+	font-family: 'Arimo Regular', sans-serif
+	
+	&__title 
+		color: #2D3036
+		font-size: 32px
+		font-family: 'Nexa Script', sans-serif
+		margin-bottom: 25px
+	&__promo
+		display: flex
+		margin-top: 10px
+		margin-bottom: 25px
+	&__input
+		width: 300px
+		background: #FFFFFF
+		border: 1px solid #F0F0F0
+		box-sizing: border-box
+		border-top-left-radius: 6px
+		border-bottom-left-radius: 6px
+		color: #979899
+		height: 42px
+		padding-left: 16px
+		&::placeholder
+			color: #979899
+	&__btn
+		width: 57px
+		border-top-right-radius: 6px
+		border-bottom-right-radius: 6px
+		height: 42px
+		border: 0
+		color: #979899
+		font-family: 'Arsenal Bold',sans-serif
+		text-transform: uppercase
+	&__descr
+		font-size: 16px
+		display: flex
+		justify-content: space-between
+		margin-bottom: 10px
+		span
+			&:first-child
+				color: #494A4C
+			&:last-child
+				font-family: 'Arimo Bold', sans-serif
+				color: #494A4C
+	.order-cart__descr_discount
+		span
+			&:last-child
+				color: #D9435D
+	&__total
+		margin-top: 10px
+		padding-top: 16px
+		border-top: 1px solid #D0C9D6
+		color: #7E2A2A
+		display: flex
+		justify-content: space-between
+		span:nth-child(2)
+			font-size: 24px
+			span
+				font-size: 16px
+
+
+
+.item-cart_checkout
+	width: 778px
+	border-right: 0
+	border-left: 0
+	.item-cart__icon 
+		align-self: flex-start
+		margin-right: 16px
+		img
+			width: 64px
+			height: 64px
+	.item-cart__info
+		flex: 1
+		span
+			&:nth-child(2)
+				margin-top: 3px
+			&:nth-child(3)
+				color: #494A4C
+				font-size: 16px
+				margin-top: 5px
+	.item-cart__price
+		flex-basis: 165px
+		align-self: flex-start
+		span
+			&:nth-child(1)
+				color: #7E2A2A
+				font-size: 20px
+				font-family: 'Arimo Bold', sans-serif
+				span
+					margin-left: 5px
+					font-size: 16px
+			&:nth-child(2)
+				margin-top: 8px
+				color: #666666
+				font-size: 16px
+			
+@media screen and (max-width: 1299px)
+	.checkout__left
+		flex-basis: 650px
+		.order-info__location,
+		.order-info__input_delivery
+			width: 500px
+		.order-info__btn
+			width: 300px
+		.order-info__input_text
+			width: 600px
+		.order-info__input_name,
+		.order-info__input_phone,
+		.order-info__input_email
+			width: 194px
+		.item-cart_checkout
+			width: 640px
+		.order-info__input_name, 
+		.order-info__input_phone
+			margin-right: 5px
+	.checkout__top-line, 
+	.checkout__body
+		width: 1110px
+	.order-line
+		&__item
+			&:nth-child(1)
+				left: 60px
+			&:nth-child(2)
+				left: 285px
+			&:nth-child(3)
+				left: 545px
+			&:nth-child(4)
+				left: 785px
+			&:nth-child(5)
+				right: 60px
+@media screen and (max-width: 1149px)
+	.checkout__left
+		flex-basis: 450px
+		.order-info__location, 
+		.order-info__input_delivery
+			width: 360px
+		.order-info_location .order-info__descr
+			width: 400px
+		.order-info__btn
+			width: 200px
+			span
+				padding-left: 12px
+				&:before
+					width: 31px
+					height: 31px
+					left: -25px
+			&_onfoot span:before
+				background-size: contain
+			&_oncar span:before
+				background-size: contain
+			&_cash span:before
+				background-size: contain
+			&_cashless  span:before
+				background-size: contain
+		.order-info__input_phone,
+		.order-info__input_name
+			width: 175px
+		.order-info__input_email
+			display: block
+			width: 360px
+		.order-info__input_text
+			width: 360px
+		.order-info__wrapper
+			display: flex
+			justify-content: space-between
+			.order-info__caption
+				width: 200px
+		.order-info__about
+			width: 380px
+		.item-cart_checkout
+			width: 400px
+			flex-wrap: wrap
+			.item-cart__info
+				flex: 1 0 100px
+			.item-cart__price
+				flex-basis: 215px
+				padding-left: 79px
+				margin-top: 12px
+	.checkout__top-line,
+	.checkout__body
+		width: 888px
+	.order-line
+		&__item
+			&:nth-child(1)
+				left: 40px
+			&:nth-child(2)
+				left: 240px
+			&:nth-child(3)
+				left: 440px
+			&:nth-child(4)
+				left: 640px
+			&:nth-child(5)
+				right: 40px
+@media screen and (max-width: 1023px)
+	.checkout__right
+		flex-basis: 325px
+	.order-cart__title
+		font-size: 28px
+	.order-cart__input
+		width: 220px
+	.checkout__top-line, 
+	.checkout__body
+		width: 808px
+	.order-line
+		&__item
+			&:nth-child(1)
+				left: 20px
+			&:nth-child(2)
+				left: 200px
+			&:nth-child(3)
+				left: 400px
+			&:nth-child(4)
+				left: 588px
+			&:nth-child(5)
+				right: 20px
+@media screen and (max-width: 880px)
+	.order-info__navigate
+		svg
+			display: none
+		.order-info__next
+			border: 1px solid #D9435D
+			border-radius: 6px
+		.order-info__back
+			border-radius: 6px
+			border: 1px solid rgba(151, 152, 153, 0.2)
+		.order-info__back, 
+		.order-info__next
+			width: 95px
+@media screen and (max-width: 880px)
+	.checkout__top-line, 
+	.checkout__body
+		width: 360px
+	.checkout__body
+		flex-direction: column
+	.checkout__right
+		margin-left: 0
+	.order-cart
+		height: 360px
+		margin-top: 20px
+	.checkout__left
+		.order-info__btn
+			width: 280px
+		.item-cart_checkout
+			width: 320px
+		.order-info__location,
+		.order-info__input_delivery
+			width: 320px
+		.order-info_location 
+			.order-info__descr
+				width: 290px
+		.order-info__input_phone,
+		.order-info__input_name,
+		.order-info__input_email,
+		.order-info__input_text
+			width: 320px
+		.order-info__input_text
+			margin-bottom: 55px
+		.order-info__input_delivery
+			margin-bottom: 50px
+		.order-info__about
+			width: 320px
+			.order-info__descr
+				width: 100px
+			.order-info__caption
+				width: 180px
+	.order-info__body
+		padding-left: 20px
+	.order-info__delivery,
+	.order-info__payment
+		display: flex
+		flex-direction: column        
+		button
+			margin-bottom: 10px
+	.order-info__payment
+		margin-bottom: 40px
+	.order-line
+		&__item
+			&:nth-child(1)
+				left: 0
+				&:before
+					left: -12px
+			&:nth-child(2)
+				left: 90px
+				&:before
+					left: -102px
+			&:nth-child(3)
+				left: 180px
+				&:before
+					left: -192px
+			&:nth-child(4)
+				left: 260px
+				&:before
+					left: -272px
+			&:nth-child(5)
+				right: 0
+				&:before
+					left: -340px
+			&:before
+				opacity: 0
+				width: 360px
+				text-align: center
+			&_now
+				&:before
+					opacity: 1
+
+@media screen and (max-width: 370px)
+	.checkout__top-line, 
+	.checkout__body
+		width: 290px
+	.checkout__left
+		.order-info__btn
+			width: 260px
+		.item-cart_checkout
+			width: 260px
+		.order-info__location,
+		.order-info__input_delivery
+			width: 260px
+		.order-info_location 
+			.order-info__descr
+				margin-bottom: 30px
+				width: 250px
+		.order-info__input_phone,
+		.order-info__input_name,
+		.order-info__input_email,
+		.order-info__input_text
+			width: 260px
+		.order-info__about
+			width: 260px
+			.order-info__caption
+				width: 151px
+				word-break: break-word
+	.order-line
+		&__item
+			&:nth-child(1)
+				left: 0
+				&:before
+					left: 0
+			&:nth-child(2)
+				left: 65px
+				&:before
+					left: -67px
+			&:nth-child(3)
+				left: 135px
+				&:before
+					left: -137px
+			&:nth-child(4)
+				left: 205px
+				&:before
+					left: -206px
+			&:nth-child(5)
+				right: 0
+				&:before
+					left: -268px
+@media screen and (max-width: 370px)
+	.order-line
+		&__item
+			&:before
+				width: 290px
+			
