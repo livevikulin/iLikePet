@@ -23,23 +23,6 @@ $(document).ready(function() {
 		$navbar.find('.js-account').toggleClass('navbar-fixed__account_hidden');
 	});
 
-
-
-	
-	// $('.navbar-fixed__search').click(function(e) {
-	// 	e.preventDefault();
-	// 	$(this).parent().find('.navbar-search').addClass('search-open');
-	// 	//Поправил классы
-	// 	$('.navbar-item__op').addClass('navbar-button');
-	// 	$(this).parent().find('.navbar-search__close').show(850);
-	// });
-	// $('.navbar-search__close').click(function() {
-	// 	$(this).hide();
-	// 	$(this).parent().find('.navbar-search').removeClass('search-open');
-	// 	//Поправил классы
-	// 	$('.navbar-item__op').removeClass('navbar-button');
-	// });
-	
 	//Меню на мобиле
 	$('.header-mobile__burger').click(function() {
 		$('.header-mobile__menu').slideDown();

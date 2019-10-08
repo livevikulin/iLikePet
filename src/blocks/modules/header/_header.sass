@@ -322,6 +322,7 @@ header
 
         &_hidden
             opacity: 0
+            pointer-events: none
 
     a 
         font-family: Arsenal Regular
@@ -396,6 +397,7 @@ header
             color: #494A4C
             border: none
             outline: none
+            box-sizing: border-box
 
         &__close
             padding-top: 12px
@@ -493,7 +495,7 @@ header
     background: #FFFFFF
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1)
     padding: 12px 0 5px
-    z-index: 9999
+    z-index: 50
 //Класс для появления фиксированной шапки
 .nav-active
 	display: block
@@ -518,6 +520,7 @@ header
 
         &_hidden
             opacity: 0
+            pointer-events: none
 
         img 
             width: auto
@@ -530,7 +533,8 @@ header
 
         &_hidden
             opacity: 0
-            
+            pointer-events: none
+
         ul 
             display: flex
             padding: 0
@@ -568,11 +572,13 @@ header
                 background: #D9435D
                 transition: 0.3s 
     &__account
+        display: flex
         opacity: 1
         transition: opacity .5s ease
 
         &_hidden
             opacity: 0
+            pointer-events: none
 
         a 
             text-decoration: none
