@@ -16,6 +16,37 @@ import "jquery-mask-plugin";
 
 
 $(document).ready(function () {
+
+	//Кнопка "НАВЕРХ"
+	const $toTopButton = $(".js-to-top-link");
+
+	if ($toTopButton.length) {
+		let scrollTrigger = 20, // px
+			backToTop = () => {
+				var scrollTop = $(window).scrollTop();
+
+				if (scrollTop > scrollTrigger) {
+					$toTopButton.addClass("topper_active");
+				} else {
+					$toTopButton.removeClass("topper_active");
+				}
+			};
+
+		backToTop();
+
+		$(window).on("scroll", () => {
+			backToTop();
+		});
+
+		$toTopButton.on("click", (e) => {
+			e.preventDefault();
+
+			$("html,body").animate({
+				scrollTop: 0
+			}, 700);
+		});
+	}
+
 	//Инициализация fancybox
 	$("[data-fancybox]").fancybox({
 		helpers: {
@@ -439,7 +470,7 @@ $(document).ready(function () {
 	});
 
 	$("#inputPetBorn").click(function () {
-		$(".ui-datepicker").addClass("ui-datepicker-pets");
+		$(".ui-datepicker").addClass("ui-datepicker-personal");
 	});
 
 	function initSelect() {
@@ -508,6 +539,8 @@ $(document).ready(function () {
 	// });
 
 
+
+
 	//Фильтр на мобильной версии
 	$(".filter-mobile").click(function () {
 		$(this).next().slideToggle();
@@ -526,5 +559,19 @@ $(document).ready(function () {
 	$("#inputBorn").mask("00.00.0000");
 	$("#inputPetBorn").mask("00.00.0000");
 	$("#inputPhone").mask("+7(000) 000-0000");
-	$("#inputPhone2").mask("+7(000) 000-0000");
+	$("#inputPhone2").mask("+7(000) 000-0000");	
+
+	//Смена вход/регистрация
+	$('.signin').on('click', function() {
+		$('.login').removeClass('choice-active');
+		$(this).addClass('choice-active');
+		$('.form-login').removeClass('form-active');
+		$('.form-registration').addClass('form-active');
+	});
+	$('.login').on('click', function() {
+		$('.signin').removeClass('choice-active');
+		$(this).addClass('choice-active');
+		$('.form-registration').removeClass('form-active');
+		$('.form-login').addClass('form-active');
+	})
 });
