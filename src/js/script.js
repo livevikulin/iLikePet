@@ -366,6 +366,40 @@ $(document).ready(function () {
 		}
 	}
 
+	//checkout page end
+	
+	
+	//pesonal page
+		//Делегирование событий
+		$('.table-order__wrapper').on('click',function(e){
+			if(e.target.className === "table-order__check") {
+				let link = $(e.target);
+				let item =  $(e.target).parent();
+				let id = $(e.target).data("open");
+				let inner = $(`.table-order__inner[data-open="${id}"]`);
+				if(!inner.hasClass('table-order__inner_active')) {
+					inner.fadeIn(100);
+					item.addClass("table-order__item_active")
+					inner.addClass('table-order__inner_active');
+					link.css("opacity","0");
+					
+				}
+			}
+
+			if(e.target.className === "table-inner__collapse") {
+				let inner = $(e.target).parent().parent();
+				let id = inner.data("open");
+				let link = $(`.table-order__check[data-open="${id}"]`);
+				let item = link.parent();
+				if(inner.hasClass('table-order__inner_active')) {
+					inner.fadeOut(100);
+					inner.removeClass('table-order__inner_active');
+					item.removeClass("table-order__item_active");
+					link.css("opacity","1");
+				}
+			}
+		});
+	//pesonal page
 
 
 

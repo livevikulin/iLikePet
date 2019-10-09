@@ -383,25 +383,31 @@ block content
 							a(href="#").personal-sub__btn.btn Подписаться
 						.personal-tabs__box#tabs-order
 							span.personal-box__title Мои заказы
-							span.personal-box__none У вас 4 заказа:
+							span.personal-box__none.personal-box__none_order У вас 4 заказа:
 							.table-order
 								.table-order__list
-									.table-order__item
+									.table-order__item.table-order__item_header
 										.table-order__number № Заказа
 										.table-order__date Дата и время заказа
 										.table-order__status Статус
 										.table-order__total Сумма
 										a.table-order__check
-									.table-order__item 
-										.table-order__number 112233456
-										.table-order__date 112233456
-										.table-order__status Закрыт
-										.table-order__total 29 590 руб.
-										a.table-order__check Посмотреть
-										.table-order__inner
+									.table-order__wrapper
+										.table-order__item 
+											.table-order__number 112233456
+											.table-order__date 112233456
+											.table-order__status Закрыт
+											.table-order__total 29 590 руб.
+											a.table-order__check(data-open="1") Посмотреть
+										.table-order__inner(data-open="1")
 											span.personal-box__title.personal-box__title_order Заказ №112233456
 											.table-inner
-												.item-cart
+												.table-inner__header
+													.table-inner__title Товар
+													.table-inner__price Цена
+													.table-inner__amount Количество
+													.table-inner__price Стоимость
+												.item-cart.item-cart_personal
 													.item-cart__icon
 														img(src="./img/product-card/slider-block.png")
 													.item-cart__info
@@ -412,7 +418,87 @@ block content
 													.item-cart__amount
 														span 2 шт														
 													.item-cart__price
-														span 2380 руб														
+														span 2380 руб
+												.item-cart.item-cart_personal
+													.item-cart__icon
+														img(src="./img/product-card/slider-block.png")
+													.item-cart__info
+														span Royal Canin X-Small Puppy для щенков
+														span 800 г
+													.item-cart__cost
+														span 1190 руб.
+													.item-cart__amount
+														span 2 шт														
+													.item-cart__price
+														span 2380 руб
+												.item-cart.item-cart_personal
+													.item-cart__icon
+														img(src="./img/product-card/slider-block.png")
+													.item-cart__info
+														span Royal Canin X-Small Puppy для щенков
+														span 800 г
+													.item-cart__cost
+														span 1190 руб.
+													.item-cart__amount
+														span 2 шт														
+													.item-cart__price
+														span 2380 руб
+												.__collapse
+													a Свернуть
+									.table-order__wrapper
+										.table-order__item 
+											.table-order__number 112233456
+											.table-order__date 112233456
+											.table-order__status Закрыт
+											.table-order__total 29 590 руб.
+											a.table-order__check(data-open="2") Посмотреть
+										.table-order__inner(data-open="2")
+											span.personal-box__title.personal-box__title_order Заказ №112233456
+											.table-inner
+												.table-inner__header
+													.table-inner__title Товар
+													.table-inner__price Цена
+													.table-inner__amount Количество
+													.table-inner__price Стоимость
+												.item-cart.item-cart_personal
+													.item-cart__icon
+														img(src="./img/product-card/slider-block.png")
+													.item-cart__info
+														span Royal Canin X-Small Puppy для щенков
+														span 800 г
+													.item-cart__cost
+														span 1190 руб.
+													.item-cart__amount
+														span 2 шт														
+													.item-cart__price
+														span 2380 руб
+												.item-cart.item-cart_personal
+													.item-cart__icon
+														img(src="./img/product-card/slider-block.png")
+													.item-cart__info
+														span Royal Canin X-Small Puppy для щенков
+														span 800 г
+													.item-cart__cost
+														span 1190 руб.
+													.item-cart__amount
+														span 2 шт														
+													.item-cart__price
+														span 2380 руб
+												.item-cart.item-cart_personal
+													.item-cart__icon
+														img(src="./img/product-card/slider-block.png")
+													.item-cart__info
+														span Royal Canin X-Small Puppy для щенков
+														span 800 г
+													.item-cart__cost
+														span 1190 руб.
+													.item-cart__amount
+														span 2 шт														
+													.item-cart__price
+														span 2380 руб
+												.__collapse
+													a Свернуть
+																								
 
 						
 					
