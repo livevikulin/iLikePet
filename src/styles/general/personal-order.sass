@@ -3,9 +3,12 @@
         display: flex
         flex-direction: column
     &__inner
-        position: absolute
-        top: 10px
+        top: 60px
+        left: 0
         width: inherit
+        box-shadow: 0px 0px 18px rgba(117, 117, 117, 0.12)
+        padding-top: 30px
+        display: none
     &__item
         width: 876px
         display: flex
@@ -18,7 +21,10 @@
         padding-right: 20px
         font-family: 'Arimo Regular', sans-serif
         justify-content: space-between
-        &:first-child
+        transition: .3s
+        &_active
+            background-color: #EAECEF
+        &_header
             border-top: 1px solid #DDDDDD
             color: #979899
             font-family: 'Arsenal Regular', sans-serif
@@ -42,33 +48,157 @@
 .personal-box__title_order
     color: #2D3036
     font-size: 20px
-    margin-top: 100px
+    margin-left: 18px
+    
+.item-cart_personal
+    align-items: flex-start
+    border-left: 0
+    border-right: 0
+    &:first-child
+        border-top: 1px solid #E4DFEA
+    .item-cart__icon
+        img
+            width: 64px
+            height: 64px
+    .item-cart__info
+        flex: 1
+        span
+            &:last-child
+                margin-top: 10px
+    .item-cart__cost,
+    .item-cart__price,
+    .item-cart__amount
+        flex-basis: 120px
+        font-family: 'Arimo Regular', sans-serif
+        font-size: 16px
+        color: #494A4C
+
+.table-inner
+    &__header
+        display: flex
+        color: #979899
+        font-size: 18px
+        margin-top: 24px
+    &__title
+        margin-left: 18px
+        flex-basis: 473px
+    &__price
+        flex-basis: 93px
+    &__amount
+        flex-basis: 138px
+    &__collapse
+        display: flex
+        justify-content: flex-end
+        padding-right: 26px
+        a
+            margin-top: 25px
+            pointer-events: none
+            margin-bottom: 30px
+            color: #494A4C
+            font-family: 'Arimo Regular', sans-serif
+            font-size: 15px
+            text-decoration: none
+            border-bottom: 1px dashed #D9435D
+
     
 @media screen and (max-width: 1279px)
     .table-order__item
         width: 770px
         .table-order__number
             flex-basis: 140px
+    .table-order__inner
+        width: 770px
+        .table-inner__title
+            flex-basis: 365px
+        .table-inner__price
+            flex-basis: 100px
 @media screen and (max-width: 1160px)
     .table-order__item
-        width: 570px
+        width: 700px
         .table-order__number
             flex-basis: 140px
+        .table-order__date
+            flex-basis: 161px
+    .table-order__inner
+        width: 700px
+        .item-cart_personal
+            .item-cart__cost,
+            .item-cart__price,
+            .item-cart__amount
+                flex-basis: 126px
+        .table-inner__title
+            flex-basis: 279px
+@media screen and (max-width: 1085px)
+    .table-order__item
+        width: 615px
+        .table-order__number
+            flex-basis: 140px
+        .table-order__date
+            flex-basis: 161px
+    .table-order__inner
+        width: 615px
+        .item-cart_personal
+            .item-cart__cost,
+            .item-cart__price,
+            .item-cart__amount
+                flex-basis: 99px
+        .table-inner__title
+            flex-basis: 279px
+        .table-inner__amount
+            flex-basis: 120px
+    .table-order__inner .table-inner__price
+        flex-basis: 70px
+
 @media screen and (max-width: 999px)
     .table-order__item
         width: 700px
         .table-order__number
-            flex-basis: 100px
+            flex-basis: 140px
+        .table-order__date
+            flex-basis: 161px
+    .table-order__inner
+        width: 700px
+        .item-cart_personal
+            .item-cart__cost,
+            .item-cart__price,
+            .item-cart__amount
+                flex-basis: 126px
+        .table-inner__title
+            flex-basis: 279px
 @media screen and (max-width: 787px)
     .table-order__item
-        width: 670px
+        width: 615px
         .table-order__number
+            flex-basis: 140px
+        .table-order__date
+            flex-basis: 161px
+    .table-order__inner
+        width: 615px
+        .item-cart_personal
+            .item-cart__cost,
+            .item-cart__price,
+            .item-cart__amount
+                flex-basis: 99px
+        .table-inner__title
+            flex-basis: 279px
+        .table-inner__amount
             flex-basis: 120px
-@media screen and (max-width: 787px)
+    .table-order__inner .table-inner__price
+        flex-basis: 70px
+@media screen and (max-width: 690px)
     .table-order__item
-        width: 876px
+        width: 770px
         .table-order__number
+            flex-basis: 140px
+    .table-order__inner
+        width: 770px
+        .table-inner__title
+            flex-basis: 365px
+        .table-inner__price
             flex-basis: 100px
     .table-order__list
         overflow-x: scroll
+@media screen and (max-width: 652px)
+    .personal-box__none_order
+        padding-left: 15px
         
