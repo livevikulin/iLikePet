@@ -3042,6 +3042,69 @@ input[type="number"]::-webkit-outer-spin-button
 				line-height: 20px
 				color: #979899
 
+//Стили для страницы результатов поиска
+.result-search
+	&__title
+		display: block
+		font-family: Arsenal Bold
+		font-style: normal
+		font-size: 48px
+		line-height: 60px
+		color: #494A4C
+		text-align: center
+		margin-bottom: 40px
+	&__block
+		padding: 24px 32px
+		background: #ffffff
+		margin-bottom: 40px
+	&__input
+		display: inline-block
+		width: 87%
+		margin-right: 20px
+		position: relative
+		input
+			width: 100%
+			background: #F5F9FA
+			border-radius: 5px
+			padding: 15px 17px
+			border: none
+			outline: none
+			font-family: Arimo Regular
+			font-style: normal
+			font-weight: normal
+			font-size: 18px
+			line-height: 21px
+			color: #494A4C
+			box-sizing: border-box
+		span
+			position: absolute
+			top: 50%
+			right: 17px
+			transform: translateY(-50%)
+			cursor: pointer
+			path
+				transition: 0.2s
+			&:hover
+				path
+					fill: #000000
+	&__btn
+		display: inline-block
+		font-family: Arsenal Bold
+		font-style: normal
+		font-size: 18px
+		line-height: 25px
+		text-align: center
+		color: #FFFFFF
+		background: #D9435D
+		border-radius: 24px
+		padding: 13px 35px
+		box-sizing: border-box
+		outline: none
+		text-decoration: none
+		transition: 0.2s
+		&:hover
+			background: #CA2441
+
 //Стиль для инпута
 .input
 	position: relative
