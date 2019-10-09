@@ -607,5 +607,15 @@ $(document).ready(function () {
 		$(this).addClass('choice-active');
 		$('.form-registration').removeClass('form-active');
 		$('.form-login').addClass('form-active');
-	})
+	});
+
+	let $label = $('#loginName, #loginPassword');
+
+	$label.on('change', function() {
+		if ($(this).val() != '') {
+			$(this).next().css('display', 'none');
+		} else {
+			$(this).next().css('display', 'block');
+		}
+	});
 });
