@@ -2,17 +2,15 @@ body
 	font-family: Arsenal Regular, sans-serif
 
 a
-	font-family: Merriweather
+	font-family: Arsenal Regular
 	font-style: normal
-	font-weight: normal
 	font-size: 15px
 	line-height: 27px
 	color: #494A4C
 	text-decoration: none
 p
-	font-family: Merriweather
+	font-family: Arsenal Regular
 	font-style: normal
-	font-weight: normal
 	font-size: 15px
 	line-height: 28px
 	color: #494A4C
@@ -28,9 +26,8 @@ ul
 ol
 	padding: 0
 h1
-	font-family: Arsenal
+	font-family: Arsenal Bold
 	font-style: normal
-	font-weight: bold
 	font-size: 48px
 	line-height: 60px
 	color: #494A4C
@@ -1477,6 +1474,10 @@ input[type="number"]::-webkit-outer-spin-button
 			display: flex
 			flex-direction: column
 			margin-bottom: 56px
+		&__video
+			.block-video
+				&:nth-child(2n+2)
+					margin-right: 28px
 	&-main
 		width: 100%
 		padding: 25px 50px 64px
@@ -3946,6 +3947,11 @@ input[type="number"]::-webkit-outer-spin-button
 		&-head
 			&__author
 				display: block
+		&-block
+			&__video
+				.block-video
+					&:nth-child(2n+2)
+						margin-right: 0
 	.personal-tabs__boxes
 		padding: 30px 5px
 	.personal-box__data
