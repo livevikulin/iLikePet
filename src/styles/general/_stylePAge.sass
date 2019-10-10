@@ -1474,6 +1474,10 @@ input[type="number"]::-webkit-outer-spin-button
 			display: flex
 			flex-direction: column
 			margin-bottom: 56px
+		&__video
+			.block-video
+				&:nth-child(2n+2)
+					margin-right: 28px
 	&-main
 		width: 100%
 		padding: 25px 50px 64px
@@ -3943,6 +3947,11 @@ input[type="number"]::-webkit-outer-spin-button
 		&-head
 			&__author
 				display: block
+		&-block
+			&__video
+				.block-video
+					&:nth-child(2n+2)
+						margin-right: 0
 	.personal-tabs__boxes
 		padding: 30px 5px
 	.personal-box__data
