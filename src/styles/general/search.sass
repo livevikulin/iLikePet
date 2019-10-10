@@ -1,0 +1,84 @@
+.search-card
+	min-height: 300px
+	display: flex
+	background: #fff
+	margin-top: 16px
+	transition: box-shadow .3s ease
+	box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.05)
+	position: relative
+
+	&:hover
+		box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.15)
+
+	&__image
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		opacity: 0.7
+		object-fit: cover
+		object-position: center
+
+	&__preview
+		box-sizing: border-box
+		flex: 0 0 400px
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		padding: 16px
+		position: relative
+		background: #000
+
+	&__title
+		display: block
+		font-family: Arsenal Bold
+		font-style: normal
+		font-weight: bold
+		font-size: 24px
+		line-height: 32px
+		color: #D9435D
+		margin: 0 0 17px 0
+		text-align: left
+		z-index: 1
+
+	&__additional
+		z-index: 1
+		position: relative
+
+	&__visual-link
+		font-weight: bold
+		margin-top: auto
+
+	&__info
+		padding: 16px 32px 16px 16px
+
+	&__link
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		z-index: 2
+
+@media (max-width: 999px)
+	.search-card
+		flex-direction: column
+
+		&__preview
+			flex: 0 0 300px
+
+
+	.result-search
+		&__input
+			width: 100%
+			margin: 0 0 16px 0
+
+@media (max-width: 768px)
+	.favorites-tabs_search
+		ul
+			display: flex
+			flex-direction: column
+
+		li
+			padding: 12px 0
