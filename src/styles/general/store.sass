@@ -18,13 +18,13 @@ $sectionTitle: #D9435D
         width: 280px
         margin-left: 40px
         margin-top: 48px
-
         img
             width: 100%
             object-fit: cover
             height: 680px
     &__more-articles
         box-sizing: border-box
+        font-family: 'Arsenal Regular'
         color: $cardTitle
         border: 3px solid #F7D9DF
         background-color: #fff
@@ -80,7 +80,9 @@ $sectionTitle: #D9435D
     &:nth-child(2)
         margin-right: 31px
         margin-left: 31px
-
+.row_video
+        justify-content: space-between
+        margin-bottom: 140px
 .pets
     margin: 0
     padding: 0
@@ -88,10 +90,11 @@ $sectionTitle: #D9435D
     align-items: center
     list-style: none    
     flex-basis: 896px
+    justify-content: space-between
     &__item
-        flex-basis: 64px
+        flex-basis: 85px
         text-align: center
-        margin-right: 40px
+        margin-right: 5px
         position: relative
         &:before
             position: absolute
@@ -228,7 +231,11 @@ $sectionTitle: #D9435D
     height: 300px
     border-radius: 8px
     border-bottom: 0
-    overflow: hidden
+    overflow: unset
+    i
+        color: #fff
+    .review-author
+        margin-bottom: 16px
 
 .block-video_store
     border-radius: 8px
@@ -334,11 +341,14 @@ $sectionTitle: #D9435D
                         &:last-child
                             display: none
 @media screen and (max-width: 1050px)
+    .row_video
+        margin-bottom: 50px
     .pets
         flex-basis: 272px
         flex-wrap: wrap
         .pets__item
             margin-bottom: 10px
+            margin-right: 5px
             &:nth-child(3n+3)
                 margin-right: 0
             &:before

@@ -36,7 +36,7 @@ block content
 							input(type="submit", value="Отправить")
 						.__info
 							| Нажимая на кнопку, я соглашаюсь на обработку
-							a персональных данных
+							a.product-modal__link персональных данных
 						.__close
 				.product-card__content
 					.product-slider
@@ -68,18 +68,19 @@ block content
 								label(for="800g") 800г
 						.product-card__taste
 							span Вкус:
-							.taste-wrapper
-								input(type="radio" id="chiken" name="taste")
-								label(for="chiken") Курица
-							.taste-wrapper
-								input(type="radio" id="lamb" name="taste")
-								label(for="lamb") Ягненок
-							.taste-wrapper
-								input(type="radio" id="veal" name="taste")
-								label(for="veal") Телятина
-							.taste-wrapper
-								input(type="radio" id="rabbit" name="taste")
-								label(for="rabbit") Кролик
+							.product-card__taste-wrapper
+								.taste-wrapper
+									input(type="radio" id="chiken" name="taste")
+									label(for="chiken") Курица
+								.taste-wrapper
+									input(type="radio" id="lamb" name="taste")
+									label(for="lamb") Ягненок
+								.taste-wrapper
+									input(type="radio" id="veal" name="taste")
+									label(for="veal") Телятина
+								.taste-wrapper
+									input(type="radio" id="rabbit" name="taste")
+									label(for="rabbit") Кролик
 						.product-card__row
 							.product-card__price
 								.price
@@ -120,7 +121,7 @@ block content
 						#tabs-1.product-card__tabs-item
 							p Сухой корм для собак мелких размеров с 10 месяцев до 8 лет.
 							h3 Достоинства:
-							ul
+							ul.product-card__list
 								li стимулирование аппетита
 								li здоровая шерсть
 								li замедленное образование зубного налета

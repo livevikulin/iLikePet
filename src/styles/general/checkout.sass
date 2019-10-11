@@ -117,11 +117,12 @@
 		   label
 			   color: #979899
 			   position: relative
-			   
 			   padding-left: 40px
 			   &:before
 				   position: absolute
 				   content: ''
+				   top: 50%
+				   transform: translateY(-50%)
 				   width: 24px
 				   height: 24px
 				   transition: .3s
@@ -251,6 +252,7 @@
 		width: 129px
 		height: 48px
 		font-size: 20px
+		font-family: 'Arsenal Bold', sans-serif
 		cursor: pointer
 		border: 0
 		svg
@@ -258,6 +260,8 @@
 			left: 0
 			top: 0
 			pointer-events: none
+	&__next
+		color: #D9435D
 	&__navigate
 		display: flex
 		align-items: center
@@ -329,7 +333,8 @@
 	box-shadow: 0px 4px 12px rgba(40, 40, 50, 0.1)
 	padding: 24px 24px 0 24px
 	font-family: 'Arimo Regular', sans-serif
-	
+	&__caption
+		color: #494A4C
 	&__title 
 		color: #2D3036
 		font-size: 32px
@@ -364,7 +369,7 @@
 		font-size: 16px
 		display: flex
 		justify-content: space-between
-		margin-bottom: 10px
+		margin-bottom: 20px
 		span
 			&:first-child
 				color: #494A4C
@@ -376,7 +381,6 @@
 			&:last-child
 				color: #D9435D
 	&__total
-		margin-top: 10px
 		padding-top: 16px
 		border-top: 1px solid #D0C9D6
 		color: #7E2A2A
@@ -384,8 +388,10 @@
 		justify-content: space-between
 		span:nth-child(2)
 			font-size: 24px
+			font-family: 'Arimo Bold',sans-serif
 			span
 				font-size: 16px
+				margin-left: 5px
 
 
 
@@ -423,7 +429,9 @@
 				margin-top: 8px
 				color: #666666
 				font-size: 16px
-			
+
+
+
 @media screen and (max-width: 1299px)
 	.checkout__left
 		flex-basis: 650px
@@ -557,6 +565,9 @@
 		.order-info__next
 			width: 95px
 @media screen and (max-width: 880px)
+	.order-info_confirm .order-info__navigate .order-info__next
+		width: 190px
+		background: #D9435D
 	.checkout__top-line, 
 	.checkout__body
 		width: 360px
@@ -681,6 +692,11 @@
 				right: 0
 				&:before
 					left: -268px
+	.order-info_confirm .order-info__navigate .order-info__next
+		width: 105px
+		span
+			width: 95px
+			font-size: 16px
 @media screen and (max-width: 370px)
 	.order-line
 		&__item
