@@ -135,23 +135,50 @@ $(document).ready(function () {
 	var monthNames = $(".js-datepicker .js-datepicker-personal").datepicker("option", "monthNames");
 	var monthNamesShort = $(".js-datepicker .js-datepicker-personal").datepicker("option", "monthNamesShort");
 
+	$.datepicker.setDefaults({
+		dateFormat: 'dd.mm.yy'
+	});
+
 	$(".js-datepicker").datepicker({
 		firstDay: 1,
 		numberOfMonths: 2,
-		dateFormat: "yy-mm-dd",
+		dayNames: ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение"],
+		dayNamesMin: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+		monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+		monthNamesShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+		beforeShowDay: function (date) {
+			var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#dateStart").val());
+			var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#dateEnd").val());
+			return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "datepicker-highlight" : ""];
+		},
 		onSelect: function (date, i) {
-			if (date !== i.lastVal) {
+			var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#dateStart").val());
+			var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#dateEnd").val());
+			var selectedDate = $.datepicker.parseDate($.datepicker._defaults.dateFormat, date);
 
-				$.post($(".js-datepicker").data("url"), "ajax=Y&curr_event_date=" + date,
+			if (!date1 || date2) {
+				$("#dateStart").val(date);
+				$("#dateEnd").val("");
+				$(this).datepicker();
+			} else if (selectedDate < date1) {
+				$("#dateEnd").val($("#dateStart").val());
+				$("#dateStart").val(date);
+				$(this).datepicker();
+
+				$.post($(".js-datepicker").data("url"), "ajax=Y&event_date_start=" + $("#dateStart").val() + '&event_date_end=' + $("#dateEnd").val(),
+					function (html) {
+						$("#events-container").html(html);
+					});
+			} else {
+				$("#dateEnd").val(date);
+				$(this).datepicker();
+
+				$.post($(".js-datepicker").data("url"), "ajax=Y&event_date_start=" + $("#dateStart").val() + '&event_date_end=' + $("#dateEnd").val(),
 					function (html) {
 						$("#events-container").html(html);
 					});
 			}
-		},
-		dayNames: ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение"],
-		dayNamesMin: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
-		monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
-		monthNamesShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"]
+		}
 	});
 
 	$(".js-show-current-week").on("click", () => {
