@@ -1,7 +1,7 @@
 .cart
     &__list
         .item-cart
-            &:first-child
+            &:nth-child(2)
                 border-top: 1px solid #E4DFEA
                 border-radius: 6px 6px 0px 0px
             &:last-child
@@ -235,13 +235,44 @@
         font-size: 16px
         text-decoration: underline
 
+.list-heder
+    display: flex
+    color: #979899
+    font-family: 'Arsenal Regular', sans-serif
+    margin-bottom: 16px
+    font-size: 18px
+    &__title
+        flex-basis: 588px
+    &__cost
+        flex-basis: 230px
+    &__amount
+        flex-basis: 187px
+
+
+
+
+
 @media screen and (max-width: 1329px)
     .cart__delivery, 
     .cart__list, 
     .cart__footer,
     .cart__top-line
         width: 1180px
+    .list-heder
+        &__title
+            flex-basis: 547px
+        &__cost
+            flex-basis: 206px
+        &__amount
+            flex-basis: 169px
 @media screen and (max-width: 1210px)
+    .list-heder
+        &__title
+            flex-basis: 447px
+        &__cost
+            flex-basis: 194px
+        &__amount
+            flex-basis: 146px
     .cart__delivery, 
     .cart__list, 
     .cart__footer,
@@ -250,6 +281,13 @@
     .item-cart_full .item-cart__info
         flex-basis: 270px
 @media screen and (max-width: 1050px)
+    .list-heder
+        &__title
+            flex-basis: 347px
+        &__cost
+            flex-basis: 115px
+        &__amount
+            flex-basis: 146px
     .cart__delivery, 
     .cart__list, 
     .cart__footer,
@@ -272,6 +310,8 @@
         .order-product
             margin-right: 0
 @media screen and (max-width: 800px)
+    .list-heder
+        display: none
     .cart__delivery, 
     .cart__list, 
     .cart__footer,
