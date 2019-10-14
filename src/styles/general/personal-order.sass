@@ -24,15 +24,26 @@
         transition: .3s
         &_active
             background-color: #EAECEF
+            .table-order__number
+                color: #494A4C
+                text-decoration: none
+            .table-order__item_header
+                .table-order__number
+                    color: #979899
         &_header
             border-top: 1px solid #DDDDDD
             color: #979899
             font-family: 'Arsenal Regular', sans-serif
             font-size:  18px
+            .table-order__number
+                text-decoration: none
+                color: #979899
             .table-order__check
                 visibility: hidden
     &__number
         flex-basis: 100px
+        text-decoration: underline
+        color: #3A1F5D
     &__date
         flex-basis: 200px
     &__status
@@ -44,7 +55,12 @@
         color: #D9435D
         border-bottom: 1px dashed #D9435D
         
-    
+.table-order__check
+    font-family: 'Arimo Regular', sans-serif
+    cursor: pointer
+.table-inner__collapse
+    cursor: pointer
+
 .personal-box__title_order
     color: #2D3036
     font-size: 20px

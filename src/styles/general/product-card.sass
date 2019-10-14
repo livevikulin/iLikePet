@@ -2,6 +2,7 @@ $infoColor: #F5F5F5
 $favoritColot: #E8E8E8
 $textColor: #494A4C
 .product-card
+    overflow: hidden
     &__looked
         border-top: 1px solid #E0E0E0
         .row
@@ -43,17 +44,22 @@ $textColor: #494A4C
                 padding-right: 20px
                 padding-left: 20px
     &__tabs-item
-        font-family: 'Merriweather', sans-serif
         h3
             color: #494A4C
             font-size: 15px
+            font-family: 'Merriweather', sans-serif
         p
             width: 976px
             line-height: 27px
-        ul
+            font-family: 'Merriweather', sans-serif
+        .product-card__list
+            margin-left: 44px
+            overflow: unset
             li
                 font-size: 15px
+                font-family: 'Merriweather', sans-serif
                 margin-bottom: 8px
+                color: #494A4C
     &__content
         display: flex
         width: 1280px
@@ -70,7 +76,7 @@ $textColor: #494A4C
         border-radius: 4px
         border: 1px dashed #494A4C
         width: 700px
-        margin: 21px 23px 40px 37px
+        margin: 21px 23px 40px 30px
         box-sizing: border-box
         background-color: #fff
         padding: 16px 0
@@ -123,6 +129,9 @@ $textColor: #494A4C
         margin-left: 39px
         display: flex
         font-family: 'Arimo Regular', sans-serif
+    
+        &-wrapper
+            display: flex
         span
             font-size: 18px
             color: #979899
@@ -131,15 +140,25 @@ $textColor: #494A4C
         .taste-wrapper
             input[type="radio"]
                 display: none
-            label                
-                font-size: 18px
+            label          
+                cursor: pointer
                 color: #3A1F5D
                 padding: 5px 10px
                 box-sizing: border-box
+                position: relative
+                span
+                    color: #3A1F5D
+                    font-size: 18px
+                    margin: 0
+                    border-bottom: 1px dashed #D9435D
             input:checked ~ label
                 background-color: #F7D9DF
                 border-radius: 4px
                 height: 32px
+                span
+                    border: 0
+    &__taste
+        margin-top: 13px
     &__weight
         span
             margin-right: 21px
@@ -169,6 +188,8 @@ $textColor: #494A4C
         width: 370px
         margin-top: 22px
         display: flex
+        position: relative
+        left: -7px
         box-sizing: border-box
         padding-left: 30px
         background-color: #FBD45F
@@ -186,11 +207,12 @@ $textColor: #494A4C
                     font-size: 16px
                     font-family: 'Arimo Regular', sans-serif
                     position: relative
+                    color: #494A4C
                     &:after
                         content: ''
                         position: absolute
                         right: -33px
-                        top: -25px
+                        top: -32px
                         background: url('../img/sprites/intermediate-svg/card-product-subscribe.svg') no-repeat
                         width: 33px
                         height: 37px
@@ -213,6 +235,7 @@ $textColor: #494A4C
         font-family: 'Arsenal Bold', sans-serif
         text-decoration: none
         align-self: center  
+        cursor: pointer
         font-size: 18px
         border-bottom: 1px dashed  #D9435D
         padding-bottom: 1px
@@ -236,7 +259,7 @@ $textColor: #494A4C
                 border: 0
                 color: #fff
                 height: 56px
-                line-height: 56px
+                line-height: 55px
                 position: absolute
                 &:before
                     content: ''
@@ -244,7 +267,7 @@ $textColor: #494A4C
                     position: absolute
                     width: 17px
                     height: 17px
-                    top: 50%
+                    top: 49%
                     transform: translateY(-50%)
                     left: 25px
         .product-card__amount
@@ -304,11 +327,13 @@ $textColor: #494A4C
     background: url('../img/sprites/intermediate-svg/product-card-ring.svg') no-repeat
     display: inline-block
         
-    
+
 
 .product-slider
     margin-top: 40px
     margin-bottom: 56px
+    .slick-list
+        overflow: unset
     .product-card__slider-block
         width: 480px 
         .product-slider__item
@@ -320,7 +345,7 @@ $textColor: #494A4C
                 width: 78px
                 height: 35px
                 top: 8px
-                right: 7px
+                right: -11px
                 line-height: 35px
                 text-align: center
                 color: #fff
@@ -335,10 +360,14 @@ $textColor: #494A4C
     &__item
     .product-slider__nav
             .product-slider__item
+                border: 1px solid #F5F5F5
+                box-sizing: border-box
+                border-radius: 4px
                 img
                     width: 96px
                     height: 88px
                     object-fit: cover
+        
 .produc-modal-wrapper
     position: fixed
     top: 0
@@ -361,6 +390,7 @@ $textColor: #494A4C
         top: 50%
         z-index: 999
         transform: translate(-50%,-50%)
+        
         &__close
             width: 15px
             height: 20px
@@ -422,9 +452,11 @@ $textColor: #494A4C
             color: #494A4C
             font-family: 'Arimo Regular', sans-serif
             font-size: 14px
-            a
-                text-decoration: underline
-                color: #D9435D
+        &__link
+            font-size: 14px
+            font-family: 'Arimo Regular', sans-serif
+            text-decoration: underline
+            color: #D9435D
 
 
 
@@ -488,6 +520,15 @@ $textColor: #494A4C
     .product-card__tabs-item p
         width: 650px
 @media screen and (max-width: 768px)
+    .product-card__taste
+        margin-top: 17px
+    .product-card__taste-wrapper
+        flex-wrap: wrap
+        flex-basis: 200px
+        .taste-wrapper
+            margin-bottom: 14px
+            label
+                padding: 8px
     .product-card__top-line,
     .product-card__content,
     .product-card__tabs,
@@ -513,13 +554,13 @@ $textColor: #494A4C
         margin-top: 55px
     .product-card__deliveri-info 
         margin: 20px auto
-        width: 270px
+        width: 320px
         display: flex
         justify-content: flex-end
         span
             margin-left: 0
             display: inline-block
-            width: 200px
+            width: 250px
     .product-card__tabs-item p
         width: 360px
         font-size: 14px
@@ -550,6 +591,12 @@ $textColor: #494A4C
     .produc-modal-wrapper .product-modal__title
         font-size: 29px
 @media screen and (max-width: 360px)
+    .product-card__taste-wrapper
+        flex-basis: 157px
+    .product-card__deliveri-info 
+        width: 270px
+        span
+            width: 200px
     .product-card__top-line,
     .product-card__content,
     .product-card__tabs,
@@ -587,3 +634,15 @@ $textColor: #494A4C
     .product-card__price-subscribe .descr span:last-child:after
         top: -36px
         right: -15px
+
+
+
+.product-slider
+    .product-slider__nav
+        .slick-slider 
+            overflow: hidden
+        .slick-list 
+            margin: 0 32px
+            margin-left: 0
+        .slick-slide > div
+            padding-right: 32px

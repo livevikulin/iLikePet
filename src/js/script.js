@@ -487,18 +487,14 @@ $(document).ready(function () {
 	});
 
 	//Инициализация календаря в Личном кабинете
-	$(".js-datepicker-personal").datepicker({ dateFormat: "dd.mm.yy" });
-	$("#inputBorn").click(function () {
-		$(".ui-datepicker").addClass("ui-datepicker-personal");
-	});
-
-	$(".js-datepicker-personal").datepicker({
+	$(".js-datepicker-personal").datepicker({ 
 		dateFormat: "dd.mm.yy",
 		dayNames: ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение"],
 		dayNamesMin: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
 		monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
 		monthNamesShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"]
 	});
+
 	$("#inputBorn").click(function () {
 		$(".ui-datepicker").addClass("ui-datepicker-personal");
 	});
