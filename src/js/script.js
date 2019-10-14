@@ -248,6 +248,33 @@ $(document).ready(function () {
 	});
 	//declaration-more page END
 
+
+
+	//service page
+		$('.services__list').click(function(e){
+			e.preventDefault();
+			let target = $(e.target);
+			if(target.hasClass('js-open-more')) {
+				target.toggleClass('open-more-active');
+				let open = target.hasClass('open-more-active');
+				let borderOpen = target.data('more');
+				let items = target.parent().children();
+				items.each(function(i,item){
+					let node = $(item);
+					if(node.hasClass('open-more')) {
+						return;
+					}
+					if(open){
+						node.removeClass('services-link_hidden');
+					} else if(!open && i >= borderOpen) {
+						node.addClass('services-link_hidden');
+					}			
+				})
+				
+			}
+		})
+	//service page
+
 	//store page
 	// store-slider module
 	let sliderStore = $(".sllider-brands");
