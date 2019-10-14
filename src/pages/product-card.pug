@@ -2,7 +2,7 @@ extends ../views/layouts/default
 block variables
 	- var title = "Страница товара";
 	- var isMain = false;
-	
+	- var isShop = true;
 block content
 	main
 		.product-card
@@ -24,7 +24,8 @@ block content
 					a(href="#").breadcrumbs-this__page.breadcrumbs-item  Корм для собак
 				h1.__title Royal Canin Mini Adult для собак
 				.product-card
-					img(src="./img/product-card/product-logo.png")
+					a(href="#")
+						img(src="./img/product-card/product-logo.png")
 			.__section
 				.produc-modal-wrapper
 					.product-modal
@@ -59,28 +60,35 @@ block content
 							span Вес:
 							.weight-wrapper
 								input(type="radio" id="3kg" name="weight")
-								label(for="3kg") 3кг
+								label(for="3kg") 
+									span 3кг
 							.weight-wrapper
 								input(type="radio" id="15kg" name="weight")
-								label(for="15kg") 15кг
+								label(for="15kg") 
+									span 15кг
 							.weight-wrapper
 								input(type="radio" id="800g" name="weight")
-								label(for="800g") 800г
+								label(for="800g") 
+									span 800г
 						.product-card__taste
 							span Вкус:
 							.product-card__taste-wrapper
 								.taste-wrapper
 									input(type="radio" id="chiken" name="taste")
-									label(for="chiken") Курица
+									label(for="chiken") 
+										span Курица
 								.taste-wrapper
 									input(type="radio" id="lamb" name="taste")
-									label(for="lamb") Ягненок
+									label(for="lamb") 
+										span Ягненок
 								.taste-wrapper
 									input(type="radio" id="veal" name="taste")
-									label(for="veal") Телятина
+									label(for="veal") 
+										span Телятина
 								.taste-wrapper
 									input(type="radio" id="rabbit" name="taste")
-									label(for="rabbit") Кролик
+									label(for="rabbit") 
+										span Кролик
 						.product-card__row
 							.product-card__price
 								.price
@@ -109,9 +117,9 @@ block content
 					#tabs.dog-page-tabs__block
 						ul
 							li
-								a(href="#tabs-1") О породе, фото и видео
+								a(href="#tabs-1") Описание
 							li
-								a(href="#tabs-2") Стандарты породы
+								a(href="#tabs-2") Состав
 							li
 								a(href="#tabs-3") Рекомендации по питанию
 							li

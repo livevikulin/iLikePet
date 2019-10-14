@@ -1,0 +1,64 @@
+.header-shop
+    flex-basis: 145px
+    height: 27px
+    background: #F5F9FA
+    border-radius: 20px
+    line-height: 35px
+    text-align: right
+    position: relative
+    &:before
+        content: ''
+        position: absolute
+        width: 38px
+        height: 36px
+        display: inline-block
+        background: url('../img/sprites/intermediate-svg/shop-icon.svg')
+        left: 0
+        bottom: 0
+    &__link
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        text-decoration: none
+    &__title
+        padding-left: 7px
+        font-size: 18px
+        padding-right: 9px
+        color: #D9435D
+        font-family: 'Arsenal Bold', sans-serif
+    &__count
+        background: #F7D9DF
+        width: 26px
+        height: 26px
+        border-radius: 50%
+        text-align: center
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 16px
+    &__icon
+        &_fixed
+            margin-left: 15px
+    &__mobile-icon
+        background-size: cover
+        width: 20px
+        height: 25px    
+        background: url('../img/sprites/intermediate-svg/shop-icon.svg') no-repeat
+        background-size: contain
+
+
+
+.header-account .header-shop__count
+    color: #D9435D
+
+@media screen and ( max-width: 1055px )
+    .header-shop__title
+        font-size: 14px
+    .header-shop
+        flex-basis: 111px
+        &:before
+            width: 25px
+            height: 25px
+            background-size: contain
