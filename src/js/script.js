@@ -252,9 +252,9 @@ $(document).ready(function () {
 
 	//service page
 		$('.services__list').click(function(e){
-			e.preventDefault();
 			let target = $(e.target);
 			if(target.hasClass('js-open-more')) {
+				e.preventDefault();
 				target.toggleClass('open-more-active');
 				let open = target.hasClass('open-more-active');
 				let borderOpen = target.data('more');
