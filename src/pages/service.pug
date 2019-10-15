@@ -13,17 +13,18 @@ block content
 					a(href="#").breadcrumbs-this__page.breadcrumbs-item Ветеринарные услуги   /  Акушерство и гинекология
 				h2.service-block__title.title-page Акушерство и гинекология
 				.service-tag-line
-					a(href="#" class="services-link") акушерство и гинекология
+					a(href="#" class="services-link services-link_active") акушерство и гинекология
 					a(href="#" class="services-link") аллергология
 					a(href="#" class="services-link") анализы
 					a(href="#" class="services-link") анестезиология
 					a(href="#" class="services-link") бронхоспокопия
 					a(href="#" class="services-link") вакцинация
-					a(href="#" class="services-link") вызов врача на дом
-					a(href="#" class="services-link") гастроскопия
-					a(href="#" class="services-link") гастроэнтерология
-					a(href="#" class="services-link") гемодиализ
-					a(href="#" class="services-link") гомеопатия
+					a(href="#" class="services-link services-link_hidden") вызов врача на дом
+					a(href="#" class="services-link services-link_hidden") гастроскопия
+					a(href="#" class="services-link services-link_hidden") гастроэнтерология
+					a(href="#" class="services-link services-link_hidden") гемодиализ
+					a(href="#" class="services-link services-link_hidden") гомеопатия
+					a(href="#" class="open-more js-open-more services-link" data-more="6") ...
 				.service-content
 					.service__left
 						.filter-main
@@ -95,29 +96,44 @@ block content
 									img(src="./img/service-card.png")
 								.service__card-title Оберег
 								.service__card-descr 0 отзывов
+								a(href="#").service__card-favorit
 							.service__card
 								.service__card-icon
 									img(src="./img/service-card-2.png")
 								.service__card-title Оберег
 								.service__card-descr 0 отзывов
+								a(href="#").service__card-favorit
 							.service__card
 								.service__card-icon
 									img(src="./img/service-card-3.png")
 								.service__card-title Оберег
 								.service__card-descr 0 отзывов
+								a(href="#").service__card-favorit
 							.service__card
 								.service__card-icon
 									img(src="./img/service-card-4.png")
 								.service__card-title Оберег
 								.service__card-descr 0 отзывов
+								a(href="#").service__card-favorit
 							.service__card
 								.service__card-icon
 									img(src="./img/service-card-3.png")
 								.service__card-title Оберег
 								.service__card-descr 0 отзывов
+								a(href="#").service__card-favorit
 							.service__card
 								.service__card-icon
 									img(src="./img/service-card-5.png")
 								.service__card-title Оберег
 								.service__card-descr 0 отзывов
+								a(href="#").service__card-favorit
+						.row
+							.pagination.pagination__service
+								.pagination-block
+									a(href="#").pagination-block__number 1
+									a(href="#").pagination-block__number.pagination-number__this 2
+									a(href="#").pagination-block__number 3
+									a(href="#").pagination-block__points ...
+									a(href="#").pagination-block__number 72
+									a(href="#").pagination-block__next Далее
 							

@@ -11,6 +11,9 @@
             justify-content: space-between
     &__item
         margin-bottom: 40px
+        transition: .58s ease
+        transition-property: flex-basis
+        will-change: flex-basis
         &_beauty
             flex-basis: 375px
         &_vet
@@ -38,9 +41,11 @@
                 align-self: flex-start
                 font-size: 15px
                 color: #D9435D
-
+        &_open
+            flex-basis: 100%
         &-body
             margin-top: 17px
+            transition: all 1s ease
             .open-more
                 width: 32px
                 border-radius: 50%
@@ -55,6 +60,7 @@
     min-height: 32px
     font-size: 16px
     display: inline-block
+    align-self: baseline
     margin-right: 10px
     border: 1px solid #D9435D
     background-color: #fff
@@ -62,6 +68,14 @@
     line-height: 28px
     padding-left: 14px
     padding-right: 14px
+    transform: max-width .4s ease
+    will-change: max-width
+    &_hidden
+        display: none
+    &_active
+            background-color: #D9435D
+            border: 1px solid #fff
+            color: #fff
 @media screen and (max-width: 1280px)
     .services__list
         width: 1024px
