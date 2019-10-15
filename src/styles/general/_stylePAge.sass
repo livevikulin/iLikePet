@@ -2321,6 +2321,7 @@ input[type="number"]::-webkit-outer-spin-button
 			height: 100%
 			object-fit: cover
 		&__nav
+			padding-top: 30px
 			.dog-page-slider__item
 				width: 46px !important
 				height: 36px
@@ -2367,6 +2368,19 @@ input[type="number"]::-webkit-outer-spin-button
 					margin-left: -27px
 					border: 1px solid #D9435D
 					box-sizing: border-box
+			.slick-prev
+				top: 0
+				left: 4px
+				transform: rotate(-90deg)
+				&:before
+					content: url("../img/sprites/intermediate-svg/right-arrow.svg")
+			.slick-next
+				top: auto
+				bottom: 0
+				left: 4px
+				transform: rotate(-90deg)
+				&:before
+					content: url("../img/sprites/intermediate-svg/left-arrow.svg")
 	&-info
 		padding: 22px 0 0 28px
 		box-sizing: border-box
@@ -3780,6 +3794,7 @@ input[type="number"]::-webkit-outer-spin-button
 				width: 100%
 				max-width: 576px
 				margin-top: 20px
+				padding-top: 0
 				.slick-slide
 					padding: 10px
 				.slick-current
