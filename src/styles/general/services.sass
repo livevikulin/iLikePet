@@ -11,6 +11,7 @@
             justify-content: space-between
     &__item
         margin-bottom: 40px
+        transition: all .7s ease-in-out
         &_beauty
             flex-basis: 375px
         &_vet
@@ -38,7 +39,8 @@
                 align-self: flex-start
                 font-size: 15px
                 color: #D9435D
-
+        &_open
+            flex-basis: 100%
         &-body
             margin-top: 17px
             .open-more
@@ -64,6 +66,10 @@
     padding-right: 14px
     &_hidden
         display: none
+    &_active
+            background-color: #D9435D
+            border: 1px solid #fff
+            color: #fff
 @media screen and (max-width: 1280px)
     .services__list
         width: 1024px
