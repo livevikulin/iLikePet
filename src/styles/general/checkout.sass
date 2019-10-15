@@ -112,6 +112,10 @@
 		   margin-bottom: 15px
 		   input
 			   display: none
+			   &:checked + label
+				   font-family: 'Arimo Bold',sans-serif
+				   color: #494A4C
+				   font-size: 16px
 			   &:checked + label:before
 				   border: 8px solid #D9435D
 		   label
@@ -437,7 +441,49 @@
 	display: none
 
 
+.punct-delivery
+	width: 778px
+	display: none
+	padding: 25px 32px
+	box-sizing: border-box
+	border: 1px solid #E7E6EA
+	margin-bottom: 20px
+	&__btn
+		color: #fff
+		width: 258px
+		cursor: pointer
+		text-decoration: none
+		display: block
+		height: 42px
+		text-align: center
+		line-height: 42px
+		border-radius: 24px
+		font-size: 16px
+		background: #D9435D
+		font-family: 'Arsenal Bold', sans-serif
+	&__row
+		display: flex
+	&__descr
+		margin-top: 16px
+		span
+			font-family: 'Arimo Regular',sans-serif
+			font-size: 16px
+			&:first-child
+				color: #979899
+				margin-right: 5px
+			&:last-child
+				color: #2D3036
+
+
+.punct-delivery_to-door
+	display: none
+	.order-info__input_delivery
+		margin-bottom: 10px
+
+
 @media screen and (max-width: 1299px)
+	.punct-delivery
+		width: 600px
 	.checkout__left
 		flex-basis: 650px
 		.order-info__location,
@@ -472,6 +518,8 @@
 			&:nth-child(5)
 				right: 60px
 @media screen and (max-width: 1149px)
+	.punct-delivery
+		width: 400px
 	.checkout__left
 		flex-basis: 450px
 		.order-info__location, 
@@ -570,6 +618,10 @@
 		.order-info__next
 			width: 95px
 @media screen and (max-width: 880px)
+	.punct-delivery
+		width: 300px
+		.punct-delivery__row
+			flex-direction: column
 	.order-info_confirm .order-info__navigate .order-info__next
 		width: 190px
 		background: #D9435D
@@ -650,6 +702,10 @@
 					opacity: 1
 
 @media screen and (max-width: 370px)
+	.punct-delivery
+		width: unset
+		padding: 0
+		border: 0
 	.checkout__top-line, 
 	.checkout__body
 		width: 290px

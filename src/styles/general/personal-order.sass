@@ -116,7 +116,28 @@
             text-decoration: none
             border-bottom: 1px dashed #D9435D
 
-    
+
+.personal-box__none_order 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 10px
+    .personanl-bonus
+        height: 30px
+        line-height: 30px
+        padding: 0 12px
+        background-color: #F7D9DF
+        border-radius: 15px
+        box-sizing: border-box
+        span
+            margin-left: 5px
+            font-family: 'Arimo Bold', sans-serif
+            font-size: 16px
+            color: #2D3036
+
+
+
+
 @media screen and (max-width: 1279px)
     .table-order__item
         width: 770px
@@ -166,6 +187,8 @@
         flex-basis: 70px
 
 @media screen and (max-width: 999px)
+    .personal-box__none_order 
+        width: 700px
     .table-order__item
         width: 700px
         .table-order__number
@@ -182,6 +205,8 @@
         .table-inner__title
             flex-basis: 279px
 @media screen and (max-width: 787px)
+    .personal-box__none_order 
+        width: 615px
     .table-order__item
         width: 615px
         .table-order__number
@@ -202,6 +227,8 @@
     .table-order__inner .table-inner__price
         flex-basis: 70px
 @media screen and (max-width: 690px)
+    .personal-box__none_order 
+        width: unset
     .table-order__item
         width: 770px
         .table-order__number
@@ -217,4 +244,6 @@
 @media screen and (max-width: 652px)
     .personal-box__none_order
         padding-left: 15px
-        
+@media screen and (max-width: 345px)
+    .personal-box__none_order
+        flex-direction: column

@@ -507,10 +507,52 @@ $(document).ready(function () {
 
 	//Костыли для кнопок
 	$('.order-info__delivery').on('click', function (e) {
-		if ($(e.target).hasClass('order-info__btn')) {
-			$('.order-info__btn_onfoot').removeClass('order-info__btn_active');
-			$('.order-info__btn_oncar').removeClass('order-info__btn_active');
-			$(e.target).addClass('order-info__btn_active');
+		let target = $(e.target);
+		if (target.hasClass('order-info__btn')) {
+			if(!target.data('active')) {
+				btnDeliveryClear();
+				target.attr('data-active',true);
+				target.addClass('order-info__btn_active')
+				chekcDeliveryActive(target);
+			}
+		}
+	})
+
+	function btnDeliveryClear(){
+		[].forEach.call(document.querySelectorAll('.order-info__btn'),function(item){
+			if(item.dataset.active){
+				item.classList.remove('order-info__btn_active');
+				item.dataset.active = false;
+			}
+		})
+	}
+
+	function chekcDeliveryActive(target) {
+			if(target.hasClass('order-info__btn_onfoot')){
+				$('.order-info__where').fadeOut();
+				$('.oncar-lable').fadeIn();
+				$('.oncar-lable-title').fadeIn();
+
+				$('.punct-delivery').hide();
+				$('.punct-delivery_to-door').hide();
+			}
+			if(target.hasClass('order-info__btn_oncar')) {
+				$('.oncar-lable').fadeOut();
+				$('.oncar-lable-title').fadeOut();
+				$('.order-info__where').fadeIn();
+			}
+		
+	}
+
+	$('.order-info__where').click(function(e){
+		if(e.target.id === "Msk_Piter") {
+			$('.punct-delivery').fadeIn();
+			$('.punct-delivery_to-door').hide();
+		}
+
+		if(e.target.id === "other_city") {
+			$('.punct-delivery').hide();
+			$('.punct-delivery_to-door').fadeIn();
 		}
 	})
 
@@ -522,11 +564,16 @@ $(document).ready(function () {
 		}
 	})
 
-
+	function showModalCheckOut(){
+		$(".js-modal-checkout").fadeIn();
+		$('.js-modal-checkout .product-modal__close').click(function(){
+			$(".js-modal-checkout").fadeOut();
+		})
+	}
 
 	//Функция для запроса
 	function makeRequestForOrder() {
-		alert(JSON.stringify(dataOrder))
+		showModalCheckOut();
 	}
 
 	//checkout page
