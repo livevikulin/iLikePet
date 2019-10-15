@@ -252,6 +252,17 @@ $(document).ready(function () {
 
 	//service page
 		$('.services__list').click(function(e){
+			AnimateTags(e);
+		})
+
+
+
+		$('.service-tag-line').click(function(e){
+			AnimateTags(e);
+		})
+
+
+		function AnimateTags(e) {
 			let target = $(e.target);
 			if(target.hasClass('js-open-more')) {
 				e.preventDefault();
@@ -282,7 +293,7 @@ $(document).ready(function () {
 				})
 				
 			}
-		})
+		}
 	//service page
 
 	//store page
