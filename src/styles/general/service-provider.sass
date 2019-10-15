@@ -117,18 +117,13 @@
 
 .service__card__wrapper-provider
     display: flex
+    flex-wrap: wrap
     
 @media screen and (max-width: 1280px)
     .service-provider
         .provider-service,
         .provider
-            width: 1024px
-        .provider-service__container
-            cursor: pointer
-            overflow-x: scroll
-        .service__card__wrapper-provider
-            .service__card
-                width: 290px
+            width: 1024px                    
 @media screen and (max-width: 1280px)
     .service-provider
         .provider-service,
@@ -152,6 +147,12 @@
         .provider
             width: 732px
 @media screen and (max-width: 768px)
+    .service-provider .provider-service__container .service__card:nth-child(3n+3)
+        margin-right: 0
+    .service__card__wrapper-provider
+        justify-content: center
+        .service__card
+            margin-right: 0
     .provider__tabs
         width: 290px
         margin: 0 auto
