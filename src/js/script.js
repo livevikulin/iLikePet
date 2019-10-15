@@ -220,19 +220,21 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		arrows: true,
 		fade: true,
-		asNavFor: ".dog-page-slider__nav"
+		asNavFor: ".dog-page-slider__nav",
 	});
 	$(".dog-page-slider__nav").slick({
 		slidesToShow: 6,
 		asNavFor: ".dog-page-slider",
 		focusOnSelect: true,
+		arrows: true,
 		vertical: true,
 		responsive: [
 			{
 				breakpoint: 769,
 				settings: {
 					vertical: false,
-					variableWidth: true
+					variableWidth: true,
+					arrows: false,
 				}
 			}
 		]
