@@ -298,6 +298,13 @@ $(document).ready(function () {
 		}
 	//service page
 
+	//service-provider
+	
+		$('.js-provider-show').click(function(){
+			$(".js-modal-provider").fadeIn();
+		})
+	//service-provider end
+
 	//store page
 	// store-slider module
 	let sliderStore = $(".sllider-brands");
