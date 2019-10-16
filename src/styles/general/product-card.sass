@@ -390,7 +390,6 @@ $textColor: #494A4C
         top: 50%
         z-index: 999
         transform: translate(-50%,-50%)
-        
         &__close
             width: 15px
             height: 20px
@@ -423,7 +422,8 @@ $textColor: #494A4C
             margin-bottom: 24px
         &__form
             text-align: center
-            input
+            input,
+            textarea
                 background-color: #F5F9FA
                 width: 420px
                 height: 48px
@@ -432,6 +432,10 @@ $textColor: #494A4C
                 margin-bottom: 22px
                 border: 1px solid #E0E0E0
                 border-radius: 6px
+            textarea
+                padding-top: 10px
+                height: 100px
+                resize: none
             input[type="submit"]
                 width: 184px
                 height: 48px
@@ -586,7 +590,8 @@ $textColor: #494A4C
         width: 290px
     .produc-modal-wrapper .product-modal__descr
         font-size: 15px
-    .product-modal__form,.produc-modal-wrapper .product-modal__descr,.produc-modal-wrapper .product-modal__form input
+    .product-modal__form,.produc-modal-wrapper .product-modal__descr,.produc-modal-wrapper .product-modal__form input,
+    .product-modal__form,.produc-modal-wrapper .product-modal__descr,.produc-modal-wrapper .product-modal__form textarea
         width: unset
     .produc-modal-wrapper .product-modal__title
         font-size: 29px

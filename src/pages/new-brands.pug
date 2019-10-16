@@ -1,0 +1,96 @@
+extends ../views/layouts/default
+block variables
+	- var title = "Корзина";
+	- var isMain = false;
+	- var isShop = true;
+block content
+	main
+		.cart
+			.__top-line
+				.breadcrumbs.cart__breadcrumbs
+					a(href="#").breadcrumbs-item Главная
+					a(href="#").breadcrumbs-this__page.breadcrumbs-item  Бренды
+				h1.__title Бренды
+				div(class="alphabet" id="alphabet_functions")
+				.content-wrapper
+					.content-container(data-entity='container-1')
+						.content-item(data-entity='items-row')
+							.breeds__item
+								.favorite.fav_star_container_84220(onclick="return addToFavHandler('84220')")
+								a.breeds__item-link(href='https://ilike.pet/ru/brands/1_all_systems/')
+								.breeds__item-picture
+									img.breeds__item-picture-img(src='https://ilike.pet/upload/iblock/b93/b93d9f1a9230cd95a5e4e1abb95f20b1.png' alt='#1 All Systems' title='#1 All Systems')
+								span.breeds__item-title #1 All Systems
+						.content-item(data-entity='items-row')
+							.breeds__item
+								.favorite.fav_star_container_84220(onclick="return addToFavHandler('84220')")
+								a.breeds__item-link(href='https://ilike.pet/ru/brands/1_all_systems/')
+								.breeds__item-picture
+									img.breeds__item-picture-img(src='https://ilike.pet/upload/iblock/b93/b93d9f1a9230cd95a5e4e1abb95f20b1.png' alt='#1 All Systems' title='#1 All Systems')
+								span.breeds__item-title #1 All Systems
+						.content-item(data-entity='items-row')
+							.breeds__item
+								.favorite.fav_star_container_84220(onclick="return addToFavHandler('84220')")
+								a.breeds__item-link(href='https://ilike.pet/ru/brands/1_all_systems/')
+								.breeds__item-picture
+									img.breeds__item-picture-img(src='https://ilike.pet/upload/iblock/b93/b93d9f1a9230cd95a5e4e1abb95f20b1.png' alt='#1 All Systems' title='#1 All Systems')
+								span.breeds__item-title #1 All Systems
+						.content-item(data-entity='items-row')
+							.breeds__item
+								.favorite.fav_star_container_84220(onclick="return addToFavHandler('84220')")
+								a.breeds__item-link(href='https://ilike.pet/ru/brands/1_all_systems/')
+								.breeds__item-picture
+									img.breeds__item-picture-img(src='https://ilike.pet/upload/iblock/b93/b93d9f1a9230cd95a5e4e1abb95f20b1.png' alt='#1 All Systems' title='#1 All Systems')
+								span.breeds__item-title #1 All Systems
+						.content-item(data-entity='items-row')
+							.breeds__item
+								.favorite.fav_star_container_84220(onclick="return addToFavHandler('84220')")
+								a.breeds__item-link(href='https://ilike.pet/ru/brands/1_all_systems/')
+								.breeds__item-picture
+									img.breeds__item-picture-img(src='https://ilike.pet/upload/iblock/b93/b93d9f1a9230cd95a5e4e1abb95f20b1.png' alt='#1 All Systems' title='#1 All Systems')
+								span.breeds__item-title #1 All Systems
+						.content-item(data-entity='items-row')
+							.breeds__item
+								.favorite.fav_star_container_84220(onclick="return addToFavHandler('84220')")
+								a.breeds__item-link(href='https://ilike.pet/ru/brands/1_all_systems/')
+								.breeds__item-picture
+									img.breeds__item-picture-img(src='https://ilike.pet/upload/iblock/b93/b93d9f1a9230cd95a5e4e1abb95f20b1.png' alt='#1 All Systems' title='#1 All Systems')
+								span.breeds__item-title #1 All Systems
+						.content-item(data-entity='items-row')
+							.breeds__item
+								.favorite.fav_star_container_84220(onclick="return addToFavHandler('84220')")
+								a.breeds__item-link(href='https://ilike.pet/ru/brands/1_all_systems/')
+								.breeds__item-picture
+									img.breeds__item-picture-img(src='https://ilike.pet/upload/iblock/b93/b93d9f1a9230cd95a5e4e1abb95f20b1.png' alt='#1 All Systems' title='#1 All Systems')
+								span.breeds__item-title #1 All Systems
+						.content-item(data-entity='items-row')
+							.breeds__item
+								.favorite.fav_star_container_84220(onclick="return addToFavHandler('84220')")
+								a.breeds__item-link(href='https://ilike.pet/ru/brands/1_all_systems/')
+								.breeds__item-picture
+									img.breeds__item-picture-img(src='https://ilike.pet/upload/iblock/b93/b93d9f1a9230cd95a5e4e1abb95f20b1.png' alt='#1 All Systems' title='#1 All Systems')
+								span.breeds__item-title #1 All Systems
+						.content-item(data-entity='items-row')
+							.breeds__item
+								.favorite.fav_star_container_84220(onclick="return addToFavHandler('84220')")
+								a.breeds__item-link(href='https://ilike.pet/ru/brands/1_all_systems/')
+								.breeds__item-picture
+									img.breeds__item-picture-img(src='https://ilike.pet/upload/iblock/b93/b93d9f1a9230cd95a5e4e1abb95f20b1.png' alt='#1 All Systems' title='#1 All Systems')
+								span.breeds__item-title #1 All Systems
+						.content-item(data-entity='items-row')
+							.breeds__item
+								.favorite.fav_star_container_84220(onclick="return addToFavHandler('84220')")
+								a.breeds__item-link(href='https://ilike.pet/ru/brands/1_all_systems/')
+								.breeds__item-picture
+									img.breeds__item-picture-img(src='https://ilike.pet/upload/iblock/b93/b93d9f1a9230cd95a5e4e1abb95f20b1.png' alt='#1 All Systems' title='#1 All Systems')
+								span.breeds__item-title #1 All Systems
+				button(class="btn declaration__more") Показать еще
+				.row
+					.pagination.pagination__brands
+						.pagination-block
+							a(href="#").pagination-block__number 1
+							a(href="#").pagination-block__number.pagination-number__this 2
+							a(href="#").pagination-block__number 3
+							a(href="#").pagination-block__points ...
+							a(href="#").pagination-block__number 72
+							a(href="#").pagination-block__next Далее
