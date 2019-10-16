@@ -140,7 +140,7 @@ $(document).ready(function () {
 	});
 
 	$(".js-datepicker").datepicker({
-		firstDay: 1,
+		firstDay: 0,
 		numberOfMonths: 2,
 		dayNames: ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение"],
 		dayNamesMin: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
@@ -297,6 +297,20 @@ $(document).ready(function () {
 			}
 		}
 	//service page
+
+	//service-provider
+	
+		$('.js-provider-show').click(function(){
+			$(".js-modal-provider").fadeIn();
+			$(".js-modal-provider").css("overflow","scroll");
+			$(".js-modal-provider").children().css("margin","120px 0");
+			$('body').css("overflow","hidden");
+			$(".js-modal-provider .product-modal__close").click(function(e){
+				$(".js-modal-provider").fadeOut();
+				$('body').css("overflow","unset");
+			});
+		})
+	//service-provider end
 
 	//store page
 	// store-slider module
@@ -691,6 +705,14 @@ $(document).ready(function () {
 	// 	e.preventDefault();
 	// 	$(".page-data__pets").fadeOut();
 	// });
+
+
+
+
+	//new brands
+		$("#alphabet_functions").html('<div class="nav-kind"><div class="nav-kind__block"><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_820921508=Y">А</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_1206481970=Y">Б</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_3739231624=Y">В</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_2850493726=Y">Г</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_931365053=Y">Д</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_1082437675=Y">Е</a><a class="nav-kind__item" href="javascript:void(0);">Ё</a><a class="nav-kind__item" href="javascript:void(0);">Ж</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_2928333063=Y">З</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_1043713174=Y">И</a><a class="nav-kind__item" href="javascript:void(0);">Й</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_3493572026=Y">К</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_2805767468=Y">Л</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_962070671=Y">М</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_1314863129=Y">Н</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_3612764579=Y">О</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_2689685813=Y">П</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_372732936=Y">Р</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_1630553246=Y">С</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_4164490532=Y">Т</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_2403214770=Y">У</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_291155985=Y">Ф</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_1717403783=Y">Х</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_4283748669=Y">Ц</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_2287198635=Y">Ч</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_418184250=Y">Ш</a><a class="nav-kind__item" href="javascript:void(0);">Щ</a><a class="nav-kind__item" href="javascript:void(0);">Ъ</a><a class="nav-kind__item" href="javascript:void(0);">Ы</a><a class="nav-kind__item" href="javascript:void(0);">Ь</a><a class="nav-kind__item nav-kind__item_active" href="?set_filter=Показать&arrFilter_384_1753614517=Y">Э</a><a class="nav-kind__item" href="javascript:void(0);">Ю</a><a class="nav-kind__item" href="javascript:void(0);">Я</a></div><a class="nav-kind__all" href="/ru/brands/" class="alphabet__list-item-link">ВСЕ</a></div>');
+	//new brands end
+
 
 
 

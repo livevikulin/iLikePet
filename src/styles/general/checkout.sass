@@ -14,6 +14,7 @@
 		&:after
 			display: none
 	&__top-line
+		overflow: hidden
 		h1
 			color: #2D3036
 			font-size: 48px
@@ -336,7 +337,49 @@
 	background: #FFFFFF
 	box-shadow: 0px 4px 12px rgba(40, 40, 50, 0.1)
 	padding: 24px 24px 0 24px
+	overflow: hidden
 	font-family: 'Arimo Regular', sans-serif
+	&__row
+		display: flex
+		justify-content: space-between
+		margin-bottom: 9px
+	&__bonuses
+		padding: 17px 23px 17px 23px
+		background-color: #F9F9FB
+		margin: auto -24px
+	&__have,
+	&__pay
+		color: #494A4C
+	&__have
+		span
+			font-family: 'Arimo Bold', sans-serif
+			margin-left: 8px
+	&__bonuce-form
+		display: flex
+		input
+			width: 230px
+			box-sizing: border-box
+			height: 48px
+			outline: none
+			background: #FFFFFF
+			padding-left: 16px
+			border: 1px solid #E0E0E0
+			box-sizing: border-box
+			border-radius: 6px
+		button
+			width: 90px
+			height: 48px
+			display: flex
+			margin-left: 8px
+			align-items: center
+			justify-content: center
+			background-color: #fff
+			font-family: 'Arsenal Bold', sans-serif
+			font-size: 16px
+			color: #D9435D
+			border: 2px solid #D9435D
+			box-sizing: border-box
+			border-radius: 6px
 	&__caption
 		color: #494A4C
 	&__title 
@@ -386,14 +429,17 @@
 				color: #D9435D
 	&__total
 		padding-top: 16px
-		border-top: 1px solid #D0C9D6
-		color: #7E2A2A
+		flex-direction: column
+		color: #494A4C
 		display: flex
-		justify-content: space-between
+		align-items: center
+		padding-bottom: 15px
 		span:nth-child(2)
-			font-size: 24px
+			font-size: 32px
 			font-family: 'Arimo Bold',sans-serif
+			color: #7E2A2A
 			span
+				color: #7E2A2A
 				font-size: 16px
 				margin-left: 5px
 
@@ -403,6 +449,13 @@
 	width: 778px
 	border-right: 0
 	border-left: 0
+	.item-cart__checkout-amount
+		padding-top: 13px
+		flex-basis: 125px
+		align-self: flex-start
+		color: #494A4C
+		font-size: 16px
+		font-family: 'Arimo Regular', sans-serif
 	.item-cart__icon 
 		align-self: flex-start
 		margin-right: 16px
@@ -482,6 +535,9 @@
 
 
 @media screen and (max-width: 1299px)
+	.item-cart_checkout .item-cart__checkout-amount
+		flex-basis: 75px
+		padding-top: 5px
 	.punct-delivery
 		width: 600px
 	.checkout__left
@@ -518,8 +574,14 @@
 			&:nth-child(5)
 				right: 60px
 @media screen and (max-width: 1149px)
+
 	.punct-delivery
-		width: 400px
+		width: 360px
+		.punct-delivery__row
+			flex-direction: column
+		&.punct-delivery_to-door
+			.order-info__input_delivery
+				width: 300px
 	.checkout__left
 		flex-basis: 450px
 		.order-info__location, 
@@ -582,7 +644,22 @@
 				left: 640px
 			&:nth-child(5)
 				right: 40px
+	.checkout__left .order-info__btn
+		width: 300px
+		margin-bottom: 10px
 @media screen and (max-width: 1023px)
+	.order-cart__have, .order-cart__pay
+		font-size: 13px
+	.order-cart__bonuce-form input
+		font-size: 13px
+		padding-left: 5px
+		width: 170px
+	.order-cart__bonuce-form button
+		width: 80px
+	.punct-delivery
+		width: 300px
+	.punct-delivery.punct-delivery_to-door .order-info__input_delivery
+		width: 250px
 	.checkout__right
 		flex-basis: 325px
 	.order-cart__title
@@ -605,6 +682,8 @@
 			&:nth-child(5)
 				right: 20px
 @media screen and (max-width: 880px)
+	.item-cart_checkout .item-cart__checkout-amount
+		text-align: right
 	.order-info__navigate
 		svg
 			display: none
@@ -620,8 +699,7 @@
 @media screen and (max-width: 880px)
 	.punct-delivery
 		width: 300px
-		.punct-delivery__row
-			flex-direction: column
+	
 	.order-info_confirm .order-info__navigate .order-info__next
 		width: 190px
 		background: #D9435D
@@ -633,7 +711,6 @@
 	.checkout__right
 		margin-left: 0
 	.order-cart
-		height: 360px
 		margin-top: 20px
 	.checkout__left
 		.order-info__btn
@@ -702,6 +779,8 @@
 					opacity: 1
 
 @media screen and (max-width: 370px)
+	.item-cart_checkout .item-cart__checkout-amount
+		flex-basis: 112px
 	.punct-delivery
 		width: unset
 		padding: 0
@@ -758,6 +837,8 @@
 		span
 			width: 95px
 			font-size: 16px
+	.order-cart
+		height: 500px
 @media screen and (max-width: 370px)
 	.order-line
 		&__item

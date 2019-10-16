@@ -50,12 +50,7 @@ block content
 						.__body
 							.order-info__caption Местоположение
 							label.order-info__location
-								input(class="order-info__input order-info__input_city" list="location" type="text" placeholder="Москва, московская область")
-								datalist(id="location")
-									option(value="Москва")
-									option(value="Барнаул")
-									option(value="Заринск")
-									option(value="Бийск")
+								input(class="order-info__input order-info__input_city" type="text" placeholder="Москва, московская область")
 							p.order-info__descr Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"
 							.order-info__navigate
 								button.order-info__back 
@@ -121,9 +116,9 @@ block content
 						.__body
 							.order-info__payment
 								button.order-info__btn.order-info__btn_cash
-									span При вручении
+									span Оплата при получении
 								button.order-info__btn.order-info__btn_cashless
-									span Оплата через сайт
+									span Оплата картой на сайте
 							.order-info__navigate
 								button.order-info__back 
 									|	Назад
@@ -181,7 +176,8 @@ block content
 										.item-cart__info
 											span Royal Canin X-Small Puppy для щенков
 											span 800 г
-											span 2 шт.
+											span
+										.item-cart__checkout-amount 2 шт
 										.item-cart__price
 											span 2380
 												span руб.
@@ -192,7 +188,8 @@ block content
 										.item-cart__info
 											span Royal Canin X-Small Puppy для щенков
 											span 800 г
-											span 2 шт.
+											span
+										.item-cart__checkout-amount 2 шт
 										.item-cart__price
 											span 2380
 												span руб.
@@ -203,7 +200,8 @@ block content
 										.item-cart__info
 											span Royal Canin X-Small Puppy для щенков
 											span 800 г
-											span 2 шт.
+											span
+										.item-cart__checkout-amount 2 шт
 										.item-cart__price
 											span 2380
 												span руб.
@@ -236,6 +234,15 @@ block content
 						.__descr
 							span Доставка:
 							span 50 руб.
+						.__bonuses
+							.order-cart__row
+								.order-cart__have
+									|	Бонусы на счету:
+									span 458 
+								.order-cart__pay Оплатить бонусами?								
+							form.order-cart__bonuce-form
+								input(type="text" placeholder="Сколько бонусов списать?")
+								button Списать
 						.__total
 							span Итого к оплате:
 							span
