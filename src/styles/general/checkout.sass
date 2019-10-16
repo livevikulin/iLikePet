@@ -449,6 +449,13 @@
 	width: 778px
 	border-right: 0
 	border-left: 0
+	.item-cart__checkout-amount
+		padding-top: 13px
+		flex-basis: 125px
+		align-self: flex-start
+		color: #494A4C
+		font-size: 16px
+		font-family: 'Arimo Regular', sans-serif
 	.item-cart__icon 
 		align-self: flex-start
 		margin-right: 16px
@@ -528,6 +535,9 @@
 
 
 @media screen and (max-width: 1299px)
+	.item-cart_checkout .item-cart__checkout-amount
+		flex-basis: 75px
+		padding-top: 5px
 	.punct-delivery
 		width: 600px
 	.checkout__left
@@ -564,6 +574,7 @@
 			&:nth-child(5)
 				right: 60px
 @media screen and (max-width: 1149px)
+
 	.punct-delivery
 		width: 360px
 		.punct-delivery__row
@@ -633,6 +644,9 @@
 				left: 640px
 			&:nth-child(5)
 				right: 40px
+	.checkout__left .order-info__btn
+		width: 300px
+		margin-bottom: 10px
 @media screen and (max-width: 1023px)
 	.order-cart__have, .order-cart__pay
 		font-size: 13px
@@ -668,6 +682,8 @@
 			&:nth-child(5)
 				right: 20px
 @media screen and (max-width: 880px)
+	.item-cart_checkout .item-cart__checkout-amount
+		text-align: right
 	.order-info__navigate
 		svg
 			display: none
@@ -763,6 +779,8 @@
 					opacity: 1
 
 @media screen and (max-width: 370px)
+	.item-cart_checkout .item-cart__checkout-amount
+		flex-basis: 112px
 	.punct-delivery
 		width: unset
 		padding: 0
