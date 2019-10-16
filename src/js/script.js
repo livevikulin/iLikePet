@@ -302,6 +302,13 @@ $(document).ready(function () {
 	
 		$('.js-provider-show').click(function(){
 			$(".js-modal-provider").fadeIn();
+			$(".js-modal-provider").css("overflow","scroll");
+			$(".js-modal-provider").children().css("margin","120px 0");
+			$('body').css("overflow","hidden");
+			$(".js-modal-provider .product-modal__close").click(function(e){
+				$(".js-modal-provider").fadeOut();
+				$('body').css("overflow","unset");
+			});
 		})
 	//service-provider end
 
