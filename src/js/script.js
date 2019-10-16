@@ -140,7 +140,7 @@ $(document).ready(function () {
 	});
 
 	$(".js-datepicker").datepicker({
-		firstDay: 1,
+		firstDay: 0,
 		numberOfMonths: 2,
 		dayNames: ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение"],
 		dayNamesMin: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
