@@ -6,7 +6,7 @@
         display: block
         width: 208px
         height: 48px
-        margin: 30px auto 
+        margin: 30px auto
     .row
         display: flex
         flex-wrap: wrap
@@ -21,11 +21,19 @@
         margin-left: 54px
    
 .declaration__card
-       height: 350px
+       min-height: 350px
        margin-right: 28px
        position: relative
+       align-self: baseline
        background-color: #fff
        font-family: 'Arsenal Regular', sans-serif
+       position: relative
+       &-link
+           position: absolute
+           right: 0
+           bottom: 0
+           left: 0
+           top: 0
        &:before
            content: ''
            width: 100%
@@ -43,11 +51,12 @@
            padding-left: 15px
            margin-top: 16px
            margin-bottom: 6px
-           a
-               color: #2D3036
-               font-family: 'Arsenal Bold', sans-serif                
-               font-size: 21px
-               text-decoration: none
+           max-width: 260px
+           word-break: break-word
+           color: #2D3036
+           font-family: 'Arsenal Bold', sans-serif                
+           font-size: 21px
+           text-decoration: none
        &-price
            color: #7E2A2A
            font-size: 18px
@@ -62,6 +71,7 @@
            margin-top: 12px
        &-date
            margin-top: 5px
+           margin-bottom: 15px
    
 @media screen and (max-width: 1290px)
     .declaration 

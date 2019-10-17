@@ -10,6 +10,7 @@
         margin: 0 auto
         &-container
             display: flex
+            flex-wrap: wrap
             margin-top: 21px
             .service__card
                 &:nth-child(3n+3)
@@ -52,10 +53,14 @@
     &__phone,
     &__date
         display: flex
-        padding-bottom: 15px
-        padding-top: 15px
+        height: 48px
+        align-items: center
         border-top: 1px solid #E0E0E0
         border-bottom: 1px solid #E0E0E0
+    &__place,
+    &__author,
+    &__phone
+        border-bottom: 0
     .phone
         overflow: hidden
         width: 68px
@@ -74,16 +79,19 @@
         width: 150px
     .descr
         color: #494A4C
+        align-items: center
+        display: flex
     .show-more
         display: inline-block
         color: #D9435D
         border-bottom: 1px dotted #D9435D
         position: relative
         margin-left: 15px
+        box-sizing: border-box
         &:before
             position: absolute
-            left: -18px
-            top: -2px
+            left: -17px
+            top: 4px
             content: '...'
             color: #494A4C
     .content
@@ -153,13 +161,16 @@
     .declaration-more
         .content
             width: 1024px
+        .dog-page-slider__nav
+            padding: 0
         .dog-page-slider
             width: 400px
-            height: 300px
+            height: 375px
+            .dog-page-slider__item
+                height: 375px
         &__footer
             width: 1024px
             &-container
-                overflow-x: scroll
 @media screen and (max-width: 1090px)   
     .declaration-more
         &__title
@@ -185,8 +196,11 @@
         &__footer
             width: 660px
 @media screen and (max-width: 768px)
+    .declaration-more
+        .dog-page-slider .dog-page-slider__item
+            width: 400px!important
     .declaration-more .content__right
-        width: unset
+        width: 370px
     .declaration-more .content__right
     .declaration-more .content
         margin-top: 15px
@@ -207,7 +221,13 @@
             width: 500px
         &__footer
             width: 500px
+        .declaration-more__footer-container
+            justify-content: center
+            .service__card
+                margin-right: 0
 @media screen and (max-width: 550px)
+     .declaration-more .content__right
+         width: 270px
      .declaration-more
         &__descr
             width: unset
