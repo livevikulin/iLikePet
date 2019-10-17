@@ -57,6 +57,12 @@
     word-break: break-all
     transition: max-width .4s ease
     will-change: max-width
+    transition: background .4s ease-in-out
+    transition-property: color,background
+    &:hover
+        background-color: #D9435D
+        border: 1px solid #fff
+        color: #fff
     &_hidden
         display: none
     &_active

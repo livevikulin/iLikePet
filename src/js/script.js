@@ -240,8 +240,14 @@ $(document).ready(function () {
 		]
 	});
 
+	
+
+	
+
 	//Инициализация табов на странице dog-page
 	$("#tabs").tabs();
+
+	
 	//declaration-more page
 	// show all module
 	$(".show-more").on("click", function () {
