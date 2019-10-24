@@ -54,6 +54,27 @@ $(document).ready(function () {
 		},
 	});
 
+
+
+	//new article
+
+	$('.js-new-article-close').click(function(){
+		$(this).toggleClass('article-subject__close_open');
+		$('.article-subject__list').toggle(300);
+	})
+	
+	$("a.new-article__link").click(function() {
+		$("html, body").animate({
+		   scrollTop: $($(this).attr("href")).offset().top - 76 + "px"
+		}, {
+		   duration: 500,
+		   easing: "swing"
+		});
+		return false;
+	 });
+	//new article end
+
+
 	//Открытие / Закрытие модалки с благодарностью	
 	$(window).on("sendshow", function () {
 		$.fancybox.open({
