@@ -60,7 +60,7 @@ $(document).ready(function () {
 
 	$('.js-new-article-close').click(function(){
 		$(this).toggleClass('article-subject__close_open');
-		$('.article-subject__list').toggle(300);
+		$('.article-subject__content').slideToggle(300);		
 	})
 	
 	$("a.new-article__link").click(function() {
@@ -72,6 +72,7 @@ $(document).ready(function () {
 		});
 		return false;
 	 });
+
 	//new article end
 
 
