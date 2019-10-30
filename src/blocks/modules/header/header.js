@@ -27,11 +27,13 @@ $(document).ready(function() {
 	$('.header-mobile__burger').click(function() {
 		$('.header-mobile__menu').slideDown();
 		$('body').css('overflow', 'hidden');
-		$(document).bind('touchmove', false);
+		
+		$(".js-city").css("z-index", "999").fadeIn(300);
 	});
 	$('.header-mobile__close i').click(function() {
 		$('.header-mobile__menu').slideUp();
 		$('body').css('overflow', 'auto');
+		$(".js-city").css("z-index", "10");
 	});
 	
 	//Поиск на мобиле

@@ -668,12 +668,17 @@ header
                 padding: 0 20px
 @media screen and (max-width: 999px)
     .header
-        display: none
+        padding: 0
         &-logo
             span
                 display: none
         &-mobile
             display: flex
+        &-social,
+        &-logo,
+        &-shop,
+        &-account
+            display: none
     .nav
         margin-top: 50px
     .navbar

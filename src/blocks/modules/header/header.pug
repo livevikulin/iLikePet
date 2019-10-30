@@ -1,19 +1,133 @@
 header
     .container
         .header
-            .header-social 
-                a(href="#").header-social__vk
-                    i.fab.fa-vk 
-                a(href="#").header-social__fb
-                    i.fab.fa-facebook-f
-                a(href="#").header-social__tw
-                    i.fab.fa-twitter
-                a(href="#").header-social__ok
-                    i.fab.fa-odnoklassniki
-                a(href="#").header-social__yt
-                    i.fab.fa-youtube
-                a(href="#").header-social__inst
-                    i.fab.fa-instagram
+            .heder-wrapper
+                .header-social 
+                    a(href="#").header-social__vk
+                        i.fab.fa-vk 
+                    a(href="#").header-social__fb
+                        i.fab.fa-facebook-f
+                    a(href="#").header-social__tw
+                        i.fab.fa-twitter
+                    a(href="#").header-social__ok
+                        i.fab.fa-odnoklassniki
+                    a(href="#").header-social__yt
+                        i.fab.fa-youtube
+                    a(href="#").header-social__inst
+                        i.fab.fa-instagram
+                if(isShop)
+                    .header-city.js-city
+                        .header-city__choose.js-choose-city
+                            span.header-city-now Санкт-Петербург
+                        .__modal.header-city__modal_check.js-modal-your-city
+                            .__close.js-header-city-close
+                            .__title Ваш город - Санкт-Петербург? 
+                            .__row
+                                button.__btn.button.js-header-city-confirm Верно
+                                button.__btn.header-city__btn_white.button.js-header-city-change Изменить
+                        .__modal.header-city__modal_choose.js-modal-choose
+                            .__close.js-header-city-close-choose
+                            .__title Выбор города
+                            form.header-city__form
+                                input(type="text",placeholder="Поиск города")
+                                button(type="submit").header-city__submit
+                            .header-city__cites
+                                .header-city__city-wrapper
+                                    ul.header-city__list
+                                        li.header-city__item(data-letter="A")
+                                            a(href="#") Астрахань
+                                    ul.header-city__list
+                                        li.header-city__item(data-letter="Б")
+                                            a(href="#") Барнул
+                                        li.header-city__item
+                                            a(href="#") Брянск
+                                    ul.header-city__list
+                                        li.header-city__item(data-letter="В")
+                                            a(href="#") Владивосток
+                                        li.header-city__item
+                                            a(href="#") Воронеж
+                                        li.header-city__item
+                                            a(href="#") Волгоград
+                                    ul.header-city__list
+                                        li.header-city__item(data-letter="Е")
+                                            a(href="#") Екатеринбург
+                                        ul.header-city__list
+                                        li.header-city__item(data-letter="И")
+                                            a(href="#") Ижевск
+                                        li.header-city__item
+                                            a(href="#") Иркутск
+                                    ul.header-city__list
+                                        li.header-city__item(data-letter="К")
+                                            a(href="#") Казань
+                                        li.header-city__item
+                                            a(href="#") Кемерово
+                                        li.header-city__item
+                                            a(href="#") Краснодар
+                                        li.header-city__item
+                                            a(href="#") Красноярск
+                                .header-city__city-wrapper
+                                    ul.header-city__list
+                                        li.header-city__item(data-letter="М")
+                                            a(href="#") Махачкала
+                                        li.header-city__item
+                                            a(href="#") Москва
+                                    ul.header-city__list
+                                        li.header-city__item(data-letter="М")
+                                            a(href="#") Набережные челны
+                                        li.header-city__item
+                                            a(href="#") Нижний Новгород
+                                        li.header-city__item
+                                            a(href="#") Краснодар
+                                        li.header-city__item
+                                            a(href="#") Новокузнецк
+                                        li.header-city__item
+                                            a(href="#") Новосибирск
+                                    ul.header-city__list
+                                        li.header-city__item(data-letter="О")
+                                            a(href="#") Омск
+                                        li.header-city__item
+                                            a(href="#") Оренбург
+                                    ul.header-city__list
+                                        li.header-city__item(data-letter="П")
+                                            a(href="#") Пермь
+                                    ul.header-city__list
+                                        li.header-city__item(data-letter="H")
+                                            a(href="#") Пермь
+                                        li.header-city__item
+                                            a(href="#") Ростов-на-Дону
+                                        li.header-city__item
+                                            a(href="#") Рязань
+                                .header-city__city-wrapper
+                                    ul.header-city__list
+                                        li.header-city__item(data-letter="C")
+                                            a(href="#") Самара
+                                        li.header-city__item
+                                            a(href="#") Санкт-Петербург
+                                        li.header-city__item
+                                            a(href="#") Саратов
+                                        li.header-city__item
+                                            a(href="#") Севастополь
+                                    ul.header-city__list
+                                        li.header-city__item(data-letter="Т")
+                                            a(href="#") Тольятти
+                                        li.header-city__item
+                                            a(href="#") Томск
+                                        li.header-city__item
+                                            a(href="#") Тюмень
+                                    ul.header-city__list
+                                        li.header-city__item(data-letter="У")
+                                            a(href="#") Ульяновск
+                                        li.header-city__item
+                                            a(href="#") Уфа
+                                    ul.header-city__list
+                                        li.header-city__item(data-letter="Х")
+                                            a(href="#") Хабаровск
+                                    ul.header-city__list
+                                        li.header-city__item(data-letter="Ч")
+                                            a(href="#") Челябинск
+                                    ul.header-city__list
+                                        li.header-city__item(data-letter="Я")
+                                            a(href="#") Ярославль        
             .header-logo 
                 a(href="#")
                     img(src="img/logo.png", alt="")

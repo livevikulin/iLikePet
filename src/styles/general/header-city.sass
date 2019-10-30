@@ -1,0 +1,175 @@
+.header-wrapper
+    display: flex
+    flex-direction: column
+
+.header-city
+    margin-top: 20px
+    position: relative
+    &__title
+        max-width: 235px
+        word-break: break-word
+    &__choose
+        cursor: pointer
+        .header-city-now
+            font-size: 16px
+            line-height: 22px
+            border-bottom: 1px dashed #D9435D
+            position: relative
+            pointer-events: none
+            &:after
+                content: ''
+                position: absolute
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNSA1TDkuMzMuNUguNjdMNSA1eiIgZmlsbD0iI0Q5NDM1RCIvPjwvc3ZnPg==)
+                background-repeat: no-repeat
+                width: 10px
+                height: 5px
+                display: block
+                top: 8px
+                right: -18px
+                transition: transform .4s ease-in
+        &.open
+            .header-city-now
+                &:after
+                    transform: rotate(180deg)
+    &__modal
+        position: absolute
+        background-color: #fff
+        padding-top: 20px
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.06)
+        padding-left: 48px
+        z-index: 10
+        box-sizing: border-box
+    &__modal_check
+        min-width: 426px
+        display: none
+    &__close
+        position: absolute
+        width: 40px
+        height: 55px
+        cursor: pointer
+        right: 0
+        top: 0
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTkuMDk0IDcuNWw1LjgxMiA1LjgxM2MuMDQ3LjA5My4wOTQuMTg3LjA5NC4yOGEuMzU4LjM1OCAwIDAxLS4wOTQuMjM1bC0xLjA3OCAxLjA3OGMtLjA5NC4wOTQtLjE4Ny4wOTQtLjI4MS4wOTQtLjA5NCAwLS4xODggMC0uMjM1LS4wOTRMNy41IDkuMDk0bC01LjgxMyA1LjgxMkMxLjU5NSAxNSAxLjUgMTUgMS40MDcgMTVjLS4wOTUgMC0uMTg4IDAtLjIzNS0uMDk0TC4wOTQgMTMuODI4QzAgMTMuNzgxIDAgMTMuNjg4IDAgMTMuNTk0czAtLjE4OC4wOTQtLjI4MUw1LjkwNiA3LjUuMDk0IDEuNjg3QzAgMS42NDEgMCAxLjU0NyAwIDEuNDU0czAtLjE4Ny4wOTQtLjI4MUwxLjE3Mi4wOTRBLjM1OC4zNTggMCAwMTEuNDA2IDBjLjA5NCAwIC4xODguMDQ3LjI4Mi4wOTRMNy41IDUuOTA2IDEzLjMxMy4wOTRBLjM1OC4zNTggMCAwMTEzLjU0NiAwYy4wOTQgMCAuMTg3LjA0Ny4yODEuMDk0bDEuMDc4IDEuMDc4Yy4wNDcuMDk0LjA5NC4xODcuMDk0LjI4MWEuMzU4LjM1OCAwIDAxLS4wOTQuMjM0TDkuMDk0IDcuNXoiIGZpbGw9IiM5Nzk4OTkiLz48L3N2Zz4=)
+        background-repeat: no-repeat
+        background-position: center
+    &__row
+        margin-top: 24px
+        margin-bottom: 35px
+    &__btn
+        width: 140px
+        margin-right: 16px
+    &__btn_white
+        background-color: #fff
+        border: 2px solid #D9435D
+        color: #D9435D
+        &:hover
+            background-color: darken(#fff, 1)
+            color: darken(#D9435D, 1)
+    &__modal_choose
+        display: none
+        .header-city__title
+            color: #494A4C
+            font-size: 27px
+            font-family: 'Arsenal Bold',sans-serif
+    &__form
+        position: relative
+        margin-top: 17px
+        input
+            background: #FFFFFF
+            border: 1px solid #E0E0E0
+            box-sizing: border-box
+            border-radius: 6px
+            width: 540px
+            height: 48px
+            padding-left: 18px
+            font-size: 16px
+            box-sizing: border-box
+            color: #979899
+            font-family: 'Arimo Regular', sans-serif
+            margin-right: 100px
+    &__submit
+        border: 0
+        background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE1LjkwNiAxNC42NTZhLjM1NS4zNTUgMCAwMS4wOTQuMjVjMCAuMTI1LS4wMzEuMjE5LS4wOTQuMjgxbC0uNzE5LjY4OGEuMzgxLjM4MSAwIDAxLS4yOC4xMjVjLS4xMjYgMC0uMTg4LS4wMzEtLjI1LS4xMjVsLTMuODEzLTMuNzgxYS4zNTUuMzU1IDAgMDEtLjA5NC0uMjV2LS40MzhjLS41OTQuNS0xLjI1LjkwNi0xLjk2OSAxLjE4OC0uNzUuMjgxLTEuNS40MDYtMi4yODEuNDA2LTEuMTg4IDAtMi4yODEtLjI4MS0zLjI4MS0uODc1QTYuMDM1IDYuMDM1IDAgMDEuODc1IDkuNzgxQy4yODEgOC43ODEgMCA3LjY4NyAwIDYuNWMwLTEuMTg4LjI4MS0yLjI1Ljg3NS0zLjI1LjU2My0xIDEuMzQ0LTEuNzgxIDIuMzQ0LTIuMzc1QzQuMjE5LjMxMiA1LjMxMyAwIDYuNSAwYzEuMTg4IDAgMi4yNS4zMTMgMy4yNS44NzVhNi42NTMgNi42NTMgMCAwMTIuMzc1IDIuMzc1Yy41NjMgMSAuODc1IDIuMDYzLjg3NSAzLjI1IDAgLjgxMy0uMTU2IDEuNTYzLS40MzggMi4yODEtLjI4Ljc1LS42NTYgMS40MDYtMS4xNTYgMS45NjloLjQzOGMuMDk0IDAgLjE4Ny4wMzEuMjUuMDk0bDMuODEyIDMuODEyek02LjUgMTEuNWMuODc1IDAgMS43MTktLjIxOSAyLjUtLjY1NkE0Ljg5MSA0Ljg5MSAwIDAwMTAuODEzIDljLjQzNy0uNzUuNjg3LTEuNTk0LjY4Ny0yLjUgMC0uODc1LS4yNS0xLjcxOS0uNjg4LTIuNUE1LjAzOSA1LjAzOSAwIDAwOSAyLjE4N0M4LjIxOSAxLjc1IDcuMzc1IDEuNSA2LjUgMS41Yy0uOTA2IDAtMS43NS4yNS0yLjUuNjg4QTQuODkgNC44OSAwIDAwMi4xNTYgNCA1LjA2NiA1LjA2NiAwIDAwMS41IDYuNWMwIC45MDYuMjE5IDEuNzUuNjU2IDIuNUE0Ljc1NCA0Ljc1NCAwIDAwNCAxMC44NDRjLjc1LjQzNyAxLjU5NC42NTYgMi41LjY1NnoiIGZpbGw9IiM5Nzk4OTkiLz48L3N2Zz4=)
+        background-size: cover
+        background-repeat: no-repeat
+        position: absolute
+        right: 114px
+        width: 16px
+        cursor: pointer
+        height: 16px
+        top: 50%
+        transform: translateY(-50%)
+        display: block
+    &__list
+        list-style: none
+    
+    &__item
+        a
+            color: #494A4C
+            font-size: 15px
+            line-height: 18px
+            margin-bottom: 20px
+            font-family: 'Arimo Regular', sans-serif
+            display: inline-block
+            word-break: break-word
+        &:first-child
+            position: relative
+            &:before
+                content: attr(data-letter)
+                position: absolute
+                left: -32px
+                color:#D9435D
+                background: #F7D9DF
+                width: 20px
+                height: 20px
+                box-sizing: border-box
+                text-align: center
+                line-height: 20px
+                border-radius: 50%
+                font-family: 'Arsenal Bold',sans-serif
+                display: block
+                top: -2px
+    &__cites
+        max-width: 575px
+        display: flex
+        flex-wrap: wrap
+        margin-top: 32px
+    &__city-wrapper
+        margin-right: 62px
+        max-width: 150px
+        width: 150px
+        &:nth-child(3)
+            margin-right: 0
+
+
+
+@media screen and (max-width: 999px)
+    .js-city
+        display: none
+
+@media screen and (max-width: 999px)
+    .header-city
+        &__modal_check
+            min-width: 290px
+            padding-left: 25px
+            padding-top: 30px
+        &__btn
+            margin-right: 0
+            margin-bottom: 15px
+        &__form
+            input
+                width: 290px
+                margin-right: 0
+        &__modal_choose
+            padding: 10px
+        &__cites
+            justify-content: center
+            overflow: scroll
+            max-height: 400px
+            
+        &__submit
+            right: 14px
+        &__city-wrapper
+            margin-right: 0
+            max-width: none
+            width: 75%
