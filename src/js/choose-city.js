@@ -12,6 +12,7 @@ jsChoosecity.on("click", (e) => {
 	if (target.hasClass("js-choose-city")) {
 		target.toggleClass("open");
 		modalYourCity.fadeToggle();
+		jsModalChoose.fadeOut();
 	}
 });
 
