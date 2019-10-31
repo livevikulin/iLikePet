@@ -4154,9 +4154,17 @@ input[type="number"]::-webkit-outer-spin-button
 				
 @media screen and (max-width: 446px)
 	.animals
+		&-block
+			justify-content: space-between
 		&-box
 			margin-right: 0
 			&:nth-child(5n+5)
 				margin-right: 0
 			&:nth-child(3n+3)
 				margin-right: 0
+				
+@media screen and (max-width: 410px)
+	.animals
+		&-block
+			flex-direction: column
+			align-items: center
