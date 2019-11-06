@@ -639,6 +639,8 @@ $(document).ready(function () {
 	//Инициализация календаря в Личном кабинете
 	$(".js-datepicker-personal").datepicker({ 
 		firstDay: 1,
+		changeMonth: true,
+		changeYear: true,
 		dateFormat: "dd.mm.yy",
 		dayNames: ["Воскресение", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
 		dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
