@@ -2661,9 +2661,13 @@ input[type="number"]::-webkit-outer-spin-button
 			padding-top: 5px
 		&__photos
 			display: flex
-			justify-content: space-between
 			flex-wrap: wrap
 			padding-top: 41px
+			.personal-photo
+				margin-right: 18px
+				margin-bottom: 25px
+				&nth-child(5n+5)
+					margin-right: 0
 		&__publications
 			.ui-selectmenu-menu
 				max-width: 396px
@@ -2786,8 +2790,6 @@ input[type="number"]::-webkit-outer-spin-button
 		align-items: center
 		width: 154px
 		height: 178px
-		&:nth-child(1n+6)
-			margin-top: 25px
 		&__image
 			display: flex
 			justify-content: center
@@ -2801,6 +2803,7 @@ input[type="number"]::-webkit-outer-spin-button
 			img
 				width: 100%
 				height: 100%
+				object-fit: cover
 		&__remove
 			font-family: Arimo Regular
 			font-style: normal
@@ -4048,11 +4051,12 @@ input[type="number"]::-webkit-outer-spin-button
 	.personal-box__photos
 		flex-direction: column
 		align-items: center
+		.personal-photo
+			margin-right: 0
 	.personal-tabs ul
 		padding-top: 10px
 	.personal-photo
 		margin-bottom: 15px
-
 		img
 			width: 100%
 			height: 100%
