@@ -93,7 +93,7 @@ const webpackConfig = require("./webpack.config.js"),
 		}
 	};
 
-webpackConfig.mode = production ? "production" : "development";
+webpackConfig.mode = production ? "development" : "development";
 webpackConfig.devtool = production ? false : "cheap-eval-source-map";
 
 export const server = () => {
