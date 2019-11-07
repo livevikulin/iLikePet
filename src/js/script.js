@@ -156,16 +156,18 @@ $(document).ready(function () {
 	var dayNamesMin = $(".js-datepicker .js-datepicker-personal").datepicker("option", "dayNamesMin");
 	var monthNames = $(".js-datepicker .js-datepicker-personal").datepicker("option", "monthNames");
 	var monthNamesShort = $(".js-datepicker .js-datepicker-personal").datepicker("option", "monthNamesShort");
-
+	
+	$.datepicker.regional['ru'];
+	
 	$.datepicker.setDefaults({
 		dateFormat: 'dd.mm.yy'
 	});
 
 	$(".js-datepicker").datepicker({
-		firstDay: 0,
+		firstDay: 1,
 		numberOfMonths: 2,
-		dayNames: ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение"],
-		dayNamesMin: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+		dayNames: ["Воскресение", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
+		dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
 		monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
 		monthNamesShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
 		beforeShowDay: function (date) {
@@ -200,7 +202,8 @@ $(document).ready(function () {
 						$("#events-container").html(html);
 					});
 			}
-		}
+		},
+		
 	});
 
 	$(".js-show-current-week").on("click", () => {
@@ -635,9 +638,12 @@ $(document).ready(function () {
 
 	//Инициализация календаря в Личном кабинете
 	$(".js-datepicker-personal").datepicker({ 
+		firstDay: 1,
+		changeMonth: true,
+		changeYear: true,
 		dateFormat: "dd.mm.yy",
-		dayNames: ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресение"],
-		dayNamesMin: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+		dayNames: ["Воскресение", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
+		dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
 		monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
 		monthNamesShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"]
 	});

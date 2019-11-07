@@ -1,5 +1,7 @@
 body
 	font-family: Arsenal Regular, sans-serif
+	width: 100%
+	min-width: 320px
 
 a
 	font-family: Arsenal Regular
@@ -670,7 +672,8 @@ input[type="number"]::-webkit-outer-spin-button
 			display: flex
 			flex-direction: column
 			justify-content: flex-end
-			padding: 0 0 29px 15px
+			width: 100%
+			padding: 0 15px 29px
 		&__filter
 			margin-right: 55px
 	&-main
@@ -1636,6 +1639,7 @@ input[type="number"]::-webkit-outer-spin-button
 		text-decoration: none
 		box-sizing: border-box
 .repost
+	margin-top: 25px
 	&-text
 		font-family: Merriweather Italic
 		font-style: italic
@@ -2402,38 +2406,36 @@ input[type="number"]::-webkit-outer-spin-button
 		p
 			margin: 0 0 10px 0
 	&-tabs
-		&__block
-			ul
-				display: flex
-				justify-content: space-between
-				padding: 0 0 15px 0
-				margin-top: 64px
-				margin-bottom: 0
-				list-style: none
-				border-bottom: 1px solid #E0E0E0
-				li
-					a
-						font-family: Arsenal Bold
-						font-style: normal
-						font-weight: bold
-						font-size: 18px
-						line-height: 23px
-						color: #979899
-						text-decoration: none
-						padding-bottom: 14px
-						outline: none
-				.li-active
-					a
-						color: #000000 !important
-						border-bottom: 3px solid #D9435D
 		&__box
 			width: 100%
 			max-width: 826px
 			padding-top: 31px
-			margin-bottom: 59px
 	&-bottom
 		&__block
 			margin-top: 58px
+.dog-page-tabs__block > ul
+	display: flex
+	justify-content: space-between
+	padding: 0 0 15px 0
+	margin-top: 64px
+	margin-bottom: 0
+	list-style: none
+	border-bottom: 1px solid #E0E0E0
+	li
+		a
+			font-family: Arsenal Bold
+			font-style: normal
+			font-weight: bold
+			font-size: 18px
+			line-height: 23px
+			color: #979899
+			text-decoration: none
+			padding-bottom: 14px
+			outline: none
+	.li-active
+		a
+			color: #000000 !important
+			border-bottom: 3px solid #D9435D
 .tabs
 	&-box
 		&__title
@@ -2538,6 +2540,15 @@ input[type="number"]::-webkit-outer-spin-button
 				width: 100%
 				height: 100%
 				z-index: 3
+			&:nth-child(2n+2)
+				margin-right: 28px
+			&:nth-child(3n+3)
+				margin-right: 0
+	.block-video
+		&:nth-child(2n+2)
+			margin-right: 28px
+		&:nth-child(3n+3)
+			margin-right: 0
 //Стили для страницы с Видами животных
 .animals
 	padding: 33px 0 62px
@@ -2659,9 +2670,13 @@ input[type="number"]::-webkit-outer-spin-button
 			padding-top: 5px
 		&__photos
 			display: flex
-			justify-content: space-between
 			flex-wrap: wrap
 			padding-top: 41px
+			.personal-photo
+				margin-right: 18px
+				margin-bottom: 25px
+				&nth-child(5n+5)
+					margin-right: 0
 		&__publications
 			.ui-selectmenu-menu
 				max-width: 396px
@@ -2784,8 +2799,6 @@ input[type="number"]::-webkit-outer-spin-button
 		align-items: center
 		width: 154px
 		height: 178px
-		&:nth-child(1n+6)
-			margin-top: 25px
 		&__image
 			display: flex
 			justify-content: center
@@ -2799,6 +2812,7 @@ input[type="number"]::-webkit-outer-spin-button
 			img
 				width: 100%
 				height: 100%
+				object-fit: cover
 		&__remove
 			font-family: Arimo Regular
 			font-style: normal
@@ -2821,6 +2835,8 @@ input[type="number"]::-webkit-outer-spin-button
 			max-width: 396px
 			margin-right: 28px
 			margin-top: 22px
+			&:nth-child(2n+2)
+				margin-right: 0
 			ul
 				width: 100%
 				list-style: none
@@ -2903,6 +2919,7 @@ input[type="number"]::-webkit-outer-spin-button
 		border: 1px solid #E0E0E0
 		box-sizing: border-box
 		border-radius: 6px
+		outline: none
 	&-sub
 		input
 			display: none
@@ -3322,7 +3339,7 @@ input[type="number"]::-webkit-outer-spin-button
 		a
 			color: #ffffff !important
 	.ui-datepicker-current-day
-		background: #D9435D
+		background: #494A4C
 		a
 			color: #ffffff !important
 
@@ -3535,6 +3552,13 @@ input[type="number"]::-webkit-outer-spin-button
 				margin-right: 28px
 			&:nth-child(2n+2)
 				margin-right: 0
+				
+@media screen and (max-width: 1255px)
+	.publications-input__title
+		margin-left: 0
+		&:nth-child(n+2)
+			margin-top: 25px
+
 
 @media screen and (max-width: 1200px)
 	.kind
@@ -3878,6 +3902,10 @@ input[type="number"]::-webkit-outer-spin-button
 		text-align: center
 	.favorites
 		padding-bottom: 0
+		.block-video
+			margin-right: 0
+			&:nth-child(2n+2)
+				margin-right: 0 
 	.favorites-tabs ul
 		justify-content: space-around
 		margin-top: 0
@@ -4046,11 +4074,12 @@ input[type="number"]::-webkit-outer-spin-button
 	.personal-box__photos
 		flex-direction: column
 		align-items: center
+		.personal-photo
+			margin-right: 0
 	.personal-tabs ul
 		padding-top: 10px
 	.personal-photo
 		margin-bottom: 15px
-
 		img
 			width: 100%
 			height: 100%
@@ -4155,9 +4184,17 @@ input[type="number"]::-webkit-outer-spin-button
 				
 @media screen and (max-width: 446px)
 	.animals
+		&-block
+			justify-content: space-between
 		&-box
 			margin-right: 0
 			&:nth-child(5n+5)
 				margin-right: 0
 			&:nth-child(3n+3)
 				margin-right: 0
+				
+@media screen and (max-width: 410px)
+	.animals
+		&-block
+			flex-direction: column
+			align-items: center
