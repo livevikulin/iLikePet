@@ -1,10 +1,9 @@
 import "jquery";
-import "@fancyapps/fancybox/";
+import "@fancyapps/fancybox/dist/jquery.fancybox.js";
 import "jquery-ui-bundle";
 import "jquery-ui";
 import "slick-slider";
 import "jquery-mask-plugin";
-
 
 // require("fancybox");
 
@@ -13,6 +12,7 @@ import "jquery-mask-plugin";
 
 // Initialise imported function as jQuery function
 // $.fn.fancybox = fancybox;
+
 
 
 $(document).ready(function () {

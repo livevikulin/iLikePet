@@ -105,6 +105,8 @@ footer
             margin-right: 5px
             font-size: 12px
         &__dev
+            display: flex
+            flex-direction: column
             a 
                 text-decoration: none
                 &:hover path
@@ -131,7 +133,10 @@ footer
         &-nav
             display: none
 
-@media screen and (max-width: 540px)
+@media screen and (max-width: 580px)
+    .footer-bottom-wrapper
+        margin-top: 10px
+        align-self: center
     .footer
         padding: 10px 0 10px
         &-nav
@@ -155,3 +160,21 @@ footer
                                 font-size: 20px
                             span
                                 display: none
+
+
+.footer-bottom-wrapper
+    display: flex
+    margin-bottom: 10px
+    align-self: flex-start  
+
+.production-by-pip
+    font-family: Arimo Regular
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 23px
+    text-align: right
+    padding-left: 10px
+    color: #999999
+    &:hover
+        color: #fff
