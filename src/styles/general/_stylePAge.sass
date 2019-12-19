@@ -3529,6 +3529,9 @@ input[type="number"]::-webkit-outer-spin-button
 			line-height: 13px
 			font-size: 11px
 			text-align: center
+			
+.article-mobile 
+	display: none 
 
 
 @media screen and (max-width: 1301px)
@@ -3567,6 +3570,18 @@ input[type="number"]::-webkit-outer-spin-button
 				display: none
 			&__detail
 				display: none
+	.article-mobile
+		display: block !important
+		background: #ffffff
+		border-bottom: 1px solid #F7D9DF
+		&:last-child
+			border-bottom: none
+		.news
+			overflow: auto
+		.article-news
+			padding: 35px 20px
+		.news-all
+			display: block
 
 @media screen and (max-width: 1185px)
 	.animals
@@ -3589,6 +3604,7 @@ input[type="number"]::-webkit-outer-spin-button
             display: flex
             flex-direction: column
         &-similar
+            display: none
             max-width: 100%
         &-main
             max-width: 100%
